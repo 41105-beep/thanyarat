@@ -38,8 +38,13 @@ body::before{
     pointer-events:none;
     z-index:50;
     opacity:.04;
+
     background-image:
-    radial-gradient(#d9aa55 1px,transparent 1px);
+    radial-gradient(
+        #d9aa55 1px,
+        transparent 1px
+    );
+
     background-size:28px 28px;
 }
 
@@ -49,49 +54,66 @@ body::before{
 ========================= */
 
 .navbar{
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
 
     min-height:76px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding:0 6%;
 
-    background:rgba(12,5,2,.94);
+    background:rgba(12,5,2,.96);
 
     backdrop-filter:blur(14px);
 
-    border-bottom:1px solid rgba(214,168,77,.35);
+    border-bottom:
+    1px solid
+    rgba(214,168,77,.35);
 }
 
 .logo{
+
     color:#e5b95d;
+
     text-decoration:none;
 
     font-family:'Playfair Display',serif;
 
     font-size:24px;
+
     letter-spacing:4px;
 }
 
 .home-button{
+
     color:#ead6ac;
+
     text-decoration:none;
 
-    border:1px solid #80602f;
+    border:
+    1px solid
+    #80602f;
 
     padding:8px 20px;
+
     border-radius:30px;
 
     transition:.3s;
 }
 
 .home-button:hover{
+
     background:#c59643;
+
     color:#160803;
 }
 
@@ -101,34 +123,44 @@ body::before{
 ========================= */
 
 .hero{
+
     min-height:620px;
 
     position:relative;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
     background:
+
     linear-gradient(
-        rgba(12,5,2,.45),
+        rgba(12,5,2,.4),
         rgba(12,5,2,.92)
     ),
+
     url("images/ayutthaya-main.jpg")
+
     center/cover no-repeat;
 }
 
 .hero-content{
+
     position:relative;
+
     z-index:2;
 
     max-width:1000px;
-    padding:80px 25px;
+
+    padding:90px 25px;
 }
 
 .eyebrow{
+
     color:#d3a04b;
 
     letter-spacing:7px;
@@ -139,9 +171,15 @@ body::before{
 }
 
 .hero h1{
+
     font-family:'Playfair Display',serif;
 
-    font-size:clamp(55px,9vw,110px);
+    font-size:
+    clamp(
+        55px,
+        9vw,
+        110px
+    );
 
     color:#f1dfb0;
 
@@ -151,16 +189,23 @@ body::before{
 }
 
 .hero h2{
+
     margin-top:25px;
 
     color:#d5a451;
 
     font-weight:300;
 
-    font-size:clamp(28px,5vw,48px);
+    font-size:
+    clamp(
+        28px,
+        5vw,
+        48px
+    );
 }
 
 .hero p{
+
     max-width:760px;
 
     margin:30px auto 0;
@@ -174,23 +219,29 @@ body::before{
 
 
 /* =========================
-   CONTENT
+   GENERAL SECTION
 ========================= */
 
 .container{
+
     width:90%;
+
     max-width:1200px;
 
     margin:auto;
 }
 
 .section{
+
     padding:90px 0;
 
-    border-bottom:1px solid #392512;
+    border-bottom:
+    1px solid
+    #392512;
 }
 
 .section-label{
+
     color:#bd8e3d;
 
     letter-spacing:5px;
@@ -201,6 +252,7 @@ body::before{
 }
 
 .section h2{
+
     color:#e1bd72;
 
     font-family:'Playfair Display',serif;
@@ -211,6 +263,7 @@ body::before{
 }
 
 .section p{
+
     color:#b9a487;
 
     line-height:2;
@@ -222,10 +275,11 @@ body::before{
 
 
 /* =========================
-   IMAGE + TEXT
+   TWO COLUMN
 ========================= */
 
 .info-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -236,18 +290,28 @@ body::before{
     align-items:center;
 }
 
+
+/* =========================
+   IMAGES
+========================= */
+
 .image-box{
+
     overflow:hidden;
 
-    border:1px solid #69491f;
+    border:
+    1px solid
+    #69491f;
 
     background:#170904;
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
+    0 20px 60px
+    rgba(0,0,0,.45);
 }
 
 .image-box img{
+
     display:block;
 
     width:100%;
@@ -260,10 +324,12 @@ body::before{
 }
 
 .image-box:hover img{
+
     transform:scale(1.05);
 }
 
 .caption{
+
     padding:12px 15px;
 
     color:#927d5f;
@@ -281,25 +347,31 @@ body::before{
 ========================= */
 
 .timeline{
+
     margin-top:45px;
 
-    border-left:1px solid #8c6630;
+    border-left:
+    1px solid
+    #8c6630;
 
     padding-left:35px;
 }
 
 .timeline-item{
+
     position:relative;
 
     margin-bottom:42px;
 }
 
 .timeline-item::before{
+
     content:"";
 
     position:absolute;
 
     width:12px;
+
     height:12px;
 
     border-radius:50%;
@@ -307,13 +379,16 @@ body::before{
     background:#d5a44e;
 
     left:-42px;
+
     top:7px;
 
     box-shadow:
-    0 0 15px rgba(213,164,78,.5);
+    0 0 15px
+    rgba(213,164,78,.5);
 }
 
 .timeline-year{
+
     color:#d4a04a;
 
     font-family:'Playfair Display',serif;
@@ -324,6 +399,7 @@ body::before{
 }
 
 .timeline-item h3{
+
     color:#e1c17d;
 
     font-size:21px;
@@ -332,32 +408,52 @@ body::before{
 }
 
 .timeline-item p{
+
     margin:0;
 }
 
 
 /* =========================
-   MAP SECTION
+   MAP
 ========================= */
 
 .map-section{
+
     padding:90px 0;
 
     background:#130704;
 }
 
+.map-section h2{
+
+    color:#e1bd72;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
 .map-image{
+
     max-width:1050px;
 
     margin:40px auto 0;
 
-    border:1px solid #725024;
+    border:
+    1px solid
+    #725024;
 
     box-shadow:
-    0 20px 70px rgba(0,0,0,.5);
+    0 20px 70px
+    rgba(0,0,0,.5);
+
+    overflow:hidden;
 }
 
 .map-image img{
+
     display:block;
 
     width:100%;
@@ -375,6 +471,7 @@ body::before{
 ========================= */
 
 .cards{
+
     display:grid;
 
     grid-template-columns:
@@ -386,16 +483,20 @@ body::before{
 }
 
 .card{
+
     padding:30px;
 
     background:#1a0a05;
 
-    border:1px solid #493118;
+    border:
+    1px solid
+    #493118;
 
     transition:.35s;
 }
 
 .card:hover{
+
     transform:translateY(-5px);
 
     border-color:#a97a35;
@@ -404,6 +505,7 @@ body::before{
 }
 
 .card-number{
+
     color:#c99942;
 
     font-family:'Playfair Display',serif;
@@ -412,23 +514,27 @@ body::before{
 }
 
 .card h3{
+
     color:#dfbc73;
 
     font-size:23px;
 
-    margin:8px 0 10px;
+    margin:
+    8px 0 10px;
 }
 
 .card p{
+
     margin:0;
 }
 
 
 /* =========================
-   IMAGE GALLERY
+   GALLERY
 ========================= */
 
 .gallery{
+
     display:grid;
 
     grid-template-columns:
@@ -440,17 +546,22 @@ body::before{
 }
 
 .gallery-item{
+
     position:relative;
 
     overflow:hidden;
 
     height:260px;
 
-    border:1px solid #573b1d;
+    border:
+    1px solid
+    #573b1d;
 }
 
 .gallery-item img{
+
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -459,17 +570,22 @@ body::before{
 }
 
 .gallery-item:hover img{
+
     transform:scale(1.08);
 }
 
 .gallery-title{
+
     position:absolute;
 
     left:0;
+
     right:0;
+
     bottom:0;
 
-    padding:18px 15px 12px;
+    padding:
+    18px 15px 12px;
 
     background:
     linear-gradient(
@@ -488,16 +604,20 @@ body::before{
 ========================= */
 
 .page-navigation{
+
     padding:80px 6%;
 
     text-align:center;
 
     background:#0a0402;
 
-    border-top:1px solid #3d2916;
+    border-top:
+    1px solid
+    #3d2916;
 }
 
 .page-navigation h2{
+
     color:#dfbd78;
 
     font-family:'Playfair Display',serif;
@@ -508,6 +628,7 @@ body::before{
 }
 
 .page-buttons{
+
     max-width:1000px;
 
     margin:auto;
@@ -521,6 +642,7 @@ body::before{
 }
 
 .page-buttons a{
+
     text-decoration:none;
 
     color:#cdbb9a;
@@ -529,12 +651,15 @@ body::before{
 
     background:#190a05;
 
-    border:1px solid #51371c;
+    border:
+    1px solid
+    #51371c;
 
     transition:.3s;
 }
 
 .page-buttons a strong{
+
     display:block;
 
     color:#d8ad5a;
@@ -548,6 +673,7 @@ body::before{
 
 .page-buttons a:hover,
 .page-buttons a.active{
+
     background:#2a1509;
 
     border-color:#bd9144;
@@ -561,6 +687,7 @@ body::before{
 ========================= */
 
 footer{
+
     padding:40px 20px;
 
     text-align:center;
@@ -569,6 +696,7 @@ footer{
 }
 
 footer h3{
+
     color:#d3a653;
 
     font-family:'Playfair Display',serif;
@@ -579,6 +707,7 @@ footer h3{
 }
 
 footer p{
+
     color:#6f604c;
 
     margin-top:8px;
@@ -586,37 +715,45 @@ footer p{
 
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
 @media(max-width:800px){
 
     .navbar{
+
         padding:0 4%;
     }
 
     .logo{
+
         font-size:18px;
     }
 
     .home-button{
+
         font-size:12px;
+
         padding:7px 13px;
     }
 
     .info-grid{
+
         grid-template-columns:1fr;
     }
 
     .cards{
+
         grid-template-columns:1fr;
     }
 
     .gallery{
+
         grid-template-columns:1fr;
     }
 
     .page-buttons{
+
         grid-template-columns:
         repeat(2,1fr);
     }
@@ -626,6 +763,7 @@ footer p{
 </style>
 
 </head>
+
 
 <body>
 
@@ -668,11 +806,13 @@ HISTORY
 </h2>
 
 <p>
+
 จากราชธานีแห่งสยาม
 สู่เมืองมรดกทางประวัติศาสตร์
 ที่ยังคงบอกเล่าเรื่องราวของอดีต
 ผ่านโบราณสถาน ศิลปกรรม
 และวิถีชีวิตของผู้คน
+
 </p>
 
 </div>
@@ -681,7 +821,7 @@ HISTORY
 
 
 <!-- =========================
-     SECTION 1
+     BEGINNING
 ========================= -->
 
 <section class="section">
@@ -702,18 +842,25 @@ THE BEGINNING
 </h2>
 
 <p>
-กรุงศรีอยุธยาสถาปนาขึ้นใน พ.ศ. 1893
-โดยสมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
+
+กรุงศรีอยุธยาสถาปนาขึ้นใน
+พ.ศ. 1893 โดยสมเด็จพระรามาธิบดีที่ 1
+หรือพระเจ้าอู่ทอง
 บริเวณพื้นที่ที่มีแม่น้ำสำคัญล้อมรอบ
-ทำให้เมืองมีความเหมาะสมทั้งด้านการตั้งถิ่นฐาน
-การคมนาคม และการป้องกันเมือง
+ทำให้เมืองมีความเหมาะสมทั้งด้าน
+การตั้งถิ่นฐาน การคมนาคม
+และการป้องกันเมือง
+
 </p>
 
 <p>
-ตำแหน่งที่ตั้งของอยุธยาทำให้เมืองสามารถเชื่อมโยง
-กับพื้นที่ต่าง ๆ ของลุ่มแม่น้ำเจ้าพระยา
-รวมถึงเส้นทางการค้าระหว่างภายในภูมิภาค
-กับดินแดนต่างประเทศ
+
+ตำแหน่งที่ตั้งของอยุธยาทำให้เมือง
+สามารถเชื่อมโยงกับพื้นที่ต่าง ๆ
+ของลุ่มแม่น้ำเจ้าพระยา
+รวมถึงเส้นทางการค้าระหว่าง
+ภายในภูมิภาคกับดินแดนต่างประเทศ
+
 </p>
 
 </div>
@@ -726,7 +873,10 @@ src="images/ayutthaya-main.jpg"
 alt="กรุงศรีอยุธยา">
 
 <div class="caption">
-กรุงศรีอยุธยาและโบราณสถานในอุทยานประวัติศาสตร์
+
+กรุงศรีอยุธยาและโบราณสถาน
+ในอุทยานประวัติศาสตร์
+
 </div>
 
 </div>
@@ -769,8 +919,12 @@ HISTORICAL TIMELINE
 </h3>
 
 <p>
-สมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
-สถาปนากรุงศรีอยุธยาขึ้นเป็นราชธานี
+
+สมเด็จพระรามาธิบดีที่ 1
+หรือพระเจ้าอู่ทอง
+สถาปนากรุงศรีอยุธยาขึ้น
+เป็นราชธานี
+
 </p>
 
 </div>
@@ -779,16 +933,20 @@ HISTORICAL TIMELINE
 <div class="timeline-item">
 
 <div class="timeline-year">
-พ.ศ. 1981
+พุทธศตวรรษที่ 20–21
 </div>
 
 <h3>
-การสถาปนากรุงศรีอยุธยาเป็นศูนย์กลางสำคัญ
+การขยายอำนาจของอยุธยา
 </h3>
 
 <p>
-อยุธยาพัฒนาอย่างต่อเนื่องและมีบทบาทมากขึ้น
-ทั้งด้านการเมือง การปกครอง และการค้า
+
+กรุงศรีอยุธยามีการขยายอำนาจ
+และสร้างความสัมพันธ์กับเมืองต่าง ๆ
+จนกลายเป็นหนึ่งในศูนย์กลางสำคัญ
+ของภูมิภาค
+
 </p>
 
 </div>
@@ -805,9 +963,12 @@ HISTORICAL TIMELINE
 </h3>
 
 <p>
+
 อยุธยากลายเป็นเมืองนานาชาติ
 มีการติดต่อค้าขายกับชาวต่างชาติ
-จากเอเชียและยุโรป
+จากหลายพื้นที่ทั้งเอเชีย
+และยุโรป
+
 </p>
 
 </div>
@@ -824,8 +985,11 @@ HISTORICAL TIMELINE
 </h3>
 
 <p>
-กรุงศรีอยุธยาสิ้นสุดบทบาทการเป็นราชธานี
-หลังเกิดสงครามและการทำลายเมือง
+
+กรุงศรีอยุธยาสิ้นสุดบทบาท
+การเป็นราชธานีหลังเกิดสงคราม
+และการทำลายเมือง
+
 </p>
 
 </div>
@@ -855,17 +1019,23 @@ GEOGRAPHY
 </h2>
 
 <p>
-อยุธยาตั้งอยู่บนพื้นที่เกาะเมือง
+
+กรุงศรีอยุธยาตั้งอยู่บนพื้นที่เกาะเมือง
 ซึ่งมีแม่น้ำสำคัญล้อมรอบ ได้แก่
-แม่น้ำเจ้าพระยา แม่น้ำป่าสัก และแม่น้ำลพบุรี
+แม่น้ำเจ้าพระยา แม่น้ำป่าสัก
+และแม่น้ำลพบุรี
+
 ลักษณะทางภูมิศาสตร์นี้มีส่วนสำคัญ
-ต่อการป้องกันเมืองและการเดินทางทางน้ำ
+ต่อการป้องกันเมือง การคมนาคม
+และการค้าทางน้ำ
+
 </p>
+
 
 <div class="map-image">
 
 <img
-src="images/ayutthaya-map.jpg"
+src="images/ayutthaya-map.png"
 alt="แผนผังและภูมิศาสตร์ของกรุงศรีอยุธยา">
 
 </div>
@@ -888,8 +1058,9 @@ THE CITY
 </div>
 
 <h2>
-การพัฒนาเมืองอยุธยา
+องค์ประกอบสำคัญของเมืองอยุธยา
 </h2>
+
 
 <div class="cards">
 
@@ -905,10 +1076,12 @@ THE CITY
 </h3>
 
 <p>
+
 พระมหากษัตริย์ใช้กรุงศรีอยุธยา
 เป็นศูนย์กลางในการบริหารราชอาณาจักร
-มีพระราชวัง วัด และสถานที่ราชการ
-กระจายอยู่ภายในเมือง
+มีพระราชวังและสถานที่สำคัญ
+อยู่ภายในเมือง
+
 </p>
 
 </div>
@@ -925,10 +1098,12 @@ THE CITY
 </h3>
 
 <p>
+
 วัดและศาสนสถานจำนวนมาก
 ถูกสร้างขึ้นเพื่อเป็นศูนย์กลาง
-ทางพระพุทธศาสนาและเป็นสถานที่
-ประกอบพิธีกรรมของราชสำนัก
+ทางพระพุทธศาสนา
+และเป็นสถานที่ประกอบพิธีกรรม
+
 </p>
 
 </div>
@@ -945,10 +1120,12 @@ THE CITY
 </h3>
 
 <p>
+
 ทำเลที่ตั้งบริเวณแม่น้ำ
-ช่วยให้เรือสินค้าสามารถเดินทาง
-เข้าออกเมืองและเชื่อมโยง
-กับเส้นทางการค้าระหว่างประเทศ
+ช่วยให้เรือสินค้าเดินทาง
+เข้าออกเมืองได้สะดวก
+และเชื่อมโยงกับเส้นทางการค้าต่างประเทศ
+
 </p>
 
 </div>
@@ -965,10 +1142,12 @@ THE CITY
 </h3>
 
 <p>
+
 สถาปัตยกรรม ประติมากรรม
 และงานช่างของอยุธยา
-สะท้อนการผสมผสานระหว่าง
-วัฒนธรรมท้องถิ่นและอิทธิพลจากต่างชาติ
+สะท้อนการผสมผสาน
+ของวัฒนธรรมหลากหลาย
+
 </p>
 
 </div>
@@ -995,11 +1174,13 @@ THE CITY
 <div class="image-box">
 
 <img
-src="images/ayutthaya-trade.jpg"
+src="images/ayutthaya-trade.png"
 alt="เมืองการค้าอยุธยา">
 
 <div class="caption">
+
 อยุธยาในฐานะเมืองศูนย์กลางการค้า
+
 </div>
 
 </div>
@@ -1016,23 +1197,32 @@ INTERNATIONAL TRADE
 </h2>
 
 <p>
-ด้วยตำแหน่งทางภูมิศาสตร์ที่เชื่อมโยง
-เส้นทางแม่น้ำและทะเล
-กรุงศรีอยุธยาจึงกลายเป็นเมืองการค้า
+
+ด้วยตำแหน่งทางภูมิศาสตร์
+ที่เชื่อมโยงเส้นทางแม่น้ำ
+และทะเล กรุงศรีอยุธยา
+จึงกลายเป็นเมืองการค้า
 ที่มีผู้คนจากหลายพื้นที่เดินทางเข้ามา
+
 </p>
 
 <p>
-มีการติดต่อกับพ่อค้าจากจีน ญี่ปุ่น อินเดีย
-เปอร์เซีย และประเทศในยุโรป
-ทำให้เกิดการแลกเปลี่ยนสินค้า ภาษา
-ความรู้ และวัฒนธรรม
+
+มีการติดต่อกับพ่อค้าจากจีน
+ญี่ปุ่น อินเดีย เปอร์เซีย
+รวมถึงประเทศในยุโรป
+ทำให้เกิดการแลกเปลี่ยนสินค้า
+ภาษา ความรู้ และวัฒนธรรม
+
 </p>
 
 <p>
-ความหลากหลายของผู้คนในอดีต
-เป็นหนึ่งในปัจจัยที่ทำให้กรุงศรีอยุธยา
-มีลักษณะเป็นเมืองนานาชาติ
+
+ความหลากหลายของผู้คน
+ทำให้กรุงศรีอยุธยามีลักษณะ
+เป็นเมืองนานาชาติที่สำคัญ
+แห่งหนึ่งของภูมิภาค
+
 </p>
 
 </div>
@@ -1062,15 +1252,20 @@ ART & CULTURE
 </h2>
 
 <p>
+
 ศิลปกรรมสมัยอยุธยามีเอกลักษณ์โดดเด่น
-ทั้งด้านสถาปัตยกรรม พระพุทธรูป
+ทั้งด้านสถาปัตยกรรม ประติมากรรม
 จิตรกรรม และงานช่าง
+
 โดยได้รับอิทธิพลจากหลายวัฒนธรรม
-และพัฒนาจนเกิดเป็นรูปแบบเฉพาะของอยุธยา
+และพัฒนาจนเกิดเป็นรูปแบบ
+เฉพาะของอยุธยา
+
 </p>
 
 
-<div class="info-grid" style="margin-top:40px;">
+<div class="info-grid"
+style="margin-top:40px;">
 
 
 <div class="image-box">
@@ -1080,7 +1275,9 @@ src="images/ayutthaya-art.jpg"
 alt="ศิลปวัฒนธรรมอยุธยา">
 
 <div class="caption">
+
 ศิลปกรรมและสถาปัตยกรรมอยุธยา
+
 </div>
 
 </div>
@@ -1089,19 +1286,23 @@ alt="ศิลปวัฒนธรรมอยุธยา">
 <div>
 
 <p>
+
 วัดและโบราณสถานหลายแห่ง
 แสดงให้เห็นถึงความสามารถ
 ของช่างในสมัยอยุธยา
 ทั้งการก่ออิฐ การสร้างปรางค์
 เจดีย์ และพระพุทธรูป
+
 </p>
 
 <p>
+
 รูปแบบศิลปกรรมเหล่านี้
 กลายเป็นมรดกสำคัญ
 ที่ช่วยให้คนรุ่นปัจจุบัน
 เข้าใจถึงความเจริญรุ่งเรือง
 ของราชธานีในอดีต
+
 </p>
 
 </div>
@@ -1115,7 +1316,7 @@ alt="ศิลปวัฒนธรรมอยุธยา">
 
 
 <!-- =========================
-     RUINS GALLERY
+     RUINS
 ========================= -->
 
 <section class="section">
@@ -1131,10 +1332,12 @@ HERITAGE
 </h2>
 
 <p>
+
 แม้กรุงศรีอยุธยาจะสิ้นสุดการเป็นราชธานี
 แต่โบราณสถานจำนวนมากยังคงเป็นหลักฐาน
-ที่สะท้อนถึงประวัติศาสตร์และความรุ่งเรือง
-ของเมืองในอดีต
+ที่สะท้อนถึงประวัติศาสตร์
+และความรุ่งเรืองของเมืองในอดีต
+
 </p>
 
 
@@ -1204,18 +1407,23 @@ SUMMARY
 </h2>
 
 <p>
+
 กรุงศรีอยุธยาไม่ได้เป็นเพียงเรื่องราว
 ของราชธานีในอดีตเท่านั้น
 แต่ยังเป็นแหล่งเรียนรู้ทางประวัติศาสตร์
 ศิลปวัฒนธรรม และสถาปัตยกรรมที่สำคัญ
+
 </p>
 
 <p>
+
 โบราณสถานและพื้นที่ทางประวัติศาสตร์
-ช่วยให้คนรุ่นใหม่สามารถศึกษาร่องรอย
-ของสังคมในอดีต และเข้าใจถึงความสัมพันธ์
-ระหว่างผู้คน การเมือง การค้า ศาสนา
+ช่วยให้คนรุ่นปัจจุบันสามารถศึกษา
+ร่องรอยของสังคมในอดีต
+และเข้าใจถึงความสัมพันธ์ระหว่าง
+ผู้คน การเมือง การค้า ศาสนา
 และวัฒนธรรมที่หล่อหลอมกรุงศรีอยุธยา
+
 </p>
 
 </div>
@@ -1232,6 +1440,7 @@ SUMMARY
 <h2>
 สำรวจเรื่องราวอยุธยา
 </h2>
+
 
 <div class="page-buttons">
 
