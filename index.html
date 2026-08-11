@@ -7,12 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AYUTTHAYA | กรุงศรีอยุธยา</title>
+<title>ประวัติศาสตร์ | AYUTTHAYA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
-
 
 *{
     margin:0;
@@ -20,1140 +19,334 @@
     box-sizing:border-box;
 }
 
-
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
-    font-family:'Kanit',sans-serif;
-    background:#0d0503;
+    background:#100805;
     color:#ead8b4;
-    overflow-x:hidden;
+    font-family:'Kanit',sans-serif;
 }
 
-
-/* =========================
-BACKGROUND PARTICLE
-========================= */
-
-body::before{
-
+body:before{
     content:"";
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:50;
-
-    opacity:.06;
-
-    background-image:
-    radial-gradient(
-        #d9aa55 1px,
-        transparent 1px
-    );
-
+    opacity:.05;
+    background-image:radial-gradient(#d9aa55 1px,transparent 1px);
     background-size:26px 26px;
 }
 
-
-/* =========================
-NAVBAR
-========================= */
-
 .navbar{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     height:76px;
-
     z-index:1000;
 
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
+    align-items:center;
 
     padding:0 5%;
 
-    background:
-    rgba(10,5,3,.78);
+    background:rgba(14,7,4,.94);
+    backdrop-filter:blur(14px);
 
-    backdrop-filter:blur(15px);
-
-    border-bottom:
-    1px solid
-    rgba(213,165,75,.35);
+    border-bottom:1px solid #745329;
 }
-
 
 .logo{
-
+    color:#e5b95d;
     text-decoration:none;
-
-    color:#e7bd67;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:25px;
-
+    font-family:'Playfair Display',serif;
+    font-size:24px;
     letter-spacing:4px;
-
-    transition:.4s;
 }
-
-
-.logo:hover{
-
-    color:#fff1bd;
-
-    text-shadow:
-    0 0 25px
-    rgba(229,185,93,.8);
-}
-
 
 .nav-button{
-
-    text-decoration:none;
-
     color:#ead6ac;
-
-    border:
-    1px solid
-    #8f672f;
-
-    padding:8px 20px;
-
+    border:1px solid #8f672f;
+    padding:8px 18px;
     border-radius:30px;
-
-    font-size:14px;
-
-    transition:.4s;
+    text-decoration:none;
 }
-
-
-.nav-button:hover{
-
-    background:#c59643;
-
-    color:#180b05;
-
-    box-shadow:
-    0 0 25px
-    rgba(197,150,67,.45);
-}
-
-
-/* =========================
-HERO COVER
-========================= */
 
 .hero{
-
-    position:relative;
-
-    min-height:100vh;
-
-    height:100vh;
-
-    overflow:hidden;
+    min-height:620px;
+    padding-top:76px;
 
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
 
-    text-align:center;
-
     background:
-
-    linear-gradient(
-        rgba(12,5,3,.30),
-        rgba(12,5,3,.88)
-    ),
-
-    url("images/Ayutthaya_Historical_Park_1.jpg")
-
-    center/cover no-repeat;
-
-    animation:
-    backgroundZoom
-    18s
-    ease-in-out
-    infinite
-    alternate;
-}
-
-
-@keyframes backgroundZoom{
-
-    from{
-        background-size:100%;
-    }
-
-    to{
-        background-size:112%;
-    }
-
-}
-
-
-/* =========================
-DARK VIGNETTE
-========================= */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    radial-gradient(
-        circle at center,
-        transparent 5%,
-        rgba(0,0,0,.75) 90%
-    );
-
-}
-
-
-/* =========================
-GOLDEN GLOW
-========================= */
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-
-    height:700px;
-
-    border-radius:50%;
-
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(226,174,70,.18),
-        transparent 68%
-    );
-
-    animation:
-    lightMove
-    10s
-    ease-in-out
-    infinite
-    alternate;
-}
-
-
-@keyframes lightMove{
-
-    from{
-        transform:
-        translate(-350px,-120px);
-    }
-
-    to{
-        transform:
-        translate(350px,120px);
-    }
-
-}
-
-
-/* =========================
-GOLD FRAME
-========================= */
-
-.frame{
-
-    position:absolute;
-
-    inset:35px;
-
-    border:
-    1px solid
-    rgba(221,175,82,.45);
-
-    z-index:5;
-
-    pointer-events:none;
-}
-
-
-.frame::before,
-.frame::after{
-
-    position:absolute;
-
-    color:#d9ab57;
-
-    font-size:34px;
-
-    background:#100805;
-
-    padding:5px 15px;
-}
-
-
-.frame::before{
-
-    content:"✦";
-
-    top:-24px;
-
-    left:50%;
-
-    transform:
-    translateX(-50%);
-}
-
-
-.frame::after{
-
-    content:"✦";
-
-    bottom:-24px;
-
-    left:50%;
-
-    transform:
-    translateX(-50%);
-}
-
-
-/* =========================
-CORNERS
-========================= */
-
-.corner{
-
-    position:absolute;
-
-    width:90px;
-
-    height:90px;
-
-    border-color:#bd9144;
-
-    opacity:.7;
-
-    z-index:6;
-}
-
-
-.corner-tl{
-
-    top:55px;
-    left:55px;
-
-    border-top:1px solid;
-    border-left:1px solid;
-}
-
-
-.corner-tr{
-
-    top:55px;
-    right:55px;
-
-    border-top:1px solid;
-    border-right:1px solid;
-}
-
-
-.corner-bl{
-
-    bottom:55px;
-    left:55px;
-
-    border-bottom:1px solid;
-    border-left:1px solid;
-}
-
-
-.corner-br{
-
-    bottom:55px;
-    right:55px;
-
-    border-bottom:1px solid;
-    border-right:1px solid;
-}
-
-
-/* =========================
-HERO CONTENT
-========================= */
-
-.hero-content{
-
-    position:relative;
-
-    z-index:10;
-
-    width:90%;
-
-    max-width:1100px;
-
-    padding:30px;
-}
-
-
-.eyebrow{
-
-    color:#d5a64e;
-
-    letter-spacing:10px;
-
-    font-size:14px;
-
-    margin-bottom:25px;
-
-    animation:
-    fadeUp
-    1s
-    ease
-    both;
-}
-
-
-.hero-title{
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:
-    clamp(
-        70px,
-        13vw,
-        160px
-    );
-
-    line-height:.85;
-
-    letter-spacing:8px;
-
-    color:#f2dfaf;
-
-    text-shadow:
-    0 10px 50px
-    rgba(0,0,0,.95);
-
-    animation:
-    titleAppear
-    1.5s
-    ease
-    both;
-}
-
-
-.thai-title{
-
-    color:#d3a04b;
-
-    font-size:
-    clamp(
-        32px,
-        5vw,
-        58px
-    );
-
-    font-weight:300;
-
-    margin-top:28px;
-
-    animation:
-    fadeUp
-    1.5s
-    .3s
-    ease
-    both;
-}
-
-
-.divider{
-
-    width:240px;
-
-    height:1px;
-
-    margin:32px auto;
-
-    background:
-
     linear-gradient(
         90deg,
-        transparent,
-        #d6a94f,
-        transparent
-    );
-
-    position:relative;
+        rgba(10,4,2,.95),
+        rgba(10,4,2,.45),
+        rgba(10,4,2,.9)
+    ),
+    url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Ayutthaya_Wat_Mahatat.jpg")
+    center/cover no-repeat;
 }
 
-
-.divider::after{
-
-    content:"◆";
-
-    position:absolute;
-
-    left:50%;
-
-    top:50%;
-
-    transform:
-    translate(-50%,-50%);
-
-    color:#d9aa54;
-
-    background:#100805;
-
-    padding:0 15px;
-
-    font-size:12px;
-}
-
-
-.hero-description{
-
-    max-width:720px;
-
+.hero-content{
+    width:90%;
+    max-width:1200px;
     margin:auto;
-
-    color:#d6c29c;
-
-    font-size:18px;
-
-    line-height:2;
-
-    animation:
-    fadeUp
-    1.5s
-    .6s
-    ease
-    both;
 }
 
-
-/* =========================
-BUTTON
-========================= */
-
-.start-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-top:38px;
-
-    padding:16px 38px;
-
-    color:#1b0d05;
-
-    text-decoration:none;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #efd183,
-        #b77a29
-    );
-
-    border-radius:40px;
-
-    font-size:17px;
-
-    box-shadow:
-    0 10px 40px
-    rgba(0,0,0,.55);
-
-    transition:.45s;
-
-    animation:
-    fadeUp
-    1.5s
-    .9s
-    ease
-    both;
-}
-
-
-.start-button:hover{
-
-    transform:
-    translateY(-7px)
-    scale(1.05);
-
-    box-shadow:
-    0 18px 50px
-    rgba(216,165,72,.5);
-}
-
-
-.start-button span{
-
-    font-size:20px;
-}
-
-
-/* =========================
-SCROLL
-========================= */
-
-.scroll{
-
-    position:absolute;
-
-    bottom:25px;
-
-    left:50%;
-
-    transform:
-    translateX(-50%);
-
-    z-index:10;
-
-    color:#cda354;
-
-    font-size:11px;
-
-    letter-spacing:5px;
-
-    animation:
-    scrollDown
-    2s
-    ease-in-out
-    infinite;
-}
-
-
-@keyframes scrollDown{
-
-    0%,100%{
-        opacity:.3;
-
-        transform:
-        translate(-50%,0);
-    }
-
-    50%{
-        opacity:1;
-
-        transform:
-        translate(-50%,-8px);
-    }
-
-}
-
-
-/* =========================
-INTRO
-========================= */
-
-.intro{
-
-    padding:110px 8%;
-
-    background:#130906;
-
-    text-align:center;
-
-    border-top:
-    1px solid #4b3319;
-}
-
-
-.intro-label{
-
-    color:#bd8e3d;
-
+.hero small{
+    color:#c89945;
     letter-spacing:6px;
-
-    font-size:13px;
-
-    margin-bottom:15px;
 }
 
-
-.intro h2{
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    color:#e3bf75;
-
-    font-size:45px;
-
-    margin-bottom:25px;
+.hero h1{
+    color:#f0d9a2;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(55px,9vw,105px);
+    margin-top:15px;
 }
 
+.hero h2{
+    color:#d0a04c;
+    font-weight:300;
+    font-size:38px;
+}
 
-.intro p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    color:#a99678;
-
+.hero p{
+    max-width:750px;
+    color:#c6b18d;
     line-height:2;
-
+    margin-top:25px;
     font-size:17px;
 }
 
-
-/* =========================
-5 TOPICS
-========================= */
-
-.topics{
-
+.section{
     padding:90px 7%;
-
-    background:#0e0604;
 }
 
+.section:nth-of-type(even){
+    background:#180b06;
+}
 
-.topics-title{
-
+.title{
     text-align:center;
-
-    margin-bottom:50px;
+    margin-bottom:55px;
 }
 
-
-.topics-title span{
-
-    color:#bd8e3d;
-
+.title span{
+    color:#b98b3f;
     letter-spacing:5px;
-
     font-size:13px;
 }
 
-
-.topics-title h2{
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    color:#e3bf75;
-
-    font-size:40px;
-
+.title h2{
+    color:#e4bf76;
+    font-family:'Playfair Display',serif;
+    font-size:43px;
     margin-top:10px;
 }
 
+.title p{
+    max-width:800px;
+    margin:15px auto;
+    color:#96836d;
+    line-height:1.9;
+}
 
-.topic-grid{
-
-    max-width:1200px;
-
+.history{
+    max-width:1100px;
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
-    gap:1px;
-
-    background:#5b3c1e;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
 }
 
-
-.topic{
-
-    min-height:240px;
-
-    padding:35px 20px;
-
-    text-align:center;
-
-    background:#1b0d07;
-
-    transition:.4s;
+.history-card{
+    background:#211109;
+    border:1px solid #51391d;
+    padding:35px;
 }
 
-
-.topic:hover{
-
-    background:#29160a;
-
-    transform:
-    translateY(-8px);
-
-    z-index:2;
-
-    box-shadow:
-    0 15px 35px
-    rgba(0,0,0,.4);
-}
-
-
-.topic-number{
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    color:#b8873c;
-
-    font-size:18px;
-
-    margin-bottom:15px;
-}
-
-
-.topic-icon{
-
-    font-size:38px;
-
-    margin-bottom:15px;
-}
-
-
-.topic h3{
-
-    color:#d8b261;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:22px;
-
-    margin-bottom:12px;
-}
-
-
-.topic p{
-
-    color:#8f7b65;
-
-    line-height:1.7;
-
-    font-size:14px;
-}
-
-
-/* =========================
-PAGE NAVIGATION
-========================= */
-
-.page-navigation{
-
-    padding:70px 20px;
-
-    text-align:center;
-
-    background:#0b0402;
-
-    border-top:
-    1px solid #493219;
-}
-
-
-.page-navigation-title{
-
-    color:#b98b3e;
-
-    letter-spacing:5px;
-
-    font-size:12px;
-
+.history-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
     margin-bottom:25px;
 }
 
-
-.page-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:12px;
-
-    flex-wrap:wrap;
+.history-card h3{
+    color:#dbb66c;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:12px;
 }
 
+.history-card p{
+    color:#a28d73;
+    line-height:1.9;
+}
 
-.page-buttons a{
+.timeline{
+    max-width:900px;
+    margin:auto;
+    border-left:1px solid #8a642e;
+    padding-left:35px;
+}
 
-    width:55px;
+.timeline-item{
+    position:relative;
+    margin-bottom:45px;
+}
 
-    height:55px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border:
-    1px solid #79582d;
-
+.timeline-item:before{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:13px;
+    background:#c99a45;
     border-radius:50%;
-
-    color:#d8bd80;
-
-    text-decoration:none;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:18px;
-
-    transition:.35s;
+    left:-42px;
+    top:5px;
+    box-shadow:0 0 15px #c99a45;
 }
 
-
-.page-buttons a:hover{
-
-    background:#c59643;
-
-    color:#180b05;
-
-    border-color:#d7ae5c;
-
-    transform:
-    translateY(-6px);
-
-    box-shadow:
-    0 12px 25px
-    rgba(197,150,67,.3);
+.timeline-item h3{
+    color:#dcb66d;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
 }
 
-
-.page-buttons .home{
-
-    width:auto;
-
-    padding:0 25px;
-
-    border-radius:30px;
-
+.timeline-item span{
+    color:#a87d35;
+    font-size:13px;
 }
 
-
-/* =========================
-FOOTER
-========================= */
-
-footer{
-
-    background:#080302;
-
-    padding:45px 20px;
-
-    text-align:center;
-
-    border-top:
-    1px solid #392511;
-}
-
-
-footer h3{
-
-    color:#d3a653;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    letter-spacing:4px;
-
-    font-size:25px;
-}
-
-
-footer p{
-
-    color:#6f604c;
-
+.timeline-item p{
+    color:#9a876e;
+    line-height:1.9;
     margin-top:8px;
 }
 
+.map-box{
+    max-width:1200px;
+    margin:auto;
 
-/* =========================
-ANIMATION
-========================= */
+    background:#1d0e07;
+    border:1px solid #604521;
 
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0);
-
-    }
-
+    padding:25px;
 }
 
-
-@keyframes titleAppear{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(60px)
-        scale(.9);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0)
-        scale(1);
-
-    }
-
+.map-box img{
+    width:100%;
+    max-height:600px;
+    object-fit:contain;
+    background:#26150b;
 }
 
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:950px){
-
-    .topic-grid{
-
-        grid-template-columns:
-        repeat(3,1fr);
-
-    }
-
+.map-caption{
+    padding:25px;
+    text-align:center;
 }
 
+.map-caption h3{
+    color:#dcb66c;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+}
 
-@media(max-width:650px){
+.map-caption p{
+    color:#97836a;
+    line-height:1.8;
+    margin-top:10px;
+}
+
+.nav-pages{
+    padding:60px 20px;
+    text-align:center;
+    background:#090402;
+    border-top:1px solid #493219;
+}
+
+.nav-pages p{
+    color:#aa7d38;
+    letter-spacing:4px;
+    margin-bottom:22px;
+}
+
+.pages{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.pages a{
+    width:52px;
+    height:52px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid #76572d;
+    border-radius:50%;
+
+    text-decoration:none;
+    color:#ddc18a;
+    transition:.3s;
+}
+
+.pages a:hover,
+.pages .active{
+    background:#c59643;
+    color:#180b05;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#070302;
+}
+
+footer h3{
+    color:#d3a653;
+    font-family:'Playfair Display',serif;
+    letter-spacing:5px;
+}
+
+footer p{
+    color:#6f604c;
+    margin-top:8px;
+}
+
+@media(max-width:700px){
 
     .navbar{
-
-        height:68px;
-
         padding:0 4%;
     }
 
     .logo{
-
         font-size:18px;
     }
 
     .nav-button{
-
         font-size:12px;
-
-        padding:7px 13px;
     }
 
-    .frame{
-
-        inset:20px;
-    }
-
-    .corner{
-
-        display:none;
-    }
-
-    .hero{
-
-        min-height:680px;
-    }
-
-    .eyebrow{
-
-        letter-spacing:5px;
-
-        font-size:11px;
-    }
-
-    .hero-description{
-
-        font-size:15px;
-    }
-
-    .intro{
-
-        padding:75px 7%;
-    }
-
-    .intro h2{
-
-        font-size:34px;
-    }
-
-    .topic-grid{
-
+    .history{
         grid-template-columns:1fr;
-
     }
 
-    .topic{
-
-        min-height:auto;
-
-        padding:30px 20px;
-    }
-
-    .page-buttons a{
-
-        width:48px;
-
-        height:48px;
+    .hero h2{
+        font-size:28px;
     }
 
 }
@@ -1162,381 +355,286 @@ RESPONSIVE
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-NAVBAR
-========================= -->
 
 <nav class="navbar">
 
-    <a
-        href="index.html"
-        class="logo"
-    >
+    <a href="index.html" class="logo">
         🏛 AYUTTHAYA
     </a>
 
-
-    <a
-        href="page1.html"
-        class="nav-button"
-    >
-        เริ่มสำรวจ →
+    <a href="page2.html" class="nav-button">
+        สถานที่สำคัญ →
     </a>
 
 </nav>
 
 
-
-<!-- =========================
-COVER
-========================= -->
-
 <section class="hero">
-
-
-    <div class="frame"></div>
-
-
-    <div class="corner corner-tl"></div>
-    <div class="corner corner-tr"></div>
-    <div class="corner corner-bl"></div>
-    <div class="corner corner-br"></div>
-
 
     <div class="hero-content">
 
+        <small>
+            PAGE 01 • HISTORY
+        </small>
 
-        <div class="eyebrow">
-            THE HISTORICAL CITY OF SIAM
-        </div>
+        <h1>
+            HISTORY
+        </h1>
 
+        <h2>
+            ประวัติศาสตร์กรุงศรีอยุธยา
+        </h2>
 
-        <div class="hero-title">
-            AYUTTHAYA
-        </div>
-
-
-        <div class="thai-title">
-            กรุงศรีอยุธยา
-        </div>
-
-
-        <div class="divider"></div>
-
-
-        <p class="hero-description">
-
-            เปิดประตูสู่เรื่องราวของอดีตราชธานี
-            แห่งสยาม
-
-            <br>
-
-            ประวัติศาสตร์ • สถานที่สำคัญ • วิถีชีวิต
-            • วัฒนธรรม • การท่องเที่ยว
-
+        <p>
+            เรื่องราวของราชธานีที่รุ่งเรือง
+            เป็นศูนย์กลางทางการเมือง การค้า
+            ศาสนา และวัฒนธรรมของสยาม
+            ก่อนจะกลายเป็นมรดกทางประวัติศาสตร์
+            ที่ยังคงอยู่จนถึงปัจจุบัน
         </p>
 
-
-        <!-- ไปหน้า 1 -->
-
-        <a
-            href="page1.html"
-            class="start-button"
-        >
-
-            เริ่มต้นการเดินทาง
-
-            <span>
-                ✦
-            </span>
-
-        </a>
-
-
     </div>
-
-
-    <div class="scroll">
-        SCROLL TO EXPLORE
-    </div>
-
 
 </section>
 
 
+<section class="section">
 
-<!-- =========================
-INTRO
-========================= -->
-
-<section class="intro">
-
-
-    <div class="intro-label">
-        WELCOME TO AYUTTHAYA
-    </div>
-
-
-    <h2>
-        เมืองแห่งประวัติศาสตร์
-    </h2>
-
-
-    <p>
-
-        กรุงศรีอยุธยา คืออดีตราชธานีของสยาม
-        ที่มีเรื่องราวยาวนานกว่า 400 ปี
-        เป็นศูนย์กลางด้านการเมือง การค้า
-        ศาสนา ศิลปะ และวัฒนธรรม
-
-        <br><br>
-
-        เว็บไซต์นี้จะพาคุณไปรู้จักอยุธยา
-        ตั้งแต่เรื่องราวในอดีต
-        สถานที่สำคัญ วิถีชีวิต วัฒนธรรม
-        อาหาร ของฝาก และการท่องเที่ยว
-
-    </p>
-
-</section>
-
-
-
-<!-- =========================
-5 TOPICS
-========================= -->
-
-<section class="topics">
-
-
-    <div class="topics-title">
+    <div class="title">
 
         <span>
-            EXPLORE AYUTTHAYA
+            THE BEGINNING
         </span>
 
         <h2>
-            เรื่องราวทั้ง 5 หน้า
+            กำเนิดกรุงศรีอยุธยา
+        </h2>
+
+        <p>
+            อยุธยาก่อตั้งขึ้นใน พ.ศ. 1893
+            และพัฒนาขึ้นเป็นราชธานีที่มีความสำคัญ
+            ต่อประวัติศาสตร์ไทยอย่างยาวนาน
+        </p>
+
+    </div>
+
+
+    <div class="history">
+
+        <div class="history-card">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Ayutthaya_Wat_Mahatat.jpg"
+                alt="โบราณสถานอยุธยา"
+            >
+
+            <h3>
+                ราชธานีแห่งสยาม
+            </h3>
+
+            <p>
+                ทำเลที่ตั้งของอยุธยามีแม่น้ำล้อมรอบ
+                ช่วยให้เหมาะสมต่อการคมนาคม
+                การค้าขาย และการป้องกันเมือง
+                จึงพัฒนาขึ้นเป็นศูนย์กลางสำคัญ
+                ของภูมิภาค
+            </p>
+
+        </div>
+
+
+        <div class="history-card">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Wat_Chaiwatthanaram%2C_Ayutthaya%2C_Thailand.jpg"
+                alt="วัดไชยวัฒนาราม"
+            >
+
+            <h3>
+                ยุคแห่งความรุ่งเรือง
+            </h3>
+
+            <p>
+                อยุธยามีความสัมพันธ์ทางการค้ากับ
+                ดินแดนต่าง ๆ ทั้งในเอเชียและภูมิภาคอื่น
+                ทำให้เกิดการแลกเปลี่ยนสินค้า
+                ผู้คน ภาษา และวัฒนธรรม
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="title">
+
+        <span>
+            HISTORICAL TIMELINE
+        </span>
+
+        <h2>
+            ลำดับเรื่องราวสำคัญ
         </h2>
 
     </div>
 
 
-    <div class="topic-grid">
+    <div class="timeline">
 
+        <div class="timeline-item">
 
-        <!-- PAGE 1 -->
-
-        <a
-            href="page1.html"
-            class="topic"
-            style="text-decoration:none;"
-        >
-
-            <div class="topic-number">
-                01
-            </div>
-
-            <div class="topic-icon">
-                📜
-            </div>
+            <span>
+                พ.ศ. 1893
+            </span>
 
             <h3>
-                ประวัติศาสตร์
+                การก่อตั้งกรุงศรีอยุธยา
             </h3>
 
             <p>
-                เรื่องราวความเป็นมา
-                และแผนผังลำดับเหตุการณ์
-                ของกรุงศรีอยุธยา
+                สมเด็จพระรามาธิบดีที่ 1
+                หรือพระเจ้าอู่ทอง
+                สถาปนากรุงศรีอยุธยาเป็นราชธานี
             </p>
 
-        </a>
+        </div>
 
 
-        <!-- PAGE 2 -->
+        <div class="timeline-item">
 
-        <a
-            href="page2.html"
-            class="topic"
-            style="text-decoration:none;"
-        >
-
-            <div class="topic-number">
-                02
-            </div>
-
-            <div class="topic-icon">
-                🏛️
-            </div>
+            <span>
+                ยุคอยุธยาตอนต้น
+            </span>
 
             <h3>
-                สถานที่สำคัญ
+                การขยายอำนาจ
             </h3>
 
             <p>
-                โบราณสถาน วัดสำคัญ
-                และสถานที่ท่องเที่ยว
-                ที่ไม่ควรพลาด
+                ราชอาณาจักรมีการขยายอำนาจ
+                และสร้างความสัมพันธ์กับเมืองต่าง ๆ
+                ในภูมิภาค
             </p>
 
-        </a>
+        </div>
 
 
-        <!-- PAGE 3 -->
+        <div class="timeline-item">
 
-        <a
-            href="page3.html"
-            class="topic"
-            style="text-decoration:none;"
-        >
-
-            <div class="topic-number">
-                03
-            </div>
-
-            <div class="topic-icon">
-                👘
-            </div>
+            <span>
+                ยุครุ่งเรือง
+            </span>
 
             <h3>
-                ชุดไทยและวิถีชีวิต
+                การค้าและความสัมพันธ์ระหว่างประเทศ
             </h3>
 
             <p>
-                การแต่งกาย วิถีชีวิต
-                ความเป็นอยู่ และผู้คน
-                ในแบบฉบับอยุธยา
+                อยุธยากลายเป็นศูนย์กลางการค้า
+                ที่มีชาวต่างชาติเดินทางเข้ามาติดต่อ
+                และตั้งถิ่นฐาน
             </p>
 
-        </a>
+        </div>
 
 
-        <!-- PAGE 4 -->
+        <div class="timeline-item">
 
-        <a
-            href="page4.html"
-            class="topic"
-            style="text-decoration:none;"
-        >
-
-            <div class="topic-number">
-                04
-            </div>
-
-            <div class="topic-icon">
-                🍜
-            </div>
+            <span>
+                พ.ศ. 2310
+            </span>
 
             <h3>
-                วัฒนธรรมและอาหาร
+                การสิ้นสุดของกรุงศรีอยุธยา
             </h3>
 
             <p>
-                ประเพณี วัฒนธรรม
-                และอาหารขึ้นชื่อ
-                ของอยุธยา
+                กรุงศรีอยุธยาเสียกรุงใน พ.ศ. 2310
+                แต่ร่องรอยทางศิลปะ วัฒนธรรม
+                และประวัติศาสตร์ยังคงสืบทอดต่อมา
             </p>
 
-        </a>
-
-
-        <!-- PAGE 5 -->
-
-        <a
-            href="page5.html"
-            class="topic"
-            style="text-decoration:none;"
-        >
-
-            <div class="topic-number">
-                05
-            </div>
-
-            <div class="topic-icon">
-                🛍️
-            </div>
-
-            <h3>
-                จุดเด่นและของฝาก
-            </h3>
-
-            <p>
-                จุดเด่นของอยุธยา
-                ของฝาก และแนวทาง
-                การท่องเที่ยว
-            </p>
-
-        </a>
-
+        </div>
 
     </div>
 
 </section>
 
 
+<section class="section">
 
-<!-- =========================
-PAGE NAVIGATION
-========================= -->
+    <div class="title">
 
-<section class="page-navigation">
+        <span>
+            CITY PLAN
+        </span>
 
+        <h2>
+            แผนผังเมืองอยุธยา
+        </h2>
 
-    <div class="page-navigation-title">
-        EXPLORE AYUTTHAYA
+        <p>
+            ลักษณะพื้นที่เมืองอยุธยามีแม่น้ำล้อมรอบ
+            ทำให้เกิดภูมิประเทศที่มีความโดดเด่น
+            และมีบทบาททั้งด้านการเดินทาง
+            การค้า และการป้องกันเมือง
+        </p>
+
     </div>
 
 
-    <div class="page-buttons">
+    <div class="map-box">
 
-
-        <a
-            href="index.html"
-            class="home"
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ayutthaya_map.jpg"
+            alt="แผนที่อยุธยา"
+            onerror="this.style.display='none'"
         >
-            หน้าปก
-        </a>
 
+        <div class="map-caption">
 
-        <a href="page1.html">
-            1
-        </a>
+            <h3>
+                เมืองเกาะอยุธยา
+            </h3>
 
+            <p>
+                แม่น้ำสำคัญที่ล้อมรอบพื้นที่เมือง
+                ได้แก่ แม่น้ำเจ้าพระยา แม่น้ำป่าสัก
+                และแม่น้ำลพบุรี
+                ซึ่งมีความสัมพันธ์กับการตั้งถิ่นฐาน
+                และการคมนาคมของเมือง
+            </p>
 
-        <a href="page2.html">
-            2
-        </a>
-
-
-        <a href="page3.html">
-            3
-        </a>
-
-
-        <a href="page4.html">
-            4
-        </a>
-
-
-        <a href="page5.html">
-            5
-        </a>
-
+        </div>
 
     </div>
 
 </section>
 
 
+<section class="nav-pages">
 
-<!-- =========================
-FOOTER
-========================= -->
+    <p>
+        EXPLORE ALL 5 PAGES
+    </p>
+
+    <div class="pages">
+
+        <a href="page1.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+
+    </div>
+
+</section>
+
 
 <footer>
 
@@ -1545,13 +643,11 @@ FOOTER
     </h3>
 
     <p>
-        กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • วิถีชีวิต
+        หน้า 1 • ประวัติศาสตร์และแผนผัง
     </p>
 
 </footer>
 
-
 </body>
-
 </html>
 ```
