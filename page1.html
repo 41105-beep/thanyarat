@@ -1,15 +1,18 @@
 ```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ประวัติศาสตร์ | AYUTTHAYA</title>
+<title>AYUTTHAYA | กรุงศรีอยุธยา</title>
 
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
 
 *{
     margin:0;
@@ -17,49 +20,1483 @@
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
+
     font-family:'Kanit',sans-serif;
+
     background:#100805;
+
     color:#ead8b4;
+
     overflow-x:hidden;
 }
 
-/* ================================
-   BACKGROUND
-================================ */
+
+/* =========================
+BACKGROUND
+========================= */
 
 body::before{
+
     content:"";
+
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     z-index:50;
-    opacity:.05;
+
+    opacity:.06;
 
     background-image:
-    radial-gradient(#d9aa55 1px,transparent 1px);
+    radial-gradient(
+        #d9aa55 1px,
+        transparent 1px
+    );
 
     background-size:26px 26px;
 }
 
-/* ================================
-   NAVBAR
-================================ */
+
+/* =========================
+NAVBAR
+========================= */
 
 .navbar{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
+
     height:78px;
+
     z-index:1000;
 
     display:flex;
+
     align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:
+    rgba(14,7,4,.82);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:
+    1px solid
+    rgba(214,168,77,.35);
+}
+
+
+.logo{
+
+    color:#e5b95d;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    letter-spacing:4px;
+
+    transition:.4s;
+}
+
+
+.logo:hover{
+
+    color:#fff0bb;
+
+    text-shadow:
+    0 0 25px
+    rgba(229,185,93,.8);
+}
+
+
+.nav-button{
+
+    text-decoration:none;
+
+    color:#ead6ac;
+
+    border:
+    1px solid #8f672f;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.4s;
+}
+
+
+.nav-button:hover{
+
+    background:#c59643;
+
+    color:#180b05;
+
+    box-shadow:
+    0 0 25px
+    rgba(197,150,67,.45);
+}
+
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(15,7,4,.35),
+        rgba(15,7,4,.9)
+    ),
+
+    url("images/Ayutthaya_Historical_Park_1.jpg")
+
+    center/cover no-repeat;
+
+    animation:
+    backgroundZoom
+    18s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+@keyframes backgroundZoom{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:112%;
+    }
+
+}
+
+
+/* =========================
+VIGNETTE
+========================= */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        transparent 10%,
+        rgba(0,0,0,.75) 85%
+    );
+}
+
+
+/* =========================
+GOLDEN LIGHT
+========================= */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(225,174,73,.17),
+        transparent 68%
+    );
+
+    animation:
+    lightMove
+    9s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+@keyframes lightMove{
+
+    from{
+        transform:
+        translate(-300px,-100px);
+    }
+
+    to{
+        transform:
+        translate(300px,100px);
+    }
+
+}
+
+
+/* =========================
+FRAME
+========================= */
+
+.frame{
+
+    position:absolute;
+
+    inset:35px;
+
+    border:
+    1px solid
+    rgba(221,175,82,.45);
+
+    z-index:4;
+
+    pointer-events:none;
+}
+
+
+.frame::before,
+.frame::after{
+
+    position:absolute;
+
+    color:#d9ab57;
+
+    font-size:35px;
+
+    background:#100805;
+
+    padding:5px 15px;
+}
+
+
+.frame::before{
+
+    content:"✦";
+
+    top:-24px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+}
+
+
+.frame::after{
+
+    content:"✦";
+
+    bottom:-24px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+}
+
+
+/* =========================
+CORNERS
+========================= */
+
+.corner{
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    border-color:#bd9144;
+
+    opacity:.7;
+
+}
+
+
+.corner-tl{
+
+    top:55px;
+    left:55px;
+
+    border-top:1px solid;
+    border-left:1px solid;
+}
+
+
+.corner-tr{
+
+    top:55px;
+    right:55px;
+
+    border-top:1px solid;
+    border-right:1px solid;
+}
+
+
+.corner-bl{
+
+    bottom:55px;
+    left:55px;
+
+    border-bottom:1px solid;
+    border-left:1px solid;
+}
+
+
+.corner-br{
+
+    bottom:55px;
+    right:55px;
+
+    border-bottom:1px solid;
+    border-right:1px solid;
+}
+
+
+/* =========================
+HERO CONTENT
+========================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:1000px;
+
+    padding:30px;
+}
+
+
+.eyebrow{
+
+    color:#d5a64e;
+
+    letter-spacing:10px;
+
+    font-size:14px;
+
+    margin-bottom:22px;
+
+    animation:
+    fadeUp
+    1s
+    ease
+    both;
+}
+
+
+.hero-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:
+    clamp(
+        70px,
+        13vw,
+        160px
+    );
+
+    line-height:.85;
+
+    letter-spacing:8px;
+
+    color:#f2dfaf;
+
+    text-shadow:
+
+    0 10px 40px
+    rgba(0,0,0,.9);
+
+    animation:
+    titleAppear
+    1.5s
+    ease
+    both;
+}
+
+
+@keyframes titleAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px)
+        scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+.thai-title{
+
+    color:#d3a04b;
+
+    font-size:
+    clamp(
+        30px,
+        5vw,
+        55px
+    );
+
+    font-weight:300;
+
+    margin-top:25px;
+
+    animation:
+    fadeUp
+    1.5s
+    .3s
+    ease
+    both;
+}
+
+
+.divider{
+
+    width:240px;
+
+    height:1px;
+
+    margin:30px auto;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        #d6a94f,
+        transparent
+    );
+
+    position:relative;
+}
+
+
+.divider::after{
+
+    content:"◆";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    color:#d9aa54;
+
+    background:#100805;
+
+    padding:0 15px;
+
+    font-size:12px;
+}
+
+
+.hero-description{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#d6c29c;
+
+    font-size:18px;
+
+    line-height:2;
+
+    animation:
+    fadeUp
+    1.5s
+    .6s
+    ease
+    both;
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+START BUTTON
+========================= */
+
+.start-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    color:#1b0d05;
+
+    text-decoration:none;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #efd183,
+        #b77a29
+    );
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    box-shadow:
+
+    0 10px 40px
+    rgba(0,0,0,.5);
+
+    transition:.45s;
+}
+
+
+.start-button:hover{
+
+    transform:
+    translateY(-7px)
+    scale(1.05);
+
+    box-shadow:
+
+    0 18px 50px
+    rgba(216,165,72,.45);
+}
+
+
+.start-button span{
+
+    font-size:20px;
+}
+
+
+/* =========================
+PARTICLES
+========================= */
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:#edc66d;
+
+    box-shadow:
+    0 0 12px #edc66d;
+
+    opacity:0;
+
+    z-index:3;
+
+    animation:
+    rise
+    9s
+    linear
+    infinite;
+}
+
+
+.p1{
+    left:8%;
+    bottom:-20px;
+    animation-delay:0s;
+}
+
+.p2{
+    left:20%;
+    bottom:-20px;
+    animation-delay:2s;
+}
+
+.p3{
+    left:35%;
+    bottom:-20px;
+    animation-delay:5s;
+}
+
+.p4{
+    left:55%;
+    bottom:-20px;
+    animation-delay:1s;
+}
+
+.p5{
+    left:72%;
+    bottom:-20px;
+    animation-delay:4s;
+}
+
+.p6{
+    left:90%;
+    bottom:-20px;
+    animation-delay:7s;
+}
+
+
+@keyframes rise{
+
+    0%{
+
+        transform:
+        translateY(0)
+        translateX(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+        opacity:.7;
+    }
+
+    80%{
+        opacity:.5;
+    }
+
+    100%{
+
+        transform:
+        translateY(-100vh)
+        translateX(100px);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =========================
+SCROLL
+========================= */
+
+.scroll{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    z-index:10;
+
+    color:#cda354;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    animation:
+    scrollDown
+    2s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes scrollDown{
+
+    0%,100%{
+        opacity:.3;
+
+        transform:
+        translate(-50%,0);
+    }
+
+    50%{
+        opacity:1;
+
+        transform:
+        translate(-50%,-8px);
+    }
+
+}
+
+
+/* =========================
+INTRO
+========================= */
+
+.intro{
+
+    background:#130906;
+
+    padding:90px 8%;
+
+    text-align:center;
+
+    border-top:
+    1px solid #4b3319;
+}
+
+
+.intro-small{
+
+    color:#bd8e3d;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+}
+
+
+.intro h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e3bf75;
+
+    font-size:42px;
+
+    margin:
+    12px 0
+    20px;
+}
+
+
+.intro p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#a99678;
+
+    line-height:2;
+}
+
+
+/* =========================
+FEATURES
+========================= */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:1px;
+
+    background:#5a3c1d;
+}
+
+
+.feature{
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    background:#1b0d07;
+
+    transition:.4s;
+}
+
+
+.feature:hover{
+
+    background:#27140a;
+}
+
+
+.feature-icon{
+
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+
+.feature h3{
+
+    color:#d7ad5b;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+
+.feature p{
+
+    color:#938066;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+WEBSITE NAVIGATION
+========================= */
+
+.page-navigation{
+
+    padding:
+    70px 20px;
+
+    text-align:center;
+
+    background:#0d0503;
+
+    border-top:
+    1px solid #493219;
+}
+
+
+.page-navigation-title{
+
+    color:#b98b3e;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    margin-bottom:25px;
+}
+
+
+.page-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+.page-buttons a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+    1px solid #79582d;
+
+    border-radius:50%;
+
+    color:#d8bd80;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:18px;
+
+    transition:.35s;
+}
+
+
+.page-buttons a:hover{
+
+    background:#c59643;
+
+    color:#180b05;
+
+    border-color:#d7ae5c;
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 12px 25px
+    rgba(197,150,67,.3);
+}
+
+
+/* หน้า 1 กำลังเปิดอยู่ */
+
+.page-buttons .current{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #efd183,
+        #b77a29
+    );
+
+    color:#180b05;
+
+    border-color:#e4c16e;
+
+    box-shadow:
+    0 8px 25px
+    rgba(197,150,67,.25);
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+    background:#090403;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:
+    1px solid #392511;
+}
+
+
+footer h3{
+
+    color:#d3a653;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:4px;
+
+    font-size:25px;
+}
+
+
+footer p{
+
+    color:#6f604c;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+    .navbar{
+
+        height:70px;
+
+        padding:0 4%;
+    }
+
+
+    .logo{
+
+        font-size:19px;
+    }
+
+
+    .nav-button{
+
+        font-size:12px;
+
+        padding:7px 13px;
+    }
+
+
+    .frame{
+
+        inset:20px;
+    }
+
+
+    .corner{
+
+        display:none;
+    }
+
+
+    .hero{
+
+        min-height:620px;
+    }
+
+
+    .hero-description{
+
+        font-size:15px;
+    }
+
+
+    .features{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .intro{
+
+        padding:
+        70px 7%;
+    }
+
+
+    .intro h2{
+
+        font-size:32px;
+    }
+
+
+    .page-buttons a{
+
+        width:48px;
+
+        height:48px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+        🏛 AYUTTHAYA
+    </a>
+
+
+    <!-- แก้จาก page1.html เป็น page2.html -->
+
+    <a
+        href="page2.html"
+        class="nav-button"
+    >
+        สำรวจสถานที่ →
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero">
+
+
+    <div class="frame"></div>
+
+
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+
+    <!-- PARTICLES -->
+
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+    <div class="particle p6"></div>
+
+
+    <!-- CONTENT -->
+
+    <div class="hero-content">
+
+
+        <div class="eyebrow">
+            THE HISTORICAL CITY OF SIAM
+        </div>
+
+
+        <div class="hero-title">
+            AYUTTHAYA
+        </div>
+
+
+        <div class="thai-title">
+            กรุงศรีอยุธยา
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <p class="hero-description">
+
+            เมืองหลวงแห่งความรุ่งเรือง
+
+            <br>
+
+            ศูนย์กลางแห่งการเมือง
+            การค้า ศาสนา และวัฒนธรรมของสยาม
+
+            <br>
+
+            เรื่องราวจากอดีต
+            สู่มรดกทางวัฒนธรรมที่ยังคงอยู่
+
+        </p>
+
+
+        <!-- แก้ให้ไปหน้า 2 -->
+
+        <a
+            href="page2.html"
+            class="start-button"
+        >
+
+            เริ่มต้นการเดินทาง
+
+            <span>
+                ✦
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+    <div class="scroll">
+        SCROLL TO EXPLORE
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="intro-small">
+        WELCOME TO AYUTTHAYA
+    </div>
+
+
+    <h2>
+        ร่องรอยแห่งราชธานี
+    </h2>
+
+
+    <p>
+
+        กรุงศรีอยุธยาเป็นราชธานีแห่งที่สอง
+        ของประเทศไทย ก่อตั้งขึ้นใน พ.ศ. 1893
+        และเป็นศูนย์กลางสำคัญของสยาม
+        มาอย่างยาวนานกว่า 4 ศตวรรษ
+
+        <br><br>
+
+        ปัจจุบันโบราณสถานและเรื่องราว
+        ของอยุธยายังคงสะท้อนให้เห็นถึง
+        ความรุ่งเรืองของอาณาจักรในอดีต
+        และเป็นมรดกทางวัฒนธรรม
+        ที่สำคัญของประเทศไทย
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+FEATURES
+========================= -->
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🏛️
+        </div>
+
+        <h3>
+            ประวัติศาสตร์
+        </h3>
+
+        <p>
+
+            เรื่องราวของราชธานี
+            ที่มีอายุยาวนานกว่า 400 ปี
+            และเป็นศูนย์กลางของสยาม
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🌏
+        </div>
+
+        <h3>
+            วัฒนธรรม
+        </h3>
+
+        <p>
+
+            การผสมผสานของผู้คน
+            ศิลปะ ภาษา อาหาร
+            และวิถีชีวิตที่หลากหลาย
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🏆
+        </div>
+
+        <h3>
+            มรดกโลก
+        </h3>
+
+        <p>
+
+            อุทยานประวัติศาสตร์
+            ที่สะท้อนคุณค่าทางประวัติศาสตร์
+            และได้รับการยกย่องระดับโลก
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+PAGE NAVIGATION
+========================= -->
+
+<section class="page-navigation">
+
+
+    <div class="page-navigation-title">
+        EXPLORE AYUTTHAYA
+    </div>
+
+
+    <div class="page-buttons">
+
+
+        <!-- PAGE 1 -->
+
+        <a
+            href="index.html"
+            class="current"
+            title="หน้าแรก"
+        >
+            1
+        </a>
+
+
+        <!-- PAGE 2 -->
+
+        <a
+            href="page2.html"
+            title="สถานที่ท่องเที่ยว"
+        >
+            2
+        </a>
+
+
+        <!-- PAGE 3 -->
+
+        <a
+            href="page3.html"
+            title="ชุดไทยและวิถีชีวิต"
+        >
+            3
+        </a>
+
+
+        <!-- PAGE 4 -->
+
+        <a
+            href="page4.html"
+            title="อาหารและของฝาก"
+        >
+            4
+        </a>
+
+
+        <!-- PAGE 5 -->
+
+        <a
+            href="page5.html"
+            title="แกลเลอรี"
+        >
+            5
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+
+    <p>
+        กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • มรดกโลก
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
     justify-content:space-between;
 
     padding:0 5%;
