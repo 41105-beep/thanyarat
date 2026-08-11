@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AYUTTHAYA | กรุงศรีอยุธยา</title>
+<title>Ayutthaya | ประวัติกรุงศรีอยุธยา</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
@@ -21,100 +21,112 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
-    background:#170d08;
-    color:white;
+    background:#120a06;
+    color:#ead8b4;
     overflow-x:hidden;
 }
 
-/* ================= NAV ================= */
+/* =========================
+   พื้นหลังลวดลาย
+========================= */
 
-nav{
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.08;
+    z-index:999;
+
+    background-image:
+    radial-gradient(#d9ad61 1px, transparent 1px);
+
+    background-size:25px 25px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:82px;
+    height:78px;
     z-index:1000;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 6%;
+    padding:0 5%;
 
-    background:linear-gradient(
-        180deg,
-        rgba(15,8,4,.92),
-        rgba(15,8,4,.35)
-    );
+    background:rgba(17,9,5,.82);
+    backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(232,190,103,.25);
-    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(218,173,88,.35);
 }
 
 .logo{
-    color:#f4ce7a;
+    color:#e8bd63;
     text-decoration:none;
+
     font-family:'Playfair Display',serif;
     font-size:25px;
     letter-spacing:3px;
-    font-weight:700;
-    transition:.4s;
+
+    text-shadow:0 0 20px rgba(226,178,78,.25);
 }
 
-.logo:hover{
-    color:#fff1bb;
-    text-shadow:0 0 25px #e8bd65;
+.logo span{
+    color:#f4e2b1;
 }
 
-.nav-link{
-    color:#f7ead2;
+.home-btn{
     text-decoration:none;
-    font-size:15px;
-    padding:9px 18px;
-    border:1px solid rgba(240,203,125,.45);
+    color:#e9d5aa;
+
+    border:1px solid #9f7335;
     border-radius:30px;
-    transition:.4s;
+
+    padding:8px 20px;
+
+    transition:.35s;
 }
 
-.nav-link:hover{
-    background:#c99743;
-    color:#24140b;
-    box-shadow:0 0 25px rgba(221,173,76,.4);
+.home-btn:hover{
+    color:#1a0d06;
+    background:#d6a950;
+    box-shadow:0 0 25px rgba(214,169,80,.45);
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:100vh;
+    height:100vh;
+    min-height:650px;
+
     position:relative;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
+    justify-content:center;
+
     overflow:hidden;
 
     background:
-        linear-gradient(
-            rgba(20,10,5,.25),
-            rgba(20,10,5,.85)
-        ),
-        url("images/Ayutthaya_Historical_Park_1.jpg")
-        center/cover no-repeat;
-
-    animation:zoom 20s ease-in-out infinite alternate;
+    linear-gradient(
+        90deg,
+        rgba(12,6,3,.9),
+        rgba(22,10,5,.45),
+        rgba(12,6,3,.9)
+    ),
+    url("images/Ayutthaya_Historical_Park_1.jpg")
+    center/cover no-repeat;
 }
-
-@keyframes zoom{
-    from{
-        background-size:100%;
-    }
-    to{
-        background-size:112%;
-    }
-}
-
-/* golden vignette */
 
 .hero::before{
     content:"";
@@ -122,337 +134,763 @@ nav{
     inset:0;
 
     background:
-        radial-gradient(
-            circle at center,
-            transparent 10%,
-            rgba(0,0,0,.7) 90%
-        );
+    radial-gradient(
+        circle at center,
+        transparent 10%,
+        rgba(0,0,0,.75) 90%
+    );
 }
 
-/* gold glow */
+/* เส้นกรอบทอง */
 
-.hero::after{
-    content:"";
+.hero-border{
+    position:absolute;
+    inset:35px;
+
+    border:1px solid rgba(219,175,88,.4);
+
+    pointer-events:none;
+}
+
+.hero-border::before,
+.hero-border::after{
+    content:"✦";
+
     position:absolute;
 
-    width:600px;
-    height:600px;
+    color:#d9aa54;
+    font-size:30px;
 
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(246,205,111,.18),
-            transparent 68%
-        );
-
-    animation:glow 8s ease-in-out infinite alternate;
+    background:#120a06;
+    padding:8px 15px;
 }
 
-@keyframes glow{
-    from{
-        transform:translate(-260px,-100px);
-    }
-    to{
-        transform:translate(260px,100px);
-    }
+.hero-border::before{
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
-/* ================= CONTENT ================= */
+.hero-border::after{
+    bottom:-25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content{
     position:relative;
     z-index:5;
-    max-width:1100px;
+
+    text-align:center;
+
+    max-width:950px;
+
     padding:30px;
 }
 
-.kicker{
-    color:#eac16d;
-    letter-spacing:8px;
-    font-size:15px;
+.english{
+    color:#d5a94f;
 
-    animation:appear 1.2s ease both;
+    letter-spacing:10px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
 }
 
-.title{
+.hero h1{
     font-family:'Playfair Display',serif;
 
-    font-size:clamp(70px,12vw,155px);
+    font-size:clamp(55px,9vw,120px);
 
-    line-height:.95;
+    line-height:1;
 
-    letter-spacing:7px;
+    color:#f4dfad;
 
-    margin:15px 0;
-
-    color:#fffaf0;
+    letter-spacing:5px;
 
     text-shadow:
-        0 8px 40px rgba(0,0,0,.9);
+    0 10px 40px #000;
 
-    animation:titleIn 1.5s ease both;
+    animation:titleFloat 5s ease-in-out infinite;
 }
 
-@keyframes titleIn{
-    from{
-        opacity:0;
-        transform:translateY(50px) scale(.94);
+@keyframes titleFloat{
+    0%,100%{
+        transform:translateY(0);
     }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
+
+    50%{
+        transform:translateY(-8px);
     }
 }
 
-.thai-title{
-    font-size:clamp(30px,5vw,55px);
-    color:#efc978;
+.hero h2{
+    margin-top:20px;
+
+    color:#c9953d;
+
+    font-size:clamp(25px,4vw,45px);
+
     font-weight:300;
-
-    animation:appear 1.6s .3s ease both;
 }
 
-.line{
-    width:180px;
+.hero-line{
+    width:220px;
     height:1px;
 
-    margin:25px auto;
+    margin:30px auto;
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         90deg,
         transparent,
-        #e7bd68,
+        #d9aa54,
         transparent
     );
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:2;
+
+    color:#d6c19a;
+}
+
+/* =========================
+   SCROLL
+========================= */
+
+.scroll{
+    position:absolute;
+
+    bottom:30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#c99d4b;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    animation:scroll 2s infinite;
+}
+
+@keyframes scroll{
+    0%,100%{
+        opacity:.3;
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        opacity:1;
+        transform:translate(-50%,-8px);
+    }
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:100px 5%;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title small{
+    color:#c59645;
+
+    letter-spacing:5px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+
+    color:#e6c681;
+
+    font-size:clamp(35px,5vw,55px);
+
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#9f8867;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-bottom:100px;
+}
+
+.intro-text h3{
+    color:#d7a84e;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+}
+
+.intro-text p{
+    color:#c5b18d;
+
+    line-height:2;
+
+    margin-bottom:15px;
+
+    text-align:justify;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+    position:relative;
+
+    border:1px solid #765323;
+
+    padding:10px;
+
+    background:#1b0e08;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.5);
+
+    overflow:hidden;
+}
+
+.image-box::before{
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:1px solid rgba(225,180,85,.4);
+
+    pointer-events:none;
+
+    z-index:2;
+}
+
+.image-box img{
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:1s;
+}
+
+.image-box:hover img{
+    transform:scale(1.06);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    position:relative;
+
+    margin:80px 0 110px;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:
+    linear-gradient(
+        transparent,
+        #a87b35,
+        transparent
+    );
+}
+
+.timeline-item{
+    width:50%;
+
+    padding:25px 50px;
 
     position:relative;
 }
 
-.line::after{
-    content:"✦";
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-
-    background:#24140b;
-    padding:0 12px;
-
-    color:#e8bd69;
+.timeline-item:nth-child(odd){
+    text-align:right;
 }
 
-.description{
-    max-width:720px;
-    margin:0 auto;
-
-    color:#eadcc5;
-
-    font-size:18px;
-    line-height:2;
-
-    animation:appear 1.6s .6s ease both;
+.timeline-item:nth-child(even){
+    margin-left:50%;
 }
 
-.enter{
-    display:inline-flex;
-    align-items:center;
-    gap:15px;
-
-    margin-top:35px;
-
-    padding:16px 35px;
-
-    text-decoration:none;
-
-    color:#2b170b;
-
-    background:linear-gradient(
-        135deg,
-        #f1d185,
-        #b77a2d
-    );
-
-    border-radius:50px;
-
-    font-size:17px;
-    font-weight:500;
-
-    box-shadow:
-        0 12px 40px rgba(0,0,0,.45);
-
-    transition:.4s;
-
-    animation:
-        appear 1.6s .9s ease both,
-        floating 3s 2s ease-in-out infinite;
-}
-
-.enter:hover{
-    transform:translateY(-7px) scale(1.04);
-
-    box-shadow:
-        0 18px 50px rgba(224,174,76,.4);
-}
-
-@keyframes floating{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-7px);
-    }
-}
-
-@keyframes appear{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* ================= FLOATING PARTICLES ================= */
-
-.particle{
+.timeline-dot{
     position:absolute;
 
-    width:4px;
-    height:4px;
+    top:35px;
+
+    width:15px;
+    height:15px;
 
     border-radius:50%;
 
-    background:#f1cc7a;
+    background:#d8aa52;
 
-    box-shadow:0 0 12px #f1cc7a;
-
-    opacity:.6;
-
-    animation:particle 8s linear infinite;
+    box-shadow:
+    0 0 20px #d8aa52;
 }
 
-.p1{left:8%;bottom:-10px;animation-delay:0s}
-.p2{left:20%;bottom:-20px;animation-delay:2s}
-.p3{left:37%;bottom:-10px;animation-delay:4s}
-.p4{left:58%;bottom:-20px;animation-delay:1s}
-.p5{left:73%;bottom:-10px;animation-delay:5s}
-.p6{left:88%;bottom:-20px;animation-delay:3s}
-
-@keyframes particle{
-    0%{
-        transform:translateY(0);
-        opacity:0;
-    }
-
-    20%{
-        opacity:.7;
-    }
-
-    100%{
-        transform:translateY(-105vh) translateX(100px);
-        opacity:0;
-    }
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-7px;
 }
 
-/* ================= CORNER FRAME ================= */
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-7px;
+}
 
-.corner{
+.timeline-card{
+    background:
+    linear-gradient(
+        135deg,
+        #24130a,
+        #1a0d07
+    );
+
+    border:1px solid #61451f;
+
+    padding:25px;
+
+    transition:.4s;
+}
+
+.timeline-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#c79a48;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.4);
+}
+
+.timeline-card .year{
+    color:#d5a54b;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+}
+
+.timeline-card h3{
+    color:#e3c27f;
+
+    margin:7px 0;
+}
+
+.timeline-card p{
+    color:#a99575;
+}
+
+/* =========================
+   THREE CARDS
+========================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:100px;
+}
+
+.card{
+    position:relative;
+
+    min-height:270px;
+
+    padding:35px 28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #25140a,
+        #160b06
+    );
+
+    border:1px solid #5d411d;
+
+    transition:.5s;
+
+    overflow:hidden;
+}
+
+.card::after{
+    content:"";
+
     position:absolute;
+
     width:100px;
     height:100px;
-    z-index:4;
-    opacity:.6;
+
+    border-radius:50%;
+
+    right:-50px;
+    bottom:-50px;
+
+    border:1px solid rgba(216,170,82,.25);
+
+    transition:.5s;
 }
 
-.corner::before,
-.corner::after{
-    content:"";
-    position:absolute;
-    background:#d9ad5d;
+.card:hover{
+    transform:translateY(-10px);
+
+    border-color:#c99a47;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45);
 }
 
-.corner::before{
+.card:hover::after{
+    transform:scale(2);
+}
+
+.card-icon{
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#dcb86e;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#a99676;
+
+    line-height:1.9;
+}
+
+/* =========================
+   MAP SECTION
+========================= */
+
+.map-section{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    margin-bottom:100px;
+
+    padding:50px;
+
+    background:
+    linear-gradient(
+        120deg,
+        #1b0d07,
+        #29160b
+    );
+
+    border-top:1px solid #6d4d22;
+    border-bottom:1px solid #6d4d22;
+}
+
+.map-section h2{
+    color:#dcb66b;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.map-section p{
+    color:#b5a181;
+
+    line-height:2;
+
+    text-align:justify;
+}
+
+.map-img img{
     width:100%;
-    height:1px;
+
+    max-height:400px;
+
+    object-fit:contain;
+
+    filter:
+    sepia(.25)
+    brightness(.8);
+
+    transition:.5s;
 }
 
-.corner::after{
-    width:1px;
-    height:100%;
+.map-img img:hover{
+    filter:none;
+
+    transform:scale(1.03);
 }
 
-.top-left{
-    top:110px;
-    left:35px;
+/* =========================
+   WORLD HERITAGE
+========================= */
+
+.heritage{
+    position:relative;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+    margin-bottom:100px;
+
+    background:
+    linear-gradient(
+        rgba(24,12,6,.88),
+        rgba(24,12,6,.95)
+    ),
+    url("images/Ayutthaya_HistoricaL_Park_3.jpg")
+    center/cover;
+
+    border:1px solid #765323;
+
+    overflow:hidden;
 }
 
-.top-right{
-    top:110px;
-    right:35px;
-    transform:rotate(90deg);
-}
+.heritage::before{
+    content:"";
 
-.bottom-left{
-    bottom:45px;
-    left:35px;
-    transform:rotate(-90deg);
-}
-
-.bottom-right{
-    bottom:45px;
-    right:35px;
-    transform:rotate(180deg);
-}
-
-.scroll{
     position:absolute;
-    bottom:25px;
-    left:50%;
-    transform:translateX(-50%);
 
-    color:#dbc391;
-    font-size:12px;
+    inset:15px;
+
+    border:1px solid rgba(220,174,82,.35);
+}
+
+.heritage-content{
+    position:relative;
+    z-index:2;
+}
+
+.heritage small{
+    color:#d5a44b;
+
+    letter-spacing:6px;
+}
+
+.heritage h2{
+    color:#f0d28d;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    margin:15px 0;
+}
+
+.heritage p{
+    max-width:750px;
+
+    margin:auto;
+
+    color:#c7b38f;
+
+    line-height:2;
+}
+
+/* =========================
+   PAGE NAV
+========================= */
+
+.page-nav{
+    padding:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    background:#0d0704;
+
+    border-top:1px solid #4f3619;
+}
+
+.page-nav a{
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#c7ae7f;
+
+    border:1px solid #67491f;
+
+    border-radius:50%;
+
+    transition:.35s;
+}
+
+.page-nav a:hover,
+.page-nav .active{
+    color:#1b0d06;
+
+    background:#d0a34e;
+
+    border-color:#d0a34e;
+
+    box-shadow:
+    0 0 20px rgba(208,163,78,.4);
+
+    transform:translateY(-5px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+
+    padding:55px 20px;
+
+    background:#090503;
+
+    border-top:1px solid #392512;
+}
+
+footer h2{
+    font-family:'Playfair Display',serif;
+
+    color:#d5aa58;
+
     letter-spacing:4px;
-
-    z-index:5;
-
-    animation:pulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse{
-    0%,100%{opacity:.4}
-    50%{opacity:1}
+footer p{
+    color:#756448;
+
+    margin-top:10px;
 }
 
-/* ================= MOBILE ================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:700px){
+@media(max-width:850px){
 
-    nav{
+    .navbar{
         height:70px;
-        padding:0 5%;
     }
 
-    .logo{
-        font-size:19px;
+    .hero{
+        min-height:600px;
     }
 
-    .nav-link{
-        font-size:13px;
-        padding:7px 13px;
+    .hero-border{
+        inset:20px;
     }
 
-    .description{
-        font-size:15px;
+    .intro,
+    .map-section{
+        grid-template-columns:1fr;
     }
 
-    .corner{
-        display:none;
+    .cards{
+        grid-template-columns:1fr;
     }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+        width:100%;
+        margin-left:0;
+        padding-left:40px;
+        padding-right:0;
+        text-align:left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:3px;
+        right:auto;
+    }
+
+    .map-section{
+        padding:30px 20px;
+    }
+
+    .image-box img{
+        height:330px;
+    }
+
 }
 
 </style>
@@ -460,71 +898,477 @@ nav{
 
 <body>
 
-<nav>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
 
     <a href="index.html" class="logo">
-        🏛 AYUTTHAYA
+        🏛 <span>AYUTTHAYA</span>
     </a>
 
-    <a href="page1.html" class="nav-link">
-        สำรวจประวัติศาสตร์ →
+    <a href="index.html" class="home-btn">
+        ← หน้าปก
     </a>
 
 </nav>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
-    <div class="particle p1"></div>
-    <div class="particle p2"></div>
-    <div class="particle p3"></div>
-    <div class="particle p4"></div>
-    <div class="particle p5"></div>
-    <div class="particle p6"></div>
-
-    <div class="corner top-left"></div>
-    <div class="corner top-right"></div>
-    <div class="corner bottom-left"></div>
-    <div class="corner bottom-right"></div>
-
+    <div class="hero-border"></div>
 
     <div class="hero-content">
 
-        <div class="kicker">
-            THE HISTORICAL CITY
+        <div class="english">
+            THE ROYAL CITY OF SIAM
         </div>
 
-        <div class="title">
+        <h1>
             AYUTTHAYA
-        </div>
+        </h1>
 
-        <div class="thai-title">
-            กรุงศรีอยุธยา
-        </div>
+        <h2>
+            ประวัติกรุงศรีอยุธยา
+        </h2>
 
-        <div class="line"></div>
+        <div class="hero-line"></div>
 
-        <p class="description">
-            เมืองหลวงแห่งความรุ่งเรือง
-            ศูนย์กลางแห่งการเมือง การค้า ศาสนา
-            และวัฒนธรรมของสยาม
-            <br>
-            จากเรื่องราวในอดีต สู่มรดกทางวัฒนธรรม
-            ที่ยังคงอยู่จนถึงปัจจุบัน
+        <p>
+            เรื่องราวของราชธานีอันยิ่งใหญ่
+            ศูนย์กลางแห่งการเมือง การค้า
+            ศาสนา และวัฒนธรรม
+            ที่รุ่งเรืองมายาวนานกว่า 4 ศตวรรษ
         </p>
-
-        <a href="page1.html" class="enter">
-            เริ่มต้นการเดินทาง
-            <span>✦</span>
-        </a>
 
     </div>
 
     <div class="scroll">
-        SCROLL TO EXPLORE
+        SCROLL ↓
     </div>
 
 </section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- TITLE -->
+
+<section class="section-title">
+
+    <small>CHAPTER 01</small>
+
+    <h2>
+        เมืองหลวงแห่งความรุ่งเรือง
+    </h2>
+
+    <p>
+        จากราชธานีโบราณ สู่มรดกโลกในปัจจุบัน
+    </p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="intro-text">
+
+        <h3>
+            กรุงศรีอยุธยา
+        </h3>
+
+        <p>
+            กรุงศรีอยุธยาเป็นราชธานีแห่งที่สอง
+            ของประเทศไทย ก่อตั้งขึ้นเมื่อ
+            พ.ศ. 1893 โดยสมเด็จพระรามาธิบดีที่ 1
+            หรือพระเจ้าอู่ทอง
+        </p>
+
+        <p>
+            อยุธยาดำรงฐานะราชธานี
+            เป็นเวลาประมาณ 417 ปี
+            ก่อนเสียกรุงครั้งที่ 2
+            ใน พ.ศ. 2310
+        </p>
+
+        <p>
+            ตลอดระยะเวลาที่เป็นราชธานี
+            อยุธยาได้พัฒนาจนกลายเป็น
+            ศูนย์กลางสำคัญของภูมิภาค
+            ทั้งด้านการเมือง เศรษฐกิจ
+            ศาสนา และวัฒนธรรม
+        </p>
+
+    </div>
+
+
+    <div class="image-box">
+
+        <img
+            src="images/Ayutthaya_Historical_Park_1.jpg"
+            alt="อุทยานประวัติศาสตร์พระนครศรีอยุธยา"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section-title">
+
+    <small>HISTORICAL TIMELINE</small>
+
+    <h2>
+        เส้นทางแห่งกาลเวลา
+    </h2>
+
+</section>
+
+
+<section class="timeline">
+
+
+    <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+            <div class="year">
+                พ.ศ. 1893
+            </div>
+
+            <h3>
+                การสถาปนากรุงศรีอยุธยา
+            </h3>
+
+            <p>
+                สมเด็จพระรามาธิบดีที่ 1
+                หรือพระเจ้าอู่ทอง
+                สถาปนากรุงศรีอยุธยา
+                ให้เป็นราชธานี
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+            <div class="year">
+                ยุครุ่งเรือง
+            </div>
+
+            <h3>
+                ศูนย์กลางการค้าระหว่างประเทศ
+            </h3>
+
+            <p>
+                อยุธยามีความสัมพันธ์ทางการค้า
+                กับจีน ญี่ปุ่น เปอร์เซีย
+                และชาติตะวันตกหลายประเทศ
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+            <div class="year">
+                พ.ศ. 2310
+            </div>
+
+            <h3>
+                การเสียกรุงครั้งที่ 2
+            </h3>
+
+            <p>
+                กรุงศรีอยุธยาสิ้นสุดสถานะ
+                การเป็นราชธานี
+                หลังจากดำรงความรุ่งเรือง
+                มาอย่างยาวนาน
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+            <div class="year">
+                พ.ศ. 2534
+            </div>
+
+            <h3>
+                มรดกโลก
+            </h3>
+
+            <p>
+                อุทยานประวัติศาสตร์
+                พระนครศรีอยุธยาได้รับการขึ้นทะเบียน
+                เป็นมรดกโลก
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- CARDS -->
+
+<section class="section-title">
+
+    <small>THE CITY</small>
+
+    <h2>
+        ทำไมอยุธยาจึงรุ่งเรือง?
+    </h2>
+
+</section>
+
+
+<section class="cards">
+
+
+    <article class="card">
+
+        <div class="card-icon">
+            🌊
+        </div>
+
+        <h3>
+            ทำเลที่ตั้ง
+        </h3>
+
+        <p>
+            เมืองตั้งอยู่บริเวณที่มีแม่น้ำ
+            เจ้าพระยา ป่าสัก และลพบุรี
+            ล้อมรอบ ทำให้มีลักษณะคล้ายเกาะ
+            และช่วยในการป้องกันเมือง
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="card-icon">
+            ⚓
+        </div>
+
+        <h3>
+            การค้าระหว่างประเทศ
+        </h3>
+
+        <p>
+            อยุธยาเป็นเมืองท่าสำคัญ
+            มีพ่อค้าและนักเดินทาง
+            จากหลายประเทศเข้ามาติดต่อ
+            และตั้งถิ่นฐาน
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="card-icon">
+            🏛
+        </div>
+
+        <h3>
+            ศูนย์กลางวัฒนธรรม
+        </h3>
+
+        <p>
+            การติดต่อกับต่างชาติทำให้เกิด
+            การแลกเปลี่ยนภาษา ศิลปะ
+            อาหาร ความรู้
+            และเทคโนโลยี
+        </p>
+
+    </article>
+
+
+</section>
+
+
+<!-- MAP -->
+
+<section class="map-section">
+
+    <div>
+
+        <h2>
+            เกาะเมืองอยุธยา
+        </h2>
+
+        <p>
+            ทำเลที่ตั้งของอยุธยาเป็นหนึ่งใน
+            ปัจจัยสำคัญที่ทำให้เมืองสามารถ
+            เจริญรุ่งเรืองได้
+        </p>
+
+        <p>
+            แม่น้ำที่ล้อมรอบเมืองไม่ได้เป็นเพียง
+            แนวป้องกันตามธรรมชาติเท่านั้น
+            แต่ยังเป็นเส้นทางคมนาคม
+            และเส้นทางการค้าสำคัญ
+        </p>
+
+    </div>
+
+
+    <div class="map-img">
+
+        <img
+            src="images/Ayuthistparkmap.png"
+            alt="แผนที่เกาะเมืองอยุธยา"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- FOREIGN TRADE -->
+
+<section class="intro">
+
+    <div class="image-box">
+
+        <img
+            src="images/Ayutthaya_HistoricaL_Park_3.jpg"
+            alt="โบราณสถานอยุธยา"
+        >
+
+    </div>
+
+
+    <div class="intro-text">
+
+        <h3>
+            🌏 เมืองนานาชาติแห่งสยาม
+        </h3>
+
+        <p>
+            อยุธยามีการติดต่อกับชาวต่างชาติ
+            หลายประเทศ เช่น จีน ญี่ปุ่น
+            โปรตุเกส ฮอลันดา ฝรั่งเศส
+            และเปอร์เซีย
+        </p>
+
+        <p>
+            การติดต่อเหล่านี้ทำให้เกิด
+            การแลกเปลี่ยนทางวัฒนธรรม
+            และทำให้อยุธยากลายเป็นเมือง
+            ที่มีความหลากหลาย
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WORLD HERITAGE -->
+
+<section class="heritage">
+
+    <div class="heritage-content">
+
+        <small>
+            UNESCO WORLD HERITAGE
+        </small>
+
+        <h2>
+            มรดกโลกของไทย
+        </h2>
+
+        <p>
+            ปัจจุบันอุทยานประวัติศาสตร์
+            พระนครศรีอยุธยาเป็นแหล่งเรียนรู้
+            ทางประวัติศาสตร์ที่สำคัญ
+            และได้รับการขึ้นทะเบียน
+            เป็นมรดกโลกใน พ.ศ. 2534
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= PAGE NAV ================= -->
+
+<div class="page-nav">
+
+    <a href="page1.html" class="active">
+        1
+    </a>
+
+    <a href="page2.html">
+        2
+    </a>
+
+    <a href="page3.html">
+        3
+    </a>
+
+    <a href="page4.html">
+        4
+    </a>
+
+    <a href="page5.html">
+        5
+    </a>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        AYUTTHAYA
+    </h2>
+
+    <p>
+        กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • มรดกโลก
+    </p>
+
+</footer>
+
 
 </body>
 </html>
