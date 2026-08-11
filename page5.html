@@ -1,1 +1,1719 @@
-5
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>จุดเด่น ของฝาก และการท่องเที่ยว | AYUTTHAYA</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Kanit',sans-serif;
+    background:#100805;
+    color:#ead8b4;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:50;
+    opacity:.05;
+
+    background-image:
+    radial-gradient(
+        #d9aa55 1px,
+        transparent 1px
+    );
+
+    background-size:26px 26px;
+}
+
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:76px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:rgba(14,7,4,.92);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(214,168,77,.35);
+}
+
+.logo{
+    color:#e5b95d;
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:10px;
+}
+
+.nav-button{
+    text-decoration:none;
+
+    color:#ead6ac;
+
+    border:1px solid #8f672f;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.35s;
+}
+
+.nav-button:hover{
+    background:#c59643;
+    color:#180b05;
+}
+
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+    min-height:700px;
+
+    padding-top:76px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(8,3,1,.94),
+        rgba(8,3,1,.48),
+        rgba(8,3,1,.9)
+    ),
+
+    url("images/ayutthaya-tourism.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero-small{
+    color:#c99a46;
+    letter-spacing:7px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:
+    clamp(48px,8vw,105px);
+
+    line-height:.95;
+
+    color:#f2dfaf;
+}
+
+.hero h2{
+
+    color:#d3a04b;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    margin-top:20px;
+}
+
+.hero-line{
+
+    width:180px;
+
+    height:1px;
+
+    background:#c99b4c;
+
+    margin:28px 0;
+}
+
+.hero p{
+
+    max-width:780px;
+
+    color:#cbb897;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+
+/* =========================
+SECTION
+========================= */
+
+.section{
+    padding:100px 7%;
+}
+
+.dark{
+    background:#130906;
+}
+
+.light{
+    background:#1a0d07;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title span{
+
+    color:#b88a3d;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e5c27a;
+
+    font-size:44px;
+
+    margin-top:10px;
+}
+
+.section-title p{
+
+    max-width:850px;
+
+    margin:15px auto 0;
+
+    color:#98846c;
+
+    line-height:1.9;
+}
+
+
+/* =========================
+HIGHLIGHTS
+========================= */
+
+.highlight-grid{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+}
+
+.highlight-card{
+
+    position:relative;
+
+    min-height:430px;
+
+    overflow:hidden;
+
+    border:1px solid #554020;
+
+    background:#1c0e07;
+}
+
+.highlight-card img{
+
+    width:100%;
+    height:100%;
+
+    position:absolute;
+    inset:0;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.highlight-card:hover img{
+    transform:scale(1.08);
+}
+
+.highlight-overlay{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:30px;
+
+    background:
+    linear-gradient(
+        transparent 15%,
+        rgba(7,3,1,.96)
+    );
+}
+
+.highlight-number{
+
+    color:#c39448;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:17px;
+
+    margin-bottom:8px;
+}
+
+.highlight-overlay h3{
+
+    color:#e5c27a;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:31px;
+
+    margin-bottom:8px;
+}
+
+.highlight-overlay p{
+
+    color:#c1ab87;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+SOUVENIRS
+========================= */
+
+.souvenir-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:24px;
+}
+
+.souvenir-card{
+
+    display:grid;
+
+    grid-template-columns:250px 1fr;
+
+    min-height:250px;
+
+    background:#211109;
+
+    border:1px solid #4f371e;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.souvenir-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#b28a48;
+
+    box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.35);
+}
+
+.souvenir-card img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.souvenir-content{
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.souvenir-content span{
+
+    color:#b8893f;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+}
+
+.souvenir-content h3{
+
+    color:#dfbd78;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    margin:8px 0 12px;
+}
+
+.souvenir-content p{
+
+    color:#95816a;
+
+    line-height:1.85;
+}
+
+
+/* =========================
+TRAVEL GUIDE
+========================= */
+
+.travel-box{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    border:1px solid #5b401f;
+
+    overflow:hidden;
+}
+
+.travel-image{
+
+    min-height:550px;
+
+    background:
+
+    url("images/ayutthaya-travel.jpg")
+    center/cover no-repeat;
+}
+
+.travel-content{
+
+    padding:60px 50px;
+
+    background:#1c0e07;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.travel-content span{
+
+    color:#b98b3f;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+}
+
+.travel-content h2{
+
+    color:#e3bf76;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:40px;
+
+    margin:12px 0 20px;
+}
+
+.travel-content > p{
+
+    color:#98836b;
+
+    line-height:2;
+
+    margin-bottom:25px;
+}
+
+.travel-list{
+
+    list-style:none;
+}
+
+.travel-list li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid #3d2918;
+
+    color:#c2a87f;
+
+    line-height:1.7;
+}
+
+.travel-list li strong{
+
+    color:#d8b36d;
+}
+
+.travel-list li::before{
+
+    content:"✦";
+
+    color:#c29445;
+
+    margin-right:12px;
+}
+
+
+/* =========================
+TRAVEL TIPS
+========================= */
+
+.tip-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+}
+
+.tip{
+
+    padding:35px 22px;
+
+    text-align:center;
+
+    background:#211109;
+
+    border:1px solid #49331c;
+
+    transition:.35s;
+}
+
+.tip:hover{
+
+    transform:translateY(-7px);
+
+    background:#28140a;
+
+    border-color:#a77c3c;
+}
+
+.tip-icon{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+}
+
+.tip h3{
+
+    color:#dbb66e;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.tip p{
+
+    color:#91806a;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+
+/* =========================
+PHOTO GALLERY
+========================= */
+
+.gallery{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    grid-auto-rows:220px;
+
+    gap:12px;
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border:1px solid #49331c;
+}
+
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+}
+
+.gallery-item.large{
+
+    grid-column:span 2;
+
+    grid-row:span 2;
+}
+
+
+/* =========================
+FINAL MESSAGE
+========================= */
+
+.final-message{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:65px 35px;
+
+    border:1px solid #654821;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #28160b,
+        #160a05
+    );
+}
+
+.final-message h2{
+
+    color:#e6c37b;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+    margin-bottom:18px;
+}
+
+.final-message p{
+
+    color:#a18b70;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:2;
+}
+
+
+/* =========================
+PAGE NAVIGATION
+========================= */
+
+.page-navigation{
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    background:#0b0402;
+
+    border-top:1px solid #493219;
+}
+
+.page-navigation-title{
+
+    color:#b98b3e;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    margin-bottom:25px;
+}
+
+.page-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.page-buttons a{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #79582d;
+
+    border-radius:50%;
+
+    color:#d8bd80;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:18px;
+
+    transition:.35s;
+}
+
+.page-buttons a:hover{
+
+    background:#c59643;
+
+    color:#180b05;
+
+    transform:translateY(-6px);
+}
+
+.page-buttons .current{
+
+    background:
+    linear-gradient(
+        135deg,
+        #efd183,
+        #b77a29
+    );
+
+    color:#180b05;
+
+    border-color:#e4c16e;
+
+    box-shadow:
+    0 8px 25px
+    rgba(197,150,67,.3);
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+    background:#080302;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #392511;
+}
+
+footer h3{
+
+    color:#d3a653;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:4px;
+
+    font-size:25px;
+}
+
+footer p{
+
+    color:#6f604c;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .highlight-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .souvenir-grid{
+        grid-template-columns:1fr;
+    }
+
+    .tip-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .travel-box{
+        grid-template-columns:1fr;
+    }
+
+    .travel-image{
+        min-height:400px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        height:68px;
+        padding:0 4%;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .nav-button{
+        font-size:12px;
+        padding:7px 12px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section{
+        padding:70px 6%;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .highlight-grid,
+    .tip-grid{
+        grid-template-columns:1fr;
+    }
+
+    .souvenir-card{
+        grid-template-columns:1fr;
+    }
+
+    .souvenir-card img{
+        height:240px;
+    }
+
+    .travel-content{
+        padding:40px 25px;
+    }
+
+    .travel-content h2{
+        font-size:32px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:160px;
+    }
+
+    .gallery-item.large{
+        grid-column:span 2;
+        grid-row:span 2;
+    }
+
+    .final-message h2{
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        🏛 AYUTTHAYA
+    </a>
+
+    <div class="nav-links">
+
+        <a href="page4.html" class="nav-button">
+            ← วัฒนธรรม
+        </a>
+
+        <a href="page1.html" class="nav-button">
+            หน้าแรก →
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            PAGE 05 • TRAVEL & SOUVENIRS
+        </div>
+
+        <h1>
+            DISCOVER
+        </h1>
+
+        <h2>
+            จุดเด่น • ของฝาก • การท่องเที่ยว
+        </h2>
+
+        <div class="hero-line"></div>
+
+        <p>
+            ปิดท้ายการเดินทางด้วยการค้นพบเสน่ห์
+            ของพระนครศรีอยุธยา ตั้งแต่จุดเด่นของเมือง
+            ของฝากจากชุมชน ไปจนถึงประสบการณ์
+            การท่องเที่ยวที่น่าจดจำ
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+HIGHLIGHTS
+========================= -->
+
+<section class="section dark">
+
+    <div class="section-title">
+
+        <span>
+            AYUTTHAYA HIGHLIGHTS
+        </span>
+
+        <h2>
+            จุดเด่นที่ไม่ควรพลาด
+        </h2>
+
+        <p>
+            อยุธยามีเสน่ห์จากการผสมผสานระหว่าง
+            ประวัติศาสตร์ โบราณสถาน ธรรมชาติ
+            อาหาร และวิถีชีวิตของชุมชน
+        </p>
+
+    </div>
+
+
+    <div class="highlight-grid">
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-temple.jpg"
+                alt="โบราณสถานอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    01
+                </div>
+
+                <h3>
+                    เมืองแห่งโบราณสถาน
+                </h3>
+
+                <p>
+                    เต็มไปด้วยวัด เจดีย์ และโบราณสถาน
+                    ที่สะท้อนความรุ่งเรืองของกรุงศรีอยุธยา
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-river.jpg"
+                alt="แม่น้ำอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    02
+                </div>
+
+                <h3>
+                    เมืองแห่งสายน้ำ
+                </h3>
+
+                <p>
+                    แม่น้ำล้อมรอบพื้นที่เมืองเก่า
+                    และเป็นส่วนสำคัญของภูมิประเทศ
+                    และวิถีชีวิต
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-food.jpg"
+                alt="อาหารอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    03
+                </div>
+
+                <h3>
+                    อาหารและของกิน
+                </h3>
+
+                <p>
+                    มีทั้งก๋วยเตี๋ยวเรือ กุ้งแม่น้ำ
+                    โรตีสายไหม และอาหารท้องถิ่น
+                    ที่มีเอกลักษณ์
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-community.jpg"
+                alt="ชุมชนอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    04
+                </div>
+
+                <h3>
+                    ชุมชนและวิถีชีวิต
+                </h3>
+
+                <p>
+                    ชุมชนท้องถิ่นช่วยรักษาภูมิปัญญา
+                    อาหาร งานฝีมือ และวัฒนธรรม
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-culture.jpg"
+                alt="วัฒนธรรมอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    05
+                </div>
+
+                <h3>
+                    วัฒนธรรมหลากหลาย
+                </h3>
+
+                <p>
+                    การติดต่อกับผู้คนจากหลายพื้นที่
+                    ทำให้เกิดการแลกเปลี่ยนวัฒนธรรม
+                    และวิถีชีวิต
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="highlight-card">
+
+            <img
+                src="images/highlight-sunset.jpg"
+                alt="บรรยากาศอยุธยา"
+            >
+
+            <div class="highlight-overlay">
+
+                <div class="highlight-number">
+                    06
+                </div>
+
+                <h3>
+                    บรรยากาศเมืองเก่า
+                </h3>
+
+                <p>
+                    ความงดงามของโบราณสถาน
+                    ในช่วงเช้าและเย็นทำให้การเดินทาง
+                    มีบรรยากาศที่น่าจดจำ
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+SOUVENIRS
+========================= -->
+
+<section class="section light">
+
+    <div class="section-title">
+
+        <span>
+            AYUTTHAYA SOUVENIRS
+        </span>
+
+        <h2>
+            ของฝากจากอยุธยา
+        </h2>
+
+        <p>
+            ของฝากเป็นอีกหนึ่งวิธีในการนำความทรงจำ
+            จากการเดินทางกลับบ้าน
+            โดยมีทั้งขนม อาหาร และสินค้าจากชุมชน
+        </p>
+
+    </div>
+
+
+    <div class="souvenir-grid">
+
+
+        <div class="souvenir-card">
+
+            <img
+                src="images/souvenir-roti.jpg"
+                alt="โรตีสายไหม"
+            >
+
+            <div class="souvenir-content">
+
+                <span>
+                    SWEET
+                </span>
+
+                <h3>
+                    โรตีสายไหม
+                </h3>
+
+                <p>
+                    ของฝากยอดนิยมของอยุธยา
+                    มีทั้งสายไหมหลายรสชาติ
+                    และแป้งโรตีที่รับประทานคู่กัน
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="souvenir-card">
+
+            <img
+                src="images/souvenir-snack.jpg"
+                alt="ขนมของฝาก"
+            >
+
+            <div class="souvenir-content">
+
+                <span>
+                    LOCAL SNACK
+                </span>
+
+                <h3>
+                    ขนมและของกิน
+                </h3>
+
+                <p>
+                    สามารถเลือกซื้อขนมไทย
+                    ขนมพื้นบ้าน และอาหารแปรรูป
+                    จากร้านค้าท้องถิ่น
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="souvenir-card">
+
+            <img
+                src="images/souvenir-handicraft.jpg"
+                alt="สินค้าหัตถกรรม"
+            >
+
+            <div class="souvenir-content">
+
+                <span>
+                    HANDICRAFT
+                </span>
+
+                <h3>
+                    งานหัตถกรรม
+                </h3>
+
+                <p>
+                    สินค้าจากภูมิปัญญาชุมชน
+                    เหมาะสำหรับผู้ที่ต้องการ
+                    ของฝากที่มีเอกลักษณ์
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="souvenir-card">
+
+            <img
+                src="images/souvenir-local.jpg"
+                alt="สินค้าชุมชน"
+            >
+
+            <div class="souvenir-content">
+
+                <span>
+                    COMMUNITY
+                </span>
+
+                <h3>
+                    สินค้าชุมชน
+                </h3>
+
+                <p>
+                    ผลิตภัณฑ์จากชุมชนช่วยสร้างรายได้
+                    และสนับสนุนผู้ประกอบการท้องถิ่น
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+TRAVEL
+========================= -->
+
+<section class="section dark">
+
+    <div class="section-title">
+
+        <span>
+            TRAVEL GUIDE
+        </span>
+
+        <h2>
+            เที่ยวอยุธยาอย่างไรให้น่าจดจำ
+        </h2>
+
+    </div>
+
+
+    <div class="travel-box">
+
+        <div class="travel-image"></div>
+
+
+        <div class="travel-content">
+
+            <span>
+                TRAVEL EXPERIENCE
+            </span>
+
+            <h2>
+                เส้นทางแห่งความทรงจำ
+            </h2>
+
+            <p>
+                การเที่ยวอยุธยาสามารถวางแผนได้หลายรูปแบบ
+                ทั้งการเที่ยวแบบวันเดียว การเดินชมเมืองเก่า
+                หรือการใช้เวลาเต็มวันเพื่อสัมผัสทั้ง
+                ประวัติศาสตร์ อาหาร และวิถีชีวิต
+            </p>
+
+
+            <ul class="travel-list">
+
+                <li>
+                    <strong>เริ่มต้น:</strong>
+                    ชมโบราณสถานสำคัญในช่วงเช้า
+                </li>
+
+                <li>
+                    <strong>ช่วงกลางวัน:</strong>
+                    ลองอาหารท้องถิ่นและก๋วยเตี๋ยวเรือ
+                </li>
+
+                <li>
+                    <strong>ช่วงบ่าย:</strong>
+                    เดินทางต่อไปยังแหล่งท่องเที่ยว
+                    และชุมชน
+                </li>
+
+                <li>
+                    <strong>ช่วงเย็น:</strong>
+                    ชมบรรยากาศเมืองเก่าและพระอาทิตย์ตก
+                </li>
+
+                <li>
+                    <strong>ก่อนกลับ:</strong>
+                    เลือกซื้อของฝากจากร้านค้าท้องถิ่น
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+TRAVEL TIPS
+========================= -->
+
+<section class="section light">
+
+    <div class="section-title">
+
+        <span>
+            TRAVEL TIPS
+        </span>
+
+        <h2>
+            เคล็ดลับสำหรับนักท่องเที่ยว
+        </h2>
+
+    </div>
+
+
+    <div class="tip-grid">
+
+
+        <div class="tip">
+
+            <div class="tip-icon">
+                ☀️
+            </div>
+
+            <h3>
+                เตรียมตัวเรื่องอากาศ
+            </h3>
+
+            <p>
+                พกน้ำดื่ม หมวก หรืออุปกรณ์
+                ป้องกันแดดเมื่อต้องเดินชม
+                โบราณสถานกลางแจ้ง
+            </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+            <div class="tip-icon">
+                👟
+            </div>
+
+            <h3>
+                รองเท้าที่เหมาะสม
+            </h3>
+
+            <p>
+                เลือกรองเท้าที่เดินสบาย
+                เพราะการเที่ยวเมืองเก่า
+                อาจต้องเดินหลายจุด
+            </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+            <div class="tip-icon">
+                📷
+            </div>
+
+            <h3>
+                เก็บภาพความทรงจำ
+            </h3>
+
+            <p>
+                อยุธยามีมุมถ่ายภาพมากมาย
+                ทั้งโบราณสถาน วัดเก่า
+                และบรรยากาศริมแม่น้ำ
+            </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+            <div class="tip-icon">
+                🙏
+            </div>
+
+            <h3>
+                เคารพสถานที่
+            </h3>
+
+            <p>
+                แต่งกายและปฏิบัติตนอย่างเหมาะสม
+                โดยเฉพาะเมื่อเข้าชมวัด
+                และโบราณสถาน
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+GALLERY
+========================= -->
+
+<section class="section dark">
+
+    <div class="section-title">
+
+        <span>
+            AYUTTHAYA GALLERY
+        </span>
+
+        <h2>
+            ภาพความประทับใจ
+        </h2>
+
+        <p>
+            เมืองเก่าที่เต็มไปด้วยเรื่องราว
+            และมุมมองที่แตกต่างกันในทุกช่วงเวลา
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <div class="gallery-item large">
+
+            <img
+                src="images/gallery-ayutthaya-1.jpg"
+                alt="อยุธยา"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/gallery-ayutthaya-2.jpg"
+                alt="วัดอยุธยา"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/gallery-ayutthaya-3.jpg"
+                alt="โบราณสถานอยุธยา"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/gallery-ayutthaya-4.jpg"
+                alt="แม่น้ำอยุธยา"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/gallery-ayutthaya-5.jpg"
+                alt="เมืองเก่าอยุธยา"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+FINAL
+========================= -->
+
+<section class="section light">
+
+    <div class="final-message">
+
+        <h2>
+            แล้วพบกันที่อยุธยา
+        </h2>
+
+        <p>
+            จากราชธานีในอดีต สู่เมืองมรดกทางวัฒนธรรม
+            ที่ยังคงมีชีวิตอยู่ในปัจจุบัน
+            อยุธยาไม่ได้มีเพียงเรื่องราวในตำรา
+            แต่ยังรอให้เราออกไปสัมผัสด้วยตัวเอง
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+PAGE NAVIGATION
+========================= -->
+
+<section class="page-navigation">
+
+    <div class="page-navigation-title">
+        EXPLORE AYUTTHAYA
+    </div>
+
+
+    <div class="page-buttons">
+
+        <a href="page1.html">
+            1
+        </a>
+
+        <a href="page2.html">
+            2
+        </a>
+
+        <a href="page3.html">
+            3
+        </a>
+
+        <a href="page4.html">
+            4
+        </a>
+
+        <a href="page5.html" class="current">
+            5
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+    <p>
+        หน้า 5 • จุดเด่น • ของฝาก • การท่องเที่ยว
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
