@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AYUTTHAYA | ประวัติศาสตร์และแผนผัง</title>
+<title>ประวัติศาสตร์อยุธยา | AYUTTHAYA</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,32 +26,34 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
-    background:#0d0603;
+    background:#0d0502;
     color:#ead8b4;
-    line-height:1.8;
+    overflow-x:hidden;
 }
 
-body:before{
+body::before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
-    z-index:20;
-    opacity:.05;
-    background-image:radial-gradient(#d7aa55 1px,transparent 1px);
+    z-index:50;
+    opacity:.04;
+    background-image:
+    radial-gradient(#d9aa55 1px,transparent 1px);
     background-size:28px 28px;
 }
 
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
-    position:fixed;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    height:75px;
     z-index:1000;
+
+    min-height:76px;
 
     display:flex;
     align-items:center;
@@ -60,617 +62,563 @@ body:before{
     padding:0 6%;
 
     background:rgba(12,5,2,.94);
-    backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(207,160,73,.35);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(214,168,77,.35);
 }
 
 .logo{
-    color:#e7bc64;
+    color:#e5b95d;
     text-decoration:none;
 
     font-family:'Playfair Display',serif;
-    font-size:23px;
+
+    font-size:24px;
     letter-spacing:4px;
 }
 
-.nav-button{
-    color:#e4d0a7;
+.home-button{
+    color:#ead6ac;
     text-decoration:none;
 
     border:1px solid #80602f;
-    padding:7px 19px;
+
+    padding:8px 20px;
     border-radius:30px;
 
     transition:.3s;
 }
 
-.nav-button:hover{
-    background:#c69743;
-    color:#160a04;
+.home-button:hover{
+    background:#c59643;
+    color:#160803;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
+    min-height:620px;
 
-    min-height:700px;
-    padding-top:75px;
+    position:relative;
 
     display:flex;
     align-items:center;
+    justify-content:center;
 
-    position:relative;
-    overflow:hidden;
+    text-align:center;
 
     background:
     linear-gradient(
-        90deg,
-        rgba(8,3,1,.95),
-        rgba(8,3,1,.60),
-        rgba(8,3,1,.88)
+        rgba(12,5,2,.45),
+        rgba(12,5,2,.92)
     ),
-    url("https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg")
+    url("images/ayutthaya-main.jpg")
     center/cover no-repeat;
 }
 
 .hero-content{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
     position:relative;
-    z-index:5;
+    z-index:2;
+
+    max-width:1000px;
+    padding:80px 25px;
 }
 
 .eyebrow{
-    color:#c99b4b;
+    color:#d3a04b;
+
     letter-spacing:7px;
-    font-size:13px;
-    margin-bottom:15px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
 }
 
 .hero h1{
     font-family:'Playfair Display',serif;
-    font-size:clamp(65px,11vw,145px);
-    line-height:.9;
-    color:#f3dfae;
+
+    font-size:clamp(55px,9vw,110px);
+
+    color:#f1dfb0;
+
     letter-spacing:5px;
+
+    line-height:1;
 }
 
 .hero h2{
     margin-top:25px;
-    color:#d1a252;
-    font-size:38px;
+
+    color:#d5a451;
+
     font-weight:300;
-}
 
-.hero-line{
-    width:250px;
-    height:1px;
-    margin:27px 0;
-
-    background:linear-gradient(
-        90deg,
-        #d8a950,
-        transparent
-    );
+    font-size:clamp(28px,5vw,48px);
 }
 
 .hero p{
-    max-width:800px;
-    color:#c8b697;
-    font-size:18px;
+    max-width:760px;
+
+    margin:30px auto 0;
+
+    color:#d1bea0;
+
+    line-height:2;
+
+    font-size:17px;
 }
 
 
-/* SECTION */
+/* =========================
+   CONTENT
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+}
 
 .section{
-    padding:100px 7%;
+    padding:90px 0;
+
+    border-bottom:1px solid #392512;
 }
 
-.section.dark{
-    background:#160a05;
-}
+.section-label{
+    color:#bd8e3d;
 
-.section-title{
-    max-width:950px;
-    margin:0 auto 55px;
-    text-align:center;
-}
-
-.section-title small{
-    color:#bd8e3e;
     letter-spacing:5px;
-}
 
-.section-title h2{
-    color:#e3bd72;
-    font-family:'Playfair Display',serif;
-    font-size:44px;
-    margin:10px 0 15px;
-}
+    font-size:13px;
 
-.section-title p{
-    color:#96836c;
-}
-
-
-/* HISTORY INTRO */
-
-.history-grid{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.05fr 1fr;
-    gap:55px;
-
-    align-items:center;
-}
-
-.history-grid img{
-
-    width:100%;
-    height:480px;
-    object-fit:cover;
-
-    border:1px solid #745329;
-    padding:7px;
-
-    background:#211006;
-}
-
-.history-text h3{
-    color:#dfbc75;
-    font-family:'Playfair Display',serif;
-    font-size:33px;
-    margin-bottom:18px;
-}
-
-.history-text p{
-    color:#a4937b;
-    margin-bottom:18px;
-}
-
-
-/* FACT BOX */
-
-.fact-row{
-
-    max-width:1200px;
-    margin:55px auto 0;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
-
-    background:#5a401f;
-}
-
-.fact{
-    background:#1a0c06;
-    padding:35px 20px;
-    text-align:center;
-}
-
-.fact-number{
-    color:#d9af60;
-    font-family:'Playfair Display',serif;
-    font-size:40px;
-}
-
-.fact-title{
-    color:#b29b7a;
-    font-size:14px;
-}
-
-
-/* MAP */
-
-.map-layout{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:40px;
-    align-items:center;
-}
-
-.map-layout img{
-
-    width:100%;
-    min-height:430px;
-
-    object-fit:cover;
-
-    border:1px solid #705026;
-    padding:8px;
-
-    background:#211007;
-}
-
-.map-text h3{
-    color:#dfbc75;
-    font-family:'Playfair Display',serif;
-    font-size:32px;
-}
-
-.map-text p{
-    color:#9c8970;
-    margin:18px 0;
-}
-
-.map-list{
-    margin-top:20px;
-}
-
-.map-list div{
-    border-left:2px solid #b4873d;
-    padding:8px 15px;
-    margin:10px 0;
-    color:#bba98c;
-}
-
-
-/* HISTORY CARDS */
-
-.history-cards{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-}
-
-.history-card{
-
-    background:#1c0d07;
-    border:1px solid #4f381d;
-
-    transition:.4s;
-    overflow:hidden;
-}
-
-.history-card:hover{
-    transform:translateY(-8px);
-    border-color:#b58a43;
-}
-
-.history-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.history-card-content{
-    padding:25px;
-}
-
-.history-card h3{
-    font-family:'Playfair Display',serif;
-    color:#dfbd78;
-    font-size:27px;
     margin-bottom:10px;
 }
 
-.history-card p{
-    color:#96836d;
-}
-
-
-/* TIMELINE */
-
-.timeline{
-
-    max-width:950px;
-    margin:auto;
-
-    border-left:1px solid #80602d;
-    padding-left:45px;
-}
-
-.timeline-item{
-    position:relative;
-    margin-bottom:50px;
-}
-
-.timeline-item:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:13px;
-    height:13px;
-
-    background:#d0a04c;
-    border-radius:50%;
-
-    left:-52px;
-    top:10px;
-
-    box-shadow:0 0 15px rgba(211,165,77,.5);
-}
-
-.timeline-year{
-    color:#bb8b3c;
-    letter-spacing:3px;
-}
-
-.timeline-item h3{
-    color:#dfbd78;
-    font-family:'Playfair Display',serif;
-    font-size:29px;
-}
-
-.timeline-item p{
-    color:#96836d;
-}
-
-
-/* INTERNATIONAL */
-
-.international{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.international-box{
-
-    background:#1c0d07;
-    border:1px solid #4e371d;
-
-    padding:35px;
-}
-
-.international-box h3{
-    color:#dcb873;
-    font-family:'Playfair Display',serif;
-    font-size:28px;
-}
-
-.international-box p{
-    color:#96836d;
-    margin-top:12px;
-}
-
-
-/* FALL */
-
-.fall{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    align-items:center;
-}
-
-.fall img{
-
-    width:100%;
-    height:430px;
-    object-fit:cover;
-
-    border:1px solid #704e27;
-    padding:7px;
-}
-
-.fall h3{
-    font-family:'Playfair Display',serif;
-    color:#dfbd78;
-    font-size:34px;
-}
-
-.fall p{
-    color:#98866f;
-    margin:18px 0;
-}
-
-
-/* WORLD HERITAGE */
-
-.world{
-
-    max-width:1000px;
-    margin:auto;
-
-    text-align:center;
-
-    padding:65px 40px;
-
-    border:1px solid #745329;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(76,47,17,.35),
-        rgba(20,8,3,.9)
-    );
-}
-
-.world-number{
+.section h2{
+    color:#e1bd72;
 
     font-family:'Playfair Display',serif;
-    font-size:80px;
-    color:#e0b665;
-}
 
-.world h3{
-    color:#dfbd78;
-    font-size:30px;
-}
-
-.world p{
-    max-width:800px;
-    margin:15px auto;
-    color:#a18f76;
-}
-
-
-/* PAGE NAVIGATION */
-
-.page-navigation{
-
-    background:#090402;
-
-    padding:65px 20px;
-
-    text-align:center;
-
-    border-top:1px solid #4a331a;
-}
-
-.page-navigation h3{
-
-    color:#bb8c40;
-
-    letter-spacing:5px;
+    font-size:42px;
 
     margin-bottom:25px;
 }
 
-.pages{
+.section p{
+    color:#b9a487;
 
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
+    line-height:2;
+
+    font-size:16px;
+
+    margin-bottom:20px;
 }
 
-.pages a{
 
-    width:55px;
-    height:55px;
+/* =========================
+   IMAGE + TEXT
+========================= */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.image-box{
+    overflow:hidden;
+
+    border:1px solid #69491f;
+
+    background:#170904;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+}
+
+.image-box img{
+    display:block;
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.image-box:hover img{
+    transform:scale(1.05);
+}
+
+.caption{
+    padding:12px 15px;
+
+    color:#927d5f;
+
+    font-size:13px;
+
+    text-align:center;
+
+    background:#120603;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    margin-top:45px;
+
+    border-left:1px solid #8c6630;
+
+    padding-left:35px;
+}
+
+.timeline-item{
+    position:relative;
+
+    margin-bottom:42px;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+    height:12px;
 
     border-radius:50%;
 
-    border:1px solid #79582c;
+    background:#d5a44e;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    left:-42px;
+    top:7px;
 
-    text-decoration:none;
+    box-shadow:
+    0 0 15px rgba(213,164,78,.5);
+}
 
-    color:#d7bc7d;
+.timeline-year{
+    color:#d4a04a;
 
     font-family:'Playfair Display',serif;
-    font-size:20px;
+
+    font-size:28px;
+
+    margin-bottom:5px;
+}
+
+.timeline-item h3{
+    color:#e1c17d;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.timeline-item p{
+    margin:0;
+}
+
+
+/* =========================
+   MAP SECTION
+========================= */
+
+.map-section{
+    padding:90px 0;
+
+    background:#130704;
+}
+
+.map-image{
+    max-width:1050px;
+
+    margin:40px auto 0;
+
+    border:1px solid #725024;
+
+    box-shadow:
+    0 20px 70px rgba(0,0,0,.5);
+}
+
+.map-image img{
+    display:block;
+
+    width:100%;
+
+    max-height:650px;
+
+    object-fit:contain;
+
+    background:#ead9ae;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:40px;
+}
+
+.card{
+    padding:30px;
+
+    background:#1a0a05;
+
+    border:1px solid #493118;
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    border-color:#a97a35;
+
+    background:#241007;
+}
+
+.card-number{
+    color:#c99942;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:35px;
+}
+
+.card h3{
+    color:#dfbc73;
+
+    font-size:23px;
+
+    margin:8px 0 10px;
+}
+
+.card p{
+    margin:0;
+}
+
+
+/* =========================
+   IMAGE GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:40px;
+}
+
+.gallery-item{
+    position:relative;
+
+    overflow:hidden;
+
+    height:260px;
+
+    border:1px solid #573b1d;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-title{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:18px 15px 12px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    color:#f0ddb0;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+.page-navigation{
+    padding:80px 6%;
+
+    text-align:center;
+
+    background:#0a0402;
+
+    border-top:1px solid #3d2916;
+}
+
+.page-navigation h2{
+    color:#dfbd78;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:35px;
+
+    margin-bottom:30px;
+}
+
+.page-buttons{
+    max-width:1000px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:12px;
+}
+
+.page-buttons a{
+    text-decoration:none;
+
+    color:#cdbb9a;
+
+    padding:18px 10px;
+
+    background:#190a05;
+
+    border:1px solid #51371c;
 
     transition:.3s;
 }
 
-.pages a:hover,
-.pages .active{
+.page-buttons a strong{
+    display:block;
 
-    background:linear-gradient(
-        135deg,
-        #efd183,
-        #b77a29
-    );
-
-    color:#170a04;
-
-    transform:translateY(-5px);
-}
-
-
-/* FOOTER */
-
-footer{
-
-    background:#050201;
-
-    text-align:center;
-
-    padding:40px 20px;
-}
-
-footer h3{
+    color:#d8ad5a;
 
     font-family:'Playfair Display',serif;
 
+    font-size:25px;
+
+    margin-bottom:5px;
+}
+
+.page-buttons a:hover,
+.page-buttons a.active{
+    background:#2a1509;
+
+    border-color:#bd9144;
+
+    transform:translateY(-4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 20px;
+
+    text-align:center;
+
+    background:#070302;
+}
+
+footer h3{
     color:#d3a653;
 
+    font-family:'Playfair Display',serif;
+
     letter-spacing:5px;
+
+    font-size:24px;
 }
 
 footer p{
-    color:#6d5c48;
+    color:#6f604c;
+
+    margin-top:8px;
 }
 
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:850px){
-
-    .history-grid,
-    .map-layout,
-    .fall{
-        grid-template-columns:1fr;
-    }
-
-    .history-cards{
-        grid-template-columns:1fr;
-    }
-
-    .international{
-        grid-template-columns:1fr;
-    }
-
-    .fact-row{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:550px){
-
-    .hero h2{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .section{
-        padding:70px 6%;
-    }
-
-    .section-title h2{
-        font-size:33px;
-    }
-
-    .fact-row{
-        grid-template-columns:1fr;
-    }
+@media(max-width:800px){
 
     .navbar{
         padding:0 4%;
     }
 
     .logo{
-        font-size:17px;
+        font-size:18px;
     }
 
-    .nav-button{
-        font-size:11px;
+    .home-button{
+        font-size:12px;
+        padding:7px 13px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .page-buttons{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
 }
@@ -682,7 +630,9 @@ footer p{
 <body>
 
 
-<!-- NAVBAR -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav class="navbar">
 
@@ -690,21 +640,23 @@ footer p{
 🏛 AYUTTHAYA
 </a>
 
-<a href="page2.html" class="nav-button">
-สถานที่สำคัญ →
+<a href="index.html" class="home-button">
+← กลับหน้าหลัก
 </a>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
 <div class="eyebrow">
-PAGE 01 • HISTORY & CITY PLAN
+PAGE 01 • HISTORY
 </div>
 
 <h1>
@@ -715,12 +667,12 @@ HISTORY
 ประวัติศาสตร์กรุงศรีอยุธยา
 </h2>
 
-<div class="hero-line"></div>
-
 <p>
-เรื่องราวของราชธานีที่เคยเป็นหนึ่งในเมืองสำคัญ
-ของเอเชียตะวันออกเฉียงใต้ ทั้งในด้านการเมือง
-การค้า ศาสนา ศิลปะ และความสัมพันธ์ระหว่างประเทศ
+จากราชธานีแห่งสยาม
+สู่เมืองมรดกทางประวัติศาสตร์
+ที่ยังคงบอกเล่าเรื่องราวของอดีต
+ผ่านโบราณสถาน ศิลปกรรม
+และวิถีชีวิตของผู้คน
 </p>
 
 </div>
@@ -728,151 +680,57 @@ HISTORY
 </section>
 
 
-<!-- INTRO -->
+<!-- =========================
+     SECTION 1
+========================= -->
 
 <section class="section">
 
-<div class="section-title">
+<div class="container">
 
-<small>THE BEGINNING</small>
+<div class="info-grid">
+
+
+<div>
+
+<div class="section-label">
+THE BEGINNING
+</div>
 
 <h2>
 กำเนิดกรุงศรีอยุธยา
 </h2>
 
 <p>
-จากเมืองที่ตั้งอยู่ท่ามกลางสายน้ำ
-สู่ศูนย์กลางของอาณาจักรสยาม
+กรุงศรีอยุธยาสถาปนาขึ้นใน พ.ศ. 1893
+โดยสมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
+บริเวณพื้นที่ที่มีแม่น้ำสำคัญล้อมรอบ
+ทำให้เมืองมีความเหมาะสมทั้งด้านการตั้งถิ่นฐาน
+การคมนาคม และการป้องกันเมือง
+</p>
+
+<p>
+ตำแหน่งที่ตั้งของอยุธยาทำให้เมืองสามารถเชื่อมโยง
+กับพื้นที่ต่าง ๆ ของลุ่มแม่น้ำเจ้าพระยา
+รวมถึงเส้นทางการค้าระหว่างภายในภูมิภาค
+กับดินแดนต่างประเทศ
 </p>
 
 </div>
 
 
-<div class="history-grid">
+<div class="image-box">
 
 <img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="กรุงศรีอยุธยา"
->
+src="images/ayutthaya-main.jpg"
+alt="กรุงศรีอยุธยา">
 
-
-<div class="history-text">
-
-<h3>
-ราชธานีแห่งที่สองของสยาม
-</h3>
-
-<p>
-กรุงศรีอยุธยาก่อตั้งขึ้นประมาณ ค.ศ. 1350
-หรือ พ.ศ. 1893 และกลายเป็นราชธานีแห่งที่สอง
-ของสยามต่อจากสุโขทัย
-</p>
-
-<p>
-ตลอดระยะเวลาหลายศตวรรษ อยุธยาได้พัฒนา
-จากเมืองหลวงของอาณาจักรให้กลายเป็นเมืองขนาดใหญ่
-ที่มีบทบาทสำคัญทั้งด้านการเมือง เศรษฐกิจ
-ศาสนา และวัฒนธรรม
-</p>
-
-<p>
-ทำเลของเมืองมีความสำคัญอย่างมาก เพราะตั้งอยู่บนเกาะ
-ที่มีแม่น้ำสามสายล้อมรอบและเชื่อมต่อกับทะเล
-ทำให้เหมาะกับทั้งการคมนาคม การค้า
-และการป้องกันเมือง
-</p>
-
+<div class="caption">
+กรุงศรีอยุธยาและโบราณสถานในอุทยานประวัติศาสตร์
 </div>
 
 </div>
 
-
-<div class="fact-row">
-
-<div class="fact">
-<div class="fact-number">1350</div>
-<div class="fact-title">เริ่มต้นอาณาจักรโดยประมาณ ค.ศ.</div>
-</div>
-
-<div class="fact">
-<div class="fact-number">1767</div>
-<div class="fact-title">ปีที่อยุธยาเสียกรุงครั้งที่สอง</div>
-</div>
-
-<div class="fact">
-<div class="fact-number">1991</div>
-<div class="fact-title">ปีที่ได้รับการขึ้นทะเบียนมรดกโลก</div>
-</div>
-
-<div class="fact">
-<div class="fact-number">289</div>
-<div class="fact-title">พื้นที่มรดกโลกประมาณ 289 เฮกตาร์</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CITY PLAN -->
-
-<section class="section dark">
-
-<div class="section-title">
-
-<small>CITY PLAN</small>
-
-<h2>
-แผนผังและภูมิศาสตร์ของเมือง
-</h2>
-
-<p>
-ตำแหน่งของแม่น้ำ ถนน คูเมือง และคลอง
-มีความสัมพันธ์กับการวางผังเมืองอย่างใกล้ชิด
-</p>
-
-</div>
-
-
-<div class="map-layout">
-
-<img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="แผนผังและภูมิทัศน์เมืองอยุธยา"
->
-
-
-<div class="map-text">
-
-<h3>
-เมืองที่ออกแบบด้วยสายน้ำ
-</h3>
-
-<p>
-อยุธยาตั้งอยู่บนพื้นที่เกาะซึ่งถูกล้อมรอบ
-ด้วยแม่น้ำสามสาย การวางผังเมืองมีถนน
-คลอง และคูเมืองที่เชื่อมโยงกับพื้นที่สำคัญ
-</p>
-
-<div class="map-list">
-
-<div>
-แม่น้ำเจ้าพระยา — เส้นทางสำคัญสู่ทะเล
-</div>
-
-<div>
-แม่น้ำป่าสัก — เชื่อมพื้นที่ทางตะวันออก
-</div>
-
-<div>
-แม่น้ำลพบุรี — เป็นองค์ประกอบของภูมิประเทศเมือง
-</div>
-
-<div>
-คลองและคูเมือง — ช่วยด้านการคมนาคมและการป้องกัน
-</div>
-
-</div>
 
 </div>
 
@@ -881,215 +739,21 @@ alt="แผนผังและภูมิทัศน์เมืองอย
 </section>
 
 
-<!-- GOLDEN AGE -->
+<!-- =========================
+     TIMELINE
+========================= -->
 
 <section class="section">
 
-<div class="section-title">
+<div class="container">
 
-<small>THE GOLDEN AGE</small>
+<div class="section-label">
+HISTORICAL TIMELINE
+</div>
 
 <h2>
-ยุครุ่งเรืองของกรุงศรีอยุธยา
+ลำดับเหตุการณ์สำคัญ
 </h2>
-
-<p>
-อยุธยาเติบโตจนกลายเป็นศูนย์กลางระดับภูมิภาค
-และเป็นเมืองนานาชาติที่มีผู้คนหลากหลายเชื้อสาย
-</p>
-
-</div>
-
-
-<div class="history-cards">
-
-
-<div class="history-card">
-
-<img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="โบราณสถานอยุธยา"
->
-
-<div class="history-card-content">
-
-<h3>
-ศูนย์กลางการเมือง
-</h3>
-
-<p>
-อยุธยาเป็นที่ตั้งของพระราชวัง
-และศูนย์กลางการปกครองของอาณาจักร
-มีระบบการบริหารและความสัมพันธ์
-กับหัวเมืองต่าง ๆ
-</p>
-
-</div>
-
-</div>
-
-
-<div class="history-card">
-
-<img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="เมืองการค้าอยุธยา"
->
-
-<div class="history-card-content">
-
-<h3>
-เมืองแห่งการค้า
-</h3>
-
-<p>
-ตำแหน่งที่เชื่อมต่อเส้นทางภายในภูมิภาค
-และเส้นทางออกทะเลทำให้อยุธยา
-กลายเป็นศูนย์กลางการค้าสำคัญ
-</p>
-
-</div>
-
-</div>
-
-
-<div class="history-card">
-
-<img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="ศิลปวัฒนธรรมอยุธยา"
->
-
-<div class="history-card-content">
-
-<h3>
-ศิลปะและศาสนา
-</h3>
-
-<p>
-วัด พระปรางค์ เจดีย์ ประติมากรรม
-และจิตรกรรมสะท้อนความเจริญ
-ทางศิลปะและความเชื่อของสังคมอยุธยา
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- INTERNATIONAL TRADE -->
-
-<section class="section dark">
-
-<div class="section-title">
-
-<small>GLOBAL CONNECTION</small>
-
-<h2>
-อยุธยากับโลกภายนอก
-</h2>
-
-<p>
-เมืองหลวงแห่งนี้มีความสัมพันธ์กับผู้คน
-และอาณาจักรจากหลายพื้นที่
-</p>
-
-</div>
-
-
-<div class="international">
-
-
-<div class="international-box">
-
-<h3>
-การค้าระหว่างประเทศ
-</h3>
-
-<p>
-อยุธยาเป็นศูนย์กลางการค้าระดับภูมิภาค
-และมีการติดต่อกับทั้งเอเชียและชาติตะวันตก
-ทำให้เกิดการแลกเปลี่ยนสินค้า ความรู้
-ภาษา และวัฒนธรรม
-</p>
-
-</div>
-
-
-<div class="international-box">
-
-<h3>
-ชุมชนชาวต่างชาติ
-</h3>
-
-<p>
-ในเมืองมีชุมชนของพ่อค้าและมิชชันนารี
-จากหลายพื้นที่ แต่ละกลุ่มมีรูปแบบ
-สถาปัตยกรรมและวัฒนธรรมของตนเอง
-</p>
-
-</div>
-
-
-<div class="international-box">
-
-<h3>
-ความสัมพันธ์ทางการทูต
-</h3>
-
-<p>
-ราชสำนักอยุธยามีการส่งคณะทูตและติดต่อ
-กับราชสำนักต่างประเทศ รวมถึงจีน ญี่ปุ่น
-อินเดีย เปอร์เซีย และยุโรป
-</p>
-
-</div>
-
-
-<div class="international-box">
-
-<h3>
-การผสมผสานทางวัฒนธรรม
-</h3>
-
-<p>
-อิทธิพลจากหลายพื้นที่ถูกนำมาผสมผสาน
-กับศิลปะท้องถิ่น จนเกิดเป็นรูปแบบ
-ศิลปกรรมและสถาปัตยกรรมที่มีเอกลักษณ์
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- TIMELINE -->
-
-<section class="section">
-
-<div class="section-title">
-
-<small>HISTORICAL TIMELINE</small>
-
-<h2>
-เส้นเวลาสำคัญ
-</h2>
-
-<p>
-เหตุการณ์สำคัญที่ช่วยให้เห็นพัฒนาการ
-ของกรุงศรีอยุธยา
-</p>
-
-</div>
-
 
 <div class="timeline">
 
@@ -1106,7 +770,7 @@ alt="ศิลปวัฒนธรรมอยุธยา"
 
 <p>
 สมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
-สถาปนาอยุธยาเป็นราชธานี
+สถาปนากรุงศรีอยุธยาขึ้นเป็นราชธานี
 </p>
 
 </div>
@@ -1115,16 +779,16 @@ alt="ศิลปวัฒนธรรมอยุธยา"
 <div class="timeline-item">
 
 <div class="timeline-year">
-ช่วงศตวรรษที่ 14–15
+พ.ศ. 1981
 </div>
 
 <h3>
-การขยายตัวของอาณาจักร
+การสถาปนากรุงศรีอยุธยาเป็นศูนย์กลางสำคัญ
 </h3>
 
 <p>
-อยุธยาค่อย ๆ ขยายอำนาจและสร้างความสัมพันธ์
-กับเมืองต่าง ๆ ในภูมิภาค
+อยุธยาพัฒนาอย่างต่อเนื่องและมีบทบาทมากขึ้น
+ทั้งด้านการเมือง การปกครอง และการค้า
 </p>
 
 </div>
@@ -1133,16 +797,17 @@ alt="ศิลปวัฒนธรรมอยุธยา"
 <div class="timeline-item">
 
 <div class="timeline-year">
-ศตวรรษที่ 16–17
+พุทธศตวรรษที่ 21–23
 </div>
 
 <h3>
-การค้าระหว่างประเทศเฟื่องฟู
+ยุคแห่งการค้าระหว่างประเทศ
 </h3>
 
 <p>
-อยุธยาเติบโตเป็นศูนย์กลางการค้าระหว่างประเทศ
-และมีชุมชนชาวต่างชาติอาศัยอยู่ในเมือง
+อยุธยากลายเป็นเมืองนานาชาติ
+มีการติดต่อค้าขายกับชาวต่างชาติ
+จากเอเชียและยุโรป
 </p>
 
 </div>
@@ -1155,78 +820,223 @@ alt="ศิลปวัฒนธรรมอยุธยา"
 </div>
 
 <h3>
-การเสียกรุงครั้งที่สอง
+การเสียกรุงศรีอยุธยาครั้งที่สอง
 </h3>
 
 <p>
-กองทัพพม่าบุกทำลายกรุงศรีอยุธยา
-เมืองถูกทิ้งร้างและไม่ได้สร้างราชธานีขึ้นใหม่
-ในบริเวณเดิม
+กรุงศรีอยุธยาสิ้นสุดบทบาทการเป็นราชธานี
+หลังเกิดสงครามและการทำลายเมือง
 </p>
 
 </div>
 
 
-<div class="timeline-item">
-
-<div class="timeline-year">
-พ.ศ. 2534
 </div>
-
-<h3>
-ขึ้นทะเบียนเป็นมรดกโลก
-</h3>
-
-<p>
-นครประวัติศาสตร์พระนครศรีอยุธยา
-ได้รับการขึ้นทะเบียนเป็นมรดกโลก
-โดย UNESCO
-</p>
-
-</div>
-
 
 </div>
 
 </section>
 
 
-<!-- FALL OF AYUTTHAYA -->
+<!-- =========================
+     MAP
+========================= -->
 
-<section class="section dark">
+<section class="map-section">
 
-<div class="fall">
+<div class="container">
+
+<div class="section-label">
+GEOGRAPHY
+</div>
+
+<h2>
+แผนผังและภูมิศาสตร์ของเมือง
+</h2>
+
+<p>
+อยุธยาตั้งอยู่บนพื้นที่เกาะเมือง
+ซึ่งมีแม่น้ำสำคัญล้อมรอบ ได้แก่
+แม่น้ำเจ้าพระยา แม่น้ำป่าสัก และแม่น้ำลพบุรี
+ลักษณะทางภูมิศาสตร์นี้มีส่วนสำคัญ
+ต่อการป้องกันเมืองและการเดินทางทางน้ำ
+</p>
+
+<div class="map-image">
 
 <img
-src="https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg"
-alt="ซากโบราณสถานอยุธยา"
->
+src="images/ayutthaya-map.jpg"
+alt="แผนผังและภูมิศาสตร์ของกรุงศรีอยุธยา">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CITY DEVELOPMENT
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+THE CITY
+</div>
+
+<h2>
+การพัฒนาเมืองอยุธยา
+</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-number">
+01
+</div>
+
+<h3>
+เมืองศูนย์กลางการปกครอง
+</h3>
+
+<p>
+พระมหากษัตริย์ใช้กรุงศรีอยุธยา
+เป็นศูนย์กลางในการบริหารราชอาณาจักร
+มีพระราชวัง วัด และสถานที่ราชการ
+กระจายอยู่ภายในเมือง
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+02
+</div>
+
+<h3>
+เมืองแห่งศาสนา
+</h3>
+
+<p>
+วัดและศาสนสถานจำนวนมาก
+ถูกสร้างขึ้นเพื่อเป็นศูนย์กลาง
+ทางพระพุทธศาสนาและเป็นสถานที่
+ประกอบพิธีกรรมของราชสำนัก
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+เมืองแห่งการค้า
+</h3>
+
+<p>
+ทำเลที่ตั้งบริเวณแม่น้ำ
+ช่วยให้เรือสินค้าสามารถเดินทาง
+เข้าออกเมืองและเชื่อมโยง
+กับเส้นทางการค้าระหว่างประเทศ
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+04
+</div>
+
+<h3>
+เมืองแห่งศิลปกรรม
+</h3>
+
+<p>
+สถาปัตยกรรม ประติมากรรม
+และงานช่างของอยุธยา
+สะท้อนการผสมผสานระหว่าง
+วัฒนธรรมท้องถิ่นและอิทธิพลจากต่างชาติ
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRADE
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="info-grid">
+
+
+<div class="image-box">
+
+<img
+src="images/ayutthaya-trade.jpg"
+alt="เมืองการค้าอยุธยา">
+
+<div class="caption">
+อยุธยาในฐานะเมืองศูนย์กลางการค้า
+</div>
+
+</div>
 
 
 <div>
 
-<h3>
-จากราชธานีสู่เมืองประวัติศาสตร์
-</h3>
+<div class="section-label">
+INTERNATIONAL TRADE
+</div>
+
+<h2>
+อยุธยา เมืองการค้านานาชาติ
+</h2>
 
 <p>
-ใน พ.ศ. 2310 กรุงศรีอยุธยาถูกกองทัพพม่าโจมตี
-และเมืองได้รับความเสียหายอย่างหนัก
-ประชาชนจำนวนมากต้องออกจากเมือง
+ด้วยตำแหน่งทางภูมิศาสตร์ที่เชื่อมโยง
+เส้นทางแม่น้ำและทะเล
+กรุงศรีอยุธยาจึงกลายเป็นเมืองการค้า
+ที่มีผู้คนจากหลายพื้นที่เดินทางเข้ามา
 </p>
 
 <p>
-หลังจากนั้นราชธานีใหม่ถูกสร้างขึ้นที่อื่น
-ทำให้บริเวณเมืองเก่าอยุธยากลายเป็นพื้นที่
-ทางประวัติศาสตร์และโบราณคดี
+มีการติดต่อกับพ่อค้าจากจีน ญี่ปุ่น อินเดีย
+เปอร์เซีย และประเทศในยุโรป
+ทำให้เกิดการแลกเปลี่ยนสินค้า ภาษา
+ความรู้ และวัฒนธรรม
 </p>
 
 <p>
-ปัจจุบันซากวัด พระปรางค์ เจดีย์
-และโครงสร้างเมืองโบราณยังคงเป็นหลักฐาน
-ที่ช่วยให้เราเข้าใจขนาดและความรุ่งเรือง
-ของอยุธยาในอดีต
+ความหลากหลายของผู้คนในอดีต
+เป็นหนึ่งในปัจจัยที่ทำให้กรุงศรีอยุธยา
+มีลักษณะเป็นเมืองนานาชาติ
 </p>
+
+</div>
+
 
 </div>
 
@@ -1235,31 +1045,177 @@ alt="ซากโบราณสถานอยุธยา"
 </section>
 
 
-<!-- WORLD HERITAGE -->
+<!-- =========================
+     ART
+========================= -->
 
 <section class="section">
 
-<div class="world">
+<div class="container">
 
-<div class="world-number">
-1991
+<div class="section-label">
+ART & CULTURE
 </div>
 
-<h3>
-Historic City of Ayutthaya
-</h3>
+<h2>
+ศิลปวัฒนธรรมอยุธยา
+</h2>
 
 <p>
-นครประวัติศาสตร์พระนครศรีอยุธยาได้รับการขึ้นทะเบียน
-เป็นมรดกโลกในปี ค.ศ. 1991 ตามเกณฑ์คุณค่าความโดดเด่น
-สากลด้านการเป็นพยานสำคัญของพัฒนาการ
-ของศิลปะไทย
+ศิลปกรรมสมัยอยุธยามีเอกลักษณ์โดดเด่น
+ทั้งด้านสถาปัตยกรรม พระพุทธรูป
+จิตรกรรม และงานช่าง
+โดยได้รับอิทธิพลจากหลายวัฒนธรรม
+และพัฒนาจนเกิดเป็นรูปแบบเฉพาะของอยุธยา
+</p>
+
+
+<div class="info-grid" style="margin-top:40px;">
+
+
+<div class="image-box">
+
+<img
+src="images/ayutthaya-art.jpg"
+alt="ศิลปวัฒนธรรมอยุธยา">
+
+<div class="caption">
+ศิลปกรรมและสถาปัตยกรรมอยุธยา
+</div>
+
+</div>
+
+
+<div>
+
+<p>
+วัดและโบราณสถานหลายแห่ง
+แสดงให้เห็นถึงความสามารถ
+ของช่างในสมัยอยุธยา
+ทั้งการก่ออิฐ การสร้างปรางค์
+เจดีย์ และพระพุทธรูป
 </p>
 
 <p>
-พื้นที่มรดกโลกที่ระบุโดย UNESCO มีประมาณ 289 เฮกตาร์
-และยังคงแสดงให้เห็นรูปแบบเมือง โบราณสถาน
-และมรดกทางสถาปัตยกรรมของราชธานีเดิม
+รูปแบบศิลปกรรมเหล่านี้
+กลายเป็นมรดกสำคัญ
+ที่ช่วยให้คนรุ่นปัจจุบัน
+เข้าใจถึงความเจริญรุ่งเรือง
+ของราชธานีในอดีต
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RUINS GALLERY
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+HERITAGE
+</div>
+
+<h2>
+ร่องรอยจากอดีต
+</h2>
+
+<p>
+แม้กรุงศรีอยุธยาจะสิ้นสุดการเป็นราชธานี
+แต่โบราณสถานจำนวนมากยังคงเป็นหลักฐาน
+ที่สะท้อนถึงประวัติศาสตร์และความรุ่งเรือง
+ของเมืองในอดีต
+</p>
+
+
+<div class="gallery">
+
+
+<div class="gallery-item">
+
+<img
+src="images/ayutthaya-ruins.jpg"
+alt="โบราณสถานอยุธยา">
+
+<div class="gallery-title">
+โบราณสถานอยุธยา
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ayutthaya-destruction.jpg"
+alt="ซากโบราณสถานอยุธยา">
+
+<div class="gallery-title">
+ซากโบราณสถาน
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ayutthaya-main.jpg"
+alt="อุทยานประวัติศาสตร์อยุธยา">
+
+<div class="gallery-title">
+อุทยานประวัติศาสตร์
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SUMMARY
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+SUMMARY
+</div>
+
+<h2>
+อยุธยากับความสำคัญในปัจจุบัน
+</h2>
+
+<p>
+กรุงศรีอยุธยาไม่ได้เป็นเพียงเรื่องราว
+ของราชธานีในอดีตเท่านั้น
+แต่ยังเป็นแหล่งเรียนรู้ทางประวัติศาสตร์
+ศิลปวัฒนธรรม และสถาปัตยกรรมที่สำคัญ
+</p>
+
+<p>
+โบราณสถานและพื้นที่ทางประวัติศาสตร์
+ช่วยให้คนรุ่นใหม่สามารถศึกษาร่องรอย
+ของสังคมในอดีต และเข้าใจถึงความสัมพันธ์
+ระหว่างผู้คน การเมือง การค้า ศาสนา
+และวัฒนธรรมที่หล่อหลอมกรุงศรีอยุธยา
 </p>
 
 </div>
@@ -1267,30 +1223,72 @@ Historic City of Ayutthaya
 </section>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     PAGE NAVIGATION
+========================= -->
 
 <section class="page-navigation">
 
-<h3>
-EXPLORE ALL PAGES
-</h3>
+<h2>
+สำรวจเรื่องราวอยุธยา
+</h2>
 
-<div class="pages">
+<div class="page-buttons">
 
-<a href="page1.html" class="active">1</a>
 
-<a href="page2.html">2</a>
+<a href="page1.html" class="active">
 
-<a href="page3.html">3</a>
+<strong>01</strong>
 
-<a href="page4.html">4</a>
+ประวัติศาสตร์
 
-<a href="page5.html">5</a>
+</a>
+
+
+<a href="page2.html">
+
+<strong>02</strong>
+
+สถานที่สำคัญ
+
+</a>
+
+
+<a href="page3.html">
+
+<strong>03</strong>
+
+ชุดไทยและวิถีชีวิต
+
+</a>
+
+
+<a href="page4.html">
+
+<strong>04</strong>
+
+วัฒนธรรมและอาหาร
+
+</a>
+
+
+<a href="page5.html">
+
+<strong>05</strong>
+
+จุดเด่นและของฝาก
+
+</a>
+
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1299,11 +1297,7 @@ AYUTTHAYA
 </h3>
 
 <p>
-ประวัติศาสตร์ • แผนผัง • อารยธรรม • มรดกโลก
-</p>
-
-<p>
-ข้อมูลอ้างอิง: UNESCO World Heritage Centre
+ประวัติศาสตร์ • ศิลปวัฒนธรรม • วิถีชีวิต • การท่องเที่ยว
 </p>
 
 </footer>
