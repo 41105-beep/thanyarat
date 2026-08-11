@@ -52,17 +52,17 @@ NAVBAR
     top:0;
     left:0;
     width:100%;
-    height:75px;
+    height:76px;
     z-index:1000;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 6%;
+    padding:0 5%;
 
-    background:rgba(14,7,4,.88);
-    backdrop-filter:blur(14px);
+    background:rgba(14,7,4,.90);
+    backdrop-filter:blur(15px);
 
     border-bottom:1px solid rgba(214,168,77,.35);
 }
@@ -75,16 +75,20 @@ NAVBAR
     letter-spacing:4px;
 }
 
+.nav-links{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
 .nav-button{
-    color:#ead6ac;
     text-decoration:none;
-
+    color:#ead6ac;
     border:1px solid #8f672f;
-
-    padding:8px 20px;
+    padding:8px 18px;
     border-radius:30px;
-
-    transition:.3s;
+    font-size:14px;
+    transition:.35s;
 }
 
 .nav-button:hover{
@@ -98,8 +102,9 @@ HERO
 ========================= */
 
 .hero{
-    min-height:650px;
-    padding-top:75px;
+
+    min-height:620px;
+    padding-top:76px;
 
     display:flex;
     align-items:center;
@@ -110,10 +115,11 @@ HERO
     background:
     linear-gradient(
         90deg,
-        rgba(10,4,2,.95),
-        rgba(10,4,2,.55),
-        rgba(10,4,2,.85)
+        rgba(10,4,2,.90),
+        rgba(10,4,2,.52),
+        rgba(10,4,2,.90)
     ),
+
     url("images/ayutthaya-history.jpg")
     center/cover no-repeat;
 }
@@ -129,23 +135,22 @@ HERO
 .hero-small{
     color:#c99a46;
     letter-spacing:7px;
-    font-size:14px;
+    font-size:13px;
     margin-bottom:20px;
 }
 
 .hero h1{
     font-family:'Playfair Display',serif;
-    font-size:clamp(55px,8vw,110px);
+    font-size:clamp(55px,8vw,105px);
     line-height:.95;
     color:#f2dfaf;
-    max-width:850px;
 }
 
 .hero h2{
     color:#d3a04b;
     font-size:38px;
     font-weight:300;
-    margin-top:25px;
+    margin-top:20px;
 }
 
 .hero-line{
@@ -156,7 +161,7 @@ HERO
 }
 
 .hero p{
-    max-width:700px;
+    max-width:720px;
     color:#cbb897;
     font-size:17px;
     line-height:2;
@@ -164,25 +169,24 @@ HERO
 
 
 /* =========================
-SECTION
+CONTENT
 ========================= */
 
 .section{
     padding:100px 7%;
-    position:relative;
 }
 
-.section-dark{
+.dark{
     background:#130906;
 }
 
-.section-light{
+.light{
     background:#1a0d07;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:55px;
 }
 
 .section-title span{
@@ -194,12 +198,12 @@ SECTION
 .section-title h2{
     font-family:'Playfair Display',serif;
     color:#e5c27a;
-    font-size:46px;
+    font-size:44px;
     margin-top:10px;
 }
 
 .section-title p{
-    max-width:750px;
+    max-width:780px;
     margin:15px auto 0;
     color:#98846c;
     line-height:1.9;
@@ -207,10 +211,11 @@ SECTION
 
 
 /* =========================
-HISTORY INTRO
+HISTORY
 ========================= */
 
 .history-grid{
+
     max-width:1200px;
     margin:auto;
 
@@ -222,13 +227,11 @@ HISTORY INTRO
     align-items:center;
 }
 
-.history-image{
-    position:relative;
-}
-
 .history-image img{
+
     width:100%;
     height:480px;
+
     object-fit:cover;
 
     border:1px solid #72532b;
@@ -237,51 +240,42 @@ HISTORY INTRO
     0 25px 60px rgba(0,0,0,.5);
 }
 
-.history-image::after{
-    content:"AYUTTHAYA";
-
-    position:absolute;
-    bottom:18px;
-    left:18px;
-
-    padding:8px 18px;
-
-    background:rgba(10,5,2,.8);
-
-    color:#d5aa5b;
-
-    letter-spacing:4px;
-    font-size:12px;
-}
-
 .history-text h3{
+
     font-family:'Playfair Display',serif;
+
     color:#e1bd73;
-    font-size:35px;
+
+    font-size:34px;
+
     margin-bottom:20px;
 }
 
 .history-text p{
+
     color:#a9977e;
+
     line-height:2;
+
     margin-bottom:18px;
 }
 
-.gold-number{
-    color:#d2a34e;
-    font-size:22px;
+.gold{
+    color:#d3a34f;
 }
 
 
 /* =========================
-IMPORTANT FACTS
+FACT CARDS
 ========================= */
 
 .fact-grid{
+
     max-width:1200px;
     margin:auto;
 
     display:grid;
+
     grid-template-columns:
     repeat(4,1fr);
 
@@ -289,7 +283,9 @@ IMPORTANT FACTS
 }
 
 .fact{
+
     padding:35px 20px;
+
     text-align:center;
 
     background:#201109;
@@ -300,7 +296,9 @@ IMPORTANT FACTS
 }
 
 .fact:hover{
+
     transform:translateY(-8px);
+
     border-color:#b58a45;
 }
 
@@ -326,13 +324,16 @@ TIMELINE
 ========================= */
 
 .timeline{
-    max-width:1000px;
+
+    max-width:1050px;
+
     margin:auto;
 
     position:relative;
 }
 
 .timeline::before{
+
     content:"";
 
     position:absolute;
@@ -342,17 +343,18 @@ TIMELINE
     top:0;
     bottom:0;
 
-    width:1px;
+    width:2px;
 
     background:
     linear-gradient(
-        #b88a43,
+        #bd9149,
         #543918,
-        #b88a43
+        #bd9149
     );
 }
 
 .timeline-item{
+
     width:50%;
 
     padding:20px 45px;
@@ -361,19 +363,23 @@ TIMELINE
 }
 
 .timeline-item:nth-child(odd){
+
     left:0;
+
     text-align:right;
 }
 
 .timeline-item:nth-child(even){
+
     left:50%;
 }
 
 .timeline-dot{
+
     position:absolute;
 
-    width:14px;
-    height:14px;
+    width:15px;
+    height:15px;
 
     border-radius:50%;
 
@@ -387,175 +393,250 @@ TIMELINE
 
 .timeline-item:nth-child(odd)
 .timeline-dot{
-    right:-7px;
+
+    right:-8px;
 }
 
 .timeline-item:nth-child(even)
 .timeline-dot{
-    left:-7px;
+
+    left:-8px;
 }
 
 .timeline-card{
+
     background:#1c0e08;
+
     border:1px solid #4d351c;
+
     padding:25px;
 
     transition:.3s;
 }
 
 .timeline-card:hover{
+
     border-color:#b78a43;
-    transform:translateY(-4px);
+
+    transform:translateY(-5px);
 }
 
 .timeline-year{
+
     color:#d5a552;
+
     font-family:'Playfair Display',serif;
+
     font-size:28px;
 }
 
 .timeline-card h3{
+
     color:#dfbd78;
+
     font-size:21px;
+
     margin:5px 0 10px;
 }
 
 .timeline-card p{
+
     color:#93806a;
+
     line-height:1.8;
 }
 
 
 /* =========================
-KINGS
+HISTORICAL DIAGRAM
 ========================= */
 
-.king-grid{
-    max-width:1200px;
+.diagram{
+
+    max-width:1100px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:
-    repeat(3,1fr);
+    repeat(5,1fr);
 
-    gap:25px;
+    gap:0;
 }
 
-.king{
-    background:#160a06;
-    border:1px solid #4c341c;
-    overflow:hidden;
-    transition:.4s;
+.diagram-item{
+
+    position:relative;
+
+    padding:30px 18px;
+
+    text-align:center;
+
+    background:#1c0e08;
+
+    border-top:1px solid #745329;
+
+    border-bottom:1px solid #745329;
 }
 
-.king:hover{
-    transform:translateY(-8px);
-    border-color:#bd9149;
+.diagram-item:not(:last-child)::after{
+
+    content:"→";
+
+    position:absolute;
+
+    right:-18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#d1a253;
+
+    font-size:25px;
+
+    z-index:5;
 }
 
-.king img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
+.diagram-number{
 
-.king-content{
-    padding:25px;
-}
-
-.king-content small{
-    color:#b68a43;
-    letter-spacing:2px;
-}
-
-.king-content h3{
-    color:#e1bd74;
-    font-family:'Playfair Display',serif;
-    font-size:27px;
-    margin:8px 0;
-}
-
-.king-content p{
-    color:#93806b;
-    line-height:1.8;
-}
-
-
-/* =========================
-FALL OF AYUTTHAYA
-========================= */
-
-.fall-section{
-    min-height:500px;
+    width:48px;
+    height:48px;
 
     display:flex;
+
     align-items:center;
+    justify-content:center;
 
-    background:
-    linear-gradient(
-        rgba(13,5,2,.8),
-        rgba(13,5,2,.92)
-    ),
-    url("images/ayutthaya-ruins.jpg")
-    center/cover no-repeat;
-}
+    margin:0 auto 15px;
 
-.fall-content{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
+    border-radius:50%;
 
-.fall-content h2{
+    background:#b17d32;
+
+    color:#1b0d05;
+
     font-family:'Playfair Display',serif;
-    font-size:50px;
-    color:#e0bb72;
-    margin-bottom:25px;
+
+    font-size:20px;
 }
 
-.fall-content p{
-    color:#c0aa89;
-    line-height:2;
-    font-size:17px;
+.diagram h3{
+
+    color:#dfbd78;
+
+    font-size:18px;
+
+    margin-bottom:8px;
+}
+
+.diagram p{
+
+    color:#8f7b65;
+
+    font-size:13px;
+
+    line-height:1.7;
 }
 
 
 /* =========================
-NAVIGATION
+LEGACY
+========================= */
+
+.legacy{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+}
+
+.legacy-card{
+
+    padding:35px;
+
+    background:#160a06;
+
+    border:1px solid #4d351c;
+}
+
+.legacy-card h3{
+
+    color:#dfbd78;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+.legacy-card p{
+
+    color:#97836b;
+
+    line-height:2;
+}
+
+
+/* =========================
+PAGE NAVIGATION
 ========================= */
 
 .page-navigation{
+
     padding:70px 20px;
+
     text-align:center;
 
-    background:#0c0402;
+    background:#0b0402;
 
-    border-top:1px solid #4b3319;
+    border-top:1px solid #493219;
 }
 
 .page-navigation-title{
+
     color:#b98b3e;
+
     letter-spacing:5px;
+
     font-size:12px;
+
     margin-bottom:25px;
 }
 
 .page-buttons{
+
     display:flex;
+
     justify-content:center;
+
+    align-items:center;
+
     gap:12px;
+
     flex-wrap:wrap;
 }
 
 .page-buttons a{
+
     width:55px;
     height:55px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     border:1px solid #79582d;
+
     border-radius:50%;
 
     color:#d8bd80;
@@ -563,22 +644,23 @@ NAVIGATION
     text-decoration:none;
 
     font-family:'Playfair Display',serif;
+
     font-size:18px;
 
     transition:.35s;
 }
 
 .page-buttons a:hover{
+
     background:#c59643;
+
     color:#180b05;
 
     transform:translateY(-6px);
-
-    box-shadow:
-    0 12px 25px rgba(197,150,67,.3);
 }
 
 .page-buttons .current{
+
     background:
     linear-gradient(
         135deg,
@@ -587,6 +669,12 @@ NAVIGATION
     );
 
     color:#180b05;
+
+    border-color:#e4c16e;
+
+    box-shadow:
+    0 8px 25px
+    rgba(197,150,67,.3);
 }
 
 
@@ -595,22 +683,31 @@ FOOTER
 ========================= */
 
 footer{
+
     background:#080302;
+
     padding:45px 20px;
+
     text-align:center;
 
     border-top:1px solid #392511;
 }
 
 footer h3{
+
     color:#d3a653;
+
     font-family:'Playfair Display',serif;
+
     letter-spacing:4px;
+
     font-size:25px;
 }
 
 footer p{
+
     color:#6f604c;
+
     margin-top:8px;
 }
 
@@ -619,18 +716,41 @@ footer p{
 RESPONSIVE
 ========================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
+
+    .fact-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .diagram{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .diagram-item:not(:last-child)::after{
+
+        content:"↓";
+
+        right:auto;
+
+        left:50%;
+
+        top:auto;
+
+        bottom:-20px;
+
+        transform:translateX(-50%);
+    }
+
+}
+
+@media(max-width:750px){
 
     .history-grid{
         grid-template-columns:1fr;
     }
 
-    .fact-grid{
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .king-grid{
+    .legacy{
         grid-template-columns:1fr;
     }
 
@@ -640,9 +760,13 @@ RESPONSIVE
 
     .timeline-item,
     .timeline-item:nth-child(even){
+
         width:100%;
+
         left:0;
+
         text-align:left;
+
         padding-left:50px;
     }
 
@@ -650,6 +774,7 @@ RESPONSIVE
     .timeline-dot,
     .timeline-item:nth-child(even)
     .timeline-dot{
+
         left:8px;
         right:auto;
     }
@@ -721,13 +846,31 @@ NAVBAR
 
 <nav class="navbar">
 
-    <a href="index.html" class="logo">
+    <a
+        href="index.html"
+        class="logo"
+    >
         🏛 AYUTTHAYA
     </a>
 
-    <a href="page2.html" class="nav-button">
-        สถานที่ท่องเที่ยว →
-    </a>
+
+    <div class="nav-links">
+
+        <a
+            href="index.html"
+            class="nav-button"
+        >
+            หน้าปก
+        </a>
+
+        <a
+            href="page2.html"
+            class="nav-button"
+        >
+            สถานที่ท่องเที่ยว →
+        </a>
+
+    </div>
 
 </nav>
 
@@ -742,11 +885,11 @@ HERO
     <div class="hero-content">
 
         <div class="hero-small">
-            THE HISTORY OF SIAM
+            PAGE 01 • HISTORY
         </div>
 
         <h1>
-            AYUTTHAYA
+            HISTORY
         </h1>
 
         <h2>
@@ -756,11 +899,10 @@ HERO
         <div class="hero-line"></div>
 
         <p>
-            จากราชธานีที่รุ่งเรืองสู่มรดกทางวัฒนธรรม
-            เรื่องราวกว่า 400 ปีของกรุงศรีอยุธยา
-            ผ่านการก่อตั้ง ความรุ่งเรือง การค้า
-            ศิลปวัฒนธรรม และเหตุการณ์สำคัญ
-            ที่หล่อหลอมประวัติศาสตร์ไทย
+            จากการสถาปนาราชธานี
+            สู่ยุคแห่งความรุ่งเรือง
+            และเหตุการณ์สำคัญที่หล่อหลอม
+            ประวัติศาสตร์ของกรุงศรีอยุธยา
         </p>
 
     </div>
@@ -773,19 +915,21 @@ HERO
 HISTORY
 ========================= -->
 
-<section class="section section-dark">
+<section class="section dark">
 
     <div class="section-title">
 
-        <span>THE BEGINNING</span>
+        <span>
+            THE BEGINNING
+        </span>
 
         <h2>
             จุดกำเนิดกรุงศรีอยุธยา
         </h2>
 
         <p>
-            จากเมืองเล็กริมแม่น้ำสู่หนึ่งในราชธานี
-            ที่ยิ่งใหญ่ที่สุดแห่งหนึ่งของเอเชียตะวันออกเฉียงใต้
+            ราชธานีที่มีบทบาทสำคัญต่อประวัติศาสตร์
+            การเมือง เศรษฐกิจ และวัฒนธรรมของสยาม
         </p>
 
     </div>
@@ -798,7 +942,7 @@ HISTORY
 
             <img
                 src="images/ayutthaya-history.jpg"
-                alt="กรุงศรีอยุธยา"
+                alt="ภาพกรุงศรีอยุธยา"
             >
 
         </div>
@@ -812,7 +956,7 @@ HISTORY
 
             <p>
                 กรุงศรีอยุธยาสถาปนาขึ้นใน
-                <span class="gold-number">
+                <span class="gold">
                     พ.ศ. 1893
                 </span>
                 โดยสมเด็จพระรามาธิบดีที่ 1
@@ -820,17 +964,24 @@ HISTORY
             </p>
 
             <p>
-                ทำเลที่ตั้งของอยุธยามีความสำคัญอย่างมาก
-                เพราะตั้งอยู่บริเวณที่มีแม่น้ำล้อมรอบ
-                ทำให้เหมาะสมทั้งด้านการป้องกันเมือง
-                การเดินทาง และการค้าขาย
+                ด้วยทำเลที่ตั้งบริเวณเกาะเมือง
+                ซึ่งมีแม่น้ำหลายสายล้อมรอบ
+                ทำให้เมืองมีความเหมาะสม
+                ทั้งด้านการป้องกันและการคมนาคม
             </p>
 
             <p>
-                ตลอดระยะเวลาหลายศตวรรษ
-                อยุธยาได้กลายเป็นศูนย์กลาง
-                ทางการเมือง เศรษฐกิจ ศาสนา
-                และวัฒนธรรมของสยาม
+                อยุธยาเติบโตขึ้นจนกลายเป็น
+                ศูนย์กลางการค้าระหว่างประเทศ
+                มีการติดต่อกับจีน ญี่ปุ่น อินเดีย
+                เปอร์เซีย และประเทศในยุโรป
+            </p>
+
+            <p>
+                ตลอดระยะเวลากว่า 400 ปี
+                อยุธยาได้สร้างมรดกด้านศิลปกรรม
+                สถาปัตยกรรม ภาษา ศาสนา
+                และขนบธรรมเนียมจำนวนมาก
             </p>
 
         </div>
@@ -845,11 +996,13 @@ HISTORY
 FACTS
 ========================= -->
 
-<section class="section section-light">
+<section class="section light">
 
     <div class="section-title">
 
-        <span>AYUTTHAYA IN NUMBERS</span>
+        <span>
+            AYUTTHAYA FACTS
+        </span>
 
         <h2>
             ข้อมูลสำคัญ
@@ -882,7 +1035,7 @@ FACTS
         <div class="fact">
 
             <div class="fact-icon">
-                🏯
+                ⏳
             </div>
 
             <h3>
@@ -890,8 +1043,8 @@ FACTS
             </h3>
 
             <p>
-                ช่วงเวลาที่อยุธยาเป็นราชธานี
-                ก่อนเสียกรุงครั้งที่สอง
+                ระยะเวลาที่อยุธยา
+                ดำรงสถานะราชธานี
             </p>
 
         </div>
@@ -908,8 +1061,8 @@ FACTS
             </h3>
 
             <p>
-                แม่น้ำเจ้าพระยา ป่าสัก
-                และลพบุรี มีบทบาทต่อเมือง
+                เจ้าพระยา ป่าสัก
+                และลพบุรี
             </p>
 
         </div>
@@ -943,18 +1096,20 @@ FACTS
 TIMELINE
 ========================= -->
 
-<section class="section section-dark">
+<section class="section dark">
 
     <div class="section-title">
 
-        <span>HISTORICAL TIMELINE</span>
+        <span>
+            HISTORICAL TIMELINE
+        </span>
 
         <h2>
             แผนผังลำดับเหตุการณ์
         </h2>
 
         <p>
-            เหตุการณ์สำคัญตั้งแต่การสถาปนา
+            เหตุการณ์สำคัญตั้งแต่การก่อตั้ง
             จนถึงการสิ้นสุดของกรุงศรีอยุธยา
         </p>
 
@@ -1005,9 +1160,10 @@ TIMELINE
                 </h3>
 
                 <p>
-                    อยุธยามีอำนาจเพิ่มขึ้น
-                    และมีความสัมพันธ์กับเมืองต่าง ๆ
-                    ในภูมิภาคเอเชียตะวันออกเฉียงใต้
+                    อยุธยาขยายอำนาจและมีบทบาท
+                    เพิ่มขึ้นในภูมิภาค
+                    พร้อมพัฒนาระบบการปกครอง
+                    และการค้า
                 </p>
 
             </div>
@@ -1031,8 +1187,8 @@ TIMELINE
 
                 <p>
                     กรุงศรีอยุธยาเสียแก่พม่า
-                    ก่อนจะได้รับการกอบกู้เอกราช
-                    ในเวลาต่อมา
+                    ก่อนจะสามารถกอบกู้เอกราช
+                    กลับคืนมาได้
                 </p>
 
             </div>
@@ -1057,7 +1213,8 @@ TIMELINE
                 <p>
                     สมเด็จพระนเรศวรมหาราช
                     ทรงประกาศอิสรภาพ
-                    และทำให้อยุธยากลับมาเข้มแข็ง
+                    และเสริมสร้างความเข้มแข็ง
+                    ให้กรุงศรีอยุธยา
                 </p>
 
             </div>
@@ -1082,7 +1239,7 @@ TIMELINE
                 <p>
                     กรุงศรีอยุธยาเสียแก่พม่า
                     และสิ้นสุดการเป็นราชธานี
-                    หลังดำรงอยู่มายาวนานกว่า 400 ปี
+                    หลังดำรงอยู่ยาวนานกว่า 400 ปี
                 </p>
 
             </div>
@@ -1097,110 +1254,118 @@ TIMELINE
 
 
 <!-- =========================
-IMPORTANT KINGS
+HISTORICAL DIAGRAM
 ========================= -->
 
-<section class="section section-light">
+<section class="section light">
 
     <div class="section-title">
 
-        <span>IMPORTANT KINGS</span>
+        <span>
+            AYUTTHAYA JOURNEY
+        </span>
 
         <h2>
-            กษัตริย์สำคัญ
+            แผนผังความรุ่งเรืองของอยุธยา
         </h2>
 
         <p>
-            พระมหากษัตริย์ผู้มีบทบาทสำคัญ
-            ต่อการพัฒนาและความรุ่งเรืองของอยุธยา
+            มองภาพรวมเส้นทางประวัติศาสตร์
+            ของกรุงศรีอยุธยาแบบเข้าใจง่าย
         </p>
 
     </div>
 
 
-    <div class="king-grid">
+    <div class="diagram">
 
 
-        <div class="king">
+        <div class="diagram-item">
 
-            <img
-                src="images/king-uthong.jpg"
-                alt="สมเด็จพระรามาธิบดีที่ 1"
-            >
-
-            <div class="king-content">
-
-                <small>
-                    ผู้สถาปนากรุงศรีอยุธยา
-                </small>
-
-                <h3>
-                    พระเจ้าอู่ทอง
-                </h3>
-
-                <p>
-                    สมเด็จพระรามาธิบดีที่ 1
-                    ทรงสถาปนากรุงศรีอยุธยา
-                    เป็นราชธานีใน พ.ศ. 1893
-                </p>
-
+            <div class="diagram-number">
+                01
             </div>
+
+            <h3>
+                ก่อตั้ง
+            </h3>
+
+            <p>
+                พ.ศ. 1893
+                เริ่มต้นราชธานี
+            </p>
 
         </div>
 
 
-        <div class="king">
+        <div class="diagram-item">
 
-            <img
-                src="images/king-naresuan.jpg"
-                alt="สมเด็จพระนเรศวรมหาราช"
-            >
-
-            <div class="king-content">
-
-                <small>
-                    ยุคแห่งการกอบกู้เอกราช
-                </small>
-
-                <h3>
-                    สมเด็จพระนเรศวร
-                </h3>
-
-                <p>
-                    ทรงมีบทบาทสำคัญในการประกาศ
-                    อิสรภาพและเสริมสร้างความเข้มแข็ง
-                    ให้แก่กรุงศรีอยุธยา
-                </p>
-
+            <div class="diagram-number">
+                02
             </div>
+
+            <h3>
+                เติบโต
+            </h3>
+
+            <p>
+                ขยายเมือง
+                และระบบการปกครอง
+            </p>
 
         </div>
 
 
-        <div class="king">
+        <div class="diagram-item">
 
-            <img
-                src="images/king-narai.jpg"
-                alt="สมเด็จพระนารายณ์มหาราช"
-            >
-
-            <div class="king-content">
-
-                <small>
-                    ยุคทองแห่งการติดต่อกับต่างประเทศ
-                </small>
-
-                <h3>
-                    สมเด็จพระนารายณ์
-                </h3>
-
-                <p>
-                    ในรัชสมัยของพระองค์
-                    อยุธยามีความสัมพันธ์ทางการค้า
-                    และการทูตกับหลายประเทศ
-                </p>
-
+            <div class="diagram-number">
+                03
             </div>
+
+            <h3>
+                รุ่งเรือง
+            </h3>
+
+            <p>
+                การค้า ศิลปะ
+                และวัฒนธรรมเฟื่องฟู
+            </p>
+
+        </div>
+
+
+        <div class="diagram-item">
+
+            <div class="diagram-number">
+                04
+            </div>
+
+            <h3>
+                เผชิญสงคราม
+            </h3>
+
+            <p>
+                การทำสงคราม
+                และการเปลี่ยนแปลงทางอำนาจ
+            </p>
+
+        </div>
+
+
+        <div class="diagram-item">
+
+            <div class="diagram-number">
+                05
+            </div>
+
+            <h3>
+                สิ้นสุดราชธานี
+            </h3>
+
+            <p>
+                พ.ศ. 2310
+                เสียกรุงครั้งที่ 2
+            </p>
 
         </div>
 
@@ -1212,35 +1377,90 @@ IMPORTANT KINGS
 
 
 <!-- =========================
-FALL OF AYUTTHAYA
+LEGACY
 ========================= -->
 
-<section class="section fall-section">
+<section class="section dark">
 
-    <div class="fall-content">
+    <div class="section-title">
 
-        <div class="hero-small">
-            THE END OF AN ERA
-        </div>
+        <span>
+            LEGACY
+        </span>
 
         <h2>
-            การสิ้นสุดของกรุงศรีอยุธยา
+            มรดกจากกรุงศรีอยุธยา
         </h2>
 
-        <p>
-            ใน พ.ศ. 2310 กรุงศรีอยุธยาเสียแก่พม่า
-            เป็นเหตุการณ์สำคัญที่ทำให้ราชธานี
-            ซึ่งดำรงอยู่อย่างยาวนานกว่า 400 ปี
-            สิ้นสุดลง
+    </div>
 
-            <br><br>
 
-            แม้กรุงศรีอยุธยาจะสิ้นสุดสถานะ
-            การเป็นราชธานี แต่ศิลปะ สถาปัตยกรรม
-            ภาษา ประเพณี และวัฒนธรรมจำนวนมาก
-            ยังคงส่งต่อมายังสังคมไทยในปัจจุบัน
+    <div class="legacy">
 
-        </p>
+
+        <div class="legacy-card">
+
+            <h3>
+                🏛 ศิลปะและสถาปัตยกรรม
+            </h3>
+
+            <p>
+                โบราณสถาน วัด เจดีย์
+                พระปรางค์ และงานศิลปกรรม
+                ของอยุธยากลายเป็นหลักฐานสำคัญ
+                ที่สะท้อนความรุ่งเรืองของราชธานี
+            </p>
+
+        </div>
+
+
+        <div class="legacy-card">
+
+            <h3>
+                📜 ภาษาและวัฒนธรรม
+            </h3>
+
+            <p>
+                ขนบธรรมเนียม ภาษา
+                วรรณกรรม และรูปแบบพิธีกรรม
+                หลายอย่างได้รับการสืบทอด
+                และพัฒนาต่อมาจนถึงปัจจุบัน
+            </p>
+
+        </div>
+
+
+        <div class="legacy-card">
+
+            <h3>
+                🌏 การค้าระหว่างประเทศ
+            </h3>
+
+            <p>
+                อยุธยาเป็นศูนย์กลางการค้า
+                ที่เชื่อมโยงผู้คนจากหลายภูมิภาค
+                ทำให้เกิดการแลกเปลี่ยนสินค้า
+                ความรู้ และวัฒนธรรม
+            </p>
+
+        </div>
+
+
+        <div class="legacy-card">
+
+            <h3>
+                🏆 มรดกโลก
+            </h3>
+
+            <p>
+                อุทยานประวัติศาสตร์พระนครศรีอยุธยา
+                เป็นแหล่งมรดกทางประวัติศาสตร์
+                ที่มีคุณค่าต่อประเทศไทย
+                และได้รับการยอมรับในระดับโลก
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1261,10 +1481,11 @@ PAGE NAVIGATION
 
     <div class="page-buttons">
 
+
         <a
-            href="index.html"
+            href="page1.html"
             class="current"
-            title="ประวัติศาสตร์"
+            title="หน้า 1 ประวัติศาสตร์"
         >
             1
         </a>
@@ -1272,7 +1493,7 @@ PAGE NAVIGATION
 
         <a
             href="page2.html"
-            title="สถานที่ท่องเที่ยว"
+            title="หน้า 2 สถานที่ท่องเที่ยว"
         >
             2
         </a>
@@ -1280,7 +1501,7 @@ PAGE NAVIGATION
 
         <a
             href="page3.html"
-            title="ชุดไทยและวิถีชีวิต"
+            title="หน้า 3 ชุดไทยและวิถีชีวิต"
         >
             3
         </a>
@@ -1288,7 +1509,7 @@ PAGE NAVIGATION
 
         <a
             href="page4.html"
-            title="อาหารและของฝาก"
+            title="หน้า 4 วัฒนธรรมและอาหาร"
         >
             4
         </a>
@@ -1296,7 +1517,7 @@ PAGE NAVIGATION
 
         <a
             href="page5.html"
-            title="แกลเลอรี"
+            title="หน้า 5 จุดเด่นและของฝาก"
         >
             5
         </a>
@@ -1318,8 +1539,7 @@ FOOTER
     </h3>
 
     <p>
-        ประวัติศาสตร์ • สถานที่ท่องเที่ยว • วิถีชีวิต
-        • อาหาร • ของฝาก
+        หน้า 1 • ประวัติศาสตร์และแผนผัง
     </p>
 
 </footer>
