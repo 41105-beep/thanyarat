@@ -1,18 +1,32 @@
 ```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AYUTTHAYA | กรุงศรีอยุธยา</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<title>พระนครศรีอยุธยา | AYUTTHAYA</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -25,32 +39,14 @@ html{
 }
 
 body{
+
     font-family:'Kanit',sans-serif;
-    background:#0b0502;
-    color:#ead8b4;
+
+    background:#0b0402;
+
+    color:#ead7ae;
+
     overflow-x:hidden;
-}
-
-
-/* =========================
-   BACKGROUND
-========================= */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:50;
-    opacity:.05;
-
-    background-image:
-    radial-gradient(
-        #d9aa55 1px,
-        transparent 1px
-    );
-
-    background-size:28px 28px;
 }
 
 
@@ -64,77 +60,71 @@ body::before{
 
     top:0;
     left:0;
-
-    width:100%;
-    height:78px;
+    right:0;
 
     z-index:1000;
 
+    min-height:78px;
+
+    padding:0 6%;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    padding:0 5%;
-
-    background:rgba(10,4,2,.82);
+    background:
+    rgba(10,4,2,.88);
 
     backdrop-filter:blur(15px);
 
     border-bottom:
     1px solid
-    rgba(214,168,77,.35);
+    rgba(205,158,68,.3);
+
 }
 
 .logo{
 
     text-decoration:none;
 
-    color:#e6b95f;
+    color:#e2b85d;
 
-    font-family:'Playfair Display',serif;
+    font-family:
+    'Playfair Display',
+    serif;
 
-    font-size:24px;
+    font-size:25px;
 
-    letter-spacing:4px;
+    letter-spacing:5px;
 
-    transition:.3s;
 }
 
-.logo:hover{
-
-    color:#fff0bd;
-
-    text-shadow:
-    0 0 25px
-    rgba(229,185,93,.7);
-}
-
-.nav-button{
+.nav-link{
 
     text-decoration:none;
 
-    color:#e6d4ac;
+    color:#d8c29a;
 
     border:
     1px solid
-    #80602f;
+    #6b4b23;
 
-    padding:8px 20px;
+    padding:9px 22px;
 
     border-radius:30px;
 
-    font-size:14px;
+    transition:.3s;
 
-    transition:.35s;
 }
 
-.nav-button:hover{
+.nav-link:hover{
 
-    background:#c59643;
+    background:#c69a48;
 
-    color:#180a04;
+    color:#150703;
 
-    transform:translateY(-2px);
 }
 
 
@@ -144,9 +134,9 @@ body::before{
 
 .hero{
 
-    position:relative;
-
     min-height:100vh;
+
+    position:relative;
 
     display:flex;
 
@@ -156,41 +146,18 @@ body::before{
 
     text-align:center;
 
-    overflow:hidden;
-
     background:
 
     linear-gradient(
-        rgba(10,4,2,.35),
-        rgba(10,4,2,.88)
+        rgba(7,2,1,.25),
+        rgba(7,2,1,.88)
     ),
 
-    url("https://whc.unesco.org/uploads/thumbs/site_0576_0001-1200-630-20151104175310.jpg")
+    url("images/cover.jpg")
 
-    center/cover no-repeat;
-
-    animation:
-    zoomBackground
-    18s
-    ease-in-out
-    infinite
-    alternate;
-}
-
-@keyframes zoomBackground{
-
-    from{
-        background-size:100%;
-    }
-
-    to{
-        background-size:112%;
-    }
+    center / cover no-repeat;
 
 }
-
-
-/* DARK VIGNETTE */
 
 .hero::before{
 
@@ -204,488 +171,142 @@ body::before{
 
     radial-gradient(
         circle at center,
-        transparent 5%,
+        transparent 10%,
         rgba(0,0,0,.78) 90%
     );
-}
-
-
-/* GOLDEN GLOW */
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    border-radius:50%;
-
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(221,171,70,.18),
-        transparent 68%
-    );
-
-    animation:
-    glowMove
-    9s
-    ease-in-out
-    infinite
-    alternate;
-}
-
-@keyframes glowMove{
-
-    from{
-        transform:translate(-300px,-100px);
-    }
-
-    to{
-        transform:translate(300px,100px);
-    }
 
 }
-
-
-/* =========================
-   FRAME
-========================= */
-
-.frame{
-
-    position:absolute;
-
-    inset:35px;
-
-    border:
-    1px solid
-    rgba(220,174,80,.45);
-
-    z-index:5;
-
-    pointer-events:none;
-}
-
-.frame::before,
-.frame::after{
-
-    position:absolute;
-
-    color:#d9aa54;
-
-    font-size:34px;
-
-    background:#0b0502;
-
-    padding:5px 15px;
-}
-
-.frame::before{
-
-    content:"✦";
-
-    top:-24px;
-
-    left:50%;
-
-    transform:
-    translateX(-50%);
-}
-
-.frame::after{
-
-    content:"✦";
-
-    bottom:-24px;
-
-    left:50%;
-
-    transform:
-    translateX(-50%);
-}
-
-
-/* CORNERS */
-
-.corner{
-
-    position:absolute;
-
-    width:85px;
-    height:85px;
-
-    border-color:#bd9144;
-
-    opacity:.75;
-
-    z-index:6;
-}
-
-.corner-tl{
-
-    top:55px;
-    left:55px;
-
-    border-top:1px solid;
-    border-left:1px solid;
-}
-
-.corner-tr{
-
-    top:55px;
-    right:55px;
-
-    border-top:1px solid;
-    border-right:1px solid;
-}
-
-.corner-bl{
-
-    bottom:55px;
-    left:55px;
-
-    border-bottom:1px solid;
-    border-left:1px solid;
-}
-
-.corner-br{
-
-    bottom:55px;
-    right:55px;
-
-    border-bottom:1px solid;
-    border-right:1px solid;
-}
-
-
-/* =========================
-   HERO CONTENT
-========================= */
 
 .hero-content{
 
     position:relative;
 
-    z-index:10;
-
-    width:90%;
+    z-index:2;
 
     max-width:1100px;
 
-    padding:30px;
+    padding:120px 25px;
+
 }
 
-.eyebrow{
+.small-title{
 
-    color:#d3a14c;
-
-    letter-spacing:10px;
+    color:#d3a44f;
 
     font-size:14px;
 
-    margin-bottom:25px;
+    letter-spacing:10px;
 
-    animation:
-    fadeUp
-    1s
-    ease
-    both;
+    margin-bottom:30px;
+
 }
 
-.hero-title{
+.hero h1{
 
-    font-family:'Playfair Display',serif;
+    font-family:
+    'Playfair Display',
+    serif;
 
     font-size:
     clamp(
         65px,
         13vw,
-        165px
+        155px
     );
 
     line-height:.85;
 
-    letter-spacing:8px;
+    letter-spacing:7px;
 
-    color:#f3dfaf;
+    color:#f0dca7;
 
     text-shadow:
+    0 15px 50px
+    rgba(0,0,0,.9);
 
-    0 12px 50px
-    rgba(0,0,0,.95);
-
-    animation:
-    titleAppear
-    1.5s
-    ease
-    both;
 }
 
-@keyframes titleAppear{
+.hero h2{
 
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(60px)
-        scale(.9);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0)
-        scale(1);
-    }
-}
-
-.thai-title{
-
-    margin-top:25px;
-
-    color:#d4a34d;
-
-    font-size:
-    clamp(
-        30px,
-        5vw,
-        58px
-    );
+    margin-top:35px;
 
     font-weight:300;
 
-    animation:
-    fadeUp
-    1.5s
-    .3s
-    ease
-    both;
+    color:#d6aa55;
+
+    font-size:
+    clamp(
+        27px,
+        5vw,
+        52px
+    );
+
 }
 
-.divider{
+.hero-line{
 
-    width:250px;
+    width:280px;
 
     height:1px;
 
-    margin:32px auto;
+    margin:35px auto;
 
     background:
 
     linear-gradient(
         90deg,
         transparent,
-        #d5a54d,
+        #d4a34b,
         transparent
     );
 
-    position:relative;
 }
 
-.divider::after{
+.hero p{
 
-    content:"◆";
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:
-    translate(-50%,-50%);
-
-    color:#d9aa54;
-
-    background:#100604;
-
-    padding:0 15px;
-
-    font-size:12px;
-}
-
-.hero-description{
-
-    max-width:760px;
+    max-width:850px;
 
     margin:auto;
 
-    color:#d0bea0;
-
-    font-size:18px;
-
-    line-height:2;
-
-    animation:
-    fadeUp
-    1.5s
-    .6s
-    ease
-    both;
-}
-
-
-/* =========================
-   START BUTTON
-========================= */
-
-.start-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-top:38px;
-
-    padding:15px 36px;
-
-    text-decoration:none;
-
-    color:#1b0c04;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #efd183,
-        #b77a29
-    );
-
-    border-radius:40px;
+    color:#d5c29d;
 
     font-size:17px;
 
-    box-shadow:
-    0 12px 45px
-    rgba(0,0,0,.55);
+    line-height:2;
+
+}
+
+.enter-button{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:15px 38px;
+
+    color:#f0d49b;
+
+    text-decoration:none;
+
+    border:
+    1px solid
+    #b98a3d;
+
+    background:
+    rgba(28,12,5,.7);
 
     transition:.4s;
 
-    animation:
-    fadeUp
-    1.5s
-    .9s
-    ease
-    both;
 }
 
-.start-button:hover{
+.enter-button:hover{
 
-    transform:
-    translateY(-7px)
-    scale(1.05);
+    background:#c59643;
 
-    box-shadow:
-    0 20px 55px
-    rgba(214,165,72,.45);
-}
+    color:#160803;
 
-.start-button span{
+    transform:translateY(-4px);
 
-    font-size:20px;
-}
-
-
-/* =========================
-   PARTICLES
-========================= */
-
-.particle{
-
-    position:absolute;
-
-    width:4px;
-    height:4px;
-
-    border-radius:50%;
-
-    background:#edc66d;
-
-    box-shadow:
-    0 0 12px #edc66d;
-
-    opacity:0;
-
-    z-index:7;
-
-    animation:
-    rise
-    9s
-    linear
-    infinite;
-}
-
-.p1{
-    left:8%;
-    bottom:-20px;
-}
-
-.p2{
-    left:20%;
-    bottom:-20px;
-    animation-delay:2s;
-}
-
-.p3{
-    left:35%;
-    bottom:-20px;
-    animation-delay:5s;
-}
-
-.p4{
-    left:55%;
-    bottom:-20px;
-    animation-delay:1s;
-}
-
-.p5{
-    left:72%;
-    bottom:-20px;
-    animation-delay:4s;
-}
-
-.p6{
-    left:90%;
-    bottom:-20px;
-    animation-delay:7s;
-}
-
-@keyframes rise{
-
-    0%{
-
-        transform:
-        translateY(0)
-        translateX(0);
-
-        opacity:0;
-    }
-
-    20%{
-        opacity:.7;
-    }
-
-    80%{
-        opacity:.5;
-    }
-
-    100%{
-
-        transform:
-        translateY(-100vh)
-        translateX(100px);
-
-        opacity:0;
-    }
 }
 
 
@@ -695,107 +316,56 @@ body::before{
 
 .intro{
 
-    padding:100px 8%;
+    padding:110px 6%;
 
     text-align:center;
 
-    background:#130704;
+    background:#100502;
 
-    border-top:
+    border-bottom:
     1px solid
-    #4b3319;
+    #382512;
+
 }
 
-.intro-small{
+.intro-label{
 
-    color:#bd8e3d;
+    color:#bb8b3c;
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
     font-size:13px;
+
+    margin-bottom:12px;
+
 }
 
 .intro h2{
 
-    margin:
-    12px 0 22px;
+    font-family:
+    'Playfair Display',
+    serif;
 
-    color:#e3bf75;
+    font-size:45px;
 
-    font-family:'Playfair Display',serif;
+    color:#dfbd74;
 
-    font-size:43px;
+    margin-bottom:25px;
+
 }
 
 .intro p{
 
-    max-width:850px;
+    max-width:900px;
 
     margin:auto;
 
-    color:#a99678;
+    color:#b6a184;
 
     line-height:2;
-}
 
+    font-size:16px;
 
-/* =========================
-   FEATURE CARDS
-========================= */
-
-.features{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:1px;
-
-    background:#5a3c1d;
-}
-
-.feature{
-
-    padding:50px 25px;
-
-    text-align:center;
-
-    background:#1b0d07;
-
-    transition:.4s;
-}
-
-.feature:hover{
-
-    background:#29150a;
-
-    transform:translateY(-4px);
-}
-
-.feature-icon{
-
-    font-size:38px;
-
-    margin-bottom:15px;
-}
-
-.feature h3{
-
-    color:#d7ad5b;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:25px;
-
-    margin-bottom:10px;
-}
-
-.feature p{
-
-    color:#938066;
-
-    line-height:1.8;
 }
 
 
@@ -803,40 +373,368 @@ body::before{
    PAGE MENU
 ========================= */
 
-.page-menu{
+.pages{
 
-    padding:90px 6%;
+    padding:110px 6%;
+
+    background:#0c0402;
+
+}
+
+.container{
+
+    max-width:1250px;
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+.pages-title{
 
     text-align:center;
 
-    background:#0f0603;
+    margin-bottom:60px;
+
+}
+
+.pages-title span{
+
+    color:#b88738;
+
+    letter-spacing:6px;
+
+    font-size:13px;
+
+}
+
+.pages-title h2{
+
+    margin-top:10px;
+
+    color:#dfbd74;
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-size:45px;
+
+}
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    position:relative;
+
+    min-height:420px;
+
+    overflow:hidden;
+
+    border:
+    1px solid
+    #53391c;
+
+    background:#160804;
+
+    text-decoration:none;
+
+    transition:.45s;
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-8px);
+
+    border-color:#b4863e;
+
+    box-shadow:
+    0 25px 60px
+    rgba(0,0,0,.5);
+
+}
+
+.card-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        transparent 20%,
+        rgba(7,2,1,.96) 100%
+    );
+
+}
+
+.card-content{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:35px;
+
+    z-index:2;
+
+}
+
+.card-number{
+
+    color:#c7994b;
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    letter-spacing:3px;
+
+    font-size:15px;
+
+}
+
+.card h3{
+
+    color:#f0d18b;
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-size:35px;
+
+    margin:8px 0 10px;
+
+}
+
+.card p{
+
+    color:#c0ad8c;
+
+    line-height:1.8;
+
+}
+
+.card-arrow{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#d3a44e;
+
+}
+
+
+/* =========================
+   CARD BACKGROUNDS
+========================= */
+
+.card1{
+
+    background:
+
+    linear-gradient(
+        rgba(10,4,2,.15),
+        rgba(10,4,2,.8)
+    ),
+
+    url("images/page1-cover.jpg")
+    center / cover no-repeat;
+
+}
+
+.card2{
+
+    background:
+
+    linear-gradient(
+        rgba(10,4,2,.15),
+        rgba(10,4,2,.8)
+    ),
+
+    url("images/page2-cover.jpg")
+    center / cover no-repeat;
+
+}
+
+.card3{
+
+    background:
+
+    linear-gradient(
+        rgba(10,4,2,.15),
+        rgba(10,4,2,.8)
+    ),
+
+    url("images/page3-cover.jpg")
+    center / cover no-repeat;
+
+}
+
+.card4{
+
+    background:
+
+    linear-gradient(
+        rgba(10,4,2,.15),
+        rgba(10,4,2,.8)
+    ),
+
+    url("images/page4-cover.jpg")
+    center / cover no-repeat;
+
+}
+
+.card5{
+
+    grid-column:
+    1 / -1;
+
+    min-height:380px;
+
+    background:
+
+    linear-gradient(
+        rgba(10,4,2,.15),
+        rgba(10,4,2,.82)
+    ),
+
+    url("images/page5-cover.jpg")
+    center / cover no-repeat;
+
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.feature{
+
+    padding:110px 6%;
+
+    background:#130603;
 
     border-top:
     1px solid
-    #4b3319;
+    #382512;
+
+    border-bottom:
+    1px solid
+    #382512;
+
 }
 
-.page-menu small{
+.feature-grid{
 
-    color:#bd8e3d;
+    max-width:1100px;
 
-    letter-spacing:5px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
 }
 
-.page-menu h2{
+.feature-box{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:#1a0905;
+
+    border:
+    1px solid
+    #4b3219;
+
+}
+
+.feature-icon{
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+}
+
+.feature-box h3{
+
+    color:#dcb86c;
+
+    font-family:
+    'Playfair Display',
+    serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.feature-box p{
+
+    color:#a9987b;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================
+   PAGE NAV
+========================= */
+
+.page-navigation{
+
+    padding:100px 6%;
+
+    text-align:center;
+
+    background:#080302;
+
+}
+
+.page-navigation h2{
 
     color:#dfbd78;
 
-    font-family:'Playfair Display',serif;
+    font-family:
+    'Playfair Display',
+    serif;
 
-    font-size:40px;
+    font-size:38px;
 
-    margin:10px 0 40px;
+    margin-bottom:40px;
+
 }
 
-.page-links{
+.page-buttons{
 
-    max-width:1000px;
+    max-width:1100px;
 
     margin:auto;
 
@@ -845,45 +743,53 @@ body::before{
     grid-template-columns:
     repeat(5,1fr);
 
-    gap:14px;
+    gap:12px;
+
 }
 
-.page-link{
+.page-buttons a{
 
-    padding:22px 12px;
+    padding:18px 10px;
+
+    color:#cdbb99;
 
     text-decoration:none;
 
-    color:#cdbb9a;
+    background:#190a05;
 
-    background:#1a0b06;
+    border:
+    1px solid
+    #51371c;
 
-    border:1px solid #52391d;
+    transition:.3s;
 
-    transition:.35s;
 }
 
-.page-link strong{
+.page-buttons strong{
 
     display:block;
 
-    color:#d7ad5b;
+    color:#d5a64f;
 
-    font-family:'Playfair Display',serif;
+    font-family:
+    'Playfair Display',
+    serif;
 
-    font-size:30px;
+    font-size:27px;
 
-    margin-bottom:5px;
+    margin-bottom:4px;
+
 }
 
-.page-link:hover{
-
-    background:#2a160b;
-
-    border-color:#bd9144;
+.page-buttons a:hover{
 
     transform:
-    translateY(-7px);
+    translateY(-5px);
+
+    border-color:#b4863e;
+
+    background:#2a1408;
+
 }
 
 
@@ -893,123 +799,137 @@ body::before{
 
 footer{
 
-    padding:45px 20px;
+    padding:50px 20px;
 
     text-align:center;
 
-    background:#070302;
+    background:#050201;
 
-    border-top:
-    1px solid
-    #392511;
 }
 
 footer h3{
 
-    color:#d3a653;
+    color:#d4a653;
 
-    font-family:'Playfair Display',serif;
+    font-family:
+    'Playfair Display',
+    serif;
 
-    letter-spacing:5px;
+    font-size:26px;
 
-    font-size:25px;
+    letter-spacing:6px;
+
 }
 
 footer p{
 
-    color:#6f604c;
+    color:#655741;
 
-    margin-top:8px;
+    margin-top:10px;
+
 }
 
 
 /* =========================
-   ANIMATION
+   RESPONSIVE
 ========================= */
 
-@keyframes fadeUp{
+@media(max-width:850px){
 
-    from{
+    .cards{
 
-        opacity:0;
+        grid-template-columns:1fr;
 
-        transform:
-        translateY(30px);
     }
 
-    to{
+    .card5{
 
-        opacity:1;
+        grid-column:auto;
 
-        transform:
-        translateY(0);
     }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-buttons{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:750px){
+@media(max-width:550px){
 
     .navbar{
 
-        height:70px;
-
         padding:0 4%;
+
+        min-height:68px;
+
     }
 
     .logo{
+
         font-size:18px;
+
+        letter-spacing:3px;
+
     }
 
-    .nav-button{
+    .nav-link{
 
-        font-size:11px;
+        font-size:12px;
 
         padding:7px 13px;
-    }
 
-    .frame{
-
-        inset:20px;
-    }
-
-    .corner{
-
-        display:none;
     }
 
     .hero{
 
-        min-height:650px;
+        min-height:760px;
+
     }
 
-    .hero-description{
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .hero h2{
+
+        font-size:27px;
+
+    }
+
+    .hero p{
 
         font-size:15px;
+
     }
 
-    .features{
-
-        grid-template-columns:1fr;
-    }
-
-    .page-links{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .intro{
-
-        padding:70px 7%;
-    }
-
-    .intro h2{
+    .intro h2,
+    .pages-title h2{
 
         font-size:32px;
+
+    }
+
+    .card{
+
+        min-height:390px;
+
+    }
+
+    .page-buttons{
+
+        grid-template-columns:1fr;
+
     }
 
 }
@@ -1028,12 +948,18 @@ footer p{
 
 <nav class="navbar">
 
-<a href="index.html" class="logo">
-🏛 AYUTTHAYA
+<a href="index.html"
+class="logo">
+
+AYUTTHAYA
+
 </a>
 
-<a href="page1.html" class="nav-button">
-เริ่มสำรวจ →
+<a href="#pages"
+class="nav-link">
+
+สำรวจเว็บไซต์
+
 </a>
 
 </nav>
@@ -1045,67 +971,46 @@ footer p{
 
 <section class="hero">
 
-
-<div class="frame"></div>
-
-<div class="corner corner-tl"></div>
-<div class="corner corner-tr"></div>
-<div class="corner corner-bl"></div>
-<div class="corner corner-br"></div>
-
-
-<!-- PARTICLES -->
-
-<div class="particle p1"></div>
-<div class="particle p2"></div>
-<div class="particle p3"></div>
-<div class="particle p4"></div>
-<div class="particle p5"></div>
-<div class="particle p6"></div>
-
-
 <div class="hero-content">
 
-<div class="eyebrow">
-THE HISTORICAL CITY OF SIAM
+<div class="small-title">
+
+THE ANCIENT CAPITAL OF SIAM
+
 </div>
 
-<div class="hero-title">
+<h1>
+
 AYUTTHAYA
-</div>
 
-<div class="thai-title">
-กรุงศรีอยุธยา
-</div>
+</h1>
 
-<div class="divider"></div>
+<h2>
 
-<p class="hero-description">
+พระนครศรีอยุธยา
 
-เมืองหลวงแห่งความรุ่งเรือง
-<br>
+</h2>
 
-ศูนย์กลางแห่งการเมือง การค้า ศาสนา
-และวัฒนธรรมของสยาม
+<div class="hero-line"></div>
 
-<br>
+<p>
 
-เรื่องราวจากอดีต
-สู่มรดกทางวัฒนธรรมที่ยังคงอยู่
+เมืองมรดกทางประวัติศาสตร์
+ที่รวบรวมเรื่องราวของราชธานี
+ศิลปวัฒนธรรม ผู้คน วิถีชีวิต
+อาหาร และการท่องเที่ยว
+ไว้ในสถานที่เดียว
 
 </p>
 
+<a href="#pages"
+class="enter-button">
 
-<a href="page1.html" class="start-button">
-
-เริ่มต้นการเดินทาง
-
-<span>✦</span>
+เริ่มสำรวจอยุธยา ↓
 
 </a>
 
 </div>
-
 
 </section>
 
@@ -1116,25 +1021,27 @@ AYUTTHAYA
 
 <section class="intro">
 
-<div class="intro-small">
+<div class="intro-label">
+
 WELCOME TO AYUTTHAYA
+
 </div>
 
 <h2>
-ร่องรอยแห่งราชธานี
+
+เรื่องราวจากอดีตสู่ปัจจุบัน
+
 </h2>
 
 <p>
 
-กรุงศรีอยุธยาเป็นราชธานีที่มีความสำคัญ
-ต่อประวัติศาสตร์ของสยามมาเป็นเวลาหลายศตวรรษ
+พระนครศรีอยุธยาเคยเป็นราชธานีของสยาม
+และเป็นศูนย์กลางทางการเมือง เศรษฐกิจ
+การค้า และวัฒนธรรมที่สำคัญ
 
-<br><br>
-
-เมืองแห่งนี้เคยเป็นศูนย์กลางทางการเมือง
-เศรษฐกิจ การค้า ศาสนา และวัฒนธรรม
-ก่อนจะทิ้งร่องรอยของโบราณสถานและเรื่องราว
-ไว้ให้คนรุ่นหลังได้ศึกษา
+ปัจจุบันเรื่องราวเหล่านี้ยังคงปรากฏ
+ผ่านโบราณสถาน ศิลปกรรม ประเพณี
+อาหาร และวิถีชีวิตของผู้คน
 
 </p>
 
@@ -1142,13 +1049,201 @@ WELCOME TO AYUTTHAYA
 
 
 <!-- =========================
-     FEATURES
+     PAGE MENU
 ========================= -->
 
-<section class="features">
+<section class="pages"
+id="pages">
+
+<div class="container">
+
+<div class="pages-title">
+
+<span>
+EXPLORE AYUTTHAYA
+</span>
+
+<h2>
+5 เรื่องราวของอยุธยา
+</h2>
+
+</div>
 
 
-<div class="feature">
+<div class="cards">
+
+
+<!-- PAGE 1 -->
+
+<a href="page1.html"
+class="card card1">
+
+<div class="card-content">
+
+<div class="card-number">
+01 • HISTORY
+</div>
+
+<h3>
+ประวัติศาสตร์
+</h3>
+
+<p>
+ย้อนรอยความเป็นมาของกรุงศรีอยุธยา
+ตั้งแต่การก่อตั้งราชธานี
+ภูมิศาสตร์ แผนผังเมือง
+จนถึงความรุ่งเรืองในอดีต
+</p>
+
+<span class="card-arrow">
+เข้าสู่หน้า 1 →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- PAGE 2 -->
+
+<a href="page2.html"
+class="card card2">
+
+<div class="card-content">
+
+<div class="card-number">
+02 • PLACES
+</div>
+
+<h3>
+สถานที่สำคัญ
+</h3>
+
+<p>
+พบกับโบราณสถาน วัดสำคัญ
+และสถานที่ท่องเที่ยว
+ที่เป็นเอกลักษณ์ของอยุธยา
+</p>
+
+<span class="card-arrow">
+เข้าสู่หน้า 2 →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- PAGE 3 -->
+
+<a href="page3.html"
+class="card card3">
+
+<div class="card-content">
+
+<div class="card-number">
+03 • LIFESTYLE
+</div>
+
+<h3>
+ชุดไทยและวิถีชีวิต
+</h3>
+
+<p>
+สำรวจการแต่งกาย
+บ้านเรือน สายน้ำ ตลาด
+และชีวิตประจำวัน
+ของผู้คนในอยุธยา
+</p>
+
+<span class="card-arrow">
+เข้าสู่หน้า 3 →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- PAGE 4 -->
+
+<a href="page4.html"
+class="card card4">
+
+<div class="card-content">
+
+<div class="card-number">
+04 • CULTURE
+</div>
+
+<h3>
+วัฒนธรรม ประเพณี อาหาร
+</h3>
+
+<p>
+เรียนรู้ศิลปวัฒนธรรม
+ประเพณี ความเชื่อ
+เทศกาล และอาหารขึ้นชื่อ
+ของอยุธยา
+</p>
+
+<span class="card-arrow">
+เข้าสู่หน้า 4 →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- PAGE 5 -->
+
+<a href="page5.html"
+class="card card5">
+
+<div class="card-content">
+
+<div class="card-number">
+05 • TRAVEL
+</div>
+
+<h3>
+จุดเด่น ของฝาก และการท่องเที่ยว
+</h3>
+
+<p>
+ปิดท้ายการเดินทางด้วย
+จุดเด่นของอยุธยา
+ของฝาก สถานที่น่าสนใจ
+และไอเดียการเที่ยวเมืองเก่า
+</p>
+
+<span class="card-arrow">
+เข้าสู่หน้า 5 →
+</span>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEATURE
+========================= -->
+
+<section class="feature">
+
+<div class="feature-grid">
+
+
+<div class="feature-box">
 
 <div class="feature-icon">
 🏛️
@@ -1159,119 +1254,111 @@ WELCOME TO AYUTTHAYA
 </h3>
 
 <p>
-เรียนรู้จุดกำเนิด
-พัฒนาการ และเหตุการณ์สำคัญ
-ของกรุงศรีอยุธยา
+ร่องรอยราชธานี
+และเรื่องราวสำคัญ
+จากอดีต
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="feature-box">
 
 <div class="feature-icon">
-🛕
+🎭
 </div>
 
 <h3>
-สถานที่สำคัญ
+วัฒนธรรม
 </h3>
 
 <p>
-สำรวจวัด โบราณสถาน
-พระราชวัง และสถานที่ท่องเที่ยว
-ที่มีชื่อเสียง
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-👘
-</div>
-
-<h3>
-วิถีชีวิตและวัฒนธรรม
-</h3>
-
-<p>
-สัมผัสการแต่งกาย อาหาร
-ประเพณี ศิลปะ และภูมิปัญญา
+ศิลปะ ประเพณี
+อาหาร และวิถีชีวิต
 ของผู้คน
 </p>
 
 </div>
 
 
+<div class="feature-box">
+
+<div class="feature-icon">
+🚤
+</div>
+
+<h3>
+การท่องเที่ยว
+</h3>
+
+<p>
+สัมผัสเมืองเก่า
+ชุมชน อาหาร
+และของฝาก
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
 
 <!-- =========================
-     PAGE MENU
+     PAGE NAVIGATION
 ========================= -->
 
-<section class="page-menu">
-
-<small>
-EXPLORE AYUTTHAYA
-</small>
+<section class="page-navigation">
 
 <h2>
-เรื่องราวทั้ง 5 หน้า
+เดินทางต่อในแต่ละหน้า
 </h2>
 
+<div class="page-buttons">
 
-<div class="page-links">
 
-
-<a href="page1.html" class="page-link">
+<a href="page1.html">
 
 <strong>01</strong>
 
-ประวัติศาสตร์<br>
-แผนผัง
+ประวัติศาสตร์
 
 </a>
 
 
-<a href="page2.html" class="page-link">
+<a href="page2.html">
 
 <strong>02</strong>
 
-สถานที่สำคัญ<br>
-สถานที่ท่องเที่ยว
+สถานที่สำคัญ
 
 </a>
 
 
-<a href="page3.html" class="page-link">
+<a href="page3.html">
 
 <strong>03</strong>
 
-ชุดไทย<br>
-และวิถีชีวิต
+ชุดไทยและวิถีชีวิต
 
 </a>
 
 
-<a href="page4.html" class="page-link">
+<a href="page4.html">
 
 <strong>04</strong>
 
-วัฒนธรรม<br>
-ประเพณี • อาหาร
+วัฒนธรรมและอาหาร
 
 </a>
 
 
-<a href="page5.html" class="page-link">
+<a href="page5.html">
 
 <strong>05</strong>
 
-จุดเด่น<br>
-ของฝาก • การท่องเที่ยว
+จุดเด่นและของฝาก
 
 </a>
 
@@ -1292,12 +1379,13 @@ AYUTTHAYA
 </h3>
 
 <p>
-กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • มรดกโลก
+พระนครศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • วิถีชีวิต • การท่องเที่ยว
 </p>
 
 </footer>
 
 
 </body>
+
 </html>
 ```
