@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>กรุงศรีอยุธยา | เมืองหลวงแห่งความรุ่งเรือง</title>
+<title>กรุงศรีอยุธยา | AYUTTHAYA</title>
 
 <style>
 *{
@@ -18,51 +18,168 @@ html{
 }
 
 body{
-    font-family:"Tahoma","Arial",sans-serif;
-    line-height:1.8;
-    color:#3d291b;
-    background:#f7f0df;
+    font-family:"Tahoma",Arial,sans-serif;
+    background:#f5ecd9;
+    color:#3e281a;
 }
 
-/* เมนู */
+/* ===== NAVBAR ===== */
+
 nav{
-    position:sticky;
+    position:fixed;
     top:0;
+    left:0;
+    width:100%;
     z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 7%;
-    background:#51321f;
-    box-shadow:0 3px 12px rgba(0,0,0,.25);
+
+    padding:16px 6%;
+
+    background:rgba(55,32,20,0.96);
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 
 .logo{
-    color:#f5d58a;
-    font-size:22px;
-    font-weight:bold;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:24px;
-}
-
-nav a{
-    color:white;
+    color:#f5d48b;
     text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
-nav a:hover{
-    color:#f5d58a;
-}
+/* ===== HERO ===== */
 
-/* ภาพปก */
 .hero{
-    min-height:680px;
+    min-height:100vh;
+
     display:flex;
     justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(35,18,8,0.5),
+        rgba(35,18,8,0.82)
+    ),
+    url("images/Ayutthaya_Historical_Park_1.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:1000px;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:clamp(50px,8vw,100px);
+    text-shadow:0 5px 20px black;
+}
+
+.hero h2{
+    color:#f6d58b;
+    font-size:clamp(25px,4vw,45px);
+    margin:15px 0;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.button{
+    display:inline-block;
+
+    margin-top:35px;
+    padding:14px 35px;
+
+    background:#b9782f;
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#d49a4c;
+    transform:translateY(-3px);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#382317;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+footer h3{
+    color:#f5d48b;
+    margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html" class="logo">
+🏛️ AYUTTHAYA
+</a>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>กรุงศรีอยุธยา</h1>
+
+<h2>เมืองหลวงแห่งความรุ่งเรือง</h2>
+
+<p>
+จากราชธานีโบราณสู่มรดกโลก
+<br>
+เรื่องราวของเมืองที่เคยเป็นศูนย์กลาง
+การเมือง การค้า ศาสนา และวัฒนธรรมของสยาม
+</p>
+
+<a href="page1.html" class="button">
+เข้าสู่เว็บไซต์ →
+</a>
+
+</div>
+
+</header>
+
+
+<footer>
+
+<h3>🏛️ AYUTTHAYA</h3>
+
+<p>
+Historical • Cultural • World Heritage
+</p>
+
+</footer>
+
+</body>
+</html>    justify-content:center;
     align-items:center;
     text-align:center;
     color:white;
