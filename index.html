@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>กรุงศรีอยุธยา | AYUTTHAYA</title>
+<title>AYUTTHAYA | กรุงศรีอยุธยา</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -18,951 +23,748 @@ html{
 }
 
 body{
-    font-family:"Tahoma",Arial,sans-serif;
-    background:#f5ecd9;
-    color:#3e281a;
+    font-family:"Tahoma","Arial",sans-serif;
+    background:#1d120c;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* ===== NAVBAR ===== */
 
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:16px 6%;
-
-    background:rgba(55,32,20,0.96);
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
-}
-
-.logo{
-    color:#f5d48b;
-    text-decoration:none;
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-/* ===== HERO ===== */
+/* =========================
+   BACKGROUND
+========================= */
 
 .hero{
+
+    position:relative;
+
     min-height:100vh;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     text-align:center;
 
-    color:white;
+    overflow:hidden;
 
     background:
-    linear-gradient(
-        rgba(35,18,8,0.5),
-        rgba(35,18,8,0.82)
-    ),
-    url("images/Ayutthaya_Historical_Park_1.jpg")
-    center/cover no-repeat;
+        linear-gradient(
+            rgba(25,12,6,.35),
+            rgba(25,12,6,.88)
+        ),
+        url("images/Ayutthaya_Historical_Park_1.jpg")
+        center/cover no-repeat;
+
+    animation:
+        backgroundMove 18s ease-in-out infinite alternate;
 }
 
-.hero-content{
-    max-width:1000px;
-    padding:40px;
+
+/* ภาพพื้นหลังซูมเข้าออกเบา ๆ */
+
+@keyframes backgroundMove{
+
+    0%{
+        background-size:100%;
+    }
+
+    100%{
+        background-size:108%;
+    }
+
 }
 
-.hero h1{
-    font-size:clamp(50px,8vw,100px);
-    text-shadow:0 5px 20px black;
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0,0,0,.55)
+        );
+
+    pointer-events:none;
+
 }
 
-.hero h2{
-    color:#f6d58b;
-    font-size:clamp(25px,4vw,45px);
-    margin:15px 0;
+
+/* =========================
+   GOLD LIGHT
+========================= */
+
+.light{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,210,120,.20),
+            transparent 65%
+        );
+
+    animation:
+        lightMove 8s ease-in-out infinite alternate;
+
 }
 
-.hero p{
-    font-size:20px;
-    line-height:1.8;
+.light.one{
+    top:-200px;
+    left:-150px;
 }
 
-.button{
-    display:inline-block;
+.light.two{
+    bottom:-250px;
+    right:-150px;
 
-    margin-top:35px;
-    padding:14px 35px;
+    animation-delay:3s;
+}
 
-    background:#b9782f;
-    color:white;
+@keyframes lightMove{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    100%{
+        transform:translate(80px,50px) scale(1.2);
+    }
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:18px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+
+    background:
+        linear-gradient(
+            rgba(42,24,13,.96),
+            rgba(42,24,13,.88)
+        );
+
+    border-bottom:1px solid rgba(224,180,91,.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+/* LOGO */
+
+.logo{
 
     text-decoration:none;
 
-    border-radius:30px;
+    color:#f2cc7a;
+
+    font-size:25px;
 
     font-weight:bold;
 
-    transition:0.3s;
+    letter-spacing:2px;
+
+    transition:.3s;
 }
 
-.button:hover{
-    background:#d49a4c;
-    transform:translateY(-3px);
+.logo:hover{
+
+    color:#fff0b8;
+
+    text-shadow:
+        0 0 15px #e7bd65;
+
+    transform:translateY(-2px);
+
 }
 
-/* ===== FOOTER ===== */
 
-footer{
-    background:#382317;
-    color:white;
-    text-align:center;
-    padding:35px;
-}
+/* NAV */
 
-footer h3{
-    color:#f5d48b;
-    margin-bottom:10px;
-}
+.nav-right{
 
-</style>
-</head>
+    display:flex;
 
-<body>
-
-<nav>
-
-<a href="index.html" class="logo">
-🏛️ AYUTTHAYA
-</a>
-
-</nav>
-
-
-<header class="hero">
-
-<div class="hero-content">
-
-<h1>กรุงศรีอยุธยา</h1>
-
-<h2>เมืองหลวงแห่งความรุ่งเรือง</h2>
-
-<p>
-จากราชธานีโบราณสู่มรดกโลก
-<br>
-เรื่องราวของเมืองที่เคยเป็นศูนย์กลาง
-การเมือง การค้า ศาสนา และวัฒนธรรมของสยาม
-</p>
-
-<a href="page1.html" class="button">
-เข้าสู่เว็บไซต์ →
-</a>
-
-</div>
-
-</header>
-
-
-<footer>
-
-<h3>🏛️ AYUTTHAYA</h3>
-
-<p>
-Historical • Cultural • World Heritage
-</p>
-
-</footer>
-
-</body>
-</html>    justify-content:center;
     align-items:center;
-    text-align:center;
-    color:white;
 
-    background:
-    linear-gradient(rgba(40,20,8,.55),rgba(40,20,8,.72)),
-    url("images/Ayutthaya_Historical_Park_1.jpg") center/cover no-repeat;
+    gap:28px;
+
 }
+
+.nav-right a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.nav-right a:hover{
+
+    color:#f3ca75;
+
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content{
-    max-width:900px;
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:1000px;
+
     padding:40px;
+
 }
+
+
+/* TOP LABEL */
+
+.eyebrow{
+
+    color:#f3cd7b;
+
+    font-size:18px;
+
+    letter-spacing:6px;
+
+    margin-bottom:22px;
+
+    animation:
+        fadeDown 1.2s ease forwards;
+
+}
+
+
+/* TITLE */
 
 .hero h1{
-    font-size:clamp(45px,7vw,80px);
-    text-shadow:3px 4px 10px rgba(0,0,0,.7);
+
+    font-size:
+        clamp(65px,10vw,125px);
+
+    line-height:1;
+
+    letter-spacing:5px;
+
+    color:#fff;
+
+    text-shadow:
+        0 5px 25px rgba(0,0,0,.8);
+
+    animation:
+        titleAppear 1.5s ease forwards;
+
 }
+
+
+/* THAI TITLE */
 
 .hero h2{
-    color:#f5d58a;
-    font-size:clamp(24px,3vw,38px);
-    margin:10px 0 20px;
+
+    margin-top:20px;
+
+    font-size:
+        clamp(27px,4vw,48px);
+
+    color:#f1ca79;
+
+    font-weight:normal;
+
+    animation:
+        fadeUp 1.5s ease .3s both;
+
 }
+
+
+/* DESCRIPTION */
 
 .hero p{
+
+    max-width:750px;
+
+    margin:25px auto 0;
+
     font-size:19px;
+
+    line-height:2;
+
+    color:#f5ead5;
+
+    animation:
+        fadeUp 1.5s ease .6s both;
+
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 28px;
-    background:#b9792e;
-    color:white;
+
+/* =========================
+   BUTTON
+========================= */
+
+.enter-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:38px;
+
+    padding:15px 38px;
+
+    border-radius:50px;
+
     text-decoration:none;
-    border-radius:30px;
+
+    color:#3b2416;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eac574,
+            #c78b38
+        );
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+    animation:
+        fadeUp 1.5s ease .9s both,
+        buttonFloat 3s ease-in-out 2.5s infinite;
+
 }
 
-/* Section */
-section{
-    padding:80px 8%;
+.enter-button:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(225,178,77,.35);
+
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
+@keyframes buttonFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
 }
 
-.section-title h2{
-    font-size:38px;
-    color:#70431f;
+
+/* =========================
+   DECORATIVE LINE
+========================= */
+
+.decor{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    opacity:.8;
+
 }
 
-.section-title p{
-    color:#806b59;
-}
+.decor span{
 
-.content{
-    max-width:1100px;
-    margin:auto;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    margin-bottom:30px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(90,50,20,.12);
-}
-
-.card h3{
-    color:#8b572a;
-    font-size:26px;
-    margin-bottom:15px;
-}
-
-.card p{
-    margin-bottom:15px;
-    text-align:justify;
-}
-
-/* รูปภาพ */
-.image-box{
-    margin:25px 0 40px;
-    text-align:center;
-}
-
-.image-box img{
-    width:100%;
-    max-height:520px;
-    object-fit:cover;
-    border-radius:16px;
-    box-shadow:0 5px 18px rgba(0,0,0,.2);
-}
-
-.map-image img{
-    object-fit:contain;
-    background:#eee4cf;
-}
-
-.caption{
-    margin-top:10px;
-    color:#806b59;
-    font-size:14px;
-}
-
-/* กล่องข้อมูล */
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin:30px 0;
-}
-
-.info-item{
-    background:#f3e5c7;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.info-item h3{
-    color:#78491f;
-}
-
-.info-item strong{
     display:block;
-    color:#a66b2c;
-    font-size:28px;
+
+    height:1px;
+
+    width:100px;
+
+    background:#d5ad62;
+
 }
 
-/* กล่องเน้น */
-.highlight{
-    background:linear-gradient(135deg,#704421,#a66a2c);
-    color:white;
-    padding:40px;
-    margin:35px 0;
-    border-radius:20px;
+.decor b{
+
+    color:#e7bf6e;
+
+    font-size:22px;
+
 }
 
-.highlight h3{
-    color:#f7d98b;
-    font-size:28px;
-    margin-bottom:15px;
-}
 
-.highlight p{
-    margin-bottom:12px;
-}
+/* =========================
+   FLOATING DUST
+========================= */
 
-/* Timeline */
-.timeline{
-    border-left:4px solid #b87932;
-    padding-left:30px;
-}
+.dust{
 
-.timeline-item{
-    margin-bottom:30px;
-    position:relative;
-}
-
-.timeline-item::before{
-    content:"";
     position:absolute;
-    width:15px;
-    height:15px;
-    background:#b87932;
+
+    width:5px;
+    height:5px;
+
+    background:#f4d38a;
+
     border-radius:50%;
-    left:-39px;
-    top:8px;
+
+    opacity:.6;
+
+    animation:
+        dustFloat 7s linear infinite;
+
 }
 
-.timeline-item h3{
-    color:#7a471f;
+.d1{
+    left:12%;
+    bottom:-10px;
+    animation-delay:0s;
 }
 
-/* Footer */
-footer{
-    background:#3d291b;
-    color:white;
+.d2{
+    left:28%;
+    bottom:-20px;
+    animation-delay:2s;
+}
+
+.d3{
+    left:55%;
+    bottom:-15px;
+    animation-delay:4s;
+}
+
+.d4{
+    left:75%;
+    bottom:-20px;
+    animation-delay:1s;
+}
+
+.d5{
+    left:90%;
+    bottom:-10px;
+    animation-delay:3s;
+}
+
+@keyframes dustFloat{
+
+    0%{
+        transform:translateY(0) translateX(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.7;
+    }
+
+    80%{
+        opacity:.5;
+    }
+
+    100%{
+        transform:
+            translateY(-100vh)
+            translateX(80px);
+
+        opacity:0;
+    }
+
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:0;
+
+    width:100%;
+
     text-align:center;
-    padding:40px 20px;
+
+    color:#d8bd8c;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    z-index:5;
+
+    animation:
+        bottomPulse 3s ease-in-out infinite;
+
 }
 
-footer h3{
-    color:#f7d98b;
-    margin-bottom:10px;
+@keyframes bottomPulse{
+
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+
 }
 
-/* มือถือ */
-@media(max-width:800px){
 
-    nav{
-        flex-direction:column;
-        gap:10px;
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes titleAppear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(40px)
+            scale(.95);
     }
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px;
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
     }
 
-    section{
-        padding:55px 5%;
-    }
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-
-    .card{
-        padding:25px;
-    }
 }
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .nav-right{
+        display:none;
+    }
+
+    .hero-content{
+        padding:30px 20px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .decor span{
+        width:50px;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- เมนู -->
-<nav>
 
-    <div class="logo">
-        🏛️ กรุงศรีอยุธยา
-    </div>
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <ul>
-        <li><a href="#history">ประวัติ</a></li>
-        <li><a href="#location">ทำเลที่ตั้ง</a></li>
-        <li><a href="#trade">การค้า</a></li>
-        <li><a href="#culture">วัฒนธรรม</a></li>
-        <li><a href="#heritage">มรดกโลก</a></li>
-    </ul>
+<nav class="navbar">
 
-</nav>
+    <a href="index.html" class="logo">
+        🏛️ AYUTTHAYA
+    </a>
 
+    <div class="nav-right">
 
-<!-- หน้าปก -->
-<header class="hero">
-
-    <div class="hero-content">
-
-        <h1>กรุงศรีอยุธยา</h1>
-
-        <h2>เมืองหลวงแห่งความรุ่งเรือง</h2>
-
-        <p>
-            ราชธานีโบราณที่เป็นศูนย์กลางทางการเมือง
-            เศรษฐกิจ ศาสนา การค้า และวัฒนธรรม
-            ของสยามมายาวนานกว่า 400 ปี
-        </p>
-
-        <a href="#history" class="btn">
-            เริ่มเรียนรู้
+        <a href="page1.html">
+            ประวัติกรุงศรีอยุธยา
         </a>
 
     </div>
 
-</header>
+</nav>
 
 
-<!-- ประวัติ -->
-<section id="history">
+<!-- =========================
+     HERO
+========================= -->
 
-    <div class="section-title">
-        <h2>ประวัติกรุงศรีอยุธยา</h2>
-        <p>ราชธานีแห่งที่สองของประเทศไทย</p>
+<section class="hero">
+
+
+    <!-- แสงตกแต่ง -->
+
+    <div class="light one"></div>
+
+    <div class="light two"></div>
+
+
+    <!-- ฝุ่น/ประกายลอยวน -->
+
+    <div class="dust d1"></div>
+    <div class="dust d2"></div>
+    <div class="dust d3"></div>
+    <div class="dust d4"></div>
+    <div class="dust d5"></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="eyebrow">
+            THE HISTORICAL CITY
+        </div>
+
+
+        <h1>
+            AYUTTHAYA
+        </h1>
+
+
+        <h2>
+            กรุงศรีอยุธยา
+        </h2>
+
+
+        <div class="decor">
+
+            <span></span>
+
+            <b>✦</b>
+
+            <span></span>
+
+        </div>
+
+
+        <p>
+
+            เมืองหลวงแห่งความรุ่งเรือง
+            <br>
+
+            ร่องรอยแห่งประวัติศาสตร์
+            วัฒนธรรม และวิถีชีวิต
+            ที่ยังคงเล่าเรื่องราวจากอดีต
+            สู่คนรุ่นปัจจุบัน
+
+        </p>
+
+
+        <a
+            href="page1.html"
+            class="enter-button"
+        >
+
+            เริ่มสำรวจกรุงศรีอยุธยา
+
+            <span>→</span>
+
+        </a>
+
+
     </div>
 
-    <div class="content">
 
-        <div class="image-box">
+    <div class="bottom">
 
-            <img
-            src="images/Ayutthaya_Historical_Park_1.jpg"
-            alt="กรุงศรีอยุธยา">
-
-            <div class="caption">
-                อุทยานประวัติศาสตร์พระนครศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>กรุงศรีอยุธยา เมืองหลวงแห่งความรุ่งเรือง</h3>
-
-            <p>
-                กรุงศรีอยุธยาเป็นราชธานีแห่งที่สองของประเทศไทย
-                ก่อตั้งขึ้นเมื่อ พ.ศ. 1893 โดยสมเด็จพระรามาธิบดีที่ 1
-                หรือพระเจ้าอู่ทอง และเป็นเมืองหลวงของไทยยาวนานถึง
-                417 ปี ก่อนเสียกรุงครั้งที่ 2 ใน พ.ศ. 2310
-            </p>
-
-            <p>
-                ตลอดระยะเวลาที่เป็นราชธานี
-                อยุธยาเป็นศูนย์กลางด้านการเมือง เศรษฐกิจ
-                ศาสนา และวัฒนธรรมของไทย
-                รวมทั้งเป็นเมืองท่าที่มีความสำคัญ
-                ในการค้าระหว่างประเทศ
-            </p>
-
-            <p>
-                ความเจริญรุ่งเรืองของอยุธยาเกิดจากทำเลที่ตั้ง
-                ซึ่งเอื้อต่อการเดินทาง การเกษตร
-                การค้าขาย และการป้องกันเมือง
-            </p>
-
-        </div>
-
-        <div class="info-grid">
-
-            <div class="info-item">
-                <h3>ก่อตั้ง</h3>
-                <strong>พ.ศ. 1893</strong>
-                <p>โดยพระเจ้าอู่ทอง</p>
-            </div>
-
-            <div class="info-item">
-                <h3>เป็นราชธานี</h3>
-                <strong>417 ปี</strong>
-                <p>ศูนย์กลางของอาณาจักร</p>
-            </div>
-
-            <div class="info-item">
-                <h3>เสียกรุงครั้งที่ 2</h3>
-                <strong>พ.ศ. 2310</strong>
-                <p>สิ้นสุดกรุงศรีอยุธยา</p>
-            </div>
-
-        </div>
-
-        <div class="highlight">
-
-            <h3>สมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง</h3>
-
-            <p>
-                สมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
-                เป็นผู้สถาปนากรุงศรีอยุธยา
-                และวางรากฐานให้เมืองกลายเป็นศูนย์กลางสำคัญ
-                ของอาณาจักร
-            </p>
-
-            <p>
-                การเลือกทำเลที่ตั้งมีความสำคัญต่อการเติบโตของเมือง
-                เพราะมีแม่น้ำล้อมรอบ ทำให้เหมาะแก่การป้องกัน
-                การเดินทาง และการค้าขาย
-            </p>
-
-        </div>
+        SCROLL • EXPLORE • DISCOVER
 
     </div>
+
 
 </section>
 
-
-<!-- ทำเลที่ตั้ง -->
-<section id="location">
-
-    <div class="section-title">
-
-        <h2>ทำเลที่ตั้งของอยุธยา</h2>
-
-        <p>เมืองเกาะที่ล้อมรอบด้วยสายน้ำ</p>
-
-    </div>
-
-    <div class="content">
-
-        <div class="card">
-
-            <h3>เกาะเมืองอยุธยา</h3>
-
-            <p>
-                ทำเลที่ตั้งของอยุธยาเป็นเกาะเมือง
-                มีแม่น้ำเจ้าพระยา แม่น้ำลพบุรี
-                และแม่น้ำป่าสักล้อมรอบ
-            </p>
-
-            <p>
-                ลักษณะทางภูมิศาสตร์ดังกล่าว
-                ช่วยให้เมืองเหมาะแก่การป้องกันข้าศึก
-                และทำให้การเดินทางทางน้ำสะดวก
-            </p>
-
-            <p>
-                แม่น้ำยังช่วยในการขนส่งสินค้า
-                การเดินทางของผู้คน
-                และการติดต่อค้าขายกับเมืองต่าง ๆ
-            </p>
-
-        </div>
-
-        <div class="image-box map-image">
-
-            <img
-            src="images/Ayuthistparkmap.png"
-            alt="แผนที่อุทยานประวัติศาสตร์อยุธยา">
-
-            <div class="caption">
-                แผนที่อุทยานประวัติศาสตร์พระนครศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="image-box map-image">
-
-            <img
-            src="images/Ayutthaya-map.png"
-            alt="แผนที่กรุงศรีอยุธยา">
-
-            <div class="caption">
-                แผนที่กรุงศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="image-box map-image">
-
-            <img
-            src="images/Ayutthaya_Island.png"
-            alt="แผนที่เกาะเมืองอยุธยา">
-
-            <div class="caption">
-                แผนที่เกาะเมืองพระนครศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>ความสำคัญของแม่น้ำ</h3>
-
-            <p>
-                สายน้ำรอบเมืองไม่ได้มีประโยชน์เฉพาะด้านการป้องกัน
-                แต่ยังเป็นเส้นทางคมนาคมและการค้าสำคัญ
-            </p>
-
-            <p>
-                เรือสามารถเดินทางขนส่งสินค้า
-                และเชื่อมโยงอยุธยากับพื้นที่ต่าง ๆ
-                ทำให้เมืองสามารถพัฒนาเป็นศูนย์กลางการค้า
-                ที่สำคัญของภูมิภาค
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- การค้า -->
-<section id="trade">
-
-    <div class="section-title">
-
-        <h2>การค้าและความสัมพันธ์กับต่างประเทศ</h2>
-
-        <p>อยุธยา เมืองท่านานาชาติ</p>
-
-    </div>
-
-    <div class="content">
-
-        <div class="image-box">
-
-            <img
-            src="images/Ayutthaya_HistoricaL_Park_3.jpg"
-            alt="โบราณสถานกรุงศรีอยุธยา">
-
-            <div class="caption">
-                โบราณสถานที่สะท้อนความรุ่งเรืองของกรุงศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>ศูนย์กลางการค้าระหว่างประเทศ</h3>
-
-            <p>
-                อยุธยามีการติดต่อกับชาวต่างชาติหลายประเทศ
-                เช่น จีน ญี่ปุ่น โปรตุเกส ฮอลันดา
-                ฝรั่งเศส และเปอร์เซีย
-            </p>
-
-            <p>
-                พ่อค้าและนักเดินทางจากหลายพื้นที่
-                เข้ามาค้าขายและตั้งถิ่นฐาน
-                ทำให้กรุงศรีอยุธยามีความหลากหลาย
-                ทางสังคมและวัฒนธรรม
-            </p>
-
-            <p>
-                การค้าขายช่วยสร้างความมั่งคั่ง
-                และทำให้อยุธยามีความสัมพันธ์กับประเทศต่าง ๆ
-                ในภูมิภาคเอเชียและยุโรป
-            </p>
-
-        </div>
-
-        <div class="image-box">
-
-            <img
-            src="images/Ayutthaya_Historical_Park_4.jpg"
-            alt="โบราณสถานกรุงศรีอยุธยา">
-
-            <div class="caption">
-                โบราณสถานในพื้นที่กรุงศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="highlight">
-
-            <h3>การแลกเปลี่ยนทางวัฒนธรรม</h3>
-
-            <p>
-                การติดต่อกับต่างประเทศไม่ได้มีเพียงเรื่องการค้า
-                แต่ยังทำให้เกิดการแลกเปลี่ยนความรู้
-                เทคโนโลยี ภาษา ศิลปะ อาหาร
-                และวัฒนธรรม
-            </p>
-
-            <p>
-                ความหลากหลายเหล่านี้กลายเป็นส่วนหนึ่ง
-                ของสังคมอยุธยา และสะท้อนให้เห็นว่า
-                อยุธยาเป็นเมืองที่มีความสัมพันธ์
-                กับนานาประเทศ
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- วัฒนธรรม -->
-<section id="culture">
-
-    <div class="section-title">
-
-        <h2>ศาสนา ศิลปะ และวัฒนธรรม</h2>
-
-        <p>มรดกที่สะท้อนความรุ่งเรืองของอยุธยา</p>
-
-    </div>
-
-    <div class="content">
-
-        <div class="image-box">
-
-            <img
-            src="images/Wat_Mahathat,_Ayutthaya.jpg"
-            alt="วัดมหาธาตุ อยุธยา">
-
-            <div class="caption">
-                วัดมหาธาตุ พระนครศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>วัดมหาธาตุ</h3>
-
-            <p>
-                วัดมหาธาตุเป็นหนึ่งในโบราณสถานสำคัญ
-                ของพระนครศรีอยุธยา
-                และเป็นสถานที่ที่สะท้อนความรุ่งเรือง
-                ทางด้านศาสนาและศิลปกรรม
-            </p>
-
-            <p>
-                ภายในพื้นที่มีโบราณสถานและโบราณวัตถุ
-                ที่แสดงให้เห็นถึงรูปแบบศิลปกรรม
-                และสถาปัตยกรรมของกรุงศรีอยุธยา
-            </p>
-
-        </div>
-
-        <div class="image-box">
-
-            <img
-            src="images/Ayutthaya_Historical_Park_1.jpg"
-            alt="โบราณสถานอยุธยา">
-
-            <div class="caption">
-                โบราณสถานในอุทยานประวัติศาสตร์
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>ศิลปะและวัฒนธรรม</h3>
-
-            <p>
-                ศิลปกรรมของอยุธยามีเอกลักษณ์เฉพาะตัว
-                ทั้งด้านพระพุทธรูป พระปรางค์ เจดีย์
-                และอาคารทางศาสนา
-            </p>
-
-            <p>
-                โบราณสถานที่หลงเหลืออยู่ในปัจจุบัน
-                จึงเป็นหลักฐานสำคัญที่ช่วยให้คนรุ่นหลัง
-                เข้าใจวิถีชีวิต ความเชื่อ
-                และความเจริญของผู้คนในอดีต
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Timeline -->
-<section>
-
-    <div class="section-title">
-
-        <h2>ช่วงเวลาสำคัญของกรุงศรีอยุธยา</h2>
-
-        <p>จากการก่อตั้งสู่การเป็นเมืองสำคัญของภูมิภาค</p>
-
-    </div>
-
-    <div class="content">
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <h3>พ.ศ. 1893 — สถาปนากรุงศรีอยุธยา</h3>
-
-                <p>
-                    สมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
-                    สถาปนากรุงศรีอยุธยาเป็นราชธานี
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>ยุคแห่งความเจริญรุ่งเรือง</h3>
-
-                <p>
-                    อยุธยาพัฒนาทั้งด้านการเมือง
-                    เศรษฐกิจ ศาสนา ศิลปะ
-                    และวัฒนธรรม
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>การค้ากับนานาประเทศ</h3>
-
-                <p>
-                    พ่อค้าจากจีน ญี่ปุ่น
-                    เปอร์เซีย และประเทศยุโรป
-                    เดินทางเข้ามาติดต่อค้าขาย
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>พ.ศ. 2310 — เสียกรุงครั้งที่ 2</h3>
-
-                <p>
-                    กรุงศรีอยุธยาเสียแก่พม่า
-                    และสิ้นสุดการเป็นราชธานี
-                    หลังจากเป็นศูนย์กลางของสยาม
-                    ยาวนานถึง 417 ปี
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- มรดกโลก -->
-<section id="heritage">
-
-    <div class="section-title">
-
-        <h2>อยุธยาในปัจจุบัน</h2>
-
-        <p>มรดกทางประวัติศาสตร์ที่ยังคงอยู่</p>
-
-    </div>
-
-    <div class="content">
-
-        <div class="image-box">
-
-            <img
-            src="images/Ayutthaya_Historical_Park_4.jpg"
-            alt="อุทยานประวัติศาสตร์พระนครศรีอยุธยา">
-
-            <div class="caption">
-                อุทยานประวัติศาสตร์พระนครศรีอยุธยา
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>แหล่งเรียนรู้ทางประวัติศาสตร์</h3>
-
-            <p>
-                ปัจจุบันพระนครศรีอยุธยาเป็นแหล่งเรียนรู้
-                ทางประวัติศาสตร์ที่สำคัญของประเทศไทย
-                มีโบราณสถานจำนวนมาก
-                ที่สะท้อนถึงความรุ่งเรืองของอาณาจักรในอดีต
-            </p>
-
-            <p>
-                นักท่องเที่ยวสามารถเดินทางมาเยี่ยมชม
-                วัด โบราณสถาน พิพิธภัณฑ์
-                และสถานที่สำคัญต่าง ๆ
-                เพื่อเรียนรู้เรื่องราวของกรุงศรีอยุธยา
-            </p>
-
-            <p>
-                อุทยานประวัติศาสตร์พระนครศรีอยุธยา
-                ได้รับการขึ้นทะเบียนเป็นมรดกโลก
-                จากองค์การยูเนสโกใน พ.ศ. 2534
-            </p>
-
-        </div>
-
-        <div class="highlight">
-
-            <h3>คุณค่าของกรุงศรีอยุธยา</h3>
-
-            <p>
-                กรุงศรีอยุธยาไม่ได้เป็นเพียงเมืองหลวงเก่าแก่
-                แต่เป็นหลักฐานสำคัญที่แสดงถึงความสามารถ
-                ของผู้คนในอดีตในการสร้างเมือง
-                พัฒนาการค้า สร้างศิลปวัฒนธรรม
-                และติดต่อกับนานาประเทศ
-            </p>
-
-            <p>
-                มรดกที่หลงเหลืออยู่ในปัจจุบัน
-                จึงมีคุณค่าต่อการศึกษา การท่องเที่ยว
-                และการอนุรักษ์ เพื่อให้คนรุ่นหลัง
-                ได้เรียนรู้เรื่องราวของอยุธยาต่อไป
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <h3>🏛️ กรุงศรีอยุธยา | เมืองหลวงแห่งความรุ่งเรือง</h3>
-
-    <p>
-        เว็บไซต์เพื่อการศึกษาเกี่ยวกับประวัติศาสตร์
-        และวัฒนธรรมกรุงศรีอยุธยา
-    </p>
-
-    <p>
-        © 2026 Ayutthaya Historical Website
-    </p>
-
-</footer>
 
 </body>
 </html>
