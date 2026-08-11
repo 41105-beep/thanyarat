@@ -1,1 +1,1123 @@
-3
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>สถานที่ท่องเที่ยว | AYUTTHAYA</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Kanit',sans-serif;
+    background:#100805;
+    color:#ead8b4;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:50;
+    opacity:.05;
+    background-image:radial-gradient(#d9aa55 1px,transparent 1px);
+    background-size:26px 26px;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:rgba(14,7,4,.86);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(214,168,77,.35);
+}
+
+.logo{
+    color:#e5b95d;
+    text-decoration:none;
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    letter-spacing:4px;
+}
+
+.logo:hover{
+    color:#fff0bb;
+    text-shadow:0 0 25px rgba(229,185,93,.8);
+}
+
+.nav-right{
+    display:flex;
+    gap:12px;
+}
+
+.nav-button{
+    text-decoration:none;
+    color:#ead6ac;
+    border:1px solid #8f672f;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    transition:.4s;
+}
+
+.nav-button:hover{
+    background:#c59643;
+    color:#180b05;
+    box-shadow:0 0 25px rgba(197,150,67,.45);
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+    min-height:620px;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    background:
+    linear-gradient(
+        rgba(15,7,4,.42),
+        rgba(15,7,4,.94)
+    ),
+    url("images/wat-mahathat.jpg")
+    center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        transparent 15%,
+        rgba(0,0,0,.78) 90%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:950px;
+}
+
+.eyebrow{
+    color:#d5a64e;
+    letter-spacing:8px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(55px,9vw,115px);
+
+    line-height:.95;
+
+    color:#f2dfaf;
+
+    text-shadow:0 12px 45px #000;
+}
+
+.hero h2{
+
+    color:#d3a04b;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    margin-top:22px;
+}
+
+.divider{
+
+    width:200px;
+    height:1px;
+
+    margin:30px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #d6a94f,
+        transparent
+    );
+}
+
+.hero p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#d4c19b;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+/* =========================
+SECTION
+========================= */
+
+.section{
+    padding:100px 7%;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:65px;
+}
+
+.heading-small{
+    color:#b98b3e;
+    letter-spacing:5px;
+    font-size:13px;
+}
+
+.heading h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e3bf75;
+
+    font-size:45px;
+
+    margin:10px 0 15px;
+}
+
+.heading p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#9d8b70;
+
+    line-height:1.9;
+}
+
+/* =========================
+PLACE CARDS
+========================= */
+
+.places{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:28px;
+}
+
+.place{
+
+    position:relative;
+
+    min-height:520px;
+
+    overflow:hidden;
+
+    border:1px solid #4c341b;
+
+    background:#1a0c06;
+
+    transition:.5s;
+}
+
+.place:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#bd9144;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+}
+
+.place img{
+
+    width:100%;
+    height:520px;
+
+    object-fit:cover;
+
+    transition:.7s;
+}
+
+.place:hover img{
+
+    transform:scale(1.08);
+}
+
+.place-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:35px;
+
+    background:
+    linear-gradient(
+        transparent 25%,
+        rgba(8,3,2,.25) 45%,
+        rgba(8,3,2,.96) 100%
+    );
+}
+
+.place-content{
+
+    width:100%;
+}
+
+.place-number{
+
+    color:#d2a04b;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    margin-bottom:8px;
+}
+
+.place h3{
+
+    color:#f0d99f;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.place p{
+
+    color:#c1ad88;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    max-width:500px;
+}
+
+.explore{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:8px 18px;
+
+    border:1px solid #92703a;
+
+    border-radius:25px;
+
+    color:#dcbf82;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.place:hover .explore{
+
+    background:#c59643;
+
+    color:#180b05;
+}
+
+/* =========================
+FEATURED PLACE
+========================= */
+
+.featured{
+
+    max-width:1200px;
+
+    margin:80px auto 0;
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    min-height:450px;
+
+    border:1px solid #5b3d1d;
+
+    background:#190b06;
+}
+
+.featured-image{
+
+    min-height:450px;
+
+    overflow:hidden;
+}
+
+.featured-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+}
+
+.featured:hover img{
+
+    transform:scale(1.04);
+}
+
+.featured-content{
+
+    padding:55px 50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-direction:column;
+}
+
+.featured-label{
+
+    color:#b98b3e;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+}
+
+.featured h3{
+
+    color:#e3bf75;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.featured p{
+
+    color:#9d8b70;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+.info-list{
+
+    list-style:none;
+
+    color:#cbb58b;
+
+    line-height:2.2;
+
+    font-size:14px;
+}
+
+.info-list li::before{
+
+    content:"✦";
+
+    color:#c99a47;
+
+    margin-right:10px;
+}
+
+/* =========================
+TRAVEL STRIP
+========================= */
+
+.travel-strip{
+
+    background:#130906;
+
+    border-top:1px solid #493219;
+
+    border-bottom:1px solid #493219;
+
+    padding:75px 8%;
+}
+
+.travel-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:1px;
+
+    background:#4c341b;
+}
+
+.travel-item{
+
+    background:#1a0c06;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.travel-item:hover{
+
+    background:#251208;
+}
+
+.travel-icon{
+
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+.travel-item h3{
+
+    color:#d8b365;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.travel-item p{
+
+    color:#918067;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.page-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:70px 20px;
+
+    background:#0e0604;
+}
+
+.button{
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    transition:.4s;
+
+    font-size:15px;
+}
+
+.back{
+
+    color:#dfc99e;
+
+    border:1px solid #79572d;
+}
+
+.next{
+
+    color:#1a0c05;
+
+    background:
+    linear-gradient(
+        135deg,
+        #efd183,
+        #b77a29
+    );
+}
+
+.button:hover{
+
+    transform:translateY(-5px);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+    background:#090403;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #392511;
+}
+
+footer h3{
+
+    color:#d3a653;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:4px;
+
+    font-size:25px;
+}
+
+footer p{
+
+    color:#6f604c;
+
+    margin-top:8px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        height:70px;
+        padding:0 4%;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .nav-button{
+        font-size:11px;
+        padding:7px 12px;
+    }
+
+    .places{
+        grid-template-columns:1fr;
+    }
+
+    .featured{
+        grid-template-columns:1fr;
+    }
+
+    .featured-image{
+        min-height:300px;
+    }
+
+    .travel-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .hero h2{
+        font-size:29px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .page-navigation{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        🏛 AYUTTHAYA
+    </a>
+
+    <div class="nav-right">
+
+        <a href="page1.html" class="nav-button">
+            ← ประวัติศาสตร์
+        </a>
+
+        <a href="page3.html" class="nav-button">
+            วิถีชีวิต →
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            DISCOVER THE ANCIENT CITY
+        </div>
+
+        <h1>
+            PLACES
+        </h1>
+
+        <h2>
+            สถานที่ท่องเที่ยวสำคัญ
+        </h2>
+
+        <div class="divider"></div>
+
+        <p>
+            เดินทางย้อนเวลาไปสัมผัสโบราณสถาน
+            วัดวาอาราม และร่องรอยแห่งความรุ่งเรือง
+            ที่ยังคงบอกเล่าเรื่องราวของกรุงศรีอยุธยา
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+PLACES
+========================= -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <div class="heading-small">
+            MUST VISIT
+        </div>
+
+        <h2>
+            จุดหมายสำคัญแห่งอยุธยา
+        </h2>
+
+        <p>
+            สถานที่เหล่านี้เป็นส่วนหนึ่งของมรดก
+            ทางประวัติศาสตร์และวัฒนธรรมที่สำคัญ
+            ของพระนครศรีอยุธยา
+        </p>
+
+    </div>
+
+
+    <div class="places">
+
+
+        <!-- 01 -->
+
+        <article class="place">
+
+            <img
+                src="images/wat-mahathat.jpg"
+                alt="วัดมหาธาตุ"
+            >
+
+            <div class="place-overlay">
+
+                <div class="place-content">
+
+                    <div class="place-number">
+                        01 / TEMPLE
+                    </div>
+
+                    <h3>
+                        วัดมหาธาตุ
+                    </h3>
+
+                    <p>
+                        โบราณสถานสำคัญใจกลางเกาะเมือง
+                        มีชื่อเสียงจากเศียรพระพุทธรูป
+                        ที่อยู่ท่ามกลางรากไม้
+                    </p>
+
+                    <span class="explore">
+                        EXPLORE ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="place">
+
+            <img
+                src="images/wat-chaiwatthanaram.jpg"
+                alt="วัดไชยวัฒนาราม"
+            >
+
+            <div class="place-overlay">
+
+                <div class="place-content">
+
+                    <div class="place-number">
+                        02 / TEMPLE
+                    </div>
+
+                    <h3>
+                        วัดไชยวัฒนาราม
+                    </h3>
+
+                    <p>
+                        วัดริมแม่น้ำเจ้าพระยาที่โดดเด่น
+                        ด้วยปรางค์ประธานและสถาปัตยกรรม
+                        ที่งดงามเป็นเอกลักษณ์
+                    </p>
+
+                    <span class="explore">
+                        EXPLORE ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="place">
+
+            <img
+                src="images/wat-phra-si-sanphet.jpg"
+                alt="วัดพระศรีสรรเพชญ์"
+            >
+
+            <div class="place-overlay">
+
+                <div class="place-content">
+
+                    <div class="place-number">
+                        03 / ROYAL TEMPLE
+                    </div>
+
+                    <h3>
+                        วัดพระศรีสรรเพชญ์
+                    </h3>
+
+                    <p>
+                        พระอารามหลวงสำคัญภายในเขตพระราชวัง
+                        เป็นหนึ่งในภาพจำของเมืองเก่าอยุธยา
+                    </p>
+
+                    <span class="explore">
+                        EXPLORE ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="place">
+
+            <img
+                src="images/wat-ratchaburana.jpg"
+                alt="วัดราชบูรณะ"
+            >
+
+            <div class="place-overlay">
+
+                <div class="place-content">
+
+                    <div class="place-number">
+                        04 / ANCIENT TEMPLE
+                    </div>
+
+                    <h3>
+                        วัดราชบูรณะ
+                    </h3>
+
+                    <p>
+                        โบราณสถานที่มีปรางค์ประธาน
+                        ขนาดใหญ่และสะท้อนรูปแบบ
+                        ศิลปกรรมอยุธยาได้อย่างชัดเจน
+                    </p>
+
+                    <span class="explore">
+                        EXPLORE ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- FEATURED -->
+
+    <div class="featured">
+
+        <div class="featured-image">
+
+            <img
+                src="images/wat-chaiwatthanaram.jpg"
+                alt="วัดไชยวัฒนาราม"
+            >
+
+        </div>
+
+        <div class="featured-content">
+
+            <div class="featured-label">
+                A SYMBOL OF AYUTTHAYA
+            </div>
+
+            <h3>
+                วัดไชยวัฒนาราม
+            </h3>
+
+            <p>
+                สถาปัตยกรรมที่สะท้อนความยิ่งใหญ่
+                ของกรุงศรีอยุธยา และเป็นหนึ่งใน
+                สถานที่ที่ผู้มาเยือนนิยมชมความงาม
+                ของเมืองเก่า
+            </p>
+
+            <ul class="info-list">
+
+                <li>ตั้งอยู่ริมแม่น้ำเจ้าพระยา</li>
+
+                <li>มีปรางค์ประธานเป็นจุดเด่น</li>
+
+                <li>เหมาะสำหรับชมบรรยากาศเมืองเก่า</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+TRAVEL STRIP
+========================= -->
+
+<section class="travel-strip">
+
+    <div class="heading">
+
+        <div class="heading-small">
+            BEFORE YOU EXPLORE
+        </div>
+
+        <h2>
+            เที่ยวอยุธยาอย่างมีความหมาย
+        </h2>
+
+    </div>
+
+
+    <div class="travel-grid">
+
+        <div class="travel-item">
+
+            <div class="travel-icon">
+                📸
+            </div>
+
+            <h3>
+                เก็บภาพความทรงจำ
+            </h3>
+
+            <p>
+                สถาปัตยกรรมและโบราณสถาน
+                มีมุมสวยงามให้ค้นหาอยู่เสมอ
+            </p>
+
+        </div>
+
+
+        <div class="travel-item">
+
+            <div class="travel-icon">
+                🏛️
+            </div>
+
+            <h3>
+                เรียนรู้ประวัติศาสตร์
+            </h3>
+
+            <p>
+                ทำความเข้าใจเรื่องราวของสถานที่
+                เพื่อให้การเที่ยวชมมีความหมายมากขึ้น
+            </p>
+
+        </div>
+
+
+        <div class="travel-item">
+
+            <div class="travel-icon">
+                🌿
+            </div>
+
+            <h3>
+                เคารพสถานที่
+            </h3>
+
+            <p>
+                แต่งกายสุภาพและปฏิบัติตาม
+                กฎของโบราณสถานและแหล่งท่องเที่ยว
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<div class="page-navigation">
+
+    <a
+        href="page1.html"
+        class="button back"
+    >
+        ← ประวัติศาสตร์
+    </a>
+
+    <a
+        href="page3.html"
+        class="button next"
+    >
+        ไปต่อ : ชุดไทยและวิถีชีวิต →
+    </a>
+
+</div>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+    <p>
+        กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • มรดกโลก
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
