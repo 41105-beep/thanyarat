@@ -1,1 +1,1208 @@
-้
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ประวัติศาสตร์ | AYUTTHAYA</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Kanit',sans-serif;
+    background:#100805;
+    color:#ead8b4;
+    overflow-x:hidden;
+}
+
+/* ================================
+   BACKGROUND
+================================ */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:50;
+    opacity:.05;
+
+    background-image:
+    radial-gradient(#d9aa55 1px,transparent 1px);
+
+    background-size:26px 26px;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:rgba(14,7,4,.85);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(214,168,77,.35);
+}
+
+.logo{
+    color:#e5b95d;
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+    letter-spacing:4px;
+
+    transition:.4s;
+}
+
+.logo:hover{
+    color:#fff0bb;
+    text-shadow:0 0 25px rgba(229,185,93,.8);
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-button{
+    text-decoration:none;
+    color:#ead6ac;
+
+    border:1px solid #8f672f;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.4s;
+}
+
+.nav-button:hover{
+    background:#c59643;
+    color:#180b05;
+
+    box-shadow:0 0 25px rgba(197,150,67,.45);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.page-hero{
+
+    min-height:560px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    background:
+
+    linear-gradient(
+        rgba(15,7,4,.5),
+        rgba(15,7,4,.94)
+    ),
+
+    url("images/Ayutthaya_Historical_Park_1.jpg")
+    center/cover no-repeat;
+
+}
+
+.page-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        transparent 15%,
+        rgba(0,0,0,.75) 90%
+    );
+
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+}
+
+.small-title{
+    color:#d5a64e;
+
+    letter-spacing:8px;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+}
+
+.page-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(55px,9vw,110px);
+
+    line-height:1;
+
+    color:#f1dfb0;
+
+    text-shadow:0 10px 40px #000;
+}
+
+.page-title-thai{
+
+    color:#d3a04b;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    margin-top:20px;
+}
+
+.hero-line{
+
+    width:180px;
+    height:1px;
+
+    margin:28px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #d6a94f,
+        transparent
+    );
+}
+
+.hero-text{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#d3c19d;
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+/* ================================
+   CONTENT
+================================ */
+
+.section{
+
+    padding:100px 8%;
+
+    position:relative;
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.section-small{
+
+    color:#b98b3e;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+}
+
+.section-heading h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    color:#e3bf75;
+
+    margin:10px 0 15px;
+}
+
+.section-heading p{
+
+    color:#9d8b70;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+}
+
+/* ================================
+   INTRO HISTORY
+================================ */
+
+.history-intro{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.history-image{
+
+    min-height:430px;
+
+    border:1px solid #76532a;
+
+    padding:10px;
+
+    background:#1b0d07;
+}
+
+.history-image img{
+
+    width:100%;
+    height:410px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.history-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#d9ad5d;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+}
+
+.history-text p{
+
+    color:#aa987b;
+
+    line-height:2;
+
+    margin-bottom:18px;
+}
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline-section{
+
+    background:#130906;
+
+    border-top:1px solid #493219;
+
+    border-bottom:1px solid #493219;
+}
+
+.timeline{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    left:50%;
+
+    width:1px;
+
+    background:
+    linear-gradient(
+        #b8893e,
+        #4b3218,
+        #b8893e
+    );
+
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+
+    width:50%;
+
+    padding:25px 50px;
+
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    background:#d4a34e;
+
+    border:3px solid #211007;
+
+    border-radius:50%;
+
+    top:42px;
+
+    box-shadow:
+    0 0 0 4px rgba(212,163,78,.2),
+    0 0 20px rgba(212,163,78,.5);
+}
+
+.timeline-item:nth-child(odd)
+.timeline-dot{
+
+    right:-8px;
+}
+
+.timeline-item:nth-child(even)
+.timeline-dot{
+
+    left:-8px;
+}
+
+.timeline-card{
+
+    padding:28px;
+
+    background:#1b0d07;
+
+    border:1px solid #4c341b;
+
+    transition:.4s;
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#b9893d;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+}
+
+.timeline-year{
+
+    color:#d5a64e;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+}
+
+.timeline-card h3{
+
+    color:#e1c17b;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.timeline-card p{
+
+    color:#96846a;
+
+    line-height:1.8;
+
+    font-size:15px;
+}
+
+/* ================================
+   FACT CARDS
+================================ */
+
+.facts{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    max-width:1100px;
+
+    margin:auto;
+}
+
+.fact{
+
+    background:
+    linear-gradient(
+        145deg,
+        #211007,
+        #150906
+    );
+
+    border:1px solid #493219;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.fact:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b98b3e;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+}
+
+.fact-number{
+
+    font-family:'Playfair Display',serif;
+
+    color:#d4a34e;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.fact h3{
+
+    color:#e0bd72;
+
+    margin-bottom:10px;
+}
+
+.fact p{
+
+    color:#938069;
+
+    line-height:1.8;
+
+    font-size:15px;
+}
+
+/* ================================
+   QUOTE
+================================ */
+
+.quote{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(20,9,5,.82),
+        rgba(20,9,5,.95)
+    ),
+
+    url("images/Ayutthaya_Historical_Park_1.jpg")
+    center/cover fixed;
+}
+
+.quote-mark{
+
+    color:#c39445;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:70px;
+
+    line-height:.5;
+}
+
+.quote p{
+
+    max-width:850px;
+
+    margin:20px auto;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    line-height:1.7;
+
+    color:#ead5a5;
+}
+
+/* ================================
+   PAGE NAVIGATION
+================================ */
+
+.page-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:70px 20px;
+
+    background:#0e0604;
+}
+
+.next-button{
+
+    text-decoration:none;
+
+    color:#1a0c05;
+
+    background:
+    linear-gradient(
+        135deg,
+        #efd183,
+        #b77a29
+    );
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    font-size:16px;
+
+    transition:.4s;
+}
+
+.back-button{
+
+    text-decoration:none;
+
+    color:#dfc99e;
+
+    border:1px solid #79572d;
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    transition:.4s;
+}
+
+.next-button:hover,
+.back-button:hover{
+
+    transform:translateY(-5px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+
+    background:#090403;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #392511;
+}
+
+footer h3{
+
+    color:#d3a653;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:4px;
+
+    font-size:25px;
+}
+
+footer p{
+
+    color:#6f604c;
+
+    margin-top:8px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:800px){
+
+    .navbar{
+
+        height:70px;
+
+        padding:0 4%;
+    }
+
+    .logo{
+
+        font-size:18px;
+    }
+
+    .nav-button{
+
+        padding:7px 12px;
+
+        font-size:11px;
+    }
+
+    .page-hero{
+
+        min-height:520px;
+    }
+
+    .page-title{
+
+        font-size:55px;
+    }
+
+    .page-title-thai{
+
+        font-size:30px;
+    }
+
+    .history-intro{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .facts{
+
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+
+        left:15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+
+        width:100%;
+
+        left:0;
+
+        padding-left:50px;
+
+        padding-right:0;
+
+        text-align:left;
+    }
+
+    .timeline-item:nth-child(odd)
+    .timeline-dot,
+    .timeline-item:nth-child(even)
+    .timeline-dot{
+
+        left:7px;
+        right:auto;
+    }
+
+    .quote p{
+
+        font-size:22px;
+    }
+
+    .page-navigation{
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================================
+     NAVBAR
+================================ -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        🏛 AYUTTHAYA
+    </a>
+
+    <div class="nav-right">
+
+        <a href="index.html" class="nav-button">
+            ← หน้าแรก
+        </a>
+
+        <a href="page2.html" class="nav-button">
+            สถานที่ท่องเที่ยว →
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="page-hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            THE HISTORY OF AYUTTHAYA
+        </div>
+
+        <div class="page-title">
+            HISTORY
+        </div>
+
+        <div class="page-title-thai">
+            ประวัติศาสตร์กรุงศรีอยุธยา
+        </div>
+
+        <div class="hero-line"></div>
+
+        <p class="hero-text">
+
+            จากการก่อตั้งราชธานีในปี พ.ศ. 1893
+            สู่การเป็นหนึ่งในอาณาจักรที่รุ่งเรืองที่สุด
+            แห่งหนึ่งของเอเชียตะวันออกเฉียงใต้
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     HISTORY INTRO
+================================ -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="section-small">
+            BEGINNING OF THE KINGDOM
+        </div>
+
+        <h2>
+            จุดเริ่มต้นของราชธานี
+        </h2>
+
+        <p>
+            เรื่องราวของกรุงศรีอยุธยาเริ่มต้นขึ้น
+            และพัฒนาเป็นศูนย์กลางสำคัญของสยาม
+        </p>
+
+    </div>
+
+
+    <div class="history-intro">
+
+        <div class="history-image">
+
+            <img
+                src="images/Ayutthaya_Historical_Park_1.jpg"
+                alt="อุทยานประวัติศาสตร์พระนครศรีอยุธยา"
+            >
+
+        </div>
+
+
+        <div class="history-text">
+
+            <h3>
+                ราชธานีแห่งสยาม
+            </h3>
+
+            <p>
+
+                กรุงศรีอยุธยาสถาปนาขึ้นใน
+                พ.ศ. 1893 โดยสมเด็จพระรามาธิบดีที่ 1
+                หรือพระเจ้าอู่ทอง
+
+            </p>
+
+            <p>
+
+                ด้วยทำเลที่ตั้งบริเวณเกาะเมือง
+                ซึ่งมีแม่น้ำล้อมรอบ ทำให้เหมาะแก่
+                การคมนาคม การค้า และการป้องกันเมือง
+
+            </p>
+
+            <p>
+
+                อยุธยาค่อย ๆ เติบโตจนกลายเป็น
+                ศูนย์กลางทางการเมือง เศรษฐกิจ
+                ศาสนา และวัฒนธรรมของภูมิภาค
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     TIMELINE
+================================ -->
+
+<section class="section timeline-section">
+
+    <div class="section-heading">
+
+        <div class="section-small">
+            A JOURNEY THROUGH TIME
+        </div>
+
+        <h2>
+            เส้นทางแห่งกาลเวลา
+        </h2>
+
+        <p>
+            เหตุการณ์สำคัญที่สะท้อนการเปลี่ยนแปลง
+            และความรุ่งเรืองของกรุงศรีอยุธยา
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-year">
+                    พ.ศ. 1893
+                </div>
+
+                <h3>
+                    การสถาปนากรุงศรีอยุธยา
+                </h3>
+
+                <p>
+                    สมเด็จพระรามาธิบดีที่ 1
+                    หรือพระเจ้าอู่ทอง
+                    ทรงสถาปนากรุงศรีอยุธยา
+                    ให้เป็นราชธานี
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-year">
+                    ราชธานีรุ่งเรือง
+                </div>
+
+                <h3>
+                    การค้ากับนานาชาติ
+                </h3>
+
+                <p>
+                    อยุธยากลายเป็นศูนย์กลางการค้า
+                    มีการติดต่อกับชาวจีน ญี่ปุ่น
+                    เปอร์เซีย และชาติตะวันตก
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-year">
+                    พ.ศ. 2112
+                </div>
+
+                <h3>
+                    การเสียกรุงครั้งที่หนึ่ง
+                </h3>
+
+                <p>
+                    อยุธยาตกเป็นเมืองขึ้นของพม่า
+                    ก่อนที่จะได้รับการกอบกู้เอกราช
+                    ในเวลาต่อมา
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-year">
+                    พ.ศ. 2310
+                </div>
+
+                <h3>
+                    การเสียกรุงครั้งที่สอง
+                </h3>
+
+                <p>
+                    กรุงศรีอยุธยาเสียกรุงครั้งที่สอง
+                    และสิ้นสุดสถานะการเป็นราชธานี
+                    หลังจากดำรงความรุ่งเรือง
+                    มาเป็นเวลาหลายศตวรรษ
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FACTS
+================================ -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="section-small">
+            AYUTTHAYA AT A GLANCE
+        </div>
+
+        <h2>
+            อยุธยาในมุมสำคัญ
+        </h2>
+
+    </div>
+
+
+    <div class="facts">
+
+
+        <div class="fact">
+
+            <div class="fact-number">
+                417
+            </div>
+
+            <h3>
+                ปีแห่งราชธานี
+            </h3>
+
+            <p>
+                กรุงศรีอยุธยาดำรงสถานะ
+                ราชธานีเป็นเวลาประมาณ 417 ปี
+            </p>
+
+        </div>
+
+
+        <div class="fact">
+
+            <div class="fact-number">
+                33
+            </div>
+
+            <h3>
+                พระมหากษัตริย์
+            </h3>
+
+            <p>
+                มีพระมหากษัตริย์หลายพระองค์
+                ที่มีบทบาทสำคัญต่อการพัฒนาอาณาจักร
+            </p>
+
+        </div>
+
+
+        <div class="fact">
+
+            <div class="fact-number">
+                1991
+            </div>
+
+            <h3>
+                มรดกโลก
+            </h3>
+
+            <p>
+                นครประวัติศาสตร์พระนครศรีอยุธยา
+                ได้รับการขึ้นทะเบียนเป็นมรดกโลก
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     QUOTE
+================================ -->
+
+<section class="quote">
+
+    <div class="quote-mark">
+        “
+    </div>
+
+    <p>
+        อดีตไม่ได้หายไป
+        แต่ยังคงอยู่ในร่องรอยของเมือง
+        ศิลปะ และเรื่องราวที่เราได้เห็นในวันนี้
+    </p>
+
+</section>
+
+
+<!-- ================================
+     NAVIGATION
+================================ -->
+
+<div class="page-navigation">
+
+    <a href="index.html" class="back-button">
+        ← กลับหน้าแรก
+    </a>
+
+    <a href="page2.html" class="next-button">
+        ไปต่อ : สถานที่ท่องเที่ยว →
+    </a>
+
+</div>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+    <p>
+        กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • มรดกโลก
+    </p>
+
+</footer>
+
+
+</body>
+</html>
+```
+
