@@ -1,8 +1,875 @@
-<html>
- <head>
-   <title>ยินดีต้อนรับ</title>
- </head>
-  <body>
-    <h1>ยินดีต้อนรับเข้าสู่เว็บไซต์ของธัญญรัตน์</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กรุงศรีอยุธยา | เมืองหลวงแห่งความรุ่งเรือง</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Tahoma","Arial",sans-serif;
+    line-height:1.8;
+    color:#3d291b;
+    background:#f7efe2;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#3a2115;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#f5ca70;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#f5ca70;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+
+    background:
+    linear-gradient(rgba(30,15,5,.65),rgba(30,15,5,.75)),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Historical%20Park%201.jpg")
+    center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#f5ca70;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:19px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#b4772c;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+section{
+    padding:80px 7%;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title small{
+    color:#a56b28;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.title h2{
+    font-size:40px;
+    color:#633d22;
+    margin:5px 0 10px;
+}
+
+.title p{
+    max-width:750px;
+    margin:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.image-box{
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.image-box img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+}
+
+.text h3{
+    font-size:29px;
+    color:#774b24;
+    margin-bottom:15px;
+}
+
+.text p{
+    margin-bottom:15px;
+}
+
+.bg-light{
+    background:#fffaf2;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.info-box{
+    background:#ead9bf;
+    padding:15px;
+    border-left:5px solid #ad712b;
+    border-radius:8px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#754820;
+    margin-bottom:8px;
+}
+
+.timeline{
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    margin:20px 0;
+    padding:22px;
+    border-left:6px solid #ad712b;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.timeline-item h3{
+    color:#9a6226;
+}
+
+.world{
+    color:white;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(40,20,10,.7),rgba(40,20,10,.8)),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Historical%20Park%203.jpg")
+    center/cover;
+}
+
+.world h2{
+    color:#f5ca70;
+}
+
+.world .year{
+    font-size:70px;
+    font-weight:bold;
+    color:#f5ca70;
+    margin:20px;
+}
+
+footer{
+    background:#29180f;
+    color:#ddd;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    color:#f5ca70;
+    margin-bottom:10px;
+}
+
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">AYUTTHAYA</div>
+
+<ul>
+<li><a href="#history">ประวัติ</a></li>
+<li><a href="#location">ทำเล</a></li>
+<li><a href="#trade">การค้า</a></li>
+<li><a href="#culture">วัฒนธรรม</a></li>
+<li><a href="#timeline">Timeline</a></li>
+<li><a href="#world">มรดกโลก</a></li>
+</ul>
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>กรุงศรีอยุธยา</h1>
+
+<h2>เมืองหลวงแห่งความรุ่งเรือง</h2>
+
+<p>
+ราชธานีแห่งที่สองของประเทศไทย
+ศูนย์กลางด้านการเมือง เศรษฐกิจ ศาสนา
+ศิลปวัฒนธรรม และการค้าระหว่างประเทศ
+</p>
+
+<a class="button" href="#history">
+เริ่มเรียนรู้ประวัติศาสตร์
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ประวัติ -->
+
+<section id="history">
+
+<div class="container">
+
+<div class="title">
+<small>01 — HISTORY</small>
+<h2>ประวัติกรุงศรีอยุธยา</h2>
+
+<p>
+กรุงศรีอยุธยาเป็นราชธานีสำคัญของไทย
+ที่มีประวัติศาสตร์ยาวนานกว่า 4 ศตวรรษ
+</p>
+</div>
+
+
+<div class="grid">
+
+<div class="image-box">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Historical%20Park%201.jpg"
+alt="อุทยานประวัติศาสตร์พระนครศรีอยุธยา">
+
+</div>
+
+
+<div class="text">
+
+<h3>ราชธานีแห่งความรุ่งเรือง</h3>
+
+<p>
+กรุงศรีอยุธยาสถาปนาขึ้นเมื่อ พ.ศ. 1893
+โดยสมเด็จพระรามาธิบดีที่ 1 หรือพระเจ้าอู่ทอง
+และเป็นราชธานีของไทยยาวนานประมาณ 417 ปี
+จนถึงการเสียกรุงครั้งที่ 2 ใน พ.ศ. 2310
+</p>
+
+<p>
+ตลอดช่วงเวลาที่เป็นราชธานี
+อยุธยาเป็นศูนย์กลางด้านการเมือง เศรษฐกิจ
+ศาสนา ศิลปวัฒนธรรม และการค้าระหว่างประเทศ
+</p>
+
+<div class="info">
+
+<div class="info-box">
+<b>พ.ศ. 1893</b><br>
+สถาปนากรุงศรีอยุธยา
+</div>
+
+<div class="info-box">
+<b>ประมาณ 417 ปี</b><br>
+ระยะเวลาการเป็นราชธานี
+</div>
+
+<div class="info-box">
+<b>พ.ศ. 2310</b><br>
+เสียกรุงครั้งที่ 2
+</div>
+
+<div class="info-box">
+<b>พระเจ้าอู่ทอง</b><br>
+ผู้สถาปนากรุงศรีอยุธยา
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ทำเล -->
+
+<section id="location" class="bg-light">
+
+<div class="container">
+
+<div class="title">
+
+<small>02 — LOCATION</small>
+
+<h2>ทำเลที่ตั้งของกรุงศรีอยุธยา</h2>
+
+<p>
+ลักษณะภูมิประเทศเป็นเกาะเมือง
+ที่มีแม่น้ำสายสำคัญล้อมรอบ
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="text">
+
+<h3>เมืองที่มีแม่น้ำล้อมรอบ</h3>
+
+<p>
+กรุงศรีอยุธยาตั้งอยู่บริเวณที่มี
+แม่น้ำเจ้าพระยา แม่น้ำป่าสัก
+และแม่น้ำลพบุรีล้อมรอบ
+จึงมีลักษณะเป็นเกาะเมือง
+</p>
+
+<p>
+ทำเลดังกล่าวช่วยป้องกันข้าศึก
+และทำให้การเดินทางทางน้ำ
+รวมถึงการขนส่งสินค้าเป็นไปอย่างสะดวก
+</p>
+
+<p>
+พื้นที่ลุ่มแม่น้ำยังเหมาะแก่การเพาะปลูก
+ทำให้อาณาจักรมีแหล่งอาหาร
+และทรัพยากรที่สำคัญ
+</p>
+
+</div>
+
+
+<div class="image-box">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya-map.png"
+alt="แผนที่กรุงศรีอยุธยา">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- การค้า -->
+
+<section id="trade">
+
+<div class="container">
+
+<div class="title">
+
+<small>03 — INTERNATIONAL TRADE</small>
+
+<h2>อยุธยากับการค้าระหว่างประเทศ</h2>
+
+<p>
+อยุธยาเป็นเมืองท่าที่สำคัญ
+และมีความสัมพันธ์กับผู้คนจากหลายประเทศ
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayuthistparkmap.png"
+alt="แผนที่อุทยานประวัติศาสตร์">
+
+<h3>จีนและญี่ปุ่น</h3>
+
+<p>
+มีพ่อค้าจากจีนและญี่ปุ่นเข้ามาค้าขาย
+และตั้งถิ่นฐานในกรุงศรีอยุธยา
+เกิดการแลกเปลี่ยนสินค้าและวัฒนธรรม
+</p>
+
+</div>
+
+
+<div class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Historical%20Park%204.jpg"
+alt="โบราณสถานอยุธยา">
+
+<h3>โปรตุเกส ฮอลันดา และฝรั่งเศส</h3>
+
+<p>
+ชาติตะวันตกเข้ามาติดต่อทางการค้า
+การทูต และศาสนา
+ทำให้อยุธยากลายเป็นเมืองนานาชาติ
+</p>
+
+</div>
+
+
+<div class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Island.png"
+alt="เกาะเมืองอยุธยา">
+
+<h3>เมืองนานาชาติ</h3>
+
+<p>
+ผู้คนหลายเชื้อชาติเดินทางเข้ามา
+เกิดการแลกเปลี่ยนภาษา อาหาร
+เทคโนโลยี ศิลปะ และวัฒนธรรม
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ศิลปวัฒนธรรม -->
+
+<section id="culture" class="bg-light">
+
+<div class="container">
+
+<div class="title">
+
+<small>04 — ART & CULTURE</small>
+
+<h2>ศิลปะ ศาสนา และวัฒนธรรม</h2>
+
+<p>
+มรดกจากอยุธยาสะท้อนให้เห็นผ่านวัด
+โบราณสถาน พระพุทธรูป และวิถีชีวิต
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="image-box">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wat%20Mahathat%20of%20Ayutthaya.jpg"
+alt="วัดมหาธาตุ">
+
+</div>
+
+
+<div class="text">
+
+<h3>ศูนย์กลางพระพุทธศาสนา</h3>
+
+<p>
+พระพุทธศาสนามีบทบาทสำคัญต่อสังคมอยุธยา
+วัดเป็นศูนย์กลางของชุมชน
+การศึกษา และพิธีกรรมทางศาสนา
+</p>
+
+<p>
+ศิลปกรรมอยุธยามีเอกลักษณ์
+ทั้งพระปรางค์ เจดีย์ พระพุทธรูป
+จิตรกรรม และงานช่างแขนงต่าง ๆ
+</p>
+
+<p>
+โบราณสถานสำคัญ เช่น
+วัดมหาธาตุ วัดราชบูรณะ
+วัดไชยวัฒนาราม และวัดพระศรีสรรเพชญ์
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- วัดมหาธาตุ -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+
+<small>05 — IMPORTANT LANDMARK</small>
+
+<h2>วัดมหาธาตุ</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="text">
+
+<h3>โบราณสถานสำคัญของอยุธยา</h3>
+
+<p>
+วัดมหาธาตุเป็นหนึ่งในโบราณสถานสำคัญ
+ของอุทยานประวัติศาสตร์พระนครศรีอยุธยา
+</p>
+
+<p>
+สถานที่แห่งนี้มีความโดดเด่นจาก
+เศียรพระพุทธรูปที่อยู่ภายในรากไม้
+ซึ่งกลายเป็นภาพที่มีชื่อเสียง
+และเป็นสัญลักษณ์ของอยุธยา
+</p>
+
+</div>
+
+
+<div class="image-box">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wat%20Mahathat%2C%20Ayutthaya.jpg"
+alt="วัดมหาธาตุ จังหวัดพระนครศรีอยุธยา">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Timeline -->
+
+<section id="timeline" class="bg-light">
+
+<div class="container">
+
+<div class="title">
+
+<small>06 — TIMELINE</small>
+
+<h2>เส้นเวลาสำคัญของอยุธยา</h2>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 1893</h3>
+
+<p>
+สมเด็จพระรามาธิบดีที่ 1
+หรือพระเจ้าอู่ทอง
+สถาปนากรุงศรีอยุธยา
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 2112</h3>
+
+<p>
+กรุงศรีอยุธยาเสียกรุงครั้งที่ 1
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 2133–2148</h3>
+
+<p>
+รัชสมัยสมเด็จพระนเรศวรมหาราช
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 2199–2231</h3>
+
+<p>
+รัชสมัยสมเด็จพระนารายณ์มหาราช
+และการติดต่อกับชาติตะวันตก
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 2310</h3>
+
+<p>
+กรุงศรีอยุธยาเสียกรุงครั้งที่ 2
+และสิ้นสุดการเป็นราชธานี
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>พ.ศ. 2534</h3>
+
+<p>
+อุทยานประวัติศาสตร์พระนครศรีอยุธยา
+ได้รับการขึ้นทะเบียนเป็นมรดกโลก
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- มรดกโลก -->
+
+<section id="world" class="world">
+
+<div class="container">
+
+<div class="title">
+
+<small>07 — WORLD HERITAGE</small>
+
+<h2>มรดกโลก</h2>
+
+</div>
+
+<p>
+อุทยานประวัติศาสตร์พระนครศรีอยุธยา
+ได้รับการขึ้นทะเบียนเป็นมรดกโลก
+โดยองค์การยูเนสโกใน พ.ศ. 2534
+</p>
+
+<div class="year">
+2534
+</div>
+
+<p>
+การขึ้นทะเบียนสะท้อนให้เห็นถึง
+คุณค่าทางประวัติศาสตร์ ศิลปกรรม
+และวัฒนธรรมของกรุงศรีอยุธยา
+ในระดับนานาชาติ
+</p>
+
+</div>
+
+</section>
+
+
+<!-- สรุป -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+
+<small>08 — LEGACY</small>
+
+<h2>มรดกของกรุงศรีอยุธยา</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="image-box">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayutthaya%20Historical%20Park%203.jpg"
+alt="อุทยานประวัติศาสตร์พระนครศรีอยุธยา">
+
+</div>
+
+
+<div class="text">
+
+<h3>ความสำคัญต่อประเทศไทยในปัจจุบัน</h3>
+
+<p>
+แม้กรุงศรีอยุธยาจะสิ้นสุดการเป็นราชธานี
+ไปแล้วหลายร้อยปี แต่มรดกทางประวัติศาสตร์
+ยังคงมีอิทธิพลต่อประเทศไทย
+</p>
+
+<p>
+ทั้งด้านภาษา วรรณกรรม ศิลปะ
+สถาปัตยกรรม ประเพณี อาหาร
+และวัฒนธรรม
+</p>
+
+<p>
+กรุงศรีอยุธยาจึงเป็นส่วนสำคัญ
+ของรากฐานประวัติศาสตร์
+และอัตลักษณ์ของประเทศไทย
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h2>กรุงศรีอยุธยา</h2>
+
+<p>
+เมืองหลวงแห่งความรุ่งเรือง
+แหล่งเรียนรู้ประวัติศาสตร์ ศิลปวัฒนธรรม
+และมรดกสำคัญของประเทศไทย
+</p>
+
+<p style="margin-top:15px;font-size:13px;">
+ภาพประกอบจาก Wikimedia Commons
+</p>
+
+</footer>
+
+</body>
 </html>
