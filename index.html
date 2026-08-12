@@ -2,6 +2,7 @@
 <html lang="th">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,9 +11,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
 
 <style>
+
+/* =====================================
+   RESET
+===================================== */
 
 *{
     margin:0;
@@ -26,30 +34,38 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
+
     background:#0b0402;
+
     color:#ead7ae;
+
     overflow-x:hidden;
 }
 
 
-/* =========================================
+/* =====================================
    NAVBAR
-========================================= */
+===================================== */
 
 .navbar{
+
     position:fixed;
+
     top:0;
     left:0;
 
     width:100%;
+
     min-height:76px;
 
-    z-index:1000;
+    z-index:9999;
 
     padding:0 6%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     background:rgba(10,4,2,.96);
@@ -59,7 +75,9 @@ body{
     border-bottom:1px solid rgba(205,158,68,.35);
 }
 
+
 .logo{
+
     color:#e2b85d;
 
     text-decoration:none;
@@ -73,13 +91,17 @@ body{
     transition:.3s;
 }
 
+
 .logo:hover{
+
     color:#f5d98e;
 
     transform:translateY(-2px);
 }
 
+
 .home-btn{
+
     color:#d8c29a;
 
     text-decoration:none;
@@ -91,40 +113,55 @@ body{
     transition:.3s;
 }
 
+
 .home-btn:hover{
+
     background:#c69a48;
 
     color:#150703;
+
+    transform:translateY(-3px);
 }
 
 
-/* =========================================
+/* =====================================
    HERO / COVER
-========================================= */
+===================================== */
 
 .hero{
+
     min-height:100vh;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
     position:relative;
 
-    padding:100px 25px 60px;
+    padding:110px 25px 70px;
 
     background:
+
     linear-gradient(
+
         rgba(8,3,1,.25),
-        rgba(8,3,1,.9)
+
+        rgba(8,3,1,.90)
+
     ),
+
     url("images/cover.jpg")
+
     center/cover no-repeat;
 }
 
+
 .hero::before{
+
     content:"";
 
     position:absolute;
@@ -132,24 +169,33 @@ body{
     inset:0;
 
     background:
+
     radial-gradient(
+
         circle at center,
+
         transparent 10%,
+
         rgba(0,0,0,.75) 90%
+
     );
 }
 
+
 .hero-content{
+
     position:relative;
 
     z-index:2;
 
     max-width:1000px;
 
-    padding:100px 25px;
+    padding:90px 30px;
 }
 
+
 .label{
+
     color:#d3a44f;
 
     font-size:13px;
@@ -159,10 +205,13 @@ body{
     margin-bottom:25px;
 }
 
+
 .hero h1{
+
     font-family:'Playfair Display',serif;
 
     font-size:
+
     clamp(55px,10vw,115px);
 
     line-height:.9;
@@ -172,21 +221,27 @@ body{
     color:#f0dca7;
 
     text-shadow:
+
     0 15px 50px rgba(0,0,0,.9);
 }
 
+
 .hero h2{
+
     margin-top:30px;
 
     color:#d6aa55;
 
     font-size:
+
     clamp(28px,5vw,50px);
 
     font-weight:300;
 }
 
+
 .line{
+
     width:260px;
 
     height:1px;
@@ -194,15 +249,23 @@ body{
     margin:30px auto;
 
     background:
+
     linear-gradient(
+
         90deg,
+
         transparent,
+
         #d4a34b,
+
         transparent
+
     );
 }
 
+
 .hero p{
+
     max-width:800px;
 
     margin:auto;
@@ -214,10 +277,14 @@ body{
     font-size:17px;
 }
 
+
 .hero-button{
+
     display:inline-block;
 
     margin-top:35px;
+
+    padding:13px 30px;
 
     color:#ead19b;
 
@@ -225,14 +292,14 @@ body{
 
     border:1px solid #b98b42;
 
-    padding:13px 28px;
-
-    background:rgba(20,7,3,.7);
+    background:rgba(20,7,3,.75);
 
     transition:.35s;
 }
 
+
 .hero-button:hover{
+
     background:#b98b42;
 
     color:#140602;
@@ -241,17 +308,20 @@ body{
 }
 
 
-/* =========================================
+/* =====================================
    SECTION
-========================================= */
+===================================== */
 
 .section{
+
     padding:100px 0;
 
     border-bottom:1px solid #382512;
 }
 
+
 .container{
+
     width:90%;
 
     max-width:1200px;
@@ -259,7 +329,9 @@ body{
     margin:auto;
 }
 
+
 .section-label{
+
     color:#bd8e3d;
 
     font-size:13px;
@@ -269,7 +341,9 @@ body{
     margin-bottom:10px;
 }
 
+
 .section h2{
+
     font-family:'Playfair Display',serif;
 
     color:#e1bd72;
@@ -279,7 +353,9 @@ body{
     margin-bottom:22px;
 }
 
+
 .description{
+
     max-width:900px;
 
     color:#b9a487;
@@ -290,21 +366,31 @@ body{
 }
 
 
-/* =========================================
-   FEATURE CARDS
-========================================= */
+/* =====================================
+   5 PAGE CARDS
+===================================== */
 
 .feature-grid{
+
     display:grid;
 
     grid-template-columns:
+
     repeat(3,1fr);
 
     gap:28px;
 }
 
+
 .feature-card{
+
+    display:block;
+
     overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
 
     background:#170804;
 
@@ -313,16 +399,21 @@ body{
     transition:.4s;
 }
 
+
 .feature-card:hover{
-    transform:translateY(-7px);
+
+    transform:translateY(-8px);
 
     border-color:#b0833d;
 
     box-shadow:
-    0 20px 45px rgba(0,0,0,.4);
+
+    0 20px 45px rgba(0,0,0,.45);
 }
 
+
 .feature-card img{
+
     width:100%;
 
     height:300px;
@@ -330,13 +421,25 @@ body{
     display:block;
 
     object-fit:cover;
+
+    transition:.5s;
 }
 
+
+.feature-card:hover img{
+
+    transform:scale(1.04);
+}
+
+
 .feature-content{
+
     padding:28px;
 }
 
+
 .feature-number{
+
     color:#b98436;
 
     font-family:'Playfair Display',serif;
@@ -346,35 +449,43 @@ body{
     font-size:14px;
 }
 
+
 .feature-content h3{
+
     color:#dfbc73;
 
     font-family:'Playfair Display',serif;
 
-    font-size:29px;
+    font-size:28px;
 
     margin:8px 0 12px;
 }
 
+
 .feature-content p{
+
     color:#aa997d;
 
     line-height:1.9;
 }
 
 
-/* =========================================
+/* =====================================
    STORY
-========================================= */
+===================================== */
 
 .story{
+
     background:#100502;
 }
 
+
 .story-layout{
+
     display:grid;
 
     grid-template-columns:
+
     1fr 1fr;
 
     gap:50px;
@@ -382,13 +493,17 @@ body{
     align-items:center;
 }
 
+
 .story-image{
+
     overflow:hidden;
 
     border:1px solid #59401f;
 }
 
+
 .story-image img{
+
     width:100%;
 
     height:480px;
@@ -398,7 +513,9 @@ body{
     object-fit:cover;
 }
 
+
 .story-text h3{
+
     font-family:'Playfair Display',serif;
 
     color:#dfbd72;
@@ -408,7 +525,9 @@ body{
     margin-bottom:20px;
 }
 
+
 .story-text p{
+
     color:#b9a487;
 
     line-height:2;
@@ -417,34 +536,40 @@ body{
 }
 
 
-/* =========================================
+/* =====================================
    EXPLORE
-========================================= */
+===================================== */
 
 .explore{
+
     background:#130603;
 
     text-align:center;
 }
 
+
 .explore-title{
+
     max-width:850px;
 
     margin:0 auto 55px;
 }
 
+
 .explore-title p{
+
     color:#ad9a7b;
 
     line-height:2;
 }
 
 
-/* =========================================
-   PAGE BUTTONS
-========================================= */
+/* =====================================
+   PAGE NAVIGATION
+===================================== */
 
 .page-buttons{
+
     max-width:1150px;
 
     margin:auto;
@@ -452,12 +577,15 @@ body{
     display:grid;
 
     grid-template-columns:
+
     repeat(5,1fr);
 
     gap:15px;
 }
 
+
 .page-button{
+
     min-height:145px;
 
     display:flex;
@@ -481,21 +609,19 @@ body{
     transition:.35s;
 }
 
+
 .page-button:hover{
-    transform:translateY(-5px);
+
+    transform:translateY(-6px);
 
     background:#291308;
 
     border-color:#b4863e;
 }
 
-.page-button.active{
-    background:#291308;
-
-    border-color:#b4863e;
-}
 
 .page-number{
+
     display:block;
 
     color:#d5a64f;
@@ -505,30 +631,41 @@ body{
     font-size:27px;
 }
 
+
 .page-name{
+
     font-size:15px;
 }
 
 
-/* =========================================
+/* =====================================
    QUOTE
-========================================= */
+===================================== */
 
 .quote{
+
     padding:100px 8%;
 
     text-align:center;
 
     background:
+
     linear-gradient(
+
         rgba(12,4,2,.9),
+
         rgba(12,4,2,.96)
+
     ),
+
     url("images/cover.jpg")
+
     center/cover no-repeat;
 }
 
+
 .quote-box{
+
     max-width:900px;
 
     margin:auto;
@@ -540,7 +677,9 @@ body{
     border-bottom:1px solid #735023;
 }
 
+
 .quote-box h2{
+
     font-family:'Playfair Display',serif;
 
     color:#e3c27a;
@@ -550,7 +689,9 @@ body{
     margin-bottom:20px;
 }
 
+
 .quote-box p{
+
     color:#c4b08e;
 
     line-height:2;
@@ -559,11 +700,12 @@ body{
 }
 
 
-/* =========================================
+/* =====================================
    FOOTER
-========================================= */
+===================================== */
 
 footer{
+
     padding:50px 20px;
 
     text-align:center;
@@ -571,7 +713,9 @@ footer{
     background:#050201;
 }
 
+
 footer h3{
+
     color:#d4a653;
 
     font-family:'Playfair Display',serif;
@@ -581,118 +725,147 @@ footer h3{
     letter-spacing:6px;
 }
 
+
 footer p{
+
     color:#655741;
 
     margin-top:10px;
 }
 
 
-/* =========================================
+/* =====================================
    RESPONSIVE
-========================================= */
+===================================== */
 
 @media(max-width:950px){
 
     .feature-grid{
+
         grid-template-columns:
+
         repeat(2,1fr);
     }
 
+
     .story-layout{
+
         grid-template-columns:1fr;
     }
 
+
     .page-buttons{
+
         grid-template-columns:
+
         repeat(2,1fr);
     }
 
 }
 
+
 @media(max-width:550px){
 
     .navbar{
+
         min-height:68px;
 
         padding:0 4%;
     }
 
+
     .logo{
+
         font-size:18px;
 
         letter-spacing:3px;
     }
 
+
     .home-btn{
+
         font-size:12px;
 
         padding:7px 13px;
     }
 
+
     .hero{
+
         min-height:650px;
     }
 
+
     .hero h1{
+
         font-size:48px;
     }
 
+
     .hero h2{
+
         font-size:26px;
     }
 
+
     .hero p{
+
         font-size:15px;
     }
 
+
     .section{
+
         padding:70px 0;
     }
 
+
     .section h2{
+
         font-size:32px;
     }
 
+
     .feature-grid{
+
         grid-template-columns:1fr;
     }
 
+
     .story-image img{
+
         height:350px;
     }
 
+
     .page-buttons{
+
         grid-template-columns:1fr;
     }
 
 }
 
 
-/* =========================================
-   FORCE SQUARE DESIGN
-========================================= */
+/* =====================================
+   FORCE SQUARE
+===================================== */
 
-.logo,
-.home-btn,
-.hero-button,
-.feature-card,
-.story-image,
-.page-button,
-.quote-box{
+*{
+
     border-radius:0 !important;
 }
 
 </style>
+
 </head>
 
 
 <body id="top">
 
 
-<!-- =========================================
+<!-- =====================================
      NAVBAR
-========================================= -->
+===================================== -->
 
 <nav class="navbar">
 
@@ -707,9 +880,10 @@ AYUTTHAYA
 </nav>
 
 
-<!-- =========================================
+
+<!-- =====================================
      COVER
-========================================= -->
+===================================== -->
 
 <section class="hero">
 
@@ -737,7 +911,7 @@ AYUTTHAYA
 ที่ยังคงสืบทอดมาจนถึงปัจจุบัน
 </p>
 
-<a href="#explore" class="hero-button">
+<a href="#stories" class="hero-button">
 EXPLORE AYUTTHAYA ↓
 </a>
 
@@ -746,11 +920,12 @@ EXPLORE AYUTTHAYA ↓
 </section>
 
 
-<!-- =========================================
-     INTRO
-========================================= -->
 
-<section class="section">
+<!-- =====================================
+     5 STORIES
+===================================== -->
+
+<section class="section" id="stories">
 
 <div class="container">
 
@@ -763,21 +938,28 @@ DISCOVER AYUTTHAYA
 </h2>
 
 <p class="description">
+
 พระนครศรีอยุธยาเป็นเมืองประวัติศาสตร์
 ที่เต็มไปด้วยเรื่องราวและมรดกทางวัฒนธรรม
-ทั้งโบราณสถาน ศิลปกรรม วิถีชีวิต
-อาหาร และประเพณีที่สืบทอดมาจนถึงปัจจุบัน
+ทั้งประวัติศาสตร์ สถานที่สำคัญ
+วิถีชีวิต วัฒนธรรม อาหาร
+และเมืองแห่งสายน้ำ
+
 </p>
 
 
 <div class="feature-grid">
 
 
-<article class="feature-card">
+<!-- =====================================
+     PAGE 1
+===================================== -->
+
+<a href="page1.html" class="feature-card">
 
 <img
 src="images/page1-cover.jpg"
-alt="ประวัติศาสตร์อยุธยา"
+alt="ประวัติศาสตร์และแผนผัง"
 loading="lazy">
 
 <div class="feature-content">
@@ -787,25 +969,33 @@ loading="lazy">
 </div>
 
 <h3>
-ประวัติศาสตร์
+ประวัติศาสตร์และแผนผัง
 </h3>
 
 <p>
+
 ย้อนรอยเรื่องราวของกรุงศรีอยุธยา
 ตั้งแต่การก่อตั้งราชธานี
-การรุ่งเรือง จนถึงการเปลี่ยนแปลง
+ภูมิศาสตร์ แผนผังเมือง
+การค้า และศิลปวัฒนธรรม
+
 </p>
 
 </div>
 
-</article>
+</a>
 
 
-<article class="feature-card">
+
+<!-- =====================================
+     PAGE 2
+===================================== -->
+
+<a href="page2.html" class="feature-card">
 
 <img
 src="images/page2-cover.jpg"
-alt="สถานที่สำคัญอยุธยา"
+alt="สถานที่สำคัญ"
 loading="lazy">
 
 <div class="feature-content">
@@ -819,16 +1009,25 @@ loading="lazy">
 </h3>
 
 <p>
+
 สำรวจโบราณสถานและสถานที่สำคัญ
-ที่สะท้อนเรื่องราวของอยุธยา
+ของพระนครศรีอยุธยา
+ทั้งวัด โบราณสถาน
+และสถานที่ท่องเที่ยวที่มีชื่อเสียง
+
 </p>
 
 </div>
 
-</article>
+</a>
 
 
-<article class="feature-card">
+
+<!-- =====================================
+     PAGE 3
+===================================== -->
+
+<a href="page3.html" class="feature-card">
 
 <img
 src="images/page3-cover.jpg"
@@ -846,13 +1045,89 @@ loading="lazy">
 </h3>
 
 <p>
-เรียนรู้การแต่งกาย บ้านเรือน
-ตลาด และวิถีชีวิตของผู้คน
+
+เรียนรู้การแต่งกาย
+บ้านเรือน ตลาด ชุมชน
+อาหาร และวิถีชีวิตของผู้คน
+ในพระนครศรีอยุธยา
+
 </p>
 
 </div>
 
-</article>
+</a>
+
+
+
+<!-- =====================================
+     PAGE 4
+===================================== -->
+
+<a href="page4.html" class="feature-card">
+
+<img
+src="images/page4-cover.jpg"
+alt="วัฒนธรรมและอาหาร"
+loading="lazy">
+
+<div class="feature-content">
+
+<div class="feature-number">
+04 • CULTURE & FOOD
+</div>
+
+<h3>
+วัฒนธรรมและอาหาร
+</h3>
+
+<p>
+
+สัมผัสศิลปวัฒนธรรม
+ประเพณี วิถีแห่งศรัทธา
+กุ้งแม่น้ำ ขนม
+และอาหารขึ้นชื่อของอยุธยา
+
+</p>
+
+</div>
+
+</a>
+
+
+
+<!-- =====================================
+     PAGE 5
+===================================== -->
+
+<a href="page5.html" class="feature-card">
+
+<img
+src="images/page5-cover.jpg"
+alt="เมืองแห่งสายน้ำ"
+loading="lazy">
+
+<div class="feature-content">
+
+<div class="feature-number">
+05 • RIVER CITY
+</div>
+
+<h3>
+เมืองแห่งสายน้ำ
+</h3>
+
+<p>
+
+สัมผัสเสน่ห์ของอยุธยา
+ผ่านแม่น้ำรอบเกาะเมือง
+การล่องเรือ ตลาด ชุมชน
+และวิถีชีวิตริมสายน้ำ
+
+</p>
+
+</div>
+
+</a>
 
 
 </div>
@@ -862,9 +1137,10 @@ loading="lazy">
 </section>
 
 
-<!-- =========================================
-     STORY
-========================================= -->
+
+<!-- =====================================
+     CULTURE STORY
+===================================== -->
 
 <section class="section story">
 
@@ -894,18 +1170,22 @@ CULTURE • FOOD • TRADITION
 </h3>
 
 <p>
+
 นอกจากประวัติศาสตร์และโบราณสถานแล้ว
 อยุธยายังมีเสน่ห์จากศิลปวัฒนธรรม
 อาหาร ขนม ประเพณี
 และวิถีแห่งศรัทธา
+
 </p>
 
 <p>
+
 สิ่งเหล่านี้ทำให้การเดินทาง
 มาเยือนอยุธยาไม่ได้มีเพียง
 การชมโบราณสถาน
 แต่ยังเป็นการสัมผัสวิถีชีวิต
 และเรื่องราวของผู้คน
+
 </p>
 
 </div>
@@ -918,11 +1198,12 @@ CULTURE • FOOD • TRADITION
 </section>
 
 
-<!-- =========================================
-     EXPLORE
-========================================= -->
 
-<section class="section explore" id="explore">
+<!-- =====================================
+     PAGE NAVIGATION
+===================================== -->
+
+<section class="section explore">
 
 <div class="container">
 
@@ -937,9 +1218,11 @@ EXPLORE AYUTTHAYA
 </h2>
 
 <p>
+
 เลือกหัวข้อที่ต้องการศึกษา
 แล้วออกเดินทางไปค้นพบเรื่องราว
 ของพระนครศรีอยุธยา
+
 </p>
 
 </div>
@@ -1020,9 +1303,10 @@ EXPLORE AYUTTHAYA
 </section>
 
 
-<!-- =========================================
+
+<!-- =====================================
      QUOTE
-========================================= -->
+===================================== -->
 
 <section class="quote">
 
@@ -1033,10 +1317,12 @@ EXPLORE AYUTTHAYA
 </h2>
 
 <p>
+
 เรื่องราวของอยุธยาไม่ได้อยู่เพียงในตำรา
 แต่ยังคงปรากฏผ่านโบราณสถาน
 ศิลปวัฒนธรรม วิถีชีวิต
 และความทรงจำที่สืบต่อมาจนถึงปัจจุบัน
+
 </p>
 
 </div>
@@ -1044,9 +1330,10 @@ EXPLORE AYUTTHAYA
 </section>
 
 
-<!-- =========================================
+
+<!-- =====================================
      FOOTER
-========================================= -->
+===================================== -->
 
 <footer>
 
@@ -1062,4 +1349,5 @@ AYUTTHAYA
 
 
 </body>
+
 </html>
