@@ -32,8 +32,6 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= NAVBAR ================= */
-
 .navbar{
     position:sticky;
     top:0;
@@ -302,8 +300,7 @@ body{
 .food-grid{
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:30px;
 }
@@ -322,9 +319,6 @@ body{
     transform:translateY(-8px);
 
     border-color:#b0833d;
-
-    box-shadow:
-    0 20px 45px rgba(0,0,0,.35);
 }
 
 .food-card img{
@@ -366,8 +360,7 @@ body{
 .tradition-grid{
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:30px;
 }
@@ -418,56 +411,6 @@ body{
 }
 
 
-/* ================= FAITH ================= */
-
-.faith{
-    background:#120503;
-}
-
-.faith-box{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:45px;
-
-    align-items:center;
-}
-
-.faith-image{
-    overflow:hidden;
-
-    border:1px solid #59401f;
-}
-
-.faith-image img{
-    width:100%;
-    height:450px;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.faith-text h3{
-    color:#e0bd73;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:38px;
-
-    margin-bottom:20px;
-}
-
-.faith-text p{
-    color:#b9a487;
-
-    line-height:2;
-
-    margin-bottom:20px;
-}
-
-
 /* ================= FESTIVAL ================= */
 
 .festival{
@@ -477,8 +420,7 @@ body{
 .festival-grid{
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:30px;
 }
@@ -579,7 +521,7 @@ body{
 }
 
 
-/* ================= PAGE NAV ================= */
+/* ================= NAVIGATION ================= */
 
 .page-navigation{
     padding:90px 6%;
@@ -606,8 +548,7 @@ body{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(6,1fr);
+    grid-template-columns:repeat(6,1fr);
 
     gap:12px;
 }
@@ -680,16 +621,14 @@ footer p{
 @media(max-width:950px){
 
     .page-buttons{
-        grid-template-columns:
-        repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
 }
 
 @media(max-width:850px){
 
-    .feature,
-    .faith-box{
+    .feature{
         grid-template-columns:1fr;
     }
 
@@ -940,7 +879,6 @@ alt="อาหารพื้นถิ่นอยุธยา">
 
 </article>
 
-
 </div>
 
 </div>
@@ -959,18 +897,20 @@ alt="อาหารพื้นถิ่นอยุธยา">
 </div>
 
 <h2>
-ประเพณีและวิถีชีวิต
+ประเพณีและวิถีแห่งศรัทธา
 </h2>
 
 <p class="description">
-ประเพณีเป็นส่วนสำคัญของวิถีชีวิต
+ประเพณี ความเชื่อ และศรัทธา
+เป็นส่วนสำคัญของวิถีชีวิต
 และสะท้อนความสัมพันธ์ระหว่าง
-ชุมชน ศาสนา และวัฒนธรรม
-ที่สืบทอดต่อกันมา
+ผู้คน ชุมชน และศาสนา
 </p>
 
 <div class="tradition-grid">
 
+
+<!-- ประเพณี -->
 
 <article class="tradition-card">
 
@@ -997,6 +937,8 @@ alt="ประเพณีอยุธยา">
 </article>
 
 
+<!-- วิถีแห่งศรัทธา -->
+
 <article class="tradition-card">
 
 <img
@@ -1012,7 +954,7 @@ alt="วิถีแห่งศรัทธา">
 <p>
 ศาสนาและความเชื่อมีบทบาทสำคัญ
 ต่อวิถีชีวิตของผู้คน
-วัดและศาสนสถานยังเป็นศูนย์กลาง
+วัดและศาสนสถานเป็นศูนย์กลาง
 ของชุมชนและกิจกรรมทางวัฒนธรรม
 </p>
 
@@ -1039,25 +981,52 @@ alt="วิถีแห่งศรัทธา">
 </div>
 
 <h2>
-เทศกาลและการเฉลิมฉลอง
+ประเพณีและเทศกาล
 </h2>
 
 <p class="description">
-เทศกาลและงานประเพณีเป็นช่วงเวลาที่
-ผู้คนมาร่วมกิจกรรม สืบทอดวัฒนธรรม
-และสร้างความสัมพันธ์ภายในชุมชน
+ประเพณีและเทศกาลต่าง ๆ
+สะท้อนความเชื่อ ความร่วมมือ
+และการสืบทอดวัฒนธรรมของชุมชน
 </p>
 
 <div class="festival-grid">
 
 
-<!-- เทศกาลช่องที่ 1 -->
+<!-- เรือแห่เทียนพรรษา -->
+
+<article class="festival-card">
+
+<img
+src="images/page4-candle-procession.jpg"
+alt="ประเพณีเรือแห่เทียนพรรษา">
+
+<div class="festival-content">
+
+<h3>
+ประเพณีเรือแห่เทียนพรรษา
+</h3>
+
+<p>
+กิจกรรมทางน้ำที่สะท้อนความสัมพันธ์
+ระหว่างผู้คนกับแม่น้ำ
+และความศรัทธาทางพระพุทธศาสนา
+โดยมีการจัดขบวนเรือ
+และกิจกรรมเกี่ยวกับวันเข้าพรรษา
+</p>
+
+</div>
+
+</article>
+
+
+<!-- เทศกาล -->
 
 <article class="festival-card">
 
 <img
 src="images/page4-songkran.jpg"
-alt="เทศกาลสงกรานต์ในอยุธยา">
+alt="เทศกาลสงกรานต์">
 
 <div class="festival-content">
 
@@ -1066,37 +1035,11 @@ alt="เทศกาลสงกรานต์ในอยุธยา">
 </h3>
 
 <p>
-เทศกาลสงกรานต์เป็นประเพณีสำคัญ
-ของไทยที่เกี่ยวข้องกับการทำบุญ
-การรดน้ำขอพร และการใช้เวลาร่วมกัน
+สงกรานต์เป็นประเพณีสำคัญของไทย
+เกี่ยวข้องกับการทำบุญ
+การรดน้ำขอพรผู้ใหญ่
+และการใช้เวลาร่วมกัน
 กับครอบครัวและชุมชน
-</p>
-
-</div>
-
-</article>
-
-
-<!-- เทศกาลช่องที่ 2 -->
-
-<article class="festival-card">
-
-<img
-src="images/page4-tradition.jpg"
-alt="งานประเพณีอยุธยา">
-
-<div class="festival-content">
-
-<h3>
-งานประเพณีและเทศกาลท้องถิ่น
-</h3>
-
-<p>
-อยุธยามีกิจกรรมและงานวัฒนธรรม
-ที่จัดขึ้นในช่วงต่าง ๆ ของปี
-ช่วยส่งเสริมการท่องเที่ยว
-และทำให้ผู้มาเยือนได้สัมผัส
-วิถีชีวิตของชุมชน
 </p>
 
 </div>
@@ -1170,53 +1113,39 @@ alt="ขนมและของหวานอยุธยา">
 <div class="page-buttons">
 
 <a href="index.html">
-
 <strong>⌂</strong>
 หน้าหลัก
-
 </a>
 
 <a href="page1.html">
-
 <strong>01</strong>
 ประวัติศาสตร์
-
 </a>
 
 <a href="page2.html">
-
 <strong>02</strong>
 สถานที่สำคัญ
-
 </a>
 
 <a href="page3.html">
-
 <strong>03</strong>
 ชุดไทยและวิถีชีวิต
-
 </a>
 
 <a href="page4.html" class="active">
-
 <strong>04</strong>
 ศิลปวัฒนธรรมและอาหาร
-
 </a>
 
 <a href="page5.html">
-
 <strong>05</strong>
 ของฝากและจุดเด่น
-
 </a>
 
 </div>
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
