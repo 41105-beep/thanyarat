@@ -1,49 +1,666 @@
 ```html
-<!-- ================= 03 TRADITION ================= -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="section tradition">
+<title>อยุธยา | ศิลปวัฒนธรรมและวิถีชีวิต</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Kanit",sans-serif;
+    background:#0b0503;
+    color:#ead8b5;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    height:72px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6%;
+
+    background:rgba(11,5,3,.96);
+
+    border-bottom:1px solid #4d351d;
+}
+
+.logo{
+    color:#d9ad5b;
+    text-decoration:none;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:25px;
+    letter-spacing:5px;
+}
+
+.home{
+    color:#d7c39c;
+    text-decoration:none;
+
+    padding:7px 20px;
+
+    border:1px solid #6c4c27;
+    border-radius:30px;
+}
+
+.home:hover{
+    background:#c49a4e;
+    color:#160a04;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:680px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.9)
+    ),
+    url("images/page4-cover.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    width:90%;
+    max-width:1000px;
+
+    position:relative;
+    z-index:2;
+}
+
+.small-title{
+    color:#d0a252;
+
+    font-size:14px;
+
+    letter-spacing:7px;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(55px,10vw,110px);
+
+    line-height:1;
+
+    color:#f0d9a4;
+
+    letter-spacing:6px;
+}
+
+.hero h2{
+    margin-top:25px;
+
+    color:#d4aa5b;
+
+    font-size:clamp(25px,4vw,45px);
+
+    font-weight:300;
+}
+
+.hero-line{
+    width:250px;
+    height:1px;
+
+    margin:30px auto;
+
+    background:#c39548;
+}
+
+.hero p{
+    max-width:800px;
+
+    margin:auto;
+
+    color:#d2c19f;
+
+    font-size:17px;
+}
+
+
+/* GENERAL */
+
+section{
+    padding:95px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.section-number{
+    color:#bd8b3c;
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    margin-bottom:10px;
+}
+
+h2{
+    font-family:"Playfair Display",serif;
+
+    color:#dfbb70;
+
+    font-size:43px;
+
+    margin-bottom:20px;
+}
+
+.intro{
+    max-width:900px;
+
+    color:#b9a789;
+
+    margin-bottom:50px;
+}
+
+
+/* CARDS */
+
+.grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.card{
+    overflow:hidden;
+
+    background:#160905;
+
+    border:1px solid #4e351e;
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+
+    border-color:#b48640;
+}
+
+.card img{
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.card-content{
+    padding:28px;
+}
+
+.card h3{
+    font-family:"Playfair Display",serif;
+
+    color:#dfbd76;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ad9b7e;
+}
+
+
+/* CULTURE */
+
+.culture{
+    background:#100503;
+}
+
+.culture-box{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.culture-box img{
+    width:100%;
+
+    height:440px;
+
+    object-fit:cover;
+
+    border:1px solid #59401f;
+}
+
+.culture-text h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:38px;
+
+    color:#dfbd76;
+
+    margin-bottom:20px;
+}
+
+.culture-text p{
+    color:#b9a789;
+
+    margin-bottom:18px;
+}
+
+
+/* FOOD */
+
+.food{
+    background:#140704;
+}
+
+
+/* TRADITION */
+
+.tradition{
+    background:#0e0402;
+}
+
+
+/* FESTIVAL */
+
+.festival{
+    background:#130603;
+}
+
+
+/* DESSERT */
+
+.dessert{
+    background:#100503;
+}
+
+.dessert-box{
+    max-width:900px;
+
+    margin:auto;
+
+    background:#170805;
+
+    border:1px solid #52371d;
+
+    overflow:hidden;
+}
+
+.dessert-box img{
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.dessert-content{
+    padding:35px;
+
+    text-align:center;
+}
+
+.dessert-content h3{
+    font-family:"Playfair Display",serif;
+
+    color:#dfbd76;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+.dessert-content p{
+    color:#ad9b7e;
+}
+
+
+/* NAVIGATION */
+
+.next-pages{
+    padding:80px 6%;
+
+    text-align:center;
+
+    background:#080302;
+}
+
+.next-pages h2{
+    font-size:35px;
+
+    margin-bottom:35px;
+}
+
+.buttons{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:12px;
+}
+
+.buttons a{
+    text-decoration:none;
+
+    color:#cdbd9e;
+
+    background:#190a05;
+
+    border:1px solid #4e351d;
+
+    padding:16px 8px;
+
+    transition:.3s;
+}
+
+.buttons a:hover,
+.buttons .current{
+    background:#2a1408;
+
+    border-color:#b48640;
+
+    transform:translateY(-4px);
+}
+
+.buttons strong{
+    display:block;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:25px;
+
+    color:#d6a751;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:45px 20px;
+
+    text-align:center;
+
+    background:#050201;
+}
+
+footer h3{
+    font-family:"Playfair Display",serif;
+
+    color:#d3a451;
+
+    letter-spacing:6px;
+}
+
+footer p{
+    color:#675945;
+
+    margin-top:8px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .culture-box{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:0 4%;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .home{
+        font-size:13px;
+        padding:6px 13px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    h2{
+        font-size:32px;
+    }
+
+    .buttons{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html" class="logo">
+AYUTTHAYA
+</a>
+
+<a href="index.html" class="home">
+← หน้าหลัก
+</a>
+
+</nav>
+
+
+<!-- COVER -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="small-title">
+PAGE 04 • CULTURE & LIFE
+</div>
+
+<h1>
+CULTURE
+</h1>
+
+<h2>
+ศิลปวัฒนธรรม วิถีชีวิต และอาหาร
+</h2>
+
+<div class="hero-line"></div>
+
+<p>
+สัมผัสเสน่ห์ของพระนครศรีอยุธยา
+ผ่านศิลปวัฒนธรรม อาหารพื้นถิ่น
+ประเพณี เทศกาล และวิถีแห่งศรัทธา
+</p>
+
+</div>
+
+</section>
+
+
+<!-- 01 CULTURE -->
+
+<section class="culture">
 
 <div class="container">
 
-<div class="section-label">
-03 • TRADITION
+<div class="section-number">
+01 • AYUTTHAYA CULTURE
 </div>
 
 <h2>
-ประเพณีและวิถีแห่งศรัทธา
+ศิลปวัฒนธรรมอยุธยา
 </h2>
 
-<p class="description">
-ประเพณี ความเชื่อ และศรัทธา
-เป็นส่วนสำคัญของวิถีชีวิต
-และสะท้อนความสัมพันธ์ระหว่าง
-ผู้คน ชุมชน และศาสนา
+<p class="intro">
+ศิลปวัฒนธรรมของอยุธยาเกิดจากการสั่งสม
+ภูมิปัญญา ความเชื่อ และการแลกเปลี่ยน
+ทางวัฒนธรรมกับผู้คนหลากหลายกลุ่ม
 </p>
 
-<div class="tradition-grid">
 
-
-<!-- งานประเพณีและเทศกาลท้องถิ่น -->
-
-<article class="tradition-card">
+<div class="culture-box">
 
 <img
-src="images/page4-tradition.jpg"
-alt="งานประเพณีและเทศกาลท้องถิ่น">
+src="images/page4-culture.jpg"
+alt="ศิลปวัฒนธรรมอยุธยา"
+>
 
-<div class="tradition-content">
+<div class="culture-text">
 
 <h3>
-งานประเพณีและเทศกาลท้องถิ่น
+มรดกทางศิลปกรรม
 </h3>
 
 <p>
-งานประเพณีและเทศกาลท้องถิ่น
-เป็นกิจกรรมที่สะท้อนวิถีชีวิต
-ความเชื่อ และความสัมพันธ์
-ของผู้คนในชุมชนอยุธยา
-โดยมีการจัดกิจกรรมทางวัฒนธรรม
-ในช่วงต่าง ๆ ของปี
+พระปรางค์ เจดีย์ พระพุทธรูป
+จิตรกรรม และงานช่างต่าง ๆ
+สะท้อนความรุ่งเรืองและภูมิปัญญา
+ของผู้คนในสมัยอยุธยา
+</p>
+
+<p>
+ศิลปกรรมเหล่านี้ยังเป็นหลักฐานสำคัญ
+ที่ช่วยให้เราเข้าใจประวัติศาสตร์
+และวิถีชีวิตของผู้คนในอดีต
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 02 FOOD -->
+
+<section class="food">
+
+<div class="container">
+
+<div class="section-number">
+02 • AYUTTHAYA FOOD
+</div>
+
+<h2>
+อาหารและของกินขึ้นชื่อ
+</h2>
+
+<p class="intro">
+อาหารอยุธยามีความหลากหลาย
+และมีความสัมพันธ์กับวิถีชีวิต
+ของชุมชนริมแม่น้ำ
+</p>
+
+
+<div class="grid">
+
+
+<!-- กุ้งแม่น้ำ -->
+
+<article class="card">
+
+<img
+src="images/page4-river-prawn.jpg"
+alt="กุ้งแม่น้ำอยุธยา"
+>
+
+<div class="card-content">
+
+<h3>
+กุ้งแม่น้ำอยุธยา
+</h3>
+
+<p>
+กุ้งแม่น้ำเป็นอาหารขึ้นชื่อของอยุธยา
+โดยเฉพาะกุ้งเผาที่มีเนื้อแน่น
+และมันกุ้งเป็นเอกลักษณ์
 </p>
 
 </div>
@@ -51,27 +668,25 @@ alt="งานประเพณีและเทศกาลท้องถิ
 </article>
 
 
-<!-- ประเพณีอยุธยา -->
+<!-- อาหารพื้นถิ่น -->
 
-<article class="tradition-card">
+<article class="card">
 
 <img
-src="images/page4-candle-procession.jpg"
-alt="ประเพณีอยุธยา">
+src="images/page4-food.jpg"
+alt="อาหารพื้นถิ่นอยุธยา"
+>
 
-<div class="tradition-content">
+<div class="card-content">
 
 <h3>
-ประเพณีอยุธยา
+อาหารพื้นถิ่นอยุธยา
 </h3>
 
 <p>
-ประเพณีเรือแห่เทียนพรรษา
-เป็นกิจกรรมที่สะท้อนความศรัทธา
-ทางพระพุทธศาสนา และความสัมพันธ์
-ระหว่างชุมชนกับสายน้ำ
-มีการตกแต่งขบวนเรือและร่วมกิจกรรม
-ในช่วงเทศกาลเข้าพรรษา
+อาหารพื้นถิ่นสะท้อนวิถีชีวิตของผู้คน
+และได้รับอิทธิพลจากชุมชน
+หลากหลายวัฒนธรรม
 </p>
 
 </div>
@@ -84,4 +699,288 @@ alt="ประเพณีอยุธยา">
 </div>
 
 </section>
+
+
+<!-- 03 TRADITION -->
+
+<section class="tradition">
+
+<div class="container">
+
+<div class="section-number">
+03 • TRADITION
+</div>
+
+<h2>
+งานประเพณีและเทศกาลท้องถิ่น
+</h2>
+
+<p class="intro">
+ประเพณีและเทศกาลเป็นส่วนสำคัญ
+ของวิถีชีวิตและวัฒนธรรม
+ที่สืบทอดจากรุ่นสู่รุ่น
+</p>
+
+
+<div class="grid">
+
+
+<!-- งานประเพณีและเทศกาลท้องถิ่น -->
+
+<article class="card">
+
+<img
+src="images/page4-tradition.jpg"
+alt="งานประเพณีและเทศกาลท้องถิ่น"
+>
+
+<div class="card-content">
+
+<h3>
+งานประเพณีและเทศกาลท้องถิ่น
+</h3>
+
+<p>
+งานประเพณีและเทศกาลท้องถิ่น
+เป็นกิจกรรมที่สะท้อนวิถีชีวิต
+ความเชื่อ และความสัมพันธ์
+ของผู้คนในชุมชนอยุธยา
+</p>
+
+</div>
+
+</article>
+
+
+<!-- ประเพณีอยุธยา -->
+
+<article class="card">
+
+<img
+src="images/page4-candle-procession.jpg"
+alt="ประเพณีเรือแห่เทียนพรรษา"
+>
+
+<div class="card-content">
+
+<h3>
+ประเพณีอยุธยา
+</h3>
+
+<p>
+ประเพณีเรือแห่เทียนพรรษา
+สะท้อนความศรัทธาทางพระพุทธศาสนา
+และความสัมพันธ์ระหว่างชุมชน
+กับสายน้ำของอยุธยา
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 04 FAITH -->
+
+<section class="festival">
+
+<div class="container">
+
+<div class="section-number">
+04 • FAITH
+</div>
+
+<h2>
+วิถีแห่งศรัทธา
+</h2>
+
+<p class="intro">
+ศาสนาและความเชื่อมีบทบาทสำคัญ
+ต่อวิถีชีวิตของผู้คนในอยุธยา
+</p>
+
+
+<div class="grid">
+
+
+<!-- วิถีแห่งศรัทธา -->
+
+<article class="card">
+
+<img
+src="images/page4-faith.jpg"
+alt="วิถีแห่งศรัทธา"
+>
+
+<div class="card-content">
+
+<h3>
+วิถีแห่งศรัทธา
+</h3>
+
+<p>
+วัดและศาสนสถานเป็นศูนย์กลาง
+ของชุมชนและเป็นสถานที่
+สำหรับประกอบพิธีกรรม
+รวมถึงการพบปะของผู้คน
+</p>
+
+</div>
+
+</article>
+
+
+<!-- เทศกาลสงกรานต์ -->
+
+<article class="card">
+
+<img
+src="images/page4-songkran.jpg"
+alt="เทศกาลสงกรานต์"
+>
+
+<div class="card-content">
+
+<h3>
+เทศกาลสงกรานต์
+</h3>
+
+<p>
+สงกรานต์เป็นประเพณีสำคัญ
+ที่เกี่ยวข้องกับการทำบุญ
+การรดน้ำขอพร และการใช้เวลา
+ร่วมกันกับครอบครัวและชุมชน
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 05 DESSERT -->
+
+<section class="dessert">
+
+<div class="container">
+
+<div class="section-number">
+05 • LOCAL DESSERT
+</div>
+
+<h2>
+ขนมและของหวานพื้นถิ่น
+</h2>
+
+<p class="intro">
+ของหวานเป็นอีกหนึ่งส่วนของวัฒนธรรมอาหาร
+ที่สะท้อนภูมิปัญญาและเอกลักษณ์
+ของท้องถิ่นอยุธยา
+</p>
+
+
+<div class="dessert-box">
+
+<img
+src="images/page4-dessert.jpg"
+alt="ขนมและของหวานอยุธยา"
+>
+
+<div class="dessert-content">
+
+<h3>
+ขนมและของหวานอยุธยา
+</h3>
+
+<p>
+ขนมไทยและของหวานในอยุธยา
+มีความหลากหลายและเป็นที่นิยม
+ในหมู่นักท่องเที่ยว
+โดยเฉพาะของหวานที่สามารถซื้อ
+เป็นของฝากได้
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAGE NAVIGATION -->
+
+<section class="next-pages">
+
+<h2>
+สำรวจเรื่องราวอยุธยาต่อ
+</h2>
+
+<div class="buttons">
+
+<a href="index.html">
+<strong>⌂</strong>
+หน้าหลัก
+</a>
+
+<a href="page1.html">
+<strong>01</strong>
+ประวัติศาสตร์
+</a>
+
+<a href="page2.html">
+<strong>02</strong>
+สถานที่สำคัญ
+</a>
+
+<a href="page3.html">
+<strong>03</strong>
+ชุดไทยและวิถีชีวิต
+</a>
+
+<a href="page4.html" class="current">
+<strong>04</strong>
+ศิลปวัฒนธรรม
+</a>
+
+<a href="page5.html">
+<strong>05</strong>
+ของฝาก
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+AYUTTHAYA
+</h3>
+
+<p>
+พระนครศรีอยุธยา • ศิลปวัฒนธรรม • อาหาร • ประเพณี
+</p>
+
+</footer>
+
+
+</body>
+</html>
 ```
