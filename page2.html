@@ -1,94 +1,1341 @@
-<div class="secondary-grid">
+<!DOCTYPE html>
+<html lang="th">
 
-    <!-- 05 วัดราชบูรณะ -->
-    <article class="small-card">
+<head>
 
-        <img
-        src="./images/page2-ratchaburana.jpg"
-        alt="วัดราชบูรณะ"
-        loading="lazy">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="small-content">
+<title>สถานที่สำคัญ | พระนครศรีอยุธยา</title>
 
-            <div class="small-number">
-                05 • RATCHABURANA
-            </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            <h3>
-                วัดราชบูรณะ
-            </h3>
-
-            <p>
-                โบราณสถานสำคัญที่โดดเด่นด้วย
-                พระปรางค์ประธานขนาดใหญ่
-                และศิลปกรรมสมัยอยุธยา
-                สะท้อนความรุ่งเรืองของราชธานี
-                ในอดีต
-            </p>
-
-        </div>
-
-    </article>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 
-    <!-- 06 วัดพนัญเชิง -->
-    <article class="small-card">
+<style>
 
-        <img
-        src="./images/page2-phananchoeng.jpg"
-        alt="วัดพนัญเชิงวรวิหาร"
-        loading="lazy">
+/* =========================================
+   RESET
+========================================= */
 
-        <div class="small-content">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            <div class="small-number">
-                06 • PHANANCHOENG
-            </div>
+html{
+    scroll-behavior:smooth;
+}
 
-            <h3>
-                วัดพนัญเชิง
-            </h3>
+body{
+    font-family:'Kanit',sans-serif;
 
-            <p>
-                วัดเก่าแก่ริมแม่น้ำเจ้าพระยา
-                เป็นสถานที่สำคัญทางศาสนา
-                และเป็นศูนย์รวมความศรัทธา
-                ของผู้คนมาอย่างยาวนาน
-            </p>
+    background:#0b0402;
 
-        </div>
+    color:#ead7ae;
 
-    </article>
+    overflow-x:hidden;
+}
 
 
-    <!-- 07 ตลาดน้ำ -->
-    <article class="small-card">
+/* =========================================
+   NAVBAR
+========================================= */
 
-        <img
-        src="./images/page2-floating-market.jpg"
-        alt="ตลาดน้ำอยุธยา"
-        loading="lazy">
+.navbar{
+    position:fixed;
 
-        <div class="small-content">
+    top:0;
+    left:0;
 
-            <div class="small-number">
-                07 • FLOATING MARKET
-            </div>
+    width:100%;
 
-            <h3>
-                ตลาดน้ำ
-            </h3>
+    min-height:76px;
 
-            <p>
-                แหล่งท่องเที่ยวที่สะท้อน
-                บรรยากาศของชุมชนริมแม่น้ำ
-                รวมอาหารพื้นถิ่น สินค้า
-                และกิจกรรมที่น่าสนใจ
-                ของอยุธยา
-            </p>
+    z-index:9999;
 
-        </div>
+    padding:0 6%;
 
-    </article>
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(10,4,2,.96);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(205,158,68,.35);
+}
+
+.logo{
+    color:#e2b85d;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    letter-spacing:5px;
+
+    transition:.3s;
+}
+
+.logo:hover{
+    color:#f5d98e;
+
+    transform:translateY(-2px);
+}
+
+.home-btn{
+    color:#d8c29a;
+
+    text-decoration:none;
+
+    border:1px solid #6b4b23;
+
+    padding:8px 20px;
+
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#c69a48;
+
+    color:#150703;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+
+    min-height:650px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 25px 80px;
+
+    background:
+
+    linear-gradient(
+        rgba(8,3,1,.25),
+        rgba(8,3,1,.88)
+    ),
+
+    url("images/page2-cover.jpg")
+
+    center/cover no-repeat;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        transparent 10%,
+        rgba(0,0,0,.72) 90%
+    );
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+    padding:80px 30px;
+}
+
+.hero-label{
+
+    color:#d3a44f;
+
+    font-size:13px;
+
+    letter-spacing:8px;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:
+
+    clamp(52px,9vw,100px);
+
+    line-height:.9;
+
+    letter-spacing:5px;
+
+    color:#f0dca7;
+
+    text-shadow:
+
+    0 15px 50px rgba(0,0,0,.9);
+}
+
+.hero h2{
+
+    margin-top:30px;
+
+    color:#d6aa55;
+
+    font-size:
+
+    clamp(28px,5vw,48px);
+
+    font-weight:300;
+}
+
+.line{
+
+    width:260px;
+
+    height:1px;
+
+    margin:30px auto;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        #d4a34b,
+        transparent
+    );
+}
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:#d5c29d;
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section{
+
+    padding:105px 0;
+
+    border-bottom:1px solid #382512;
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.section-label{
+
+    color:#bd8e3d;
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    margin-bottom:10px;
+}
+
+.section h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e1bd72;
+
+    font-size:42px;
+
+    margin-bottom:22px;
+}
+
+.description{
+
+    max-width:900px;
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:32px;
+}
+
+.card{
+
+    overflow:hidden;
+
+    background:#170804;
+
+    border:1px solid #4e351c;
+
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#b0833d;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.45);
+}
+
+.card img{
+
+    width:100%;
+
+    height:330px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:30px;
+}
+
+.card-number{
+
+    color:#b98436;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+}
+
+.card h3{
+
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin:9px 0 13px;
+}
+
+.card p{
+
+    color:#aa997d;
+
+    line-height:1.9;
+}
+
+
+/* =========================================
+   MAIN ATTRACTIONS
+========================================= */
+
+.main-attractions{
+
+    background:#100502;
+}
+
+
+/* =========================================
+   ADDITIONAL PLACES
+========================================= */
+
+.additional{
+
+    background:#0d0402;
+}
+
+.additional-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:28px;
+}
+
+.small-card{
+
+    overflow:hidden;
+
+    background:#170804;
+
+    border:1px solid #4e351c;
+
+    transition:.4s;
+}
+
+.small-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#b0833d;
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.4);
+}
+
+.small-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.small-content{
+
+    padding:25px;
+}
+
+.small-content h3{
+
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:10px;
+}
+
+.small-content p{
+
+    color:#aa997d;
+
+    line-height:1.85;
+}
+
+
+/* =========================================
+   PALACE / RUINS
+========================================= */
+
+.history-place{
+
+    background:#130603;
+}
+
+.history-layout{
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.history-image{
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+}
+
+.history-image img{
+
+    width:100%;
+
+    height:470px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.history-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#dfbd72;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.history-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:22px;
+}
+
+
+/* =========================================
+   PAGE NAVIGATION
+========================================= */
+
+.page-navigation{
+
+    padding:90px 6%;
+
+    text-align:center;
+
+    background:#080302;
+}
+
+.page-navigation h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#dfbd78;
+
+    font-size:36px;
+
+    margin-bottom:40px;
+}
+
+.page-buttons{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(5,1fr);
+
+    gap:12px;
+}
+
+.page-buttons a{
+
+    color:#cdbb99;
+
+    text-decoration:none;
+
+    background:#190a05;
+
+    border:1px solid #51371c;
+
+    padding:18px 10px;
+
+    transition:.3s;
+}
+
+.page-buttons strong{
+
+    display:block;
+
+    color:#d5a64f;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    margin-bottom:4px;
+}
+
+.page-buttons a:hover,
+.page-buttons .active{
+
+    transform:translateY(-5px);
+
+    border-color:#b4863e;
+
+    background:#2a1408;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#050201;
+}
+
+footer h3{
+
+    color:#d4a653;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:26px;
+
+    letter-spacing:6px;
+}
+
+footer p{
+
+    color:#655741;
+
+    margin-top:10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+    .card-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .additional-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+    }
+
+    .history-layout{
+
+        grid-template-columns:1fr;
+    }
+
+    .page-buttons{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:550px){
+
+    .navbar{
+
+        min-height:68px;
+
+        padding:0 4%;
+    }
+
+    .logo{
+
+        font-size:18px;
+
+        letter-spacing:3px;
+    }
+
+    .home-btn{
+
+        font-size:12px;
+
+        padding:7px 13px;
+    }
+
+    .hero{
+
+        min-height:600px;
+    }
+
+    .hero h1{
+
+        font-size:48px;
+    }
+
+    .hero h2{
+
+        font-size:26px;
+    }
+
+    .hero p{
+
+        font-size:15px;
+    }
+
+    .section{
+
+        padding:75px 0;
+    }
+
+    .section h2{
+
+        font-size:32px;
+    }
+
+    .additional-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .page-buttons{
+
+        grid-template-columns:1fr;
+    }
+
+    .history-image img{
+
+        height:340px;
+    }
+}
+
+
+/* =========================================
+   FORCE SQUARE
+========================================= */
+
+*{
+
+    border-radius:0 !important;
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+
+<a href="index.html#top" class="logo">
+AYUTTHAYA
+</a>
+
+<a href="index.html#top" class="home-btn">
+หน้าปก
+</a>
+
+</nav>
+
+
+<!-- =========================================
+     HERO / COVER
+========================================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-label">
+PAGE 02 • PLACES
+</div>
+
+<h1>
+PLACES
+</h1>
+
+<h2>
+สถานที่สำคัญ
+</h2>
+
+<div class="line"></div>
+
+<p>
+
+สำรวจโบราณสถาน วัดสำคัญ
+พระราชวัง และสถานที่ท่องเที่ยว
+ที่สะท้อนเรื่องราวและความรุ่งเรือง
+ของพระนครศรีอยุธยา
+
+</p>
 
 </div>
+
+</section>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="section main-attractions">
+
+<div class="container">
+
+<div class="section-label">
+FAMOUS LANDMARKS
+</div>
+
+<h2>
+สถานที่สำคัญของอยุธยา
+</h2>
+
+<p class="description">
+
+พระนครศรีอยุธยาเต็มไปด้วยโบราณสถาน
+และสถานที่สำคัญจำนวนมาก
+แต่ละแห่งสะท้อนประวัติศาสตร์
+ศิลปกรรม ความเชื่อ
+และความรุ่งเรืองของราชธานีในอดีต
+
+</p>
+
+
+<div class="card-grid">
+
+
+<!-- วัดมหาธาตุ -->
+
+<article class="card">
+
+<img
+src="images/page2-mahathat.jpg"
+alt="วัดมหาธาตุ"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+01 • TEMPLE
+</div>
+
+<h3>
+วัดมหาธาตุ
+</h3>
+
+<p>
+
+หนึ่งในโบราณสถานที่มีชื่อเสียงที่สุด
+ของอยุธยา โดดเด่นด้วยเศียรพระพุทธรูป
+ที่อยู่ภายในรากไม้
+และองค์ปรางค์สำคัญของวัด
+
+</p>
+
+</div>
+
+</article>
+
+
+<!-- วัดไชยวัฒนาราม -->
+
+<article class="card">
+
+<img
+src="images/page2-chaiwatthanaram.jpg"
+alt="วัดไชยวัฒนาราม"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+02 • TEMPLE
+</div>
+
+<h3>
+วัดไชยวัฒนาราม
+</h3>
+
+<p>
+
+โบราณสถานริมแม่น้ำเจ้าพระยา
+ที่มีพระปรางค์ประธานขนาดใหญ่
+ล้อมรอบด้วยปรางค์บริวาร
+สะท้อนความงดงามของสถาปัตยกรรมอยุธยา
+
+</p>
+
+</div>
+
+</article>
+
+
+<!-- วัดพระศรีสรรเพชญ์ -->
+
+<article class="card">
+
+<img
+src="images/page2-phrasisanphet.jpg"
+alt="วัดพระศรีสรรเพชญ์"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+03 • ROYAL TEMPLE
+</div>
+
+<h3>
+วัดพระศรีสรรเพชญ์
+</h3>
+
+<p>
+
+วัดสำคัญภายในเขตพระราชวังโบราณ
+เป็นวัดหลวงประจำพระราชวัง
+และมีเจดีย์สามองค์ที่เป็นสัญลักษณ์
+สำคัญของอยุธยา
+
+</p>
+
+</div>
+
+</article>
+
+
+<!-- วัดใหญ่ชัยมงคล -->
+
+<article class="card">
+
+<img
+src="images/page2-yai-chaimongkhon.jpg"
+alt="วัดใหญ่ชัยมงคล"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+04 • TEMPLE
+</div>
+
+<h3>
+วัดใหญ่ชัยมงคล
+</h3>
+
+<p>
+
+วัดที่มีเจดีย์ชัยมงคลขนาดใหญ่
+และพระพุทธไสยาสน์
+เป็นสถานที่สำคัญทางประวัติศาสตร์
+และเป็นจุดหมายยอดนิยมของนักท่องเที่ยว
+
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     ADDITIONAL PLACES
+========================================= -->
+
+<section class="section additional">
+
+<div class="container">
+
+<div class="section-label">
+MORE PLACES
+</div>
+
+<h2>
+สถานที่น่าสนใจเพิ่มเติม
+</h2>
+
+<p class="description">
+
+นอกจากสถานที่สำคัญหลักแล้ว
+อยุธยายังมีสถานที่อีกหลายแห่ง
+ที่สะท้อนความเชื่อ ชุมชน
+และวิถีชีวิตของผู้คน
+
+</p>
+
+
+<div class="additional-grid">
+
+
+<!-- วัดราชบูรณะ -->
+
+<article class="small-card">
+
+<img
+src="images/page2-ratchaburana.jpg"
+alt="วัดราชบูรณะ"
+loading="lazy">
+
+<div class="small-content">
+
+<h3>
+วัดราชบูรณะ
+</h3>
+
+<p>
+
+โบราณสถานสำคัญที่มีพระปรางค์ประธาน
+และมีลวดลายศิลปกรรมที่สะท้อน
+ความรุ่งเรืองของอยุธยา
+
+</p>
+
+</div>
+
+</article>
+
+
+<!-- วัดพนัญเชิง -->
+
+<article class="small-card">
+
+<img
+src="images/page2-phananchoeng.jpg"
+alt="วัดพนัญเชิง"
+loading="lazy">
+
+<div class="small-content">
+
+<h3>
+วัดพนัญเชิง
+</h3>
+
+<p>
+
+วัดสำคัญริมแม่น้ำป่าสัก
+มีพระพุทธรูปหลวงพ่อโต
+ซึ่งเป็นพระพุทธรูปขนาดใหญ่
+และเป็นที่เคารพของผู้คน
+
+</p>
+
+</div>
+
+</article>
+
+
+<!-- ตลาดน้ำ -->
+
+<article class="small-card">
+
+<img
+src="images/page2-floating-market.jpg"
+alt="ตลาดน้ำอยุธยา"
+loading="lazy">
+
+<div class="small-content">
+
+<h3>
+ตลาดน้ำ
+</h3>
+
+<p>
+
+แหล่งท่องเที่ยวที่จำลองบรรยากาศ
+ตลาดริมน้ำและวิถีชีวิต
+พร้อมอาหารและสินค้าท้องถิ่น
+จากชุมชนอยุธยา
+
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     PALACE
+========================================= -->
+
+<section class="section history-place">
+
+<div class="container">
+
+<div class="history-layout">
+
+
+<div class="history-image">
+
+<img
+src="images/page2-palace.jpg"
+alt="พระราชวังโบราณ"
+loading="lazy">
+
+</div>
+
+
+<div class="history-text">
+
+<div class="section-label">
+ANCIENT PALACE
+</div>
+
+<h3>
+พระราชวังโบราณ
+</h3>
+
+<p>
+
+พระราชวังโบราณเป็นพื้นที่สำคัญ
+ของเขตพระราชฐานในกรุงศรีอยุธยา
+เคยเป็นศูนย์กลางการปกครอง
+และเป็นที่ประทับของพระมหากษัตริย์
+
+</p>
+
+<p>
+
+พื้นที่โดยรอบยังมีโบราณสถาน
+และร่องรอยทางสถาปัตยกรรม
+ที่ช่วยให้เห็นภาพความยิ่งใหญ่
+ของราชธานีในอดีต
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     RUINS
+========================================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="card-grid">
+
+
+<article class="card">
+
+<img
+src="images/page2-ruins.jpg"
+alt="โบราณสถานอยุธยา"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+08 • AYUTTHAYA RUINS
+</div>
+
+<h3>
+ร่องรอยเมืองเก่า
+</h3>
+
+<p>
+
+ซากโบราณสถานและกำแพงเมือง
+เป็นหลักฐานที่ช่วยบอกเล่า
+เรื่องราวของกรุงศรีอยุธยา
+และความเปลี่ยนแปลงตลอดหลายร้อยปี
+
+</p>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<img
+src="images/page2-chaiwatthanaram.jpg"
+alt="โบราณสถานริมแม่น้ำ"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+09 • HERITAGE
+</div>
+
+<h3>
+มรดกทางประวัติศาสตร์
+</h3>
+
+<p>
+
+โบราณสถานต่าง ๆ ของอยุธยา
+ยังคงเป็นหลักฐานสำคัญ
+ที่แสดงให้เห็นถึงความรุ่งเรือง
+ด้านศิลปะและสถาปัตยกรรม
+
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE NAVIGATION
+========================================= -->
+
+<section class="page-navigation">
+
+<h2>
+สำรวจเรื่องราวอยุธยาต่อ
+</h2>
+
+
+<div class="page-buttons">
+
+
+<a href="page1.html">
+
+<strong>
+01
+</strong>
+
+ประวัติศาสตร์
+
+</a>
+
+
+<a href="page2.html" class="active">
+
+<strong>
+02
+</strong>
+
+สถานที่สำคัญ
+
+</a>
+
+
+<a href="page3.html">
+
+<strong>
+03
+</strong>
+
+ชุดไทยและวิถีชีวิต
+
+</a>
+
+
+<a href="page4.html">
+
+<strong>
+04
+</strong>
+
+วัฒนธรรมและอาหาร
+
+</a>
+
+
+<a href="page5.html">
+
+<strong>
+05
+</strong>
+
+เมืองแห่งสายน้ำ
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<h3>
+AYUTTHAYA
+</h3>
+
+<p>
+พระนครศรีอยุธยา • สถานที่สำคัญ • โบราณสถาน • มรดกโลก
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
