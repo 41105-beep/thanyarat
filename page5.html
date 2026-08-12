@@ -1,32 +1,19 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>เมืองแห่งสายน้ำและวิถีชีวิต | พระนครศรีอยุธยา</title>
 
-<title>จุดเด่น ของฝาก และการท่องเที่ยว | AYUTTHAYA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-RESET
-========================= */
 
 *{
     margin:0;
@@ -40,92 +27,69 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
-    background:#0b0402;
-    color:#ead7ae;
+    background:#080503;
+    color:#ead8b2;
     overflow-x:hidden;
 }
 
 
-/* =========================
-NAVBAR
-========================= */
+/* ================= NAVBAR ================= */
 
 .navbar{
-
     position:sticky;
     top:0;
     z-index:1000;
 
     min-height:76px;
-
     padding:0 6%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    background:rgba(10,4,2,.96);
+    background:rgba(8,4,2,.95);
+    backdrop-filter:blur(16px);
 
-    backdrop-filter:blur(15px);
-
-    border-bottom:
-    1px solid
-    rgba(205,158,68,.35);
-
+    border-bottom:1px solid rgba(205,158,68,.35);
 }
 
 .logo{
+    color:#e3ba62;
 
     text-decoration:none;
 
-    color:#e2b85d;
-
-    font-family:
-    'Playfair Display',
-    serif;
+    font-family:'Playfair Display',serif;
 
     font-size:24px;
 
     letter-spacing:5px;
-
 }
 
-.home-button{
-
-    color:#d8c29a;
+.home-btn{
+    color:#d7c29a;
 
     text-decoration:none;
 
-    border:
-    1px solid
-    #6b4b23;
+    border:1px solid #6b4b23;
 
     padding:8px 20px;
 
     border-radius:30px;
 
     transition:.3s;
-
 }
 
-.home-button:hover{
-
+.home-btn:hover{
     background:#c69a48;
-
     color:#150703;
-
 }
 
 
-/* =========================
-HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
 
     min-height:680px;
-
-    position:relative;
 
     display:flex;
 
@@ -135,19 +99,18 @@ HERO
 
     text-align:center;
 
+    position:relative;
+
     background:
 
     linear-gradient(
-        rgba(7,2,1,.25),
-        rgba(7,2,1,.90)
+        rgba(7,3,1,.25),
+        rgba(7,3,1,.88)
     ),
 
-    url("images/page5-cover.jpg")
+    url("./images/page5-cover.jpg")
 
-    center / cover no-repeat;
-
-    overflow:hidden;
-
+    center/cover no-repeat;
 }
 
 .hero::before{
@@ -162,10 +125,9 @@ HERO
 
     radial-gradient(
         circle at center,
-        transparent 10%,
-        rgba(0,0,0,.78) 90%
+        transparent 5%,
+        rgba(0,0,0,.72) 90%
     );
-
 }
 
 .hero-content{
@@ -174,69 +136,52 @@ HERO
 
     z-index:2;
 
-    max-width:1050px;
+    max-width:1000px;
 
     padding:100px 25px;
-
 }
 
-.eyebrow{
+.label{
 
     color:#d3a44f;
 
-    letter-spacing:9px;
-
     font-size:13px;
 
-    margin-bottom:25px;
+    letter-spacing:8px;
 
+    margin-bottom:25px;
 }
 
 .hero h1{
 
-    font-family:
-    'Playfair Display',
-    serif;
+    font-family:'Playfair Display',serif;
 
-    font-size:
-    clamp(
-        55px,
-        10vw,
-        120px
-    );
+    font-size:clamp(50px,9vw,105px);
 
-    line-height:.9;
+    line-height:.95;
 
-    letter-spacing:7px;
+    letter-spacing:5px;
 
     color:#f0dca7;
 
     text-shadow:
-    0 15px 50px
-    rgba(0,0,0,.9);
-
+    0 15px 50px rgba(0,0,0,.9);
 }
 
 .hero h2{
 
-    color:#d6aa55;
-
-    font-size:
-    clamp(
-        27px,
-        5vw,
-        52px
-    );
-
-    font-weight:300;
-
     margin-top:30px;
 
+    color:#d7aa55;
+
+    font-size:clamp(27px,5vw,50px);
+
+    font-weight:300;
 }
 
-.divider{
+.line{
 
-    width:250px;
+    width:260px;
 
     height:1px;
 
@@ -250,12 +195,11 @@ HERO
         #d4a34b,
         transparent
     );
-
 }
 
 .hero p{
 
-    max-width:820px;
+    max-width:800px;
 
     margin:auto;
 
@@ -264,22 +208,16 @@ HERO
     line-height:2;
 
     font-size:17px;
-
 }
 
 
-/* =========================
-SECTION
-========================= */
+/* ================= SECTION ================= */
 
 .section{
 
     padding:100px 0;
 
-    border-bottom:
-    1px solid
-    #392512;
-
+    border-bottom:1px solid #382512;
 }
 
 .container{
@@ -289,36 +227,31 @@ SECTION
     max-width:1200px;
 
     margin:auto;
-
 }
 
 .section-label{
 
     color:#bd8e3d;
 
-    letter-spacing:5px;
-
     font-size:13px;
 
-    margin-bottom:10px;
+    letter-spacing:5px;
 
+    margin-bottom:10px;
 }
 
 .section h2{
 
-    font-family:
-    'Playfair Display',
-    serif;
+    font-family:'Playfair Display',serif;
 
     color:#e1bd72;
 
     font-size:42px;
 
-    margin-bottom:20px;
-
+    margin-bottom:22px;
 }
 
-.intro{
+.description{
 
     max-width:900px;
 
@@ -326,14 +259,431 @@ SECTION
 
     line-height:2;
 
-    margin-bottom:65px;
-
+    margin-bottom:55px;
 }
 
 
-/* =========================
-HIGHLIGHTS
-========================= */
+/* ================= INTRO ================= */
+
+.intro{
+
+    background:#100502;
+}
+
+.intro-box{
+
+    max-width:950px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.intro-box p{
+
+    color:#bca98a;
+
+    line-height:2.1;
+
+    font-size:17px;
+}
+
+
+/* ================= CARDS ================= */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.info-card{
+
+    overflow:hidden;
+
+    background:#170804;
+
+    border:1px solid #4e351c;
+
+    transition:.4s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b0833d;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45);
+}
+
+.info-card img{
+
+    width:100%;
+
+    height:350px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.info-content{
+
+    padding:30px;
+}
+
+.info-number{
+
+    color:#b98436;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+}
+
+.info-content h3{
+
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin:8px 0 13px;
+}
+
+.info-content p{
+
+    color:#aa997d;
+
+    line-height:1.95;
+}
+
+
+/* ================= WATER ================= */
+
+.water-section{
+
+    background:#0d0502;
+}
+
+.water-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.water-image{
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+
+    background:#170804;
+}
+
+.water-image img{
+
+    width:100%;
+
+    height:500px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.water-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e0bd73;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.water-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:25px;
+}
+
+.water-list{
+
+    list-style:none;
+}
+
+.water-list li{
+
+    padding:13px 0;
+
+    border-bottom:1px solid #3d2917;
+
+    color:#d1b57a;
+}
+
+.water-list li::before{
+
+    content:"✦";
+
+    color:#c79340;
+
+    margin-right:10px;
+}
+
+
+/* ================= BOAT ================= */
+
+.boat-section{
+
+    background:#130603;
+}
+
+.boat-box{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.boat-image{
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+
+    background:#170804;
+
+    margin-bottom:35px;
+}
+
+.boat-image img{
+
+    width:100%;
+
+    height:500px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.boat-box h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#dfbd72;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.boat-box p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#b9a487;
+
+    line-height:2;
+}
+
+
+/* ================= MARKET ================= */
+
+.market-section{
+
+    background:#100502;
+}
+
+.market-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.market-image{
+
+    order:2;
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+}
+
+.market-image img{
+
+    width:100%;
+
+    height:480px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.market-text{
+
+    order:1;
+}
+
+.market-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e0bd73;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.market-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+.market-list{
+
+    list-style:none;
+}
+
+.market-list li{
+
+    padding:13px 0;
+
+    border-bottom:1px solid #3d2917;
+
+    color:#d1b57a;
+}
+
+.market-list li::before{
+
+    content:"✦";
+
+    color:#c79340;
+
+    margin-right:10px;
+}
+
+
+/* ================= FOOD ================= */
+
+.food-section{
+
+    background:#0d0402;
+}
+
+.food-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.food-image{
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+}
+
+.food-image img{
+
+    width:100%;
+
+    height:480px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.food-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e0bd73;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.food-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:25px;
+}
+
+.food-list{
+
+    list-style:none;
+}
+
+.food-list li{
+
+    padding:13px 0;
+
+    border-bottom:1px solid #3d2917;
+
+    color:#d1b57a;
+}
+
+.food-list li::before{
+
+    content:"✦";
+
+    color:#c79340;
+
+    margin-right:10px;
+}
+
+
+/* ================= HIGHLIGHTS ================= */
+
+.highlights{
+
+    background:#100502;
+
+}
 
 .highlight-grid{
 
@@ -342,345 +692,51 @@ HIGHLIGHTS
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:20px;
-
+    gap:22px;
 }
 
 .highlight{
 
-    overflow:hidden;
+    padding:30px;
 
     background:#170804;
 
-    border:
-    1px solid
-    #4e351c;
-
-    transition:.4s;
-
-}
-
-.highlight:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#b0833d;
-
-}
-
-.highlight img{
-
-    width:100%;
-
-    height:270px;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-.highlight-body{
-
-    padding:25px;
-
-}
-
-.highlight-body h3{
-
-    color:#dfbc73;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:25px;
-
-    margin-bottom:10px;
-
-}
-
-.highlight-body p{
-
-    color:#a99678;
-
-    line-height:1.9;
-
-}
-
-
-/* =========================
-SOUVENIRS
-========================= */
-
-.souvenir{
-
-    background:#120603;
-
-}
-
-.souvenir-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    .95fr 1.05fr;
-
-    gap:65px;
-
-    align-items:center;
-
-}
-
-.souvenir-image{
-
-    border:
-    1px solid
-    #60431f;
-
-    overflow:hidden;
-
-}
-
-.souvenir-image img{
-
-    width:100%;
-
-    height:500px;
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:.7s;
-
-}
-
-.souvenir-image:hover img{
-
-    transform:scale(1.06);
-
-}
-
-.souvenir-text h3{
-
-    color:#e0bd73;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:38px;
-
-    margin-bottom:20px;
-
-}
-
-.souvenir-text p{
-
-    color:#b9a487;
-
-    line-height:2;
-
-    margin-bottom:20px;
-
-}
-
-.souvenir-list div{
-
-    padding:14px 0;
-
-    border-bottom:
-    1px solid
-    #3e2917;
-
-    color:#d0b274;
-
-}
-
-.souvenir-list span{
-
-    color:#b98234;
-
-    margin-right:10px;
-
-}
-
-
-/* =========================
-TRAVEL
-========================= */
-
-.travel{
-
-    padding:100px 0;
-
-    background:#160805;
-
-}
-
-.travel-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
-
-}
-
-.travel-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:380px;
-
-    border:
-    1px solid
-    #50361b;
-
-}
-
-.travel-card img{
-
-    width:100%;
-
-    height:380px;
-
-    object-fit:cover;
-
-    transition:.7s;
-
-}
-
-.travel-card:hover img{
-
-    transform:scale(1.07);
-
-}
-
-.travel-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:flex-end;
-
-    padding:30px;
-
-    background:
-
-    linear-gradient(
-        transparent 25%,
-        rgba(5,2,1,.95)
-    );
-
-}
-
-.travel-content{
-
-    width:100%;
-
-}
-
-.travel-content h3{
-
-    color:#efd18b;
-
-    font-family:
-    'Playfair Display',
-    serif;
-
-    font-size:29px;
-
-    margin-bottom:8px;
-
-}
-
-.travel-content p{
-
-    color:#c1ae8d;
-
-    line-height:1.8;
-
-}
-
-
-/* =========================
-TRAVEL TIPS
-========================= */
-
-.tips{
-
-    padding:100px 0;
-
-}
-
-.tip-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:15px;
-
-    margin-top:45px;
-
-}
-
-.tip{
-
-    padding:30px 20px;
-
-    background:#190905;
-
-    border:
-    1px solid
-    #4b3219;
+    border:1px solid #49321b;
 
     text-align:center;
-
 }
 
-.tip-icon{
+.highlight span{
 
-    font-size:35px;
+    display:block;
 
-    margin-bottom:15px;
+    color:#c79340;
 
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:10px;
 }
 
-.tip h3{
+.highlight h3{
 
     color:#dfbd72;
 
-    margin-bottom:8px;
-
+    margin-bottom:10px;
 }
 
-.tip p{
+.highlight p{
 
-    color:#a99678;
+    color:#9f8d73;
 
     line-height:1.8;
-
-    font-size:14px;
-
 }
 
 
-/* =========================
-QUOTE
-========================= */
+/* ================= CONCLUSION ================= */
 
-.quote{
+.conclusion{
 
     padding:100px 8%;
 
@@ -689,64 +745,50 @@ QUOTE
     background:
 
     linear-gradient(
-        rgba(17,7,3,.88),
-        rgba(17,7,3,.95)
+        rgba(12,4,2,.9),
+        rgba(12,4,2,.96)
     ),
 
-    url("images/page5-cover.jpg")
+    url("./images/page5-cover.jpg")
 
-    center / cover fixed;
-
+    center/cover no-repeat;
 }
 
-.quote-inner{
+.conclusion-inner{
 
     max-width:900px;
 
     margin:auto;
 
-    padding:50px 25px;
+    padding:55px 30px;
 
-    border-top:
-    1px solid
-    #735023;
+    border-top:1px solid #735023;
 
-    border-bottom:
-    1px solid
-    #735023;
-
+    border-bottom:1px solid #735023;
 }
 
-.quote-mark{
+.conclusion h2{
 
-    color:#c79a4a;
+    font-family:'Playfair Display',serif;
 
-    font-family:
-    'Playfair Display',
-    serif;
+    color:#e3c27a;
 
-    font-size:65px;
+    font-size:40px;
 
+    margin-bottom:20px;
 }
 
-.quote p{
+.conclusion p{
 
-    color:#e4cc9b;
+    color:#c4b08e;
 
-    font-family:
-    'Playfair Display',
-    serif;
+    line-height:2;
 
-    font-size:28px;
-
-    line-height:1.7;
-
+    font-size:17px;
 }
 
 
-/* =========================
-PAGE NAVIGATION
-========================= */
+/* ================= PAGE NAVIGATION ================= */
 
 .page-navigation{
 
@@ -755,21 +797,17 @@ PAGE NAVIGATION
     text-align:center;
 
     background:#080302;
-
 }
 
 .page-navigation h2{
 
-    color:#dfbd78;
+    font-family:'Playfair Display',serif;
 
-    font-family:
-    'Playfair Display',
-    serif;
+    color:#dfbd78;
 
     font-size:36px;
 
-    margin-bottom:38px;
-
+    margin-bottom:40px;
 }
 
 .page-buttons{
@@ -780,16 +818,12 @@ PAGE NAVIGATION
 
     display:grid;
 
-    grid-template-columns:
-    repeat(5,1fr);
+    grid-template-columns:repeat(5,1fr);
 
     gap:12px;
-
 }
 
 .page-buttons a{
-
-    padding:18px 10px;
 
     color:#cdbb99;
 
@@ -797,12 +831,11 @@ PAGE NAVIGATION
 
     background:#190a05;
 
-    border:
-    1px solid
-    #51371c;
+    border:1px solid #51371c;
+
+    padding:18px 10px;
 
     transition:.3s;
-
 }
 
 .page-buttons strong{
@@ -811,14 +844,11 @@ PAGE NAVIGATION
 
     color:#d5a64f;
 
-    font-family:
-    'Playfair Display',
-    serif;
+    font-family:'Playfair Display',serif;
 
     font-size:27px;
 
     margin-bottom:4px;
-
 }
 
 .page-buttons a:hover,
@@ -829,13 +859,10 @@ PAGE NAVIGATION
     border-color:#b4863e;
 
     background:#2a1408;
-
 }
 
 
-/* =========================
-FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer{
 
@@ -844,21 +871,17 @@ footer{
     text-align:center;
 
     background:#050201;
-
 }
 
 footer h3{
 
     color:#d4a653;
 
-    font-family:
-    'Playfair Display',
-    serif;
+    font-family:'Playfair Display',serif;
 
     font-size:26px;
 
     letter-spacing:6px;
-
 }
 
 footer p{
@@ -866,46 +889,39 @@ footer p{
     color:#655741;
 
     margin-top:10px;
-
 }
 
 
-/* =========================
-RESPONSIVE
-========================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:850px){
+
+    .content-grid,
+    .water-grid,
+    .market-layout,
+    .food-layout{
+
+        grid-template-columns:1fr;
+    }
+
+    .market-image{
+
+        order:1;
+    }
+
+    .market-text{
+
+        order:2;
+    }
 
     .highlight-grid{
 
         grid-template-columns:1fr;
-
-    }
-
-    .souvenir-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .travel-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .tip-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
     }
 
     .page-buttons{
 
-        grid-template-columns:
-        repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
@@ -917,69 +933,63 @@ RESPONSIVE
         min-height:68px;
 
         padding:0 4%;
-
     }
 
     .logo{
 
         font-size:18px;
 
+        letter-spacing:3px;
     }
 
-    .home-button{
+    .home-btn{
 
         font-size:12px;
 
         padding:7px 13px;
-
     }
 
     .hero{
 
-        min-height:620px;
-
+        min-height:600px;
     }
 
     .hero h1{
 
         font-size:48px;
-
     }
 
     .hero h2{
 
-        font-size:27px;
-
+        font-size:26px;
     }
 
     .hero p{
 
         font-size:15px;
-
     }
 
     .section{
 
         padding:70px 0;
-
     }
 
     .section h2{
 
         font-size:32px;
-
     }
 
-    .tip-grid{
+    .water-image img,
+    .boat-image img,
+    .market-image img,
+    .food-image img{
 
-        grid-template-columns:1fr;
-
+        height:330px;
     }
 
     .page-buttons{
 
         grid-template-columns:1fr;
-
     }
 
 }
@@ -992,60 +1002,46 @@ RESPONSIVE
 <body>
 
 
-<!-- =========================
-NAVBAR
-========================= -->
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
-<a href="index.html"
-class="logo">
-
-🏛 AYUTTHAYA
-
+<a href="index.html" class="logo">
+AYUTTHAYA
 </a>
 
-<a href="index.html"
-class="home-button">
-
+<a href="index.html" class="home-btn">
 ← หน้าหลัก
-
 </a>
 
 </nav>
 
 
-<!-- =========================
-HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="eyebrow">
-PAGE 05 • TRAVEL
+<div class="label">
+PAGE 05 • LIFESTYLE
 </div>
 
 <h1>
-TRAVEL
+RIVERSIDE LIFE
 </h1>
 
 <h2>
-จุดเด่น ของฝาก และการท่องเที่ยว
+เมืองแห่งสายน้ำและวิถีชีวิต
 </h2>
 
-<div class="divider"></div>
+<div class="line"></div>
 
 <p>
-
-ปิดท้ายการเดินทางผ่านเมืองเก่าอยุธยา
-ด้วยจุดเด่นที่ไม่ควรพลาด
-ของฝากจากชุมชน
-อาหารขึ้นชื่อ
-และประสบการณ์การท่องเที่ยว
-ที่ทำให้เมืองแห่งนี้น่าจดจำ
-
+สัมผัสเสน่ห์ของพระนครศรีอยุธยา
+ผ่านสายน้ำ การล่องเรือ ตลาด ชุมชน
+และอาหารท้องถิ่นที่สะท้อนวิถีชีวิต
+และเอกลักษณ์ของเมืองเก่า
 </p>
 
 </div>
@@ -1053,11 +1049,293 @@ TRAVEL
 </section>
 
 
-<!-- =========================
-HIGHLIGHTS
-========================= -->
+<!-- ================= INTRO ================= -->
 
-<section class="section">
+<section class="section intro">
+
+<div class="container">
+
+<div class="intro-box">
+
+<div class="section-label">
+AYUTTHAYA LIFESTYLE
+</div>
+
+<h2>
+เสน่ห์ของอยุธยาในปัจจุบัน
+</h2>
+
+<p>
+อยุธยาไม่ได้มีเพียงโบราณสถานและเรื่องราวทางประวัติศาสตร์
+แต่ยังเป็นเมืองที่มีวิถีชีวิตผูกพันกับแม่น้ำ
+ตลาด ชุมชน อาหาร และการเดินทางทางน้ำ
+สิ่งเหล่านี้ทำให้การเดินทางมาอยุธยา
+มีทั้งเรื่องราวทางวัฒนธรรมและประสบการณ์ร่วมสมัย
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WATER CITY ================= -->
+
+<section class="section water-section">
+
+<div class="container">
+
+<div class="water-grid">
+
+<div class="water-image">
+
+<img
+src="./images/page5-water-city.jpg"
+alt="เมืองแห่งสายน้ำอยุธยา"
+loading="lazy">
+
+</div>
+
+
+<div class="water-text">
+
+<div class="section-label">
+CITY OF WATER
+</div>
+
+<h3>
+เมืองแห่งสายน้ำ
+</h3>
+
+<p>
+แม่น้ำเป็นส่วนสำคัญของภูมิประเทศอยุธยา
+ทั้งในด้านการเดินทาง การค้าขาย
+การดำรงชีวิต และการตั้งถิ่นฐาน
+ทำให้สายน้ำกลายเป็นส่วนหนึ่งของเอกลักษณ์เมือง
+</p>
+
+<ul class="water-list">
+
+<li>
+แม่น้ำเจ้าพระยา
+</li>
+
+<li>
+แม่น้ำป่าสัก
+</li>
+
+<li>
+แม่น้ำลพบุรี
+</li>
+
+<li>
+การเดินทางและการค้าทางน้ำ
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BOAT ================= -->
+
+<section class="section boat-section">
+
+<div class="container">
+
+<div class="boat-box">
+
+<div class="section-label">
+BOAT TOUR
+</div>
+
+<h2>
+ล่องเรือรอบเกาะเมือง
+</h2>
+
+<p class="description" style="margin:0 auto 35px;">
+การล่องเรือเป็นอีกวิธีหนึ่งในการชมบรรยากาศ
+รอบเกาะเมืองอยุธยา สามารถมองเห็นโบราณสถาน
+ชุมชนริมน้ำ และวิถีชีวิตของผู้คนจากอีกมุมหนึ่ง
+</p>
+
+
+<div class="boat-image">
+
+<img
+src="./images/page5-river.jpg"
+alt="ล่องเรือรอบเกาะเมืองอยุธยา"
+loading="lazy">
+
+</div>
+
+
+<h3>
+สัมผัสอยุธยาจากสายน้ำ
+</h3>
+
+<p>
+การเดินทางทางเรือช่วยให้เห็นความสัมพันธ์
+ระหว่างเมืองกับแม่น้ำได้อย่างชัดเจน
+และเป็นอีกหนึ่งกิจกรรมที่ได้รับความนิยม
+ในการเที่ยวชมบรรยากาศของอยุธยา
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MARKET ================= -->
+
+<section class="section market-section">
+
+<div class="container">
+
+<div class="market-layout">
+
+
+<div class="market-image">
+
+<img
+src="./images/page5-market.jpg"
+alt="ตลาดและชุมชนอยุธยา"
+loading="lazy">
+
+</div>
+
+
+<div class="market-text">
+
+<div class="section-label">
+MARKET & COMMUNITY
+</div>
+
+<h3>
+ตลาดและชุมชน
+</h3>
+
+<p>
+ตลาดและชุมชนเป็นพื้นที่ที่สะท้อนวิถีชีวิต
+ของคนในท้องถิ่น ทั้งการค้าขาย
+งานหัตถกรรม ของฝาก และอาหาร
+ที่เชื่อมโยงกับวัฒนธรรมของอยุธยา
+</p>
+
+<ul class="market-list">
+
+<li>
+ตลาดท้องถิ่น
+</li>
+
+<li>
+ชุมชนริมน้ำ
+</li>
+
+<li>
+สินค้าหัตถกรรม
+</li>
+
+<li>
+ของฝากจากอยุธยา
+</li>
+
+<li>
+วิถีชีวิตของคนในชุมชน
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOD ================= -->
+
+<section class="section food-section">
+
+<div class="container">
+
+<div class="food-layout">
+
+
+<div class="food-image">
+
+<img
+src="./images/page5-local-food.jpg"
+alt="อาหารท้องถิ่นอยุธยา"
+loading="lazy">
+
+</div>
+
+
+<div class="food-text">
+
+<div class="section-label">
+LOCAL FOOD
+</div>
+
+<h3>
+ชิมอาหารท้องถิ่น
+</h3>
+
+<p>
+อาหารเป็นอีกหนึ่งเสน่ห์ของการมาเยือนอยุธยา
+นักท่องเที่ยวสามารถสัมผัสอาหารท้องถิ่น
+และรสชาติที่เป็นเอกลักษณ์ของพื้นที่
+ควบคู่ไปกับการเที่ยวชมเมืองเก่า
+</p>
+
+<ul class="food-list">
+
+<li>
+กุ้งแม่น้ำเผา
+</li>
+
+<li>
+ก๋วยเตี๋ยวเรือ
+</li>
+
+<li>
+โรตีสายไหม
+</li>
+
+<li>
+อาหารพื้นถิ่น
+</li>
+
+<li>
+ขนมและของกินจากชุมชน
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= HIGHLIGHTS ================= -->
+
+<section class="section highlights">
 
 <div class="container">
 
@@ -1066,19 +1344,13 @@ AYUTTHAYA HIGHLIGHTS
 </div>
 
 <h2>
-จุดเด่นที่ไม่ควรพลาด
+เสน่ห์ที่ไม่ควรพลาด
 </h2>
 
-<p class="intro">
-
-อยุธยามีเสน่ห์จากการผสมผสานระหว่าง
-ประวัติศาสตร์ ธรรมชาติ วัฒนธรรม
-อาหาร และวิถีชีวิตของชุมชน
-
-นักท่องเที่ยวสามารถเดินทาง
-มาสัมผัสบรรยากาศเมืองเก่า
-พร้อมเรียนรู้เรื่องราวจากสถานที่จริง
-
+<p class="description">
+อยุธยามีประสบการณ์หลากหลายที่สามารถสัมผัสได้
+ตั้งแต่การชมเมืองทางน้ำ ไปจนถึงการเดินตลาด
+และชิมอาหารท้องถิ่น
 </p>
 
 
@@ -1087,368 +1359,47 @@ AYUTTHAYA HIGHLIGHTS
 
 <div class="highlight">
 
-<img
-src="images/page5-highlight.jpg"
-alt="จุดเด่นของอยุธยา"
-loading="lazy">
-
-<div class="highlight-body">
+<span>01</span>
 
 <h3>
-เมืองมรดกโลก
+สายน้ำ
 </h3>
 
 <p>
-โบราณสถานและร่องรอยของ
-ราชธานีโบราณทำให้
-อยุธยาเป็นจุดหมายสำคัญ
-สำหรับผู้สนใจประวัติศาสตร์
+ชมภูมิทัศน์และวิถีชีวิต
+ที่ผูกพันกับแม่น้ำ
 </p>
-
-</div>
 
 </div>
 
 
 <div class="highlight">
 
-<img
-src="images/page5-river.jpg"
-alt="แม่น้ำอยุธยา"
-loading="lazy">
-
-<div class="highlight-body">
+<span>02</span>
 
 <h3>
-เมืองแห่งสายน้ำ
+ชุมชน
 </h3>
 
 <p>
-แม่น้ำล้อมรอบพื้นที่เมืองเก่า
-และเป็นส่วนสำคัญของ
-การเดินทางและวิถีชีวิต
-ของชุมชน
+สัมผัสบรรยากาศตลาด
+และสินค้าท้องถิ่น
 </p>
-
-</div>
 
 </div>
 
 
 <div class="highlight">
 
-<img
-src="images/page5-market.jpg"
-alt="ตลาดอยุธยา"
-loading="lazy">
-
-<div class="highlight-body">
-
-<h3>
-ตลาดและชุมชน
-</h3>
-
-<p>
-ตลาดท้องถิ่นเป็นพื้นที่
-สำหรับสัมผัสอาหาร
-สินค้าชุมชน และวิถีชีวิต
-ของคนอยุธยา
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-SOUVENIR
-========================= -->
-
-<section class="section souvenir">
-
-<div class="container">
-
-<div class="souvenir-grid">
-
-
-<div class="souvenir-image">
-
-<img
-src="images/page5-souvenir.jpg"
-alt="ของฝากอยุธยา"
-loading="lazy">
-
-</div>
-
-
-<div class="souvenir-text">
-
-<div class="section-label">
-SOUVENIRS
-</div>
-
-<h3>
-ของฝากจากอยุธยา
-</h3>
-
-<p>
-
-การเลือกซื้อของฝากเป็นอีกหนึ่งวิธี
-ในการสนับสนุนผู้ประกอบการ
-และชุมชนท้องถิ่น
-
-ของฝากหลายชนิดสะท้อน
-ภูมิปัญญาและเอกลักษณ์
-ของพื้นที่
-
-</p>
-
-
-<div class="souvenir-list">
-
-<div>
-<span>✦</span>
-โรตีสายไหม
-</div>
-
-<div>
-<span>✦</span>
-ผลิตภัณฑ์จากชุมชน
-</div>
-
-<div>
-<span>✦</span>
-งานหัตถกรรม
-</div>
-
-<div>
-<span>✦</span>
-ของที่ระลึกเกี่ยวกับอยุธยา
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-TRAVEL
-========================= -->
-
-<section class="travel">
-
-<div class="container">
-
-<div class="section-label">
-TRAVEL EXPERIENCE
-</div>
-
-<h2>
-ประสบการณ์การท่องเที่ยว
-</h2>
-
-
-<div class="travel-grid">
-
-
-<div class="travel-card">
-
-<img
-src="images/page5-travel.jpg"
-alt="เที่ยวชมโบราณสถาน"
-loading="lazy">
-
-<div class="travel-overlay">
-
-<div class="travel-content">
-
-<h3>
-ชมเมืองเก่า
-</h3>
-
-<p>
-เดินชมโบราณสถาน
-เรียนรู้ประวัติศาสตร์
-และถ่ายภาพบรรยากาศ
-เมืองเก่า
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="travel-card">
-
-<img
-src="images/page5-river.jpg"
-alt="ล่องเรืออยุธยา"
-loading="lazy">
-
-<div class="travel-overlay">
-
-<div class="travel-content">
-
-<h3>
-ล่องเรือรอบเกาะเมือง
-</h3>
-
-<p>
-สัมผัสอยุธยา
-จากอีกมุมหนึ่ง
-ผ่านสายน้ำและ
-ชุมชนริมแม่น้ำ
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="travel-card">
-
-<img
-src="images/page5-market.jpg"
-alt="ตลาดและอาหาร"
-loading="lazy">
-
-<div class="travel-overlay">
-
-<div class="travel-content">
-
-<h3>
-ชิมอาหารท้องถิ่น
-</h3>
-
-<p>
-ลองอาหารขึ้นชื่อ
-และเดินเลือกซื้อ
-ของกินจากตลาด
-ในชุมชน
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-TIPS
-========================= -->
-
-<section class="tips">
-
-<div class="container">
-
-<div class="section-label">
-TRAVEL TIPS
-</div>
-
-<h2>
-เคล็ดลับเที่ยวอยุธยา
-</h2>
-
-
-<div class="tip-grid">
-
-
-<div class="tip">
-
-<div class="tip-icon">
-🌅
-</div>
-
-<h3>
-ช่วงเช้า
-</h3>
-
-<p>
-อากาศมักไม่ร้อนมาก
-เหมาะกับการชมโบราณสถาน
-และถ่ายภาพ
-</p>
-
-</div>
-
-
-<div class="tip">
-
-<div class="tip-icon">
-🚲
-</div>
-
-<h3>
-จักรยาน
-</h3>
-
-<p>
-เหมาะสำหรับเดินทาง
-ระหว่างสถานที่
-ที่อยู่ใกล้กัน
-</p>
-
-</div>
-
-
-<div class="tip">
-
-<div class="tip-icon">
-🍜
-</div>
+<span>03</span>
 
 <h3>
 อาหาร
 </h3>
 
 <p>
-ลองอาหารท้องถิ่น
-และของกินจากตลาด
-ชุมชน
-</p>
-
-</div>
-
-
-<div class="tip">
-
-<div class="tip-icon">
-📷
-</div>
-
-<h3>
-ถ่ายภาพ
-</h3>
-
-<p>
-เคารพสถานที่
-และหลีกเลี่ยงการปีน
-โบราณสถาน
+ลิ้มลองอาหารและของกิน
+ที่เป็นเอกลักษณ์ของอยุธยา
 </p>
 
 </div>
@@ -1461,22 +1412,22 @@ TRAVEL TIPS
 </section>
 
 
-<!-- =========================
-QUOTE
-========================= -->
+<!-- ================= CONCLUSION ================= -->
 
-<section class="quote">
+<section class="conclusion">
 
-<div class="quote-inner">
+<div class="conclusion-inner">
 
-<div class="quote-mark">
-“
-</div>
+<h2>
+อยุธยาไม่ได้มีแค่อดีต
+</h2>
 
 <p>
-อยุธยาไม่ได้เป็นเพียงเมืองเก่า
-แต่เป็นเมืองที่เรื่องราวจากอดีต
-ยังคงมีชีวิตอยู่ในปัจจุบัน
+เสน่ห์ของพระนครศรีอยุธยาเกิดจากการผสมผสาน
+ระหว่างมรดกทางประวัติศาสตร์กับวิถีชีวิตในปัจจุบัน
+สายน้ำ ตลาด ชุมชน และอาหาร
+ล้วนช่วยทำให้เมืองเก่ายังคงมีชีวิตชีวา
+และน่าค้นหาอยู่เสมอ
 </p>
 
 </div>
@@ -1484,14 +1435,12 @@ QUOTE
 </section>
 
 
-<!-- =========================
-PAGE NAVIGATION
-========================= -->
+<!-- ================= PAGE NAVIGATION ================= -->
 
 <section class="page-navigation">
 
 <h2>
-เดินทางต่อในเรื่องราวอยุธยา
+สำรวจเรื่องราวอยุธยาต่อ
 </h2>
 
 <div class="page-buttons">
@@ -1533,12 +1482,11 @@ PAGE NAVIGATION
 </a>
 
 
-<a href="page5.html"
-class="active">
+<a href="page5.html" class="active">
 
 <strong>05</strong>
 
-จุดเด่นและของฝาก
+เมืองแห่งสายน้ำ
 
 </a>
 
@@ -1548,9 +1496,7 @@ class="active">
 </section>
 
 
-<!-- =========================
-FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1559,7 +1505,7 @@ AYUTTHAYA
 </h3>
 
 <p>
-พระนครศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • วิถีชีวิต • การท่องเที่ยว
+พระนครศรีอยุธยา • สายน้ำ • ชุมชน • อาหาร • วิถีชีวิต
 </p>
 
 </footer>
@@ -1568,4 +1514,3 @@ AYUTTHAYA
 </body>
 
 </html>
-```
