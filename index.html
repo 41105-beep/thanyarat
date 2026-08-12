@@ -1,273 +1,1293 @@
-/* =================================
-   CUTE & ROUND UI
-   เปลี่ยนเฉพาะหน้าตา ไม่เปลี่ยนเนื้อหา
-================================= */
+<!DOCTYPE html>
+<html lang="th">
 
-/* ปุ่มทั้งหมด */
-button,
-.home-btn,
-.hero-button,
-.page-buttons a {
-    border-radius: 999px;
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>พระนครศรีอยุธยา | AYUTTHAYA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ปุ่มกลับหน้าหลัก */
-.home-btn {
-    padding: 10px 22px;
-    border: 1px solid rgba(211,164,79,.55);
-    background: rgba(30,12,5,.65);
-    box-shadow: 0 5px 18px rgba(0,0,0,.18);
+html{
+    scroll-behavior:smooth;
 }
 
-.home-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+body{
+
+    font-family:'Kanit',sans-serif;
+
+    background:#090403;
+
+    color:#ead8b2;
+
+    overflow-x:hidden;
 }
 
 
-/* ปุ่ม Hero */
-.hero-button {
-    border-radius: 999px;
+/* =========================================
+   NAVBAR
+========================================= */
 
-    padding: 14px 30px;
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:9999;
+
+    height:78px;
+
+    padding:0 6%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(8,3,2,.70);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(210,165,76,.25);
+}
+
+.logo{
+
+    color:#e4bd6b;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    letter-spacing:5px;
+
+    transition:.3s;
+}
+
+.logo:hover{
+
+    color:#f2d58f;
+
+    transform:translateY(-2px);
+}
+
+.nav-home{
+
+    color:#e4cc9b;
+
+    text-decoration:none;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(210,165,76,.45);
+
+    background:rgba(25,10,5,.55);
+
+    transition:.3s;
+}
+
+.nav-home:hover{
+
+    background:#c49a4d;
+
+    color:#150703;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   HERO / COVER
+========================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            rgba(5,2,1,.22),
+            rgba(5,2,1,.82)
+        ),
+
+        url("images/cover.jpg")
+
+        center center / cover no-repeat;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            transparent 10%,
+            rgba(0,0,0,.65) 100%
+        );
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:220px;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            #090403
+        );
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:1050px;
+
+    padding:120px 20px 100px;
+}
+
+.hero-label{
+
+    color:#d4a650;
+
+    font-size:13px;
+
+    letter-spacing:9px;
+
+    margin-bottom:30px;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(65px,12vw,150px);
+
+    line-height:.85;
+
+    letter-spacing:9px;
+
+    color:#f1dda9;
+
+    text-shadow:
+        0 10px 45px rgba(0,0,0,.95);
+}
+
+.hero h2{
+
+    margin-top:35px;
+
+    color:#d9b76d;
+
+    font-size:clamp(30px,5vw,55px);
+
+    font-weight:300;
+
+    text-shadow:
+        0 5px 25px rgba(0,0,0,.9);
+}
+
+.hero-line{
+
+    width:280px;
+
+    height:2px;
+
+    margin:35px auto;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #d2a14a,
+            transparent
+        );
+}
+
+.hero p{
+
+    max-width:780px;
+
+    margin:0 auto 38px;
+
+    color:#dfcda8;
+
+    font-size:17px;
+
+    line-height:2;
+
+    text-shadow:
+        0 3px 15px rgba(0,0,0,.9);
+}
+
+
+/* HERO BUTTON */
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    color:#ead19b;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    border:1px solid #b98b42;
+
+    background:rgba(20,7,3,.65);
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,.25);
+        0 10px 30px rgba(0,0,0,.3);
 
-    backdrop-filter: blur(8px);
+    transition:.35s;
 }
 
-.hero-button:hover {
-    transform: translateY(-4px) scale(1.02);
+.hero-button span{
+
+    font-size:21px;
+
+    transition:.35s;
 }
 
+.hero-button:hover{
 
-/* การ์ดทั้งหมด */
-.info-card,
-.card,
-.small-card,
-.tradition-card,
-.dessert-box {
-    border-radius: 24px;
+    background:#b98b42;
 
-    overflow: hidden;
+    color:#140602;
+
+    transform:translateY(-5px);
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,.18);
+        0 15px 35px rgba(0,0,0,.4);
+}
 
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+.hero-button:hover span{
+
+    transform:translateX(6px);
 }
 
 
-/* รูปในการ์ด */
-.info-card img,
-.card img,
-.small-card img,
-.tradition-card img {
-    border-radius: 20px 20px 0 0;
+/* =========================================
+   INTRO
+========================================= */
+
+.section{
+
+    padding:110px 0;
+
+    border-bottom:1px solid #352314;
+}
+
+.container{
+
+    width:88%;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.section-label{
+
+    color:#bd8e3d;
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
+}
+
+.section h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e1bd72;
+
+    font-size:44px;
+
+    margin-bottom:22px;
+}
+
+.description{
+
+    max-width:850px;
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:55px;
 }
 
 
-/* เอฟเฟกต์ตอนเอาเมาส์ชี้ */
-.info-card:hover,
-.card:hover,
-.small-card:hover,
-.tradition-card:hover {
-    transform: translateY(-8px);
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:28px;
+}
+
+.feature-card{
+
+    overflow:hidden;
+
+    background:#160704;
+
+    border:1px solid #4b321a;
+
+    border-radius:25px;
 
     box-shadow:
-        0 18px 45px rgba(0,0,0,.35);
+        0 10px 30px rgba(0,0,0,.2);
+
+    transition:.4s;
 }
 
+.feature-card:hover{
 
-/* กล่องแผนที่ */
-.map-box {
-    border-radius: 24px;
+    transform:translateY(-9px);
 
-    overflow: hidden;
+    border-color:#ad813b;
 
     box-shadow:
-        0 12px 35px rgba(0,0,0,.25);
+        0 20px 45px rgba(0,0,0,.38);
+}
+
+.feature-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.feature-card:hover img{
+
+    transform:scale(1.05);
+}
+
+.feature-content{
+
+    padding:28px;
+}
+
+.feature-number{
+
+    color:#b98436;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+}
+
+.feature-content h3{
+
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    margin:9px 0 12px;
+}
+
+.feature-content p{
+
+    color:#aa997d;
+
+    line-height:1.9;
 }
 
 
-/* รูปแผนที่ */
-.map-box img {
-    border-radius: 18px;
+/* =========================================
+   STORY
+========================================= */
+
+.story{
+
+    background:#100502;
 }
 
+.story-layout{
 
-/* กล่องการค้า */
-.trade-image,
-.culture-image,
-.food-image,
-.faith-image {
-    border-radius: 26px;
+    display:grid;
 
-    overflow: hidden;
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.story-image{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    border:1px solid #59401f;
 
     box-shadow:
-        0 12px 35px rgba(0,0,0,.25);
+        0 15px 40px rgba(0,0,0,.3);
+}
+
+.story-image img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+}
+
+.story-image:hover img{
+
+    transform:scale(1.04);
+}
+
+.story-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#dfbd72;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.story-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:20px;
 }
 
 
-/* รูปในส่วนต่าง ๆ */
-.trade-image img,
-.culture-image img,
-.food-image img,
-.faith-image img {
-    transition: transform .5s ease;
+/* =========================================
+   EXPLORE
+========================================= */
+
+.explore{
+
+    background:#130603;
+
+    text-align:center;
 }
 
-.trade-image:hover img,
-.culture-image:hover img,
-.food-image:hover img,
-.faith-image:hover img {
-    transform: scale(1.04);
+.explore-title{
+
+    max-width:800px;
+
+    margin:0 auto 55px;
+}
+
+.explore-title h2{
+
+    margin-bottom:20px;
+}
+
+.explore-title p{
+
+    color:#ad9a7b;
+
+    line-height:2;
 }
 
 
-/* กล่องขนม */
-.dessert-box {
-    border-radius: 28px;
+/* =========================================
+   PAGE BUTTONS
+========================================= */
 
-    overflow: hidden;
+.page-buttons{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:15px;
 }
 
+.page-button{
 
-/* ปุ่มเปลี่ยนหน้า 1-5 */
-.page-buttons a {
-    border-radius: 20px;
+    min-height:145px;
 
-    padding: 18px 14px;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:#cdbb99;
+
+    background:#190a05;
+
+    border:1px solid #51371c;
+
+    border-radius:25px;
 
     box-shadow:
-        0 6px 18px rgba(0,0,0,.15);
+        0 8px 25px rgba(0,0,0,.15);
 
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
+    transition:.35s;
 }
 
-.page-buttons a:hover,
-.page-buttons .active {
-    transform: translateY(-6px);
+.page-button:hover{
+
+    transform:translateY(-8px);
+
+    background:#291308;
+
+    border-color:#b4863e;
 
     box-shadow:
-        0 12px 28px rgba(0,0,0,.28);
+        0 18px 35px rgba(0,0,0,.3);
+}
+
+.page-number{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:#d5a64f;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    background:rgba(185,139,63,.12);
+
+    border:1px solid rgba(185,139,63,.35);
+}
+
+.page-name{
+
+    font-size:15px;
 }
 
 
-/* ตัวเลขในปุ่ม */
-.page-buttons strong {
-    border-radius: 50%;
+/* =========================================
+   QUOTE
+========================================= */
 
-    width: 48px;
-    height: 48px;
+.quote{
 
-    margin: 0 auto 8px;
+    padding:120px 8%;
 
-    display: flex;
+    text-align:center;
 
-    align-items: center;
-    justify-content: center;
+    background:
 
-    background: rgba(185,139,63,.12);
+        linear-gradient(
+            rgba(12,4,2,.88),
+            rgba(12,4,2,.96)
+        ),
 
-    border: 1px solid rgba(185,139,63,.3);
+        url("images/cover.jpg")
+
+        center / cover no-repeat;
 }
 
+.quote-box{
 
-/* เส้นตกแต่ง */
-.line,
-.hero-line {
-    border-radius: 999px;
-}
+    max-width:900px;
 
+    margin:auto;
 
-/* Timeline */
-.timeline-item {
-    border-radius: 18px;
+    padding:60px 35px;
 
-    transition:
-        background .3s ease,
-        padding .3s ease;
-}
+    border-radius:30px;
 
-.timeline-item:hover {
-    background: rgba(100,55,20,.12);
-}
+    border:1px solid rgba(180,135,61,.5);
 
-
-/* รายการอาหาร / การค้า */
-.trade-list li,
-.food-list li {
-    border-radius: 12px;
-
-    padding-left: 12px;
-
-    transition:
-        background .25s ease,
-        padding-left .25s ease;
-}
-
-.trade-list li:hover,
-.food-list li:hover {
-    background: rgba(130,80,25,.12);
-
-    padding-left: 20px;
-}
-
-
-/* กล่อง Conclusion */
-.conclusion-inner {
-    border-radius: 28px;
-
-    background: rgba(15,5,2,.25);
+    background:rgba(12,4,2,.25);
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,.18);
+        0 20px 50px rgba(0,0,0,.25);
+}
+
+.quote-box h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e3c27a;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.quote-box p{
+
+    color:#c4b08e;
+
+    line-height:2;
+
+    font-size:17px;
 }
 
 
-/* Footer */
-footer {
-    border-radius: 35px 35px 0 0;
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    padding:55px 20px;
+
+    text-align:center;
+
+    background:#050201;
+
+    border-radius:35px 35px 0 0;
+}
+
+footer h3{
+
+    color:#d4a653;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    letter-spacing:6px;
+}
+
+footer p{
+
+    color:#655741;
+
+    margin-top:12px;
 }
 
 
-/* =================================
-   MOBILE
-================================= */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-@media(max-width:600px) {
+@media(max-width:950px){
 
-    .home-btn {
-        border-radius: 999px;
+    .feature-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .page-buttons a {
-        border-radius: 18px;
+    .story-layout{
+
+        grid-template-columns:1fr;
     }
 
-    .info-card,
-    .card,
-    .small-card,
-    .tradition-card,
-    .dessert-box {
-        border-radius: 20px;
+    .page-buttons{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+
+        height:68px;
+
+        padding:0 4%;
     }
 
-    .map-box,
-    .trade-image,
-    .culture-image,
-    .food-image,
-    .faith-image {
-        border-radius: 20px;
+    .logo{
+
+        font-size:18px;
+
+        letter-spacing:3px;
+    }
+
+    .nav-home{
+
+        padding:8px 15px;
+
+        font-size:12px;
+    }
+
+    .hero{
+
+        min-height:100vh;
+
+        background-position:center;
+    }
+
+    .hero-content{
+
+        padding:100px 15px 80px;
+    }
+
+    .hero-label{
+
+        font-size:10px;
+
+        letter-spacing:5px;
+    }
+
+    .hero h1{
+
+        font-size:54px;
+
+        letter-spacing:5px;
+    }
+
+    .hero h2{
+
+        font-size:27px;
+    }
+
+    .hero p{
+
+        font-size:14px;
+    }
+
+    .section{
+
+        padding:80px 0;
+    }
+
+    .section h2{
+
+        font-size:33px;
+    }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .story-image img{
+
+        height:350px;
+    }
+
+    .page-buttons{
+
+        grid-template-columns:1fr;
+    }
+
+    .page-button{
+
+        min-height:110px;
+    }
+
+    .quote{
+
+        padding:80px 5%;
+    }
+
+    .quote-box{
+
+        padding:45px 22px;
+
+        border-radius:24px;
     }
 
 }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+
+    <!-- กดโลโก้แล้วกลับหน้าปก -->
+    <a href="index.html" class="logo">
+        AYUTTHAYA
+    </a>
+
+    <a href="index.html" class="nav-home">
+        หน้าปก
+    </a>
+
+</nav>
+
+
+<!-- =========================================
+     COVER
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            THE CITY OF HISTORY
+        </div>
+
+        <h1>
+            AYUTTHAYA
+        </h1>
+
+        <h2>
+            พระนครศรีอยุธยา
+        </h2>
+
+        <div class="hero-line"></div>
+
+        <p>
+            เมืองมรดกโลกแห่งสายน้ำ
+            เรื่องราวแห่งประวัติศาสตร์
+            ศิลปวัฒนธรรม วิถีชีวิต
+            อาหาร และความทรงจำ
+            ที่ยังคงสืบทอดมาจนถึงปัจจุบัน
+        </p>
+
+        <a href="#explore" class="hero-button">
+
+            EXPLORE AYUTTHAYA
+
+            <span>
+                ↓
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <div class="section-label">
+        DISCOVER AYUTTHAYA
+    </div>
+
+    <h2>
+        เรื่องราวของเมืองแห่งอดีต
+    </h2>
+
+    <p class="description">
+        พระนครศรีอยุธยาเป็นเมืองประวัติศาสตร์
+        ที่เต็มไปด้วยเรื่องราวและมรดกทางวัฒนธรรม
+        ทั้งโบราณสถาน ศิลปกรรม วิถีชีวิต
+        อาหาร และประเพณีที่สืบทอดมาจนถึงปัจจุบัน
+    </p>
+
+
+    <div class="feature-grid">
+
+
+        <article class="feature-card">
+
+            <img
+                src="images/page1-cover.jpg"
+                alt="ประวัติศาสตร์อยุธยา"
+                loading="lazy">
+
+            <div class="feature-content">
+
+                <div class="feature-number">
+                    01 • HISTORY
+                </div>
+
+                <h3>
+                    ประวัติศาสตร์
+                </h3>
+
+                <p>
+                    ย้อนรอยเรื่องราวของกรุงศรีอยุธยา
+                    ตั้งแต่การก่อตั้งราชธานี
+                    การรุ่งเรือง จนถึงการเปลี่ยนแปลง
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <img
+                src="images/page2-cover.jpg"
+                alt="สถานที่สำคัญอยุธยา"
+                loading="lazy">
+
+            <div class="feature-content">
+
+                <div class="feature-number">
+                    02 • PLACES
+                </div>
+
+                <h3>
+                    สถานที่สำคัญ
+                </h3>
+
+                <p>
+                    สำรวจโบราณสถานและสถานที่สำคัญ
+                    ที่สะท้อนเรื่องราวของอยุธยา
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <img
+                src="images/page3-cover.jpg"
+                alt="ชุดไทยและวิถีชีวิต"
+                loading="lazy">
+
+            <div class="feature-content">
+
+                <div class="feature-number">
+                    03 • LIFESTYLE
+                </div>
+
+                <h3>
+                    ชุดไทยและวิถีชีวิต
+                </h3>
+
+                <p>
+                    เรียนรู้การแต่งกาย บ้านเรือน
+                    ตลาด และวิถีชีวิตของผู้คน
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     STORY
+========================================= -->
+
+<section class="section story">
+
+<div class="container">
+
+    <div class="story-layout">
+
+
+        <div class="story-image">
+
+            <img
+                src="images/page4-cover.jpg"
+                alt="วัฒนธรรมอยุธยา"
+                loading="lazy">
+
+        </div>
+
+
+        <div class="story-text">
+
+            <div class="section-label">
+                CULTURE • FOOD • TRADITION
+            </div>
+
+            <h3>
+                เสน่ห์ของวัฒนธรรมอยุธยา
+            </h3>
+
+            <p>
+                นอกจากประวัติศาสตร์และโบราณสถานแล้ว
+                อยุธยายังมีเสน่ห์จากศิลปวัฒนธรรม
+                อาหาร ขนม ประเพณี
+                และวิถีแห่งศรัทธา
+            </p>
+
+            <p>
+                สิ่งเหล่านี้ทำให้การเดินทาง
+                มาเยือนอยุธยาไม่ได้มีเพียง
+                การชมโบราณสถาน
+                แต่ยังเป็นการสัมผัสวิถีชีวิต
+                และเรื่องราวของผู้คน
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     EXPLORE ALL PAGES
+========================================= -->
+
+<section class="section explore" id="explore">
+
+<div class="container">
+
+
+    <div class="explore-title">
+
+        <div class="section-label">
+            EXPLORE AYUTTHAYA
+        </div>
+
+        <h2>
+            สำรวจเรื่องราวอยุธยา
+        </h2>
+
+        <p>
+            เลือกหัวข้อที่ต้องการศึกษา
+            แล้วออกเดินทางไปค้นพบเรื่องราว
+            ของพระนครศรีอยุธยา
+        </p>
+
+    </div>
+
+
+    <div class="page-buttons">
+
+
+        <a href="page1.html" class="page-button">
+
+            <span class="page-number">
+                01
+            </span>
+
+            <span class="page-name">
+                ประวัติศาสตร์และแผนผัง
+            </span>
+
+        </a>
+
+
+        <a href="page2.html" class="page-button">
+
+            <span class="page-number">
+                02
+            </span>
+
+            <span class="page-name">
+                สถานที่สำคัญ
+            </span>
+
+        </a>
+
+
+        <a href="page3.html" class="page-button">
+
+            <span class="page-number">
+                03
+            </span>
+
+            <span class="page-name">
+                ชุดไทยและวิถีชีวิต
+            </span>
+
+        </a>
+
+
+        <a href="page4.html" class="page-button">
+
+            <span class="page-number">
+                04
+            </span>
+
+            <span class="page-name">
+                วัฒนธรรมและอาหาร
+            </span>
+
+        </a>
+
+
+        <a href="page5.html" class="page-button">
+
+            <span class="page-number">
+                05
+            </span>
+
+            <span class="page-name">
+                เมืองแห่งสายน้ำ
+            </span>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     QUOTE
+========================================= -->
+
+<section class="quote">
+
+    <div class="quote-box">
+
+        <h2>
+            มรดกจากอดีต
+        </h2>
+
+        <p>
+            เรื่องราวของอยุธยาไม่ได้อยู่เพียงในตำรา
+            แต่ยังคงปรากฏผ่านโบราณสถาน
+            ศิลปวัฒนธรรม วิถีชีวิต
+            และความทรงจำที่สืบต่อมาจนถึงปัจจุบัน
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+    <p>
+        พระนครศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • วิถีชีวิต
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
