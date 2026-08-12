@@ -31,8 +31,6 @@ body{
     overflow-x:hidden;
 }
 
-/* NAVBAR */
-
 .navbar{
     position:sticky;
     top:0;
@@ -96,7 +94,7 @@ body{
         rgba(8,3,1,.25),
         rgba(8,3,1,.9)
     ),
-    url("images/page1-cover.jpg")
+    url("./images/page1-cover.jpg")
     center/cover no-repeat;
 }
 
@@ -138,8 +136,7 @@ body{
 
     color:#f0dca7;
 
-    text-shadow:
-    0 15px 50px rgba(0,0,0,.9);
+    text-shadow:0 15px 50px rgba(0,0,0,.9);
 }
 
 .hero h2{
@@ -223,9 +220,7 @@ body{
 
 .content-grid{
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:28px;
 }
 
@@ -244,8 +239,7 @@ body{
 
     border-color:#b0833d;
 
-    box-shadow:
-    0 20px 45px rgba(0,0,0,.4);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
 }
 
 .info-card img{
@@ -393,6 +387,8 @@ body{
     overflow:hidden;
 
     border:1px solid #59401f;
+
+    background:#170804;
 }
 
 .trade-image img{
@@ -462,7 +458,7 @@ body{
         rgba(12,4,2,.9),
         rgba(12,4,2,.96)
     ),
-    url("images/page1-cover.jpg")
+    url("./images/page1-cover.jpg")
     center/cover no-repeat;
 }
 
@@ -747,12 +743,10 @@ AYUTTHAYA HISTORY
 <div class="content-grid">
 
 
-<!-- 01 กรุงศรีอยุธยา -->
-
 <article class="info-card">
 
 <img
-src="images/page1-ruins.jpg"
+src="./images/page1-ruins.jpg"
 alt="โบราณสถานอยุธยา"
 loading="lazy">
 
@@ -778,12 +772,10 @@ loading="lazy">
 </article>
 
 
-<!-- 02 ศิลปวัฒนธรรม -->
-
 <article class="info-card">
 
 <img
-src="images/page1-culture.jpg"
+src="./images/page1-culture.jpg"
 alt="ศิลปวัฒนธรรมอยุธยา"
 loading="lazy">
 
@@ -832,19 +824,15 @@ TIMELINE
 </h2>
 
 <p class="description">
-
 เหตุการณ์สำคัญที่ช่วยให้เข้าใจ
 พัฒนาการของกรุงศรีอยุธยา
 ตั้งแต่การก่อตั้งจนถึงการสิ้นสุด
 ของราชธานี
-
 </p>
 
 
 <div class="timeline">
 
-
-<!-- 1893 -->
 
 <div class="timeline-item">
 
@@ -870,8 +858,6 @@ TIMELINE
 </div>
 
 
-<!-- พัฒนาเมือง -->
-
 <div class="timeline-item">
 
 <div class="year">
@@ -896,8 +882,6 @@ TIMELINE
 </div>
 
 
-<!-- ยุครุ่งเรือง -->
-
 <div class="timeline-item">
 
 <div class="year">
@@ -921,8 +905,6 @@ TIMELINE
 
 </div>
 
-
-<!-- 2310 -->
 
 <div class="timeline-item">
 
@@ -983,7 +965,7 @@ GEOGRAPHY & CITY PLAN
 <div class="map-box">
 
 <img
-src="images/page1-map.png"
+src="./images/page1-map.png"
 alt="แผนผังและภูมิศาสตร์ของเมืองอยุธยา"
 loading="lazy">
 
@@ -1011,19 +993,15 @@ loading="lazy">
 <div class="trade-layout">
 
 
-<!-- ภาพเมืองการค้า -->
-
 <div class="trade-image">
 
 <img
-src="images/page1-trade.webp"
+src="./images/page1-trade.jpg"
 alt="เมืองการค้านานาชาติของอยุธยา"
 loading="lazy">
 
 </div>
 
-
-<!-- เนื้อหาการค้า -->
 
 <div class="trade-text">
 
@@ -1036,12 +1014,10 @@ INTERNATIONAL TRADE
 </h3>
 
 <p>
-
 อยุธยาเคยเป็นศูนย์กลางการค้าระหว่างประเทศ
 ที่เชื่อมโยงโลกตะวันออกและตะวันตก
 มีเรือสินค้าและพ่อค้าจากหลายประเทศ
 เดินทางเข้ามาค้าขาย
-
 </p>
 
 <ul class="trade-list">
@@ -1105,12 +1081,10 @@ AYUTTHAYA ART
 <div class="content-grid">
 
 
-<!-- 05 มรดกทางศิลปกรรม -->
-
 <article class="info-card">
 
 <img
-src="images/page1-art.jpg"
+src="./images/page1-art.jpg"
 alt="มรดกทางศิลปกรรมอยุธยา"
 loading="lazy">
 
@@ -1136,12 +1110,10 @@ loading="lazy">
 </article>
 
 
-<!-- 06 จุดเปลี่ยนทางประวัติศาสตร์ -->
-
 <article class="info-card">
 
 <img
-src="images/page1-destruction.jpg"
+src="./images/page1-destruction.jpg"
 alt="การทำลายกรุงศรีอยุธยา"
 loading="lazy">
 
@@ -1186,12 +1158,10 @@ loading="lazy">
 </h2>
 
 <p>
-
 ประวัติศาสตร์ของอยุธยาไม่ได้อยู่เพียง
 ในตำรา แต่ยังปรากฏอยู่ในโบราณสถาน
 ศิลปกรรม แผนผังเมือง
 และวัฒนธรรมที่สืบต่อมาจนถึงปัจจุบัน
-
 </p>
 
 </div>
@@ -1209,51 +1179,30 @@ loading="lazy">
 
 <div class="page-buttons">
 
-
 <a href="page1.html" class="active">
-
 <strong>01</strong>
-
 ประวัติศาสตร์
-
 </a>
-
 
 <a href="page2.html">
-
 <strong>02</strong>
-
 สถานที่สำคัญ
-
 </a>
-
 
 <a href="page3.html">
-
 <strong>03</strong>
-
 ชุดไทยและวิถีชีวิต
-
 </a>
-
 
 <a href="page4.html">
-
 <strong>04</strong>
-
 วัฒนธรรมและอาหาร
-
 </a>
-
 
 <a href="page5.html">
-
 <strong>05</strong>
-
 จุดเด่นและของฝาก
-
 </a>
-
 
 </div>
 
