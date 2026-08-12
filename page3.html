@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
 
@@ -7,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ชุดไทยและวิถีชีวิต | AYUTTHAYA</title>
+<title>ชุดไทยและวิถีชีวิต | พระนครศรีอยุธยา</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,25 +27,15 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
-    background:#0d0502;
-    color:#ead8b4;
+    background:#090403;
+    color:#ead8b2;
     overflow-x:hidden;
 }
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:50;
-    opacity:.035;
-    background-image:
-        radial-gradient(#d9aa55 1px,transparent 1px);
-    background-size:28px 28px;
-}
 
-
-/* ================= NAVBAR ================= */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
     position:sticky;
@@ -54,57 +43,63 @@ body::before{
     z-index:1000;
 
     min-height:76px;
-
     padding:0 6%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    background:rgba(12,5,2,.95);
+    background:rgba(8,4,2,.96);
 
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(214,168,77,.35);
+    border-bottom:1px solid rgba(205,158,68,.35);
 }
 
 .logo{
-    color:#e5b95d;
+    color:#e2b85d;
+
     text-decoration:none;
 
     font-family:'Playfair Display',serif;
 
     font-size:24px;
-    letter-spacing:4px;
+
+    letter-spacing:5px;
 }
 
-.home-button{
-    color:#ead6ac;
+.home-btn{
+    color:#d8c29a;
+
     text-decoration:none;
 
-    border:1px solid #80602f;
+    border:1px solid #6b4b23;
 
     padding:8px 20px;
 
     border-radius:30px;
 
-    transition:.35s;
+    transition:.3s;
 }
 
-.home-button:hover{
-    background:#c59643;
-    color:#160803;
+.home-btn:hover{
+    background:#c69a48;
+    color:#150703;
 }
 
 
-/* ================= HERO ================= */
+/* =========================
+   HERO / COVER
+========================= */
 
 .hero{
 
-    min-height:650px;
+    min-height:680px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -112,109 +107,124 @@ body::before{
     position:relative;
 
     background:
+
     linear-gradient(
-        rgba(15,7,3,.28),
-        rgba(15,7,3,.92)
+        rgba(8,3,1,.28),
+        rgba(8,3,1,.90)
     ),
 
-    url("images/page3-thai-dress.jpg")
-    center/cover no-repeat;
+    url("./images/page3-cover.jpg")
 
+    center/cover no-repeat;
 }
 
-.hero::after{
+.hero::before{
 
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
+
     radial-gradient(
         circle at center,
-        transparent 10%,
-        rgba(0,0,0,.72) 90%
+        transparent 5%,
+        rgba(0,0,0,.78) 90%
     );
-
 }
 
 .hero-content{
 
     position:relative;
+
     z-index:2;
 
     max-width:1000px;
 
     padding:100px 25px;
-
 }
 
-.eyebrow{
+.label{
 
-    color:#d5a64e;
-
-    letter-spacing:8px;
+    color:#d3a44f;
 
     font-size:13px;
 
-    margin-bottom:22px;
+    letter-spacing:8px;
 
+    margin-bottom:25px;
 }
 
 .hero h1{
 
     font-family:'Playfair Display',serif;
 
-    font-size:
-    clamp(55px,10vw,115px);
-
-    color:#f1dfb0;
-
-    letter-spacing:7px;
+    font-size:clamp(48px,9vw,105px);
 
     line-height:.95;
 
-    text-shadow:
-    0 10px 40px rgba(0,0,0,.9);
+    letter-spacing:5px;
 
+    color:#f0dca7;
+
+    text-shadow:
+    0 15px 50px rgba(0,0,0,.9);
 }
 
 .hero h2{
 
-    color:#d5a451;
+    margin-top:30px;
 
-    font-size:
-    clamp(28px,5vw,52px);
+    color:#d6aa55;
+
+    font-size:clamp(28px,5vw,50px);
 
     font-weight:300;
+}
 
-    margin-top:24px;
+.line{
 
+    width:260px;
+
+    height:1px;
+
+    margin:30px auto;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        #d4a34b,
+        transparent
+    );
 }
 
 .hero p{
 
     max-width:800px;
 
-    margin:28px auto 0;
+    margin:auto;
 
-    color:#d1bea0;
+    color:#d5c29d;
 
     line-height:2;
 
     font-size:17px;
-
 }
 
 
-/* ================= SECTION ================= */
+/* =========================
+   SECTION
+========================= */
 
 .section{
 
     padding:100px 0;
 
-    border-bottom:1px solid #392512;
-
+    border-bottom:1px solid #382512;
 }
 
 .container{
@@ -224,19 +234,17 @@ body::before{
     max-width:1200px;
 
     margin:auto;
-
 }
 
 .section-label{
 
     color:#bd8e3d;
 
-    letter-spacing:5px;
-
     font-size:13px;
 
-    margin-bottom:10px;
+    letter-spacing:5px;
 
+    margin-bottom:10px;
 }
 
 .section h2{
@@ -247,11 +255,10 @@ body::before{
 
     font-size:42px;
 
-    margin-bottom:20px;
-
+    margin-bottom:22px;
 }
 
-.section-intro{
+.description{
 
     max-width:900px;
 
@@ -259,323 +266,383 @@ body::before{
 
     line-height:2;
 
-    font-size:16px;
-
-    margin-bottom:70px;
-
+    margin-bottom:55px;
 }
 
 
-/* ================= STORY ================= */
+/* =========================
+   INTRO
+========================= */
 
-.story{
+.intro{
 
-    display:grid;
-
-    grid-template-columns:
-    1.05fr .95fr;
-
-    gap:65px;
-
-    align-items:center;
-
-    margin-bottom:110px;
-
+    background:#100502;
 }
 
-.story:last-child{
-    margin-bottom:0;
-}
+.intro-box{
 
-.story:nth-child(even){
-    grid-template-columns:
-    .95fr 1.05fr;
-}
-
-.story:nth-child(even) .story-image{
-    order:2;
-}
-
-.story:nth-child(even) .story-text{
-    order:1;
-}
-
-.story-image{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border:1px solid #67471f;
-
-    background:#170904;
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.55);
-
-}
-
-.story-image img{
-
-    width:100%;
-
-    height:460px;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:.7s;
-
-}
-
-.story-image:hover img{
-    transform:scale(1.06);
-}
-
-.story-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:15px;
-
-    border:1px solid rgba(222,175,80,.25);
-
-    pointer-events:none;
-
-}
-
-.story-number{
-
-    color:#bd8e3d;
-
-    font-family:'Playfair Display',serif;
-
-    letter-spacing:3px;
-
-    margin-bottom:12px;
-
-}
-
-.story-text h3{
-
-    color:#e1bd72;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:36px;
-
-    margin-bottom:18px;
-
-}
-
-.story-text p{
-
-    color:#b9a487;
-
-    line-height:2;
-
-    margin-bottom:16px;
-
-}
-
-.tag{
-
-    display:inline-block;
-
-    color:#cda354;
-
-    border:1px solid #65461f;
-
-    padding:6px 16px;
-
-    border-radius:20px;
-
-    font-size:13px;
-
-    margin-top:5px;
-
-}
-
-
-/* ================= QUOTE ================= */
-
-.quote{
-
-    padding:90px 8%;
-
-    text-align:center;
-
-    background:
-
-    linear-gradient(
-        rgba(17,7,3,.9),
-        rgba(17,7,3,.95)
-    ),
-
-    url("images/page3-river-life.jpg")
-    center/cover fixed;
-
-}
-
-.quote-inner{
-
-    max-width:900px;
+    max-width:950px;
 
     margin:auto;
 
-    border-top:1px solid #735023;
-
-    border-bottom:1px solid #735023;
-
-    padding:50px 25px;
-
+    text-align:center;
 }
 
-.quote-mark{
+.intro-box p{
 
-    font-family:'Playfair Display',serif;
+    color:#bca98a;
 
-    color:#c79a4a;
+    line-height:2.1;
 
-    font-size:65px;
-
-}
-
-.quote p{
-
-    font-family:'Playfair Display',serif;
-
-    color:#e4cc9b;
-
-    font-size:28px;
-
-    line-height:1.7;
-
+    font-size:17px;
 }
 
 
-/* ================= INFO ================= */
+/* =========================
+   CARDS
+========================= */
 
-.info-section{
+.cards-section{
 
-    padding:95px 0;
-
-    background:#130704;
-
-    border-bottom:1px solid #3e2915;
-
+    background:#0d0402;
 }
 
-.info-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
-
-    margin-top:40px;
-
-}
-
-.info-card{
-
-    padding:35px;
-
-    background:#1a0a05;
-
-    border:1px solid #493118;
-
-    transition:.4s;
-
-}
-
-.info-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#a97a35;
-
-    background:#211007;
-
-}
-
-.info-icon{
-
-    font-size:35px;
-
-    margin-bottom:15px;
-
-}
-
-.info-card h3{
-
-    color:#dfbc73;
-
-    font-size:22px;
-
-    margin-bottom:12px;
-
-}
-
-.info-card p{
-
-    color:#a99678;
-
-    line-height:1.9;
-
-}
-
-
-/* ================= LIFE ================= */
-
-.life-grid{
+.card-grid{
 
     display:grid;
 
     grid-template-columns:
     repeat(2,1fr);
 
-    gap:20px;
-
-    margin-top:35px;
-
+    gap:30px;
 }
 
-.life-card{
+.card{
+
+    overflow:hidden;
+
+    background:#170804;
+
+    border:1px solid #4e351c;
+
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b0833d;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45);
+}
+
+.card img{
+
+    width:100%;
+
+    height:350px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.card-content{
 
     padding:30px;
-
-    background:#180905;
-
-    border-left:3px solid #a97832;
-
 }
 
-.life-card h3{
+.card-number{
 
-    color:#d9b56c;
+    color:#b98436;
 
-    margin-bottom:10px;
+    font-family:'Playfair Display',serif;
 
-    font-size:21px;
+    font-size:14px;
 
+    letter-spacing:3px;
 }
 
-.life-card p{
+.card h3{
 
-    color:#a99678;
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin:8px 0 13px;
+}
+
+.card p{
+
+    color:#aa997d;
+
+    line-height:1.95;
+}
+
+
+/* =========================
+   DRESSING
+========================= */
+
+.dressing{
+
+    background:#130603;
+}
+
+.dressing-layout{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.dressing-image{
+
+    overflow:hidden;
+
+    border:1px solid #59401f;
+}
+
+.dressing-image img{
+
+    width:100%;
+
+    height:500px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.dressing-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e0bd73;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.dressing-text p{
+
+    color:#b9a487;
+
+    line-height:2;
+
+    margin-bottom:25px;
+}
+
+.dressing-list{
+
+    list-style:none;
+}
+
+.dressing-list li{
+
+    padding:13px 0;
+
+    border-bottom:1px solid #3d2917;
+
+    color:#d1b57a;
+}
+
+.dressing-list li::before{
+
+    content:"✦";
+
+    color:#c79340;
+
+    margin-right:10px;
+}
+
+
+/* =========================
+   LIFESTYLE
+========================= */
+
+.lifestyle{
+
+    background:#100502;
+}
+
+.lifestyle-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+.lifestyle-box{
+
+    background:#170804;
+
+    border:1px solid #49321b;
+
+    overflow:hidden;
+}
+
+.lifestyle-box img{
+
+    width:100%;
+
+    height:330px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.lifestyle-content{
+
+    padding:28px;
+}
+
+.lifestyle-content h3{
+
+    color:#dfbd72;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+.lifestyle-content p{
+
+    color:#aa997d;
 
     line-height:1.9;
-
 }
 
 
-/* ================= PAGE NAV ================= */
+/* =========================
+   TRADITION
+========================= */
+
+.tradition{
+
+    background:#0d0402;
+}
+
+.tradition-box{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border:1px solid #59401f;
+
+    background:#170804;
+}
+
+.tradition-box img{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin-bottom:30px;
+}
+
+.tradition-box h3{
+
+    color:#dfbd72;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+.tradition-box p{
+
+    color:#b9a487;
+
+    line-height:2;
+}
+
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(12,4,2,.90),
+        rgba(12,4,2,.96)
+    ),
+
+    url("./images/page3-cover.jpg")
+
+    center/cover no-repeat;
+}
+
+.conclusion-inner{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:55px 30px;
+
+    border-top:1px solid #735023;
+
+    border-bottom:1px solid #735023;
+}
+
+.conclusion h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#e3c27a;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.conclusion p{
+
+    color:#c4b08e;
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
 
 .page-navigation{
 
@@ -583,8 +650,7 @@ body::before{
 
     text-align:center;
 
-    background:#090403;
-
+    background:#080302;
 }
 
 .page-navigation h2{
@@ -595,8 +661,7 @@ body::before{
 
     font-size:36px;
 
-    margin-bottom:38px;
-
+    margin-bottom:40px;
 }
 
 .page-buttons{
@@ -611,130 +676,108 @@ body::before{
     repeat(5,1fr);
 
     gap:12px;
-
 }
 
 .page-buttons a{
 
+    color:#cdbb99;
+
     text-decoration:none;
-
-    color:#cdbb9a;
-
-    padding:18px 10px;
 
     background:#190a05;
 
     border:1px solid #51371c;
 
-    transition:.3s;
+    padding:18px 10px;
 
+    transition:.3s;
 }
 
 .page-buttons strong{
 
     display:block;
 
-    color:#d8ad5a;
+    color:#d5a64f;
 
     font-family:'Playfair Display',serif;
 
     font-size:27px;
 
-    margin-bottom:5px;
-
+    margin-bottom:4px;
 }
 
 .page-buttons a:hover,
 .page-buttons .active{
 
-    background:#2a1509;
-
-    border-color:#bd9144;
-
     transform:translateY(-5px);
 
+    border-color:#b4863e;
+
+    background:#2a1408;
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
-    padding:45px 20px;
+    padding:50px 20px;
 
     text-align:center;
 
-    background:#070302;
-
+    background:#050201;
 }
 
 footer h3{
 
-    color:#d3a653;
+    color:#d4a653;
 
     font-family:'Playfair Display',serif;
 
-    letter-spacing:5px;
+    font-size:26px;
 
-    font-size:25px;
-
+    letter-spacing:6px;
 }
 
 footer p{
 
-    color:#6f604c;
+    color:#655741;
 
-    margin-top:8px;
-
+    margin-top:10px;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:850px){
 
-    .story,
-    .story:nth-child(even){
+    .card-grid{
 
         grid-template-columns:1fr;
-
-        gap:30px;
-
     }
 
-    .story:nth-child(even) .story-image,
-    .story:nth-child(even) .story-text{
-
-        order:initial;
-
-    }
-
-    .story-image img{
-
-        height:320px;
-
-    }
-
-    .info-grid{
+    .dressing-layout{
 
         grid-template-columns:1fr;
-
     }
 
-    .life-grid{
+    .lifestyle-grid{
 
         grid-template-columns:1fr;
-
     }
 
     .page-buttons{
 
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
 }
+
 
 @media(max-width:550px){
 
@@ -743,69 +786,75 @@ footer p{
         min-height:68px;
 
         padding:0 4%;
-
     }
 
     .logo{
 
         font-size:18px;
 
+        letter-spacing:3px;
     }
 
-    .home-button{
+    .home-btn{
 
         font-size:12px;
 
         padding:7px 13px;
-
     }
 
     .hero{
 
-        min-height:580px;
-
+        min-height:600px;
     }
 
     .hero h1{
 
-        font-size:48px;
-
+        font-size:46px;
     }
 
     .hero h2{
 
-        font-size:28px;
-
+        font-size:26px;
     }
 
     .hero p{
 
         font-size:15px;
-
     }
 
     .section{
 
         padding:70px 0;
-
     }
 
     .section h2{
 
         font-size:32px;
-
     }
 
-    .quote p{
+    .card img{
 
-        font-size:21px;
+        height:300px;
+    }
 
+    .dressing-image img{
+
+        height:350px;
+    }
+
+    .tradition-box{
+
+        padding:20px;
+    }
+
+    .tradition-box img{
+
+        height:300px;
     }
 
     .page-buttons{
 
         grid-template-columns:1fr;
-
     }
 
 }
@@ -818,29 +867,33 @@ footer p{
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav class="navbar">
 
 <a href="index.html" class="logo">
-🏛 AYUTTHAYA
+AYUTTHAYA
 </a>
 
-<a href="index.html" class="home-button">
+<a href="index.html" class="home-btn">
 ← หน้าหลัก
 </a>
 
 </nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="eyebrow">
-PAGE 03 • LIFE & CULTURE
+<div class="label">
+PAGE 03 • LIFESTYLE
 </div>
 
 <h1>
@@ -851,11 +904,14 @@ LIFESTYLE
 ชุดไทยและวิถีชีวิต
 </h2>
 
+<div class="line"></div>
+
 <p>
-ย้อนชมวิถีชีวิตของผู้คนในกรุงศรีอยุธยา
-ผ่านเครื่องแต่งกาย บ้านเรือน
-การเดินทาง การค้าขาย อาหาร
-และภูมิปัญญาที่สืบทอดมาจนถึงปัจจุบัน
+เรียนรู้การแต่งกาย วิถีชีวิต
+การดำรงชีวิต และวัฒนธรรมของผู้คน
+ในสมัยกรุงศรีอยุธยา
+ผ่านเรื่องราวที่สะท้อนเอกลักษณ์
+ของสังคมในอดีต
 </p>
 
 </div>
@@ -863,413 +919,208 @@ LIFESTYLE
 </section>
 
 
-<!-- ================= MAIN ================= -->
+<!-- =========================
+     INTRO
+========================= -->
 
-<section class="section">
+<section class="section intro">
+
+<div class="container">
+
+<div class="intro-box">
+
+<div class="section-label">
+AYUTTHAYA LIFESTYLE
+</div>
+
+<h2>
+การแต่งกายสะท้อนวิถีชีวิต
+</h2>
+
+<p>
+การแต่งกายของผู้คนในสมัยอยุธยา
+มีความแตกต่างกันตามเพศ ฐานะ
+อาชีพ และโอกาส
+เครื่องแต่งกายยังสะท้อน
+สภาพสังคมและวัฒนธรรม
+ของผู้คนในแต่ละยุคสมัย
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MAIN CARDS
+========================= -->
+
+<section class="section cards-section">
 
 <div class="container">
 
 <div class="section-label">
-AYUTTHAYA PEOPLE
+TRADITIONAL DRESS
 </div>
 
 <h2>
-ผู้คนและวิถีชีวิตแห่งกรุงศรีอยุธยา
+การแต่งกายของชาวอยุธยา
 </h2>
 
-<p class="section-intro">
-
-กรุงศรีอยุธยาไม่ได้มีความสำคัญเพียง
-ในฐานะราชธานีและเมืองการค้าเท่านั้น
-แต่ยังเป็นพื้นที่ที่ผู้คนหลากหลายกลุ่ม
-เข้ามาอาศัย ทำงาน ติดต่อค้าขาย
-และแลกเปลี่ยนวัฒนธรรม
-
-วิถีชีวิตของชาวอยุธยาจึงมีความสัมพันธ์
-อย่างใกล้ชิดกับแม่น้ำ ชุมชน ศาสนา
-การเกษตร งานฝีมือ และการค้าขาย
-
+<p class="description">
+เสื้อผ้าและเครื่องแต่งกายเป็นส่วนหนึ่ง
+ของวัฒนธรรมที่ช่วยให้เราเข้าใจ
+ชีวิตประจำวันของผู้คนในอดีต
 </p>
 
 
-<!-- 01 -->
+<div class="card-grid">
 
-<div class="story">
 
-<div class="story-image">
+<!-- WOMAN -->
+
+<article class="card">
 
 <img
-src="images/page3-thai-dress.jpg"
-alt="การแต่งกายแบบไทย"
+src="./images/page3-woman.jpg"
+alt="การแต่งกายของผู้หญิงสมัยอยุธยา"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+01 • WOMEN
+</div>
+
+<h3>
+การแต่งกายของผู้หญิง
+</h3>
+
+<p>
+ผู้หญิงในสมัยอยุธยามีการนุ่งผ้า
+และใช้ผ้าห่มหรือผ้าสไบ
+รูปแบบการแต่งกายสามารถเปลี่ยนแปลง
+ตามฐานะ อายุ และโอกาส
+</p>
+
+</div>
+
+</article>
+
+
+<!-- MAN -->
+
+<article class="card">
+
+<img
+src="./images/page3-man.jpg"
+alt="การแต่งกายของผู้ชายสมัยอยุธยา"
+loading="lazy">
+
+<div class="card-content">
+
+<div class="card-number">
+02 • MEN
+</div>
+
+<h3>
+การแต่งกายของผู้ชาย
+</h3>
+
+<p>
+ผู้ชายมีการนุ่งผ้าในรูปแบบต่าง ๆ
+และเลือกใช้เครื่องแต่งกาย
+ให้เหมาะกับการทำงาน
+การเดินทาง และสถานะทางสังคม
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     THAI DRESS
+========================= -->
+
+<section class="section dressing">
+
+<div class="container">
+
+<div class="dressing-layout">
+
+
+<div class="dressing-image">
+
+<img
+src="./images/page3-thai-dress.jpg"
+alt="ชุดไทยและเครื่องแต่งกาย"
 loading="lazy">
 
 </div>
 
-<div class="story-text">
 
-<div class="story-number">
-01 • THAI DRESS
+<div class="dressing-text">
+
+<div class="section-label">
+THAI COSTUME
 </div>
 
 <h3>
-การแต่งกายของชาวอยุธยา
+ชุดไทยและเครื่องแต่งกาย
 </h3>
 
 <p>
-
-การแต่งกายในสมัยอยุธยา
-มีความแตกต่างตามเพศ อายุ
-ฐานะ และหน้าที่ของผู้คน
-
-</p>
-
-<p>
-
-เครื่องแต่งกายของหญิงไทย
-มีการใช้ผ้านุ่งและผ้าสไบ
-ส่วนผู้ชายมีการนุ่งผ้า
-ในรูปแบบที่เหมาะกับการใช้ชีวิต
-และกิจกรรมต่าง ๆ
-
-</p>
-
-<p>
-
-เครื่องแต่งกายจึงสะท้อน
-ทั้งวัฒนธรรม สภาพสังคม
-และความสามารถด้านงานทอผ้า
+เครื่องแต่งกายในสมัยอยุธยา
+มีการใช้ผ้าเป็นองค์ประกอบสำคัญ
+และมีรูปแบบหลากหลาย
+ตามสภาพแวดล้อมและวัฒนธรรม
 ของผู้คนในยุคนั้น
-
 </p>
 
-<span class="tag">
-การแต่งกาย • ภูมิปัญญา
-</span>
+<ul class="dressing-list">
+
+<li>
+ผ้านุ่งและโจงกระเบน
+</li>
+
+<li>
+ผ้าสไบและผ้าห่ม
+</li>
+
+<li>
+เครื่องประดับและของตกแต่ง
+</li>
+
+<li>
+ความแตกต่างตามฐานะและโอกาส
+</li>
+
+</ul>
 
 </div>
 
 </div>
-
-
-<!-- 02 -->
-
-<div class="story">
-
-<div class="story-image">
-
-<img
-src="images/page3-sabai.jpg"
-alt="ผ้าสไบ"
-loading="lazy">
-
-</div>
-
-<div class="story-text">
-
-<div class="story-number">
-02 • SABAI
-</div>
-
-<h3>
-ผ้าสไบและผ้านุ่ง
-</h3>
-
-<p>
-
-ผ้าสไบเป็นส่วนหนึ่งของ
-เครื่องแต่งกายหญิงไทย
-ที่มีภาพปรากฏในศิลปกรรม
-และหลักฐานทางวัฒนธรรม
-
-</p>
-
-<p>
-
-การใช้ผ้าไม่ได้มีเพียง
-เรื่องความสวยงาม แต่ยังสัมพันธ์
-กับโอกาสในการแต่งกาย
-และสถานะของผู้สวมใส่
-
-</p>
-
-<p>
-
-ปัจจุบันรูปแบบผ้าไทย
-ได้รับการนำมาประยุกต์
-ให้เข้ากับแฟชั่นร่วมสมัย
-โดยยังคงเอกลักษณ์ของผ้าไทยไว้
-
-</p>
-
-<span class="tag">
-ผ้าไทย • แฟชั่นร่วมสมัย
-</span>
-
-</div>
-
-</div>
-
-
-<!-- 03 -->
-
-<div class="story">
-
-<div class="story-image">
-
-<img
-src="images/page3-river-life.jpg"
-alt="วิถีชีวิตริมน้ำอยุธยา"
-loading="lazy">
-
-</div>
-
-<div class="story-text">
-
-<div class="story-number">
-03 • RIVER LIFE
-</div>
-
-<h3>
-วิถีชีวิตริมแม่น้ำ
-</h3>
-
-<p>
-
-อยุธยาตั้งอยู่บริเวณที่มีแม่น้ำ
-หลายสายล้อมรอบ จึงเกิดความสัมพันธ์
-ระหว่างผู้คนกับสายน้ำอย่างใกล้ชิด
-
-</p>
-
-<p>
-
-เรือเป็นพาหนะสำคัญ
-สำหรับเดินทาง ขนส่งสินค้า
-และติดต่อระหว่างชุมชน
-
-</p>
-
-<p>
-
-ปัจจุบันภาพวิถีชีวิตริมน้ำ
-ยังสามารถพบเห็นได้จาก
-ตลาดน้ำ ชุมชน และกิจกรรม
-การท่องเที่ยวในอยุธยา
-
-</p>
-
-<span class="tag">
-แม่น้ำ • การเดินทาง
-</span>
-
-</div>
-
-</div>
-
-
-<!-- 04 -->
-
-<div class="story">
-
-<div class="story-image">
-
-<img
-src="images/page3-market.jpg"
-alt="ตลาดอยุธยา"
-loading="lazy">
-
-</div>
-
-<div class="story-text">
-
-<div class="story-number">
-04 • MARKET
-</div>
-
-<h3>
-ตลาดและการค้าขาย
-</h3>
-
-<p>
-
-ตลาดเป็นศูนย์กลางของชุมชน
-สำหรับซื้อขายอาหาร เครื่องใช้
-เสื้อผ้า และสินค้าจากพื้นที่ต่าง ๆ
-
-</p>
-
-<p>
-
-ด้วยความที่อยุธยาเป็นเมืองท่า
-และศูนย์กลางการค้าระหว่างประเทศ
-ผู้คนจากหลายเชื้อชาติ
-จึงเข้ามาติดต่อค้าขายกัน
-
-</p>
-
-<p>
-
-ความหลากหลายดังกล่าว
-ทำให้สังคมอยุธยามีการแลกเปลี่ยน
-ภาษา อาหาร และวัฒนธรรม
-อย่างต่อเนื่อง
-
-</p>
-
-<span class="tag">
-ตลาด • การค้า • ชุมชน
-</span>
-
-</div>
-
-</div>
-
-
-<!-- 05 -->
-
-<div class="story">
-
-<div class="story-image">
-
-<img
-src="images/page3-house.jpg"
-alt="เรือนไทยในอยุธยา"
-loading="lazy">
-
-</div>
-
-<div class="story-text">
-
-<div class="story-number">
-05 • THAI HOUSE
-</div>
-
-<h3>
-บ้านเรือนและสถาปัตยกรรม
-</h3>
-
-<p>
-
-บ้านเรือนแบบไทยมีการออกแบบ
-ให้เหมาะกับสภาพอากาศ
-และสภาพแวดล้อมของประเทศไทย
-
-</p>
-
-<p>
-
-เรือนไทยยกพื้นเป็นตัวอย่าง
-ของการออกแบบที่ช่วยให้บ้าน
-เหมาะกับพื้นที่ที่มีน้ำหลาก
-และช่วยให้อากาศถ่ายเทได้ดี
-
-</p>
-
-<p>
-
-บ้านเรือนยังเป็นพื้นที่
-ที่สะท้อนรูปแบบครอบครัว
-ความสัมพันธ์ของสมาชิก
-และวิถีชีวิตของชุมชน
-
-</p>
-
-<span class="tag">
-เรือนไทย • สถาปัตยกรรม
-</span>
-
-</div>
-
-</div>
-
-
-<!-- 06 -->
-
-<div class="story">
-
-<div class="story-image">
-
-<img
-src="images/page3-food.jpg"
-alt="อาหารและตลาดอาหารอยุธยา"
-loading="lazy">
-
-</div>
-
-<div class="story-text">
-
-<div class="story-number">
-06 • FOOD
-</div>
-
-<h3>
-อาหารและของกิน
-</h3>
-
-<p>
-
-อาหารเป็นส่วนสำคัญของ
-วิถีชีวิตชาวอยุธยา โดยมี
-วัตถุดิบจากแม่น้ำ พื้นที่เกษตร
-และชุมชนโดยรอบ
-
-</p>
-
-<p>
-
-ปลา กุ้ง ผัก สมุนไพร
-และข้าวเป็นวัตถุดิบที่สามารถ
-นำมาประกอบอาหารได้หลากหลาย
-
-</p>
-
-<p>
-
-นอกจากนี้ อยุธยายังมีการติดต่อ
-กับชาวต่างชาติ ทำให้เกิด
-การแลกเปลี่ยนวัฒนธรรมอาหาร
-และเทคนิคการปรุงอาหาร
-
-</p>
-
-<span class="tag">
-อาหาร • ตลาด • ภูมิปัญญา
-</span>
-
-</div>
-
-</div>
-
 
 </div>
 
 </section>
 
 
-<!-- ================= QUOTE ================= -->
+<!-- =========================
+     LIFESTYLE
+========================= -->
 
-<section class="quote">
-
-<div class="quote-inner">
-
-<div class="quote-mark">
-“
-</div>
-
-<p>
-อยุธยาไม่ได้อยู่เพียงในซากโบราณสถาน
-แต่ยังอยู่ในอาหาร ภาษา ผ้าไทย
-สายน้ำ และวิถีชีวิตของผู้คน
-</p>
-
-</div>
-
-</section>
-
-
-<!-- ================= INFO ================= -->
-
-<section class="info-section">
+<section class="section lifestyle">
 
 <div class="container">
 
@@ -1278,69 +1129,67 @@ DAILY LIFE
 </div>
 
 <h2>
-องค์ประกอบของชีวิตชาวอยุธยา
+วิถีชีวิตของผู้คน
 </h2>
 
-<div class="info-grid">
+<p class="description">
+นอกจากการแต่งกายแล้ว
+ผู้คนในอยุธยายังมีวิถีชีวิต
+ที่สัมพันธ์กับแม่น้ำ การค้าขาย
+ศาสนา และชุมชน
+</p>
 
 
-<div class="info-card">
+<div class="lifestyle-grid">
 
-<div class="info-icon">
-🌾
-</div>
+
+<div class="lifestyle-box">
+
+<img
+src="./images/page3-lifestyle.jpg"
+alt="วิถีชีวิตชาวอยุธยา"
+loading="lazy">
+
+<div class="lifestyle-content">
 
 <h3>
-การเกษตร
+ชีวิตริมสายน้ำ
 </h3>
 
 <p>
-พื้นที่ราบลุ่มและแหล่งน้ำ
-เอื้อต่อการเพาะปลูก
-โดยเฉพาะการทำนา
-ซึ่งเป็นพื้นฐานสำคัญ
-ของเศรษฐกิจชุมชน
+แม่น้ำเป็นส่วนสำคัญของชีวิต
+ทั้งการเดินทาง การค้าขาย
+การขนส่งสินค้า และการติดต่อ
+ระหว่างชุมชน
 </p>
 
 </div>
 
-
-<div class="info-card">
-
-<div class="info-icon">
-🚣
 </div>
 
+
+<div class="lifestyle-box">
+
+<img
+src="./images/page3-traditional.jpg"
+alt="วัฒนธรรมและวิถีชีวิตอยุธยา"
+loading="lazy">
+
+<div class="lifestyle-content">
+
 <h3>
-สายน้ำ
+ชุมชนและวัฒนธรรม
 </h3>
 
 <p>
-แม่น้ำและคลองทำหน้าที่
-เป็นเส้นทางคมนาคม
-แหล่งอาหาร และพื้นที่
-เชื่อมโยงชุมชนเข้าด้วยกัน
+ผู้คนในอยุธยามีความหลากหลาย
+ทางวัฒนธรรมจากการติดต่อ
+กับผู้คนจากหลายพื้นที่
+ทำให้เกิดการแลกเปลี่ยน
+ทางภาษา อาหาร และประเพณี
 </p>
 
 </div>
-
-
-<div class="info-card">
-
-<div class="info-icon">
-🧵
-</div>
-
-<h3>
-งานฝีมือ
-</h3>
-
-<p>
-การทอผ้า จักสาน
-เครื่องปั้นดินเผา และงานช่าง
-เป็นภูมิปัญญาที่สะท้อน
-ความสามารถของชุมชน
-</p>
 
 </div>
 
@@ -1352,86 +1201,49 @@ DAILY LIFE
 </section>
 
 
-<!-- ================= COMMUNITY ================= -->
+<!-- =========================
+     TRADITION
+========================= -->
 
-<section class="section">
+<section class="section tradition">
 
 <div class="container">
 
 <div class="section-label">
-COMMUNITY
+CULTURAL HERITAGE
 </div>
 
 <h2>
-สังคมและชุมชน
+มรดกทางวัฒนธรรม
 </h2>
 
-<div class="life-grid">
+<p class="description">
+วิถีชีวิตและการแต่งกายในอดีต
+ยังคงมีอิทธิพลต่อวัฒนธรรมไทย
+และสามารถพบเห็นได้จาก
+ศิลปกรรม ประเพณี และการแต่งกาย
+ในปัจจุบัน
+</p>
 
 
-<div class="life-card">
+<div class="tradition-box">
+
+<img
+src="./images/page3-traditional.jpg"
+alt="มรดกทางวัฒนธรรมอยุธยา"
+loading="lazy">
 
 <h3>
-👨‍👩‍👧 ครอบครัวและชุมชน
+วัฒนธรรมที่สืบต่อจากอดีต
 </h3>
 
 <p>
-ครอบครัวเป็นพื้นฐานสำคัญ
-ของการดำเนินชีวิต
-และการถ่ายทอดความรู้
-จากคนรุ่นหนึ่งสู่คนอีกรุ่นหนึ่ง
+เรื่องราวของผู้คนในสมัยอยุธยา
+ช่วยให้เราเข้าใจว่าประเพณี
+การแต่งกาย และวิถีชีวิตไทย
+มีพัฒนาการและการเปลี่ยนแปลง
+มาอย่างต่อเนื่อง
 </p>
-
-</div>
-
-
-<div class="life-card">
-
-<h3>
-🛕 ศาสนา
-</h3>
-
-<p>
-พระพุทธศาสนามีบทบาทสำคัญ
-ต่อสังคมอยุธยา วัดเป็นทั้ง
-ศาสนสถานและพื้นที่
-ทำกิจกรรมของชุมชน
-</p>
-
-</div>
-
-
-<div class="life-card">
-
-<h3>
-🎭 ศิลปะและการละเล่น
-</h3>
-
-<p>
-ดนตรี การแสดง การละเล่น
-และงานศิลปกรรมเป็นส่วนหนึ่ง
-ของชีวิตทางสังคม
-และงานเทศกาลต่าง ๆ
-</p>
-
-</div>
-
-
-<div class="life-card">
-
-<h3>
-🏺 งานช่าง
-</h3>
-
-<p>
-ช่างฝีมือมีบทบาทในการสร้าง
-เครื่องใช้ เครื่องประดับ
-เครื่องปั้นดินเผา และงานศิลปกรรม
-ที่มีเอกลักษณ์ของอยุธยา
-</p>
-
-</div>
-
 
 </div>
 
@@ -1440,15 +1252,44 @@ COMMUNITY
 </section>
 
 
-<!-- ================= PAGE NAVIGATION ================= -->
+<!-- =========================
+     CONCLUSION
+========================= -->
+
+<section class="conclusion">
+
+<div class="conclusion-inner">
+
+<h2>
+เสน่ห์ของวิถีชีวิตอยุธยา
+</h2>
+
+<p>
+เครื่องแต่งกายและวิถีชีวิต
+เป็นส่วนสำคัญที่ช่วยให้เราเห็นภาพ
+ของผู้คนในอดีต และเข้าใจ
+ความสัมพันธ์ระหว่างสังคม
+วัฒนธรรม และสภาพแวดล้อม
+ของกรุงศรีอยุธยา
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PAGE NAVIGATION
+========================= -->
 
 <section class="page-navigation">
 
 <h2>
-เดินทางต่อในเรื่องราวอยุธยา
+สำรวจเรื่องราวอยุธยาต่อ
 </h2>
 
 <div class="page-buttons">
+
 
 <a href="page1.html">
 
@@ -1458,6 +1299,7 @@ COMMUNITY
 
 </a>
 
+
 <a href="page2.html">
 
 <strong>02</strong>
@@ -1465,6 +1307,7 @@ COMMUNITY
 สถานที่สำคัญ
 
 </a>
+
 
 <a href="page3.html" class="active">
 
@@ -1474,6 +1317,7 @@ COMMUNITY
 
 </a>
 
+
 <a href="page4.html">
 
 <strong>04</strong>
@@ -1482,20 +1326,24 @@ COMMUNITY
 
 </a>
 
+
 <a href="page5.html">
 
 <strong>05</strong>
 
-จุดเด่นและของฝาก
+เมืองแห่งสายน้ำ
 
 </a>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1504,7 +1352,7 @@ AYUTTHAYA
 </h3>
 
 <p>
-กรุงศรีอยุธยา • ประวัติศาสตร์ • วัฒนธรรม • วิถีชีวิต
+พระนครศรีอยุธยา • ชุดไทย • วิถีชีวิต • วัฒนธรรม
 </p>
 
 </footer>
@@ -1513,4 +1361,3 @@ AYUTTHAYA
 </body>
 
 </html>
-```
