@@ -4,23 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ชุดไทยและวิถีชีวิต | AYUTTHAYA</title>
+<title>Page 03 | ชุดไทยและวิถีชีวิต | AYUTTHAYA</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    border-radius:0 !important;
 }
 
 html{
@@ -28,89 +25,77 @@ html{
 }
 
 body{
+    background:#0b0402;
+    color:#d8c7a5;
     font-family:'Kanit',sans-serif;
-    background:#0b0503;
-    color:#ead8b5;
     line-height:1.8;
 }
 
-
-/* =====================================================
+/* =========================
    NAVBAR
-===================================================== */
+========================= */
 
 .navbar{
     position:fixed;
     top:0;
     left:0;
-
     width:100%;
-    height:72px;
+    min-height:76px;
+    z-index:9999;
 
-    z-index:999;
+    padding:0 6%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 6%;
-
     background:rgba(10,4,2,.96);
+    backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(201,158,75,.35);
-
-    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(205,158,68,.35);
 }
 
 .logo{
-    color:#d7ad58;
-
+    color:#e2b85d;
     text-decoration:none;
 
     font-family:'Playfair Display',serif;
-
-    font-size:27px;
-    font-weight:700;
-
-    letter-spacing:4px;
+    font-size:24px;
+    letter-spacing:5px;
 
     transition:.3s;
 }
 
 .logo:hover{
-    color:#f0d18a;
+    color:#fff0c5;
 }
 
-.nav-home{
-    color:#ead7ae;
-
+.home-btn{
+    color:#d8c29a;
     text-decoration:none;
 
-    padding:7px 20px;
+    border:1px solid #6b4b23;
 
-    border:1px solid #9d7839;
-
-    font-size:15px;
+    padding:8px 20px;
 
     transition:.3s;
 }
 
-.nav-home:hover{
-    background:#c49a4b;
-    color:#160805;
+.home-btn:hover{
+    color:#f0dca7;
+    border-color:#d4a34b;
+    background:#211006;
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero{
+    min-height:650px;
+
     position:relative;
-
-    height:720px;
-
-    margin-top:72px;
 
     display:flex;
     align-items:center;
@@ -118,698 +103,397 @@ body{
 
     text-align:center;
 
-    overflow:hidden;
-
-    background-image:
-        linear-gradient(
-            rgba(7,3,2,.38),
-            rgba(7,3,2,.72)
-        ),
-        url("images/page3-cover.jpg");
-
-    background-position:center;
-    background-size:cover;
-}
-
-.hero::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    width:100%;
-    height:180px;
+    padding:120px 25px 80px;
 
     background:
         linear-gradient(
-            to bottom,
-            transparent,
-            #0b0503
+            rgba(8,3,1,.25),
+            rgba(8,3,1,.88)
+        ),
+        url("images/page3-cover.jpg") center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 10%,
+            rgba(0,0,0,.72) 90%
         );
 }
 
 .hero-content{
     position:relative;
-
     z-index:2;
 
-    width:90%;
-    max-width:900px;
+    max-width:950px;
 
-    margin-top:-20px;
+    padding:80px 30px;
 }
 
 .hero-label{
-    font-family:'Playfair Display',serif;
+    color:#d3a44f;
 
-    color:#d2a64e;
+    font-size:13px;
+    letter-spacing:8px;
 
-    font-size:17px;
-
-    letter-spacing:6px;
-
-    margin-bottom:18px;
+    margin-bottom:25px;
 }
 
 .hero h1{
     font-family:'Playfair Display',serif;
 
-    color:#f0d395;
+    font-size:clamp(52px,9vw,100px);
 
-    font-size:clamp(52px,7vw,88px);
+    line-height:.9;
 
-    line-height:1.05;
+    letter-spacing:5px;
 
-    letter-spacing:3px;
+    color:#f0dca7;
+
+    text-shadow:0 15px 50px rgba(0,0,0,.9);
 }
 
 .hero h2{
-    color:#e0b968;
+    margin-top:30px;
 
-    font-size:30px;
+    color:#d6aa55;
 
-    font-weight:400;
+    font-size:clamp(28px,5vw,48px);
 
-    margin-top:18px;
+    font-weight:300;
 }
 
-.hero-description{
-    max-width:720px;
+.line{
+    width:260px;
+    height:1px;
 
-    margin:25px auto 0;
+    margin:30px auto;
 
-    color:#eee0c3;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4a34b,
+            transparent
+        );
+}
+
+.hero p{
+    max-width:800px;
+
+    margin:auto;
+
+    color:#d5c29d;
+
+    line-height:2;
 
     font-size:17px;
-
-    line-height:1.9;
 }
 
 
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
+/* =========================
+   SECTIONS
+========================= */
 
-.main{
-    width:100%;
-    max-width:1250px;
+.section{
+    padding:105px 0;
 
-    margin:0 auto;
-
-    padding:100px 6% 90px;
+    border-bottom:1px solid #382512;
 }
 
+.container{
+    width:90%;
+    max-width:1200px;
 
-/* =====================================================
-   SECTION INTRO
-===================================================== */
-
-.section-heading{
-    text-align:center;
-
-    margin-bottom:30px;
+    margin:auto;
 }
 
-.section-heading .english{
-    font-family:'Playfair Display',serif;
+.section-label{
+    color:#bd8e3d;
 
-    color:#b88b42;
-
-    font-size:15px;
+    font-size:13px;
 
     letter-spacing:5px;
 
     margin-bottom:10px;
 }
 
-.section-heading h2{
+.section h2{
     font-family:'Playfair Display',serif;
 
-    color:#e3bf74;
+    color:#e1bd72;
 
-    font-size:43px;
+    font-size:42px;
 
-    line-height:1.3;
+    margin-bottom:22px;
 }
 
-.section-heading p{
-    color:#968266;
+.description{
+    max-width:900px;
 
-    font-size:16px;
-
-    margin-top:8px;
-}
-
-.introduction{
-    max-width:880px;
-
-    margin:0 auto 90px;
-
-    text-align:center;
-
-    color:#cbb997;
-
-    font-size:17px;
+    color:#b9a487;
 
     line-height:2;
+
+    margin-bottom:55px;
 }
 
 
-/* =====================================================
-   SUB TITLE
-===================================================== */
+/* =========================
+   CARDS
+========================= */
 
-.sub-title{
-    display:flex;
-
-    align-items:center;
-
-    gap:17px;
-
-    margin-bottom:30px;
-}
-
-.sub-title::before{
-    content:"";
-
-    width:4px;
-    height:38px;
-
-    background:#c49a4b;
-
-    flex-shrink:0;
-}
-
-.sub-title h3{
-    color:#dfbc70;
-
-    font-size:29px;
-
-    font-weight:500;
-}
-
-
-/* =====================================================
-   DRESS GRID
-===================================================== */
-
-.dress-grid{
+.card-grid{
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:30px;
-
-    margin-bottom:90px;
+    gap:32px;
 }
-
-
-/* =====================================================
-   LIFE GRID
-===================================================== */
-
-.life-grid{
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-    margin-bottom:75px;
-}
-
-
-/* =====================================================
-   WATER SECTION
-===================================================== */
-
-.water-title{
-    margin-top:10px;
-}
-
-.water-grid{
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-    margin-bottom:90px;
-}
-
-
-/* =====================================================
-   CARD
-===================================================== */
 
 .card{
-    background:
-        linear-gradient(
-            145deg,
-            #1b0a06,
-            #100503
-        );
-
-    border:1px solid rgba(197,155,73,.32);
-
     overflow:hidden;
 
-    transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
+    background:#170804;
+
+    border:1px solid #4e351c;
+
+    transition:.4s;
 }
 
 .card:hover{
     transform:translateY(-7px);
 
-    border-color:#c59b4c;
+    border-color:#b0833d;
 
     box-shadow:
-        0 18px 38px rgba(0,0,0,.5);
+        0 20px 45px rgba(0,0,0,.45);
 }
 
-.card-image{
+.card img{
     width:100%;
 
-    height:280px;
-
-    object-fit:cover;
+    height:330px;
 
     display:block;
+
+    object-fit:cover;
 }
 
 .card-content{
-    padding:25px 27px 30px;
+    padding:30px;
 }
 
-.card-content h4{
-    color:#e0bd73;
-
-    font-size:24px;
-
-    font-weight:500;
-
-    margin-bottom:10px;
-}
-
-.card-content p{
-    color:#b9a789;
-
-    font-size:15px;
-
-    line-height:1.9;
-}
-
-
-/* =====================================================
-   WATER CARDS
-===================================================== */
-
-.water-grid .card-image{
-    height:330px;
-}
-
-.water-grid .card-content{
-    padding:28px 30px 32px;
-}
-
-.water-grid .card-content h4{
-    font-size:26px;
-}
-
-
-/* =====================================================
-   FOOD
-===================================================== */
-
-.food-section{
-    margin-top:5px;
-}
-
-.food-box{
-    display:grid;
-
-    grid-template-columns:1.05fr .95fr;
-
-    gap:45px;
-
-    align-items:center;
-
-    padding:25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #1b0a06,
-            #100503
-        );
-
-    border:1px solid rgba(197,155,73,.32);
-}
-
-.food-image{
-    width:100%;
-
-    height:370px;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.food-content{
-    padding:20px 25px;
-}
-
-.food-label{
-    color:#b88b42;
+.card-number{
+    color:#b98436;
 
     font-family:'Playfair Display',serif;
-
-    font-size:15px;
 
     letter-spacing:3px;
 
-    margin-bottom:8px;
+    font-size:14px;
 }
 
-.food-content h3{
-    color:#e0bd73;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:36px;
-
-    line-height:1.3;
-
-    margin-bottom:18px;
-}
-
-.food-content p{
-    color:#bbaa8b;
-
-    font-size:16px;
-
-    line-height:2;
-}
-
-
-/* =====================================================
-   DECORATIVE LINE
-===================================================== */
-
-.decorative-line{
-    width:90px;
-    height:1px;
-
-    margin:0 auto 90px;
-
-    background:#a77c37;
-}
-
-
-/* =====================================================
-   QUOTE
-===================================================== */
-
-.quote{
-    position:relative;
-
-    padding:110px 8%;
-
-    text-align:center;
-
-    background:
-        linear-gradient(
-            rgba(10,4,2,.82),
-            rgba(10,4,2,.95)
-        ),
-        url("images/page3-river-life.jpg");
-
-    background-position:center;
-    background-size:cover;
-
-    border-top:1px solid rgba(196,154,74,.2);
-    border-bottom:1px solid rgba(196,154,74,.2);
-}
-
-.quote-content{
-    max-width:850px;
-
-    margin:auto;
-}
-
-.quote-mark{
-    font-family:'Playfair Display',serif;
-
-    color:#9e7637;
-
-    font-size:50px;
-
-    line-height:1;
-
-    margin-bottom:15px;
-}
-
-.quote p{
-    color:#e0bd72;
+.card h3{
+    color:#dfbc73;
 
     font-family:'Playfair Display',serif;
 
     font-size:30px;
 
-    line-height:1.7;
+    margin:9px 0 13px;
 }
 
-.quote span{
-    display:block;
+.card p{
+    color:#aa997d;
 
-    color:#988364;
-
-    font-size:14px;
-
-    margin-top:20px;
+    line-height:1.9;
 }
 
 
-/* =====================================================
+/* =========================
+   RIVER SECTION
+========================= */
+
+.river-section{
+    background:
+        linear-gradient(
+            rgba(11,4,2,.96),
+            rgba(11,4,2,.96)
+        );
+}
+
+
+/* =========================
    PAGE NAVIGATION
-===================================================== */
+========================= */
 
 .page-navigation{
-    padding:70px 5%;
+    padding:90px 6%;
 
     text-align:center;
 
     background:#080302;
 }
 
-.page-navigation h3{
-    color:#b99147;
-
+.page-navigation h2{
     font-family:'Playfair Display',serif;
 
-    font-size:16px;
+    color:#dfbd78;
 
-    letter-spacing:4px;
+    font-size:36px;
 
-    margin-bottom:25px;
+    margin-bottom:40px;
 }
 
 .page-buttons{
-    display:flex;
+    max-width:1100px;
 
-    justify-content:center;
+    margin:auto;
 
-    align-items:center;
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
 
     gap:12px;
-
-    flex-wrap:wrap;
 }
 
 .page-buttons a{
-    width:48px;
-    height:48px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    color:#ddc68f;
+    color:#cdbb99;
 
     text-decoration:none;
 
-    background:#150705;
+    background:#190a05;
 
-    border:1px solid #8d6b35;
+    border:1px solid #51371c;
+
+    padding:18px 10px;
 
     transition:.3s;
 }
 
-.page-buttons a:hover{
-    background:#c49a4b;
+.page-buttons strong{
+    display:block;
 
-    color:#130603;
+    color:#d5a64f;
 
-    border-color:#c49a4b;
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    margin-bottom:4px;
 }
 
+.page-buttons a:hover,
 .page-buttons .active{
-    background:#c49a4b;
+    transform:translateY(-5px);
 
-    color:#130603;
+    border-color:#b4863e;
 
-    border-color:#c49a4b;
+    background:#2a1408;
+
+    color:#f0dca7;
 }
 
 
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer{
-    padding:32px 20px;
+    padding:50px 20px;
 
     text-align:center;
 
     background:#050201;
+}
 
-    color:#76664d;
+footer h3{
+    color:#d4a653;
 
-    font-size:13px;
+    font-family:'Playfair Display',serif;
 
-    border-top:1px solid rgba(196,154,74,.12);
+    font-size:26px;
+
+    letter-spacing:6px;
+}
+
+footer p{
+    color:#655741;
+
+    margin-top:10px;
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
-    .dress-grid,
-    .life-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .water-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .food-box{
+    .card-grid{
         grid-template-columns:1fr;
+    }
+
+    .page-buttons{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:650px){
+@media(max-width:550px){
 
     .navbar{
-        height:65px;
-
-        padding:0 5%;
+        min-height:68px;
+        padding:0 4%;
     }
 
     .logo{
-        font-size:21px;
-
+        font-size:18px;
         letter-spacing:3px;
     }
 
-    .nav-home{
-        padding:5px 13px;
-
-        font-size:14px;
+    .home-btn{
+        font-size:12px;
+        padding:7px 13px;
     }
 
     .hero{
-        height:620px;
-
-        margin-top:65px;
+        min-height:600px;
     }
 
     .hero h1{
-        font-size:47px;
+        font-size:48px;
     }
 
     .hero h2{
-        font-size:23px;
+        font-size:26px;
     }
 
-    .hero-description{
+    .hero p{
         font-size:15px;
-
-        padding:0 10px;
     }
 
-    .main{
-        padding:75px 5% 70px;
+    .section{
+        padding:75px 0;
     }
 
-    .section-heading h2{
-        font-size:34px;
+    .section h2{
+        font-size:32px;
     }
 
-    .introduction{
-        font-size:15px;
-
-        margin-bottom:65px;
-    }
-
-    .sub-title h3{
-        font-size:24px;
-    }
-
-    .dress-grid,
-    .life-grid,
-    .water-grid{
+    .page-buttons{
         grid-template-columns:1fr;
-
-        gap:22px;
-
-        margin-bottom:65px;
     }
 
-    .card-image,
-    .water-grid .card-image{
-        height:250px;
-    }
-
-    .food-box{
-        padding:18px;
-
-        gap:15px;
-    }
-
-    .food-image{
-        height:260px;
-    }
-
-    .food-content{
-        padding:15px 8px 20px;
-    }
-
-    .food-content h3{
-        font-size:29px;
-    }
-
-    .quote{
-        padding:80px 7%;
-    }
-
-    .quote p{
-        font-size:23px;
+    .card img{
+        height:300px;
     }
 
 }
@@ -820,163 +504,134 @@ footer{
 
 <body>
 
-
-<!-- =====================================================
+<!-- =========================
      NAVBAR
-===================================================== -->
+========================= -->
 
-<nav class="navbar">
+<header class="navbar">
 
-    <a href="index.html" class="logo">
+    <a href="index.html#top" class="logo">
         AYUTTHAYA
     </a>
 
-    <a href="index.html" class="nav-home">
-        หน้าปก
+    <a href="index.html#top" class="home-btn">
+        ← หน้าปก
     </a>
 
-</nav>
+</header>
 
 
-<!-- =====================================================
+<!-- =========================
      HERO
-===================================================== -->
+========================= -->
 
-<header class="hero">
+<section class="hero">
 
     <div class="hero-content">
 
         <div class="hero-label">
-            PAGE 03
+            PAGE 03 • LIFESTYLE
         </div>
 
         <h1>
-            THAI DRESS
+            LIFESTYLE
         </h1>
 
         <h2>
             ชุดไทยและวิถีชีวิต
         </h2>
 
-        <p class="hero-description">
-            การแต่งกาย บ้านเรือน ตลาด ชุมชน สายน้ำ และอาหาร
-            ล้วนเป็นส่วนหนึ่งที่สะท้อนวิถีชีวิตและวัฒนธรรม
-            ของผู้คนในอยุธยา
+        <div class="line"></div>
+
+        <p>
+            เรื่องราวการแต่งกาย บ้านเรือน ตลาด ชุมชน
+            และวิถีชีวิตของผู้คนในกรุงศรีอยุธยา
+            ที่สะท้อนความสัมพันธ์ระหว่างผู้คน
+            วัฒนธรรม และสายน้ำ
         </p>
 
     </div>
 
-</header>
+</section>
 
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
+<!-- =========================
+     SECTION 01
+========================= -->
 
-<main class="main">
+<section class="section">
 
+    <div class="container">
 
-    <!-- ================= INTRO ================= -->
-
-    <section>
-
-        <div class="section-heading">
-
-            <div class="english">
-                CULTURE &amp; LIFE
-            </div>
-
-            <h2>
-                ชุดไทยและวิถีชีวิต
-            </h2>
-
-            <p>
-                เรื่องราวของผู้คนในเมืองแห่งอดีต
-            </p>
-
+        <div class="section-label">
+            01 • THAI DRESS
         </div>
 
+        <h2>
+            การแต่งกายของชาวอยุธยา
+        </h2>
 
-        <div class="introduction">
-
-            อยุธยาเป็นเมืองที่มีผู้คนหลากหลายกลุ่มอาศัยอยู่ร่วมกัน
-            จึงเกิดเป็นวิถีชีวิตที่มีเอกลักษณ์ ทั้งการแต่งกาย
-            การสร้างบ้านเรือน การค้าขาย การใช้สายน้ำ
-            และอาหาร ซึ่งสะท้อนความเป็นอยู่ของผู้คน
-            และยังคงมีอิทธิพลต่อวัฒนธรรมในปัจจุบัน
-
-        </div>
-
-    </section>
+        <p class="description">
+            การแต่งกายเป็นส่วนหนึ่งที่สะท้อนวิถีชีวิต
+            และวัฒนธรรมของผู้คนในสมัยอยุธยา
+            รูปแบบเสื้อผ้าและเครื่องแต่งกายมีความแตกต่างกัน
+            ตามเพศ ฐานะ และโอกาสในการใช้ชีวิต
+        </p>
 
 
-    <!-- =================================================
-         DRESS
-    ================================================= -->
-
-    <section>
-
-        <div class="sub-title">
-
-            <h3>
-                การแต่งกายของชาวอยุธยา
-            </h3>
-
-        </div>
-
-
-        <div class="dress-grid">
-
-
-            <!-- ชุดไทย -->
+        <div class="card-grid">
 
             <article class="card">
 
                 <img
                     src="images/page3-thai-dress.jpg"
-                    class="card-image"
-                    alt="ชุดไทย"
+                    alt="การแต่งกายแบบไทย"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
                         ชุดไทย
-                    </h4>
+                    </h3>
 
                     <p>
-                        การแต่งกายของผู้คนในสมัยอยุธยา
-                        มีรูปแบบแตกต่างกันตามเพศ ฐานะ
-                        และโอกาส สะท้อนถึงวัฒนธรรม
-                        และความเป็นอยู่ของคนในสังคม
+                        การแต่งกายแบบไทยสะท้อนเอกลักษณ์
+                        และรสนิยมของผู้คนในสังคมไทย
+                        โดยมีรูปแบบที่เหมาะสมกับวิถีชีวิต
+                        และโอกาสต่าง ๆ
                     </p>
 
                 </div>
 
             </article>
 
-
-            <!-- ผ้าสไบ -->
 
             <article class="card">
 
                 <img
                     src="images/page3-sabai.jpg"
-                    class="card-image"
                     alt="ผ้าสไบและผ้านุ่ง"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
                         ผ้าสไบและผ้านุ่ง
-                    </h4>
+                    </h3>
 
                     <p>
-                        ผ้าสไบและผ้านุ่งเป็นส่วนสำคัญ
-                        ของการแต่งกายแบบไทย สามารถปรับรูปแบบ
-                        ให้เหมาะกับการใช้ชีวิตและโอกาสต่าง ๆ
-                        และเป็นสิ่งที่สะท้อนวัฒนธรรมการแต่งกาย
+                        ผ้าสไบและผ้านุ่งเป็นเครื่องแต่งกาย
+                        ที่พบในภาพจำเกี่ยวกับการแต่งกาย
+                        ของผู้หญิงไทยในอดีต
+                        และแสดงถึงความเรียบง่ายของวิถีชีวิต
                     </p>
 
                 </div>
@@ -985,76 +640,88 @@ footer{
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =================================================
-         LIFE
-    ================================================= -->
+<!-- =========================
+     SECTION 02
+========================= -->
 
-    <section>
+<section class="section">
 
-        <div class="sub-title">
+    <div class="container">
 
-            <h3>
-                วิถีชีวิตของชาวอยุธยา
-            </h3>
-
+        <div class="section-label">
+            02 • DAILY LIFE
         </div>
 
+        <h2>
+            วิถีชีวิตของชาวอยุธยา
+        </h2>
 
-        <div class="life-grid">
+        <p class="description">
+            ผู้คนในกรุงศรีอยุธยาใช้ชีวิตอยู่ท่ามกลางเมือง
+            ชุมชน ตลาด และแม่น้ำหลายสาย
+            ทำให้การค้าขาย การเดินทาง และการอยู่อาศัย
+            มีความเกี่ยวข้องกับสภาพแวดล้อมรอบตัวอย่างมาก
+        </p>
 
 
-            <!-- บ้านเรือน -->
+        <div class="card-grid">
 
             <article class="card">
 
                 <img
                     src="images/page3-house.jpg"
-                    class="card-image"
-                    alt="บ้านเรือนอยุธยา"
+                    alt="บ้านเรือนในอยุธยา"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
                         บ้านเรือน
-                    </h4>
+                    </h3>
 
                     <p>
-                        บ้านเรือนของผู้คนมีความสัมพันธ์
-                        กับสภาพพื้นที่และสายน้ำ หลายชุมชน
-                        ตั้งอยู่ใกล้แม่น้ำเพื่อความสะดวก
-                        ในการเดินทางและการดำรงชีวิต
+                        บ้านเรือนของผู้คนมีความสัมพันธ์กับ
+                        สภาพแวดล้อมและภูมิประเทศ
+                        โดยเฉพาะบริเวณที่อยู่ใกล้แม่น้ำ
+                        และพื้นที่ชุมชน
                     </p>
 
                 </div>
 
             </article>
 
-
-            <!-- ตลาดและชุมชน -->
 
             <article class="card">
 
                 <img
                     src="images/page3-market.jpg"
-                    class="card-image"
                     alt="ตลาดและชุมชน"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
                         ตลาดและชุมชน
-                    </h4>
+                    </h3>
 
                     <p>
                         ตลาดเป็นพื้นที่สำคัญในการซื้อขายสินค้า
-                        พบปะผู้คน และแลกเปลี่ยนสิ่งต่าง ๆ
-                        ทำให้เกิดการเชื่อมโยงระหว่างผู้คน
-                        และชุมชนในอยุธยา
+                        แลกเปลี่ยนสิ่งของ และพบปะผู้คน
+                        จึงเป็นส่วนหนึ่งของชีวิตประจำวัน
+                        ของชาวอยุธยา
                     </p>
 
                 </div>
@@ -1063,53 +730,61 @@ footer{
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =================================================
-         WATER
-    ================================================= -->
+<!-- =========================
+     SECTION 03
+========================= -->
 
-    <section class="water-section">
+<section class="section river-section">
 
-        <div class="sub-title water-title">
+    <div class="container">
 
-            <h3>
-                ชีวิตกับสายน้ำ
-            </h3>
-
+        <div class="section-label">
+            03 • LIFE BY THE RIVER
         </div>
 
+        <h2>
+            วิถีชีวิตริมน้ำ
+        </h2>
 
-        <!--
-            สองหัวข้อนี้ตั้งใจให้อยู่ข้างกัน
-            และใช้รูปคนละรูป
-        -->
+        <p class="description">
+            สายน้ำเป็นส่วนสำคัญของกรุงศรีอยุธยา
+            ทั้งในด้านการเดินทาง การค้าขาย
+            และการดำรงชีวิตของผู้คน
+            จึงเกิดวิถีชีวิตที่ผูกพันกับแม่น้ำอย่างใกล้ชิด
+        </p>
 
-        <div class="water-grid">
 
+        <div class="card-grid">
 
-            <!-- วิถีชีวิตริมน้ำ -->
+            <!-- CARD 1 -->
 
             <article class="card">
 
                 <img
                     src="images/page3-river-life.jpg"
-                    class="card-image"
                     alt="วิถีชีวิตริมน้ำ"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
                         วิถีชีวิตริมน้ำ
-                    </h4>
+                    </h3>
 
                     <p>
-                        ผู้คนในอยุธยามีวิถีชีวิตที่เกี่ยวข้อง
-                        กับแม่น้ำ ทั้งการเดินทาง การค้าขาย
-                        และการตั้งถิ่นฐาน ทำให้บริเวณริมน้ำ
-                        เป็นพื้นที่สำคัญของชุมชน
+                        ผู้คนใช้แม่น้ำเป็นเส้นทางเดินทาง
+                        และเป็นพื้นที่ในการทำมาหากิน
+                        บ้านเรือนและชุมชนจำนวนมาก
+                        จึงมีความสัมพันธ์กับสายน้ำ
                     </p>
 
                 </div>
@@ -1117,27 +792,30 @@ footer{
             </article>
 
 
-            <!-- ชีวิตที่ผูกพันกับสายน้ำ -->
+            <!-- CARD 2 -->
 
             <article class="card">
 
                 <img
                     src="images/page3-river-community.jpg"
-                    class="card-image"
                     alt="ชีวิตที่ผูกพันกับสายน้ำ"
                 >
 
                 <div class="card-content">
 
-                    <h4>
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
                         ชีวิตที่ผูกพันกับสายน้ำ
-                    </h4>
+                    </h3>
 
                     <p>
-                        สายน้ำไม่ได้เป็นเพียงเส้นทางการเดินทาง
-                        แต่ยังเกี่ยวข้องกับการทำมาหากิน
-                        การติดต่อระหว่างชุมชน และการใช้ชีวิต
-                        ของผู้คนในแต่ละวัน
+                        สายน้ำไม่ได้เป็นเพียงเส้นทางคมนาคม
+                        แต่ยังเป็นส่วนหนึ่งของชุมชน
+                        การค้าขาย และกิจวัตรประจำวัน
+                        ของผู้คนในอยุธยา
                     </p>
 
                 </div>
@@ -1146,118 +824,107 @@ footer{
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =================================================
-         FOOD
-    ================================================= -->
+<!-- =========================
+     SECTION 04
+========================= -->
 
-    <section class="food-section">
+<section class="section">
 
-        <div class="sub-title">
+    <div class="container">
 
-            <h3>
-                อาหารและวิถีการกิน
-            </h3>
-
+        <div class="section-label">
+            04 • FOOD & CULTURE
         </div>
 
+        <h2>
+            อาหารและวิถีการกิน
+        </h2>
 
-        <div class="food-box">
-
-            <img
-                src="images/page3-food.jpg"
-                class="food-image"
-                alt="อาหารและวิถีการกิน"
-            >
-
-
-            <div class="food-content">
-
-                <div class="food-label">
-                    FOOD &amp; DAILY LIFE
-                </div>
-
-                <h3>
-                    อาหารกับชีวิตประจำวัน
-                </h3>
-
-                <p>
-                    อาหารเป็นอีกสิ่งหนึ่งที่สะท้อนวิถีชีวิต
-                    ของผู้คนในอยุธยา ทั้งวัตถุดิบที่หาได้
-                    ในท้องถิ่น การค้าขาย และการรับวัฒนธรรม
-                    จากผู้คนหลากหลายกลุ่มที่เข้ามาติดต่อ
-                    กับเมืองอยุธยา
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-<!-- =====================================================
-     QUOTE
-===================================================== -->
-
-<section class="quote">
-
-    <div class="quote-content">
-
-        <div class="quote-mark">
-            “
-        </div>
-
-        <p>
-            สายน้ำ ผู้คน และวัฒนธรรม
-            ล้วนเป็นส่วนหนึ่งของเรื่องราวอยุธยา
+        <p class="description">
+            อาหารเป็นอีกสิ่งหนึ่งที่สะท้อนวิถีชีวิต
+            และการแลกเปลี่ยนทางวัฒนธรรมของอยุธยา
+            ซึ่งเป็นเมืองที่มีผู้คนหลากหลายเชื้อชาติ
+            เดินทางเข้ามาค้าขายและอาศัยอยู่
         </p>
 
-        <span>
-            วิถีชีวิตที่ยังคงสะท้อนตัวตนของเมืองแห่งอดีต
-        </span>
+
+        <div class="card-grid">
+
+            <article class="card">
+
+                <img
+                    src="images/page3-food.jpg"
+                    alt="อาหารและวิถีการกิน"
+                >
+
+                <div class="card-content">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        อาหารและวิถีการกิน
+                    </h3>
+
+                    <p>
+                        อาหารของอยุธยามีความหลากหลาย
+                        และได้รับอิทธิพลจากผู้คนหลายกลุ่ม
+                        จนกลายเป็นส่วนหนึ่งของวัฒนธรรม
+                        ที่สืบทอดมาจนถึงปัจจุบัน
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      PAGE NAVIGATION
-===================================================== -->
+========================= -->
 
 <section class="page-navigation">
 
-    <h3>
-        EXPLORE AYUTTHAYA
-    </h3>
-
+    <h2>
+        สำรวจเรื่องราวอยุธยาต่อ
+    </h2>
 
     <div class="page-buttons">
 
         <a href="page1.html">
-            1
+            <strong>01</strong>
+            ประวัติศาสตร์
         </a>
 
         <a href="page2.html">
-            2
+            <strong>02</strong>
+            สถานที่สำคัญ
         </a>
 
         <a href="page3.html" class="active">
-            3
+            <strong>03</strong>
+            ชุดไทยและวิถีชีวิต
         </a>
 
         <a href="page4.html">
-            4
+            <strong>04</strong>
+            วัฒนธรรมและอาหาร
         </a>
 
         <a href="page5.html">
-            5
+            <strong>05</strong>
+            เมืองแห่งสายน้ำ
         </a>
 
     </div>
@@ -1265,13 +932,19 @@ footer{
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
-    AYUTTHAYA · เรื่องราวของเมืองแห่งอดีต
+    <h3>
+        AYUTTHAYA
+    </h3>
+
+    <p>
+        เรื่องราวของเมืองแห่งอดีต
+    </p>
 
 </footer>
 
