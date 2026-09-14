@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Page 03 | ชุดไทยและวิถีชีวิต | AYUTTHAYA</title>
+<title>ชุดไทยและวิถีชีวิต | พระนครศรีอยุธยา</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,7 +18,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    border-radius:0 !important;
 }
 
 html{
@@ -25,24 +25,23 @@ html{
 }
 
 body{
-    background:#0b0402;
-    color:#d8c7a5;
     font-family:'Kanit',sans-serif;
-    line-height:1.8;
+    background:#0b0402;
+    color:#ead7ae;
+    overflow-x:hidden;
 }
+
 
 /* =========================
    NAVBAR
 ========================= */
 
 .navbar{
-    position:fixed;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    min-height:76px;
-    z-index:9999;
+    z-index:1000;
 
+    min-height:76px;
     padding:0 6%;
 
     display:flex;
@@ -62,12 +61,6 @@ body{
     font-family:'Playfair Display',serif;
     font-size:24px;
     letter-spacing:5px;
-
-    transition:.3s;
-}
-
-.logo:hover{
-    color:#fff0c5;
 }
 
 .home-btn{
@@ -78,13 +71,14 @@ body{
 
     padding:8px 20px;
 
+    border-radius:30px;
+
     transition:.3s;
 }
 
 .home-btn:hover{
-    color:#f0dca7;
-    border-color:#d4a34b;
-    background:#211006;
+    background:#c69a48;
+    color:#150703;
 }
 
 
@@ -95,22 +89,21 @@ body{
 .hero{
     min-height:650px;
 
-    position:relative;
-
     display:flex;
     align-items:center;
     justify-content:center;
 
     text-align:center;
 
-    padding:120px 25px 80px;
+    position:relative;
 
     background:
-        linear-gradient(
-            rgba(8,3,1,.25),
-            rgba(8,3,1,.88)
-        ),
-        url("images/page3-cover.jpg") center/cover no-repeat;
+    linear-gradient(
+        rgba(8,3,1,.25),
+        rgba(8,3,1,.9)
+    ),
+    url("./images/page3-cover.jpg")
+    center/cover no-repeat;
 }
 
 .hero::before{
@@ -120,26 +113,27 @@ body{
     inset:0;
 
     background:
-        radial-gradient(
-            circle at center,
-            transparent 10%,
-            rgba(0,0,0,.72) 90%
-        );
+    radial-gradient(
+        circle at center,
+        transparent 10%,
+        rgba(0,0,0,.75) 90%
+    );
 }
 
 .hero-content{
     position:relative;
     z-index:2;
 
-    max-width:950px;
+    max-width:1000px;
 
-    padding:80px 30px;
+    padding:100px 25px;
 }
 
-.hero-label{
+.label{
     color:#d3a44f;
 
     font-size:13px;
+
     letter-spacing:8px;
 
     margin-bottom:25px;
@@ -148,11 +142,11 @@ body{
 .hero h1{
     font-family:'Playfair Display',serif;
 
-    font-size:clamp(52px,9vw,100px);
+    font-size:clamp(55px,10vw,115px);
 
     line-height:.9;
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
     color:#f0dca7;
 
@@ -164,7 +158,7 @@ body{
 
     color:#d6aa55;
 
-    font-size:clamp(28px,5vw,48px);
+    font-size:clamp(28px,5vw,50px);
 
     font-weight:300;
 }
@@ -176,12 +170,12 @@ body{
     margin:30px auto;
 
     background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #d4a34b,
-            transparent
-        );
+    linear-gradient(
+        90deg,
+        transparent,
+        #d4a34b,
+        transparent
+    );
 }
 
 .hero p{
@@ -198,11 +192,11 @@ body{
 
 
 /* =========================
-   SECTIONS
+   SECTION
 ========================= */
 
 .section{
-    padding:105px 0;
+    padding:100px 0;
 
     border-bottom:1px solid #382512;
 }
@@ -249,15 +243,15 @@ body{
    CARDS
 ========================= */
 
-.card-grid{
+.content-grid{
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:32px;
+    gap:28px;
 }
 
-.card{
+.info-card{
     overflow:hidden;
 
     background:#170804;
@@ -267,16 +261,15 @@ body{
     transition:.4s;
 }
 
-.card:hover{
+.info-card:hover{
     transform:translateY(-7px);
 
     border-color:#b0833d;
 
-    box-shadow:
-        0 20px 45px rgba(0,0,0,.45);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
 }
 
-.card img{
+.info-card img{
     width:100%;
 
     height:330px;
@@ -286,11 +279,11 @@ body{
     object-fit:cover;
 }
 
-.card-content{
-    padding:30px;
+.info-content{
+    padding:28px;
 }
 
-.card-number{
+.info-number{
     color:#b98436;
 
     font-family:'Playfair Display',serif;
@@ -300,17 +293,17 @@ body{
     font-size:14px;
 }
 
-.card h3{
+.info-content h3{
     color:#dfbc73;
 
     font-family:'Playfair Display',serif;
 
-    font-size:30px;
+    font-size:29px;
 
-    margin:9px 0 13px;
+    margin:8px 0 12px;
 }
 
-.card p{
+.info-content p{
     color:#aa997d;
 
     line-height:1.9;
@@ -318,15 +311,85 @@ body{
 
 
 /* =========================
-   RIVER SECTION
+   RIVER
 ========================= */
 
-.river-section{
-    background:
-        linear-gradient(
-            rgba(11,4,2,.96),
-            rgba(11,4,2,.96)
-        );
+.river{
+    background:#100502;
+}
+
+
+/* =========================
+   FOOD
+   เนื้อหาเดี่ยวแบบยาว
+========================= */
+
+.food{
+    background:#130603;
+}
+
+.food-feature{
+    width:100%;
+
+    background:#170804;
+
+    border:1px solid #59401f;
+
+    overflow:hidden;
+}
+
+.food-feature-image{
+    width:100%;
+
+    padding:20px;
+
+    background:#170804;
+}
+
+.food-feature-image img{
+    width:100%;
+
+    height:560px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.food-feature-content{
+    padding:38px 40px 42px;
+
+    border-top:1px solid #4e351c;
+}
+
+.food-feature-number{
+    color:#b98436;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    margin-bottom:8px;
+}
+
+.food-feature-content h3{
+    color:#dfbc73;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+.food-feature-content p{
+    color:#aa997d;
+
+    line-height:2;
+
+    max-width:1000px;
 }
 
 
@@ -397,8 +460,6 @@ body{
     border-color:#b4863e;
 
     background:#2a1408;
-
-    color:#f0dca7;
 }
 
 
@@ -435,14 +496,18 @@ footer p{
    RESPONSIVE
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-    .card-grid{
+    .content-grid{
         grid-template-columns:1fr;
     }
 
     .page-buttons{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .food-feature-image img{
+        height:450px;
     }
 
 }
@@ -451,17 +516,22 @@ footer p{
 
     .navbar{
         min-height:68px;
+
         padding:0 4%;
     }
 
     .logo{
         font-size:18px;
+
         letter-spacing:3px;
     }
 
     .home-btn{
         font-size:12px;
+
         padding:7px 13px;
+
+        border-radius:30px;
     }
 
     .hero{
@@ -481,7 +551,7 @@ footer p{
     }
 
     .section{
-        padding:75px 0;
+        padding:70px 0;
     }
 
     .section h2{
@@ -492,8 +562,24 @@ footer p{
         grid-template-columns:1fr;
     }
 
-    .card img{
+    .info-card img{
         height:300px;
+    }
+
+    .food-feature-image{
+        padding:14px;
+    }
+
+    .food-feature-image img{
+        height:300px;
+    }
+
+    .food-feature-content{
+        padding:28px 24px 32px;
+    }
+
+    .food-feature-content h3{
+        font-size:28px;
     }
 
 }
@@ -504,21 +590,22 @@ footer p{
 
 <body>
 
+
 <!-- =========================
      NAVBAR
 ========================= -->
 
-<header class="navbar">
+<nav class="navbar">
 
-    <a href="index.html#top" class="logo">
+    <a href="index.html" class="logo">
         AYUTTHAYA
     </a>
 
-    <a href="index.html#top" class="home-btn">
-        ← หน้าปก
+    <a href="index.html" class="home-btn">
+        ← หน้าหลัก
     </a>
 
-</header>
+</nav>
 
 
 <!-- =========================
@@ -529,7 +616,7 @@ footer p{
 
     <div class="hero-content">
 
-        <div class="hero-label">
+        <div class="label">
             PAGE 03 • LIFESTYLE
         </div>
 
@@ -579,18 +666,20 @@ footer p{
         </p>
 
 
-        <div class="card-grid">
+        <div class="content-grid">
 
-            <article class="card">
+
+            <article class="info-card">
 
                 <img
-                    src="images/page3-thai-dress.jpg"
+                    src="./images/page3-thai-dress.jpg"
                     alt="การแต่งกายแบบไทย"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         01
                     </div>
 
@@ -600,8 +689,9 @@ footer p{
 
                     <p>
                         การแต่งกายแบบไทยสะท้อนเอกลักษณ์
-                        และรสนิยมของผู้คนในสังคมไทย
-                        โดยมีรูปแบบที่เหมาะสมกับวิถีชีวิต
+                        และวิถีชีวิตของผู้คน
+                        โดยรูปแบบการแต่งกาย
+                        มีความเหมาะสมกับเพศ ฐานะ
                         และโอกาสต่าง ๆ
                     </p>
 
@@ -610,16 +700,17 @@ footer p{
             </article>
 
 
-            <article class="card">
+            <article class="info-card">
 
                 <img
-                    src="images/page3-sabai.jpg"
+                    src="./images/page3-sabai.jpg"
                     alt="ผ้าสไบและผ้านุ่ง"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         02
                     </div>
 
@@ -629,14 +720,15 @@ footer p{
 
                     <p>
                         ผ้าสไบและผ้านุ่งเป็นเครื่องแต่งกาย
-                        ที่พบในภาพจำเกี่ยวกับการแต่งกาย
-                        ของผู้หญิงไทยในอดีต
-                        และแสดงถึงความเรียบง่ายของวิถีชีวิต
+                        ที่สะท้อนรูปแบบการแต่งกายของผู้หญิงไทย
+                        ในอดีต และเป็นส่วนหนึ่งของวัฒนธรรม
+                        การแต่งกายที่สืบทอดต่อกันมา
                     </p>
 
                 </div>
 
             </article>
+
 
         </div>
 
@@ -665,22 +757,24 @@ footer p{
             ผู้คนในกรุงศรีอยุธยาใช้ชีวิตอยู่ท่ามกลางเมือง
             ชุมชน ตลาด และแม่น้ำหลายสาย
             ทำให้การค้าขาย การเดินทาง และการอยู่อาศัย
-            มีความเกี่ยวข้องกับสภาพแวดล้อมรอบตัวอย่างมาก
+            มีความเกี่ยวข้องกับสภาพแวดล้อมรอบตัว
         </p>
 
 
-        <div class="card-grid">
+        <div class="content-grid">
 
-            <article class="card">
+
+            <article class="info-card">
 
                 <img
-                    src="images/page3-house.jpg"
+                    src="./images/page3-house.jpg"
                     alt="บ้านเรือนในอยุธยา"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         01
                     </div>
 
@@ -689,9 +783,9 @@ footer p{
                     </h3>
 
                     <p>
-                        บ้านเรือนของผู้คนมีความสัมพันธ์กับ
-                        สภาพแวดล้อมและภูมิประเทศ
-                        โดยเฉพาะบริเวณที่อยู่ใกล้แม่น้ำ
+                        บ้านเรือนของผู้คนมีความสัมพันธ์
+                        กับสภาพแวดล้อมและภูมิประเทศ
+                        โดยเฉพาะบริเวณใกล้แม่น้ำ
                         และพื้นที่ชุมชน
                     </p>
 
@@ -700,16 +794,17 @@ footer p{
             </article>
 
 
-            <article class="card">
+            <article class="info-card">
 
                 <img
-                    src="images/page3-market.jpg"
+                    src="./images/page3-market.jpg"
                     alt="ตลาดและชุมชน"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         02
                     </div>
 
@@ -728,6 +823,7 @@ footer p{
 
             </article>
 
+
         </div>
 
     </div>
@@ -739,7 +835,7 @@ footer p{
      SECTION 03
 ========================= -->
 
-<section class="section river-section">
+<section class="section river">
 
     <div class="container">
 
@@ -759,20 +855,22 @@ footer p{
         </p>
 
 
-        <div class="card-grid">
+        <div class="content-grid">
 
-            <!-- CARD 1 -->
 
-            <article class="card">
+            <!-- วิถีชีวิตริมน้ำ -->
+
+            <article class="info-card">
 
                 <img
-                    src="images/page3-river-life.jpg"
+                    src="./images/page3-river-life.jpg"
                     alt="วิถีชีวิตริมน้ำ"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         01
                     </div>
 
@@ -792,18 +890,19 @@ footer p{
             </article>
 
 
-            <!-- CARD 2 -->
+            <!-- ชีวิตที่ผูกพันกับสายน้ำ -->
 
-            <article class="card">
+            <article class="info-card">
 
                 <img
-                    src="images/page3-river-community.jpg"
+                    src="./images/page3-river-community.jpg"
                     alt="ชีวิตที่ผูกพันกับสายน้ำ"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+                <div class="info-content">
 
-                    <div class="card-number">
+                    <div class="info-number">
                         02
                     </div>
 
@@ -822,6 +921,7 @@ footer p{
 
             </article>
 
+
         </div>
 
     </div>
@@ -830,10 +930,10 @@ footer p{
 
 
 <!-- =========================
-     SECTION 04
+     SECTION 04 FOOD
 ========================= -->
 
-<section class="section">
+<section class="section food">
 
     <div class="container">
 
@@ -853,35 +953,42 @@ footer p{
         </p>
 
 
-        <div class="card-grid">
+        <!-- เนื้อหาอาหารแบบยาว -->
 
-            <article class="card">
+        <div class="food-feature">
+
+            <div class="food-feature-image">
 
                 <img
-                    src="images/page3-food.jpg"
-                    alt="อาหารและวิถีการกิน"
+                    src="./images/page3-food.jpg"
+                    alt="อาหารและวิถีการกินของอยุธยา"
+                    loading="lazy"
                 >
 
-                <div class="card-content">
+            </div>
 
-                    <div class="card-number">
-                        01
-                    </div>
 
-                    <h3>
-                        อาหารและวิถีการกิน
-                    </h3>
+            <div class="food-feature-content">
 
-                    <p>
-                        อาหารของอยุธยามีความหลากหลาย
-                        และได้รับอิทธิพลจากผู้คนหลายกลุ่ม
-                        จนกลายเป็นส่วนหนึ่งของวัฒนธรรม
-                        ที่สืบทอดมาจนถึงปัจจุบัน
-                    </p>
-
+                <div class="food-feature-number">
+                    01 • AYUTTHAYA FOOD
                 </div>
 
-            </article>
+                <h3>
+                    อาหารและวิถีการกิน
+                </h3>
+
+                <p>
+                    อาหารของอยุธยามีความหลากหลาย
+                    และได้รับอิทธิพลจากผู้คนหลายกลุ่ม
+                    เนื่องจากอยุธยาเป็นเมืองที่มีการติดต่อ
+                    ค้าขายกับผู้คนจากหลายพื้นที่
+                    วัฒนธรรมด้านอาหารจึงเกิดการผสมผสาน
+                    และกลายเป็นส่วนหนึ่งของเอกลักษณ์
+                    ทางวัฒนธรรมของอยุธยา
+                </p>
+
+            </div>
 
         </div>
 
@@ -900,31 +1007,51 @@ footer p{
         สำรวจเรื่องราวอยุธยาต่อ
     </h2>
 
+
     <div class="page-buttons">
 
         <a href="page1.html">
+
             <strong>01</strong>
+
             ประวัติศาสตร์
+
         </a>
+
 
         <a href="page2.html">
+
             <strong>02</strong>
+
             สถานที่สำคัญ
+
         </a>
+
 
         <a href="page3.html" class="active">
+
             <strong>03</strong>
+
             ชุดไทยและวิถีชีวิต
+
         </a>
+
 
         <a href="page4.html">
+
             <strong>04</strong>
+
             วัฒนธรรมและอาหาร
+
         </a>
 
+
         <a href="page5.html">
+
             <strong>05</strong>
-            เมืองแห่งสายน้ำ
+
+            จุดเด่นและของฝาก
+
         </a>
 
     </div>
@@ -943,7 +1070,7 @@ footer p{
     </h3>
 
     <p>
-        เรื่องราวของเมืองแห่งอดีต
+        พระนครศรีอยุธยา • ชุดไทย • วิถีชีวิต • สายน้ำ • อาหาร
     </p>
 
 </footer>
