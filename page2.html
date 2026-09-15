@@ -13,7 +13,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-
 <style>
 
 /* =========================================
@@ -32,11 +31,8 @@ html{
 
 body{
     font-family:'Kanit',sans-serif;
-
     background:#0b0402;
-
     color:#ead7ae;
-
     overflow-x:hidden;
 }
 
@@ -72,6 +68,7 @@ body{
     border-bottom:1px solid rgba(205,158,68,.35);
 }
 
+
 .logo{
     color:#e2b85d;
 
@@ -86,11 +83,17 @@ body{
     transition:.3s;
 }
 
+
 .logo:hover{
     color:#f5d98e;
 
     transform:translateY(-2px);
 }
+
+
+/* =========================================
+   ปุ่มหน้าหลัก
+========================================= */
 
 .home-btn{
     color:#d8c29a;
@@ -101,8 +104,11 @@ body{
 
     padding:8px 20px;
 
+    border-radius:30px;
+
     transition:.3s;
 }
+
 
 .home-btn:hover{
     background:#c69a48;
@@ -118,7 +124,6 @@ body{
 ========================================= */
 
 .hero{
-
     min-height:650px;
 
     position:relative;
@@ -145,8 +150,8 @@ body{
     center/cover no-repeat;
 }
 
-.hero::before{
 
+.hero::before{
     content:"";
 
     position:absolute;
@@ -162,8 +167,8 @@ body{
     );
 }
 
-.hero-content{
 
+.hero-content{
     position:relative;
 
     z-index:2;
@@ -173,8 +178,8 @@ body{
     padding:80px 30px;
 }
 
-.hero-label{
 
+.hero-label{
     color:#d3a44f;
 
     font-size:13px;
@@ -184,12 +189,11 @@ body{
     margin-bottom:25px;
 }
 
-.hero h1{
 
+.hero h1{
     font-family:'Playfair Display',serif;
 
     font-size:
-
     clamp(52px,9vw,100px);
 
     line-height:.9;
@@ -199,25 +203,23 @@ body{
     color:#f0dca7;
 
     text-shadow:
-
     0 15px 50px rgba(0,0,0,.9);
 }
 
-.hero h2{
 
+.hero h2{
     margin-top:30px;
 
     color:#d6aa55;
 
     font-size:
-
     clamp(28px,5vw,48px);
 
     font-weight:300;
 }
 
-.line{
 
+.line{
     width:260px;
 
     height:1px;
@@ -234,8 +236,8 @@ body{
     );
 }
 
-.hero p{
 
+.hero p{
     max-width:800px;
 
     margin:auto;
@@ -253,14 +255,13 @@ body{
 ========================================= */
 
 .section{
-
     padding:105px 0;
 
     border-bottom:1px solid #382512;
 }
 
-.container{
 
+.container{
     width:90%;
 
     max-width:1200px;
@@ -268,8 +269,8 @@ body{
     margin:auto;
 }
 
-.section-label{
 
+.section-label{
     color:#bd8e3d;
 
     font-size:13px;
@@ -279,8 +280,8 @@ body{
     margin-bottom:10px;
 }
 
-.section h2{
 
+.section h2{
     font-family:'Playfair Display',serif;
 
     color:#e1bd72;
@@ -290,8 +291,8 @@ body{
     margin-bottom:22px;
 }
 
-.description{
 
+.description{
     max-width:900px;
 
     color:#b9a487;
@@ -307,18 +308,16 @@ body{
 ========================================= */
 
 .card-grid{
-
     display:grid;
 
     grid-template-columns:
-
     repeat(2,1fr);
 
     gap:32px;
 }
 
-.card{
 
+.card{
     overflow:hidden;
 
     background:#170804;
@@ -328,19 +327,18 @@ body{
     transition:.4s;
 }
 
-.card:hover{
 
+.card:hover{
     transform:translateY(-7px);
 
     border-color:#b0833d;
 
     box-shadow:
-
     0 20px 45px rgba(0,0,0,.45);
 }
 
-.card img{
 
+.card img{
     width:100%;
 
     height:330px;
@@ -350,13 +348,13 @@ body{
     object-fit:cover;
 }
 
-.card-content{
 
+.card-content{
     padding:30px;
 }
 
-.card-number{
 
+.card-number{
     color:#b98436;
 
     font-family:'Playfair Display',serif;
@@ -366,8 +364,8 @@ body{
     font-size:14px;
 }
 
-.card h3{
 
+.card h3{
     color:#dfbc73;
 
     font-family:'Playfair Display',serif;
@@ -377,8 +375,8 @@ body{
     margin:9px 0 13px;
 }
 
-.card p{
 
+.card p{
     color:#aa997d;
 
     line-height:1.9;
@@ -390,7 +388,6 @@ body{
 ========================================= */
 
 .main-attractions{
-
     background:#100502;
 }
 
@@ -400,23 +397,21 @@ body{
 ========================================= */
 
 .additional{
-
     background:#0d0402;
 }
 
-.additional-grid{
 
+.additional-grid{
     display:grid;
 
     grid-template-columns:
-
     repeat(3,1fr);
 
     gap:28px;
 }
 
-.small-card{
 
+.small-card{
     overflow:hidden;
 
     background:#170804;
@@ -426,19 +421,18 @@ body{
     transition:.4s;
 }
 
-.small-card:hover{
 
+.small-card:hover{
     transform:translateY(-7px);
 
     border-color:#b0833d;
 
     box-shadow:
-
     0 18px 40px rgba(0,0,0,.4);
 }
 
-.small-card img{
 
+.small-card img{
     width:100%;
 
     height:250px;
@@ -448,13 +442,13 @@ body{
     display:block;
 }
 
-.small-content{
 
+.small-content{
     padding:25px;
 }
 
-.small-content h3{
 
+.small-content h3{
     color:#dfbc73;
 
     font-family:'Playfair Display',serif;
@@ -464,8 +458,8 @@ body{
     margin-bottom:10px;
 }
 
-.small-content p{
 
+.small-content p{
     color:#aa997d;
 
     line-height:1.85;
@@ -477,16 +471,14 @@ body{
 ========================================= */
 
 .history-place{
-
     background:#130603;
 }
 
-.history-layout{
 
+.history-layout{
     display:grid;
 
     grid-template-columns:
-
     1fr 1fr;
 
     gap:50px;
@@ -494,15 +486,17 @@ body{
     align-items:center;
 }
 
-.history-image{
 
+.history-image{
     overflow:hidden;
 
     border:1px solid #59401f;
+
+    background:#170804;
 }
 
-.history-image img{
 
+.history-image img{
     width:100%;
 
     height:470px;
@@ -512,8 +506,8 @@ body{
     object-fit:cover;
 }
 
-.history-text h3{
 
+.history-text h3{
     font-family:'Playfair Display',serif;
 
     color:#dfbd72;
@@ -523,8 +517,8 @@ body{
     margin-bottom:20px;
 }
 
-.history-text p{
 
+.history-text p{
     color:#b9a487;
 
     line-height:2;
@@ -538,7 +532,6 @@ body{
 ========================================= */
 
 .page-navigation{
-
     padding:90px 6%;
 
     text-align:center;
@@ -546,8 +539,8 @@ body{
     background:#080302;
 }
 
-.page-navigation h2{
 
+.page-navigation h2{
     font-family:'Playfair Display',serif;
 
     color:#dfbd78;
@@ -557,8 +550,8 @@ body{
     margin-bottom:40px;
 }
 
-.page-buttons{
 
+.page-buttons{
     max-width:1100px;
 
     margin:auto;
@@ -566,14 +559,13 @@ body{
     display:grid;
 
     grid-template-columns:
-
     repeat(5,1fr);
 
     gap:12px;
 }
 
-.page-buttons a{
 
+.page-buttons a{
     color:#cdbb99;
 
     text-decoration:none;
@@ -585,10 +577,13 @@ body{
     padding:18px 10px;
 
     transition:.3s;
+
+    /* คงปุ่มด้านล่างเป็นเหลี่ยมแบบเดิม */
+    border-radius:0;
 }
 
-.page-buttons strong{
 
+.page-buttons strong{
     display:block;
 
     color:#d5a64f;
@@ -600,9 +595,9 @@ body{
     margin-bottom:4px;
 }
 
+
 .page-buttons a:hover,
 .page-buttons .active{
-
     transform:translateY(-5px);
 
     border-color:#b4863e;
@@ -616,7 +611,6 @@ body{
 ========================================= */
 
 footer{
-
     padding:50px 20px;
 
     text-align:center;
@@ -624,8 +618,8 @@ footer{
     background:#050201;
 }
 
-footer h3{
 
+footer h3{
     color:#d4a653;
 
     font-family:'Playfair Display',serif;
@@ -635,8 +629,8 @@ footer h3{
     letter-spacing:6px;
 }
 
-footer p{
 
+footer p{
     color:#655741;
 
     margin-top:10px;
@@ -650,108 +644,98 @@ footer p{
 @media(max-width:900px){
 
     .card-grid{
-
         grid-template-columns:1fr;
     }
+
 
     .additional-grid{
-
         grid-template-columns:
-
         repeat(2,1fr);
     }
 
-    .history-layout{
 
+    .history-layout{
         grid-template-columns:1fr;
     }
 
+
     .page-buttons{
-
         grid-template-columns:
-
         repeat(2,1fr);
     }
+
 }
 
 
 @media(max-width:550px){
 
     .navbar{
-
         min-height:68px;
 
         padding:0 4%;
     }
 
-    .logo{
 
+    .logo{
         font-size:18px;
 
         letter-spacing:3px;
     }
 
-    .home-btn{
 
+    .home-btn{
         font-size:12px;
 
         padding:7px 13px;
+
+        border-radius:30px;
     }
 
-    .hero{
 
+    .hero{
         min-height:600px;
     }
 
-    .hero h1{
 
+    .hero h1{
         font-size:48px;
     }
 
-    .hero h2{
 
+    .hero h2{
         font-size:26px;
     }
 
-    .hero p{
 
+    .hero p{
         font-size:15px;
     }
 
-    .section{
 
+    .section{
         padding:75px 0;
     }
 
-    .section h2{
 
+    .section h2{
         font-size:32px;
     }
 
-    .additional-grid{
 
+    .additional-grid{
         grid-template-columns:1fr;
     }
+
 
     .page-buttons{
-
         grid-template-columns:1fr;
     }
 
-    .history-image img{
 
+    .history-image img{
         height:340px;
     }
-}
 
-
-/* =========================================
-   FORCE SQUARE
-========================================= */
-
-*{
-
-    border-radius:0 !important;
 }
 
 </style>
@@ -772,8 +756,9 @@ footer p{
 AYUTTHAYA
 </a>
 
+
 <a href="index.html#top" class="home-btn">
-หน้าปก
+← หน้าหลัก
 </a>
 
 </nav>
@@ -791,15 +776,19 @@ AYUTTHAYA
 PAGE 02 • PLACES
 </div>
 
+
 <h1>
 PLACES
 </h1>
+
 
 <h2>
 สถานที่สำคัญ
 </h2>
 
+
 <div class="line"></div>
+
 
 <p>
 
@@ -827,9 +816,11 @@ PLACES
 FAMOUS LANDMARKS
 </div>
 
+
 <h2>
 สถานที่สำคัญของอยุธยา
 </h2>
+
 
 <p class="description">
 
@@ -854,15 +845,18 @@ src="images/page2-mahathat.jpg"
 alt="วัดมหาธาตุ"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 01 • TEMPLE
 </div>
 
+
 <h3>
 วัดมหาธาตุ
 </h3>
+
 
 <p>
 
@@ -887,15 +881,18 @@ src="images/page2-chaiwatthanaram.jpg"
 alt="วัดไชยวัฒนาราม"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 02 • TEMPLE
 </div>
 
+
 <h3>
 วัดไชยวัฒนาราม
 </h3>
+
 
 <p>
 
@@ -920,15 +917,18 @@ src="images/page2-phrasisanphet.jpg"
 alt="วัดพระศรีสรรเพชญ์"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 03 • ROYAL TEMPLE
 </div>
 
+
 <h3>
 วัดพระศรีสรรเพชญ์
 </h3>
+
 
 <p>
 
@@ -953,15 +953,18 @@ src="images/page2-yai-chaimongkhon.jpg"
 alt="วัดใหญ่ชัยมงคล"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 04 • TEMPLE
 </div>
 
+
 <h3>
 วัดใหญ่ชัยมงคล
 </h3>
+
 
 <p>
 
@@ -996,9 +999,11 @@ loading="lazy">
 MORE PLACES
 </div>
 
+
 <h2>
 สถานที่น่าสนใจเพิ่มเติม
 </h2>
+
 
 <p class="description">
 
@@ -1022,11 +1027,13 @@ src="images/page2-ratchaburana.jpg"
 alt="วัดราชบูรณะ"
 loading="lazy">
 
+
 <div class="small-content">
 
 <h3>
 วัดราชบูรณะ
 </h3>
+
 
 <p>
 
@@ -1050,11 +1057,13 @@ src="images/page2-phananchoeng.jpg"
 alt="วัดพนัญเชิง"
 loading="lazy">
 
+
 <div class="small-content">
 
 <h3>
 วัดพนัญเชิง
 </h3>
+
 
 <p>
 
@@ -1079,11 +1088,13 @@ src="images/page2-floating-market.jpg"
 alt="ตลาดน้ำอยุธยา"
 loading="lazy">
 
+
 <div class="small-content">
 
 <h3>
 ตลาดน้ำ
 </h3>
+
 
 <p>
 
@@ -1133,9 +1144,11 @@ loading="lazy">
 ANCIENT PALACE
 </div>
 
+
 <h3>
 พระราชวังโบราณ
 </h3>
+
 
 <p>
 
@@ -1145,6 +1158,7 @@ ANCIENT PALACE
 และเป็นที่ประทับของพระมหากษัตริย์
 
 </p>
+
 
 <p>
 
@@ -1176,6 +1190,8 @@ ANCIENT PALACE
 <div class="card-grid">
 
 
+<!-- ร่องรอยเมืองเก่า -->
+
 <article class="card">
 
 <img
@@ -1183,15 +1199,18 @@ src="images/page2-ruins.jpg"
 alt="โบราณสถานอยุธยา"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 08 • AYUTTHAYA RUINS
 </div>
 
+
 <h3>
 ร่องรอยเมืองเก่า
 </h3>
+
 
 <p>
 
@@ -1207,6 +1226,8 @@ loading="lazy">
 </article>
 
 
+<!-- มรดกทางประวัติศาสตร์ -->
+
 <article class="card">
 
 <img
@@ -1214,15 +1235,18 @@ src="images/page2-chaiwatthanaram.jpg"
 alt="โบราณสถานริมแม่น้ำ"
 loading="lazy">
 
+
 <div class="card-content">
 
 <div class="card-number">
 09 • HERITAGE
 </div>
 
+
 <h3>
 มรดกทางประวัติศาสตร์
 </h3>
+
 
 <p>
 
@@ -1329,6 +1353,7 @@ loading="lazy">
 AYUTTHAYA
 </h3>
 
+
 <p>
 พระนครศรีอยุธยา • สถานที่สำคัญ • โบราณสถาน • มรดกโลก
 </p>
@@ -1337,5 +1362,4 @@ AYUTTHAYA
 
 
 </body>
-
 </html>
